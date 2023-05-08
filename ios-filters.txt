@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: iOS Filter List
-! Version: 2022-05-06.1
+! Version: 2022-05-08.1
 ! Expires: 1 day
 
 ! Blocked websites
@@ -88,11 +88,22 @@ m.youtube.com##ytm-item-section-renderer:has([data-style="SHORTS"])
 youtube.com,youtube-nocookie.com#@#.ytp-title-channel
 youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
 
+! Fandom
+fandom.com##.notifications-box
+fandom.com##.mobile-community-bar__discussions
+fandom.com##.beta-stars
+fandom.com##.render-wiki-recommendations
+fandom.com##.recirculation-prefooter
+fandom.com##wiki-page-header-edit-link
+fandom.com##.section-edit-link
+fandom.com##.section-edit-link + .vertical-separator
+fandom.com##.mobile-main-page__trending-articles
+fandom.com##.mobile-main-page__popular-categories
+
 ! Other
-danbooru.donmai.us##.hidden-posts-notice.fineprin
+danbooru.donmai.us##.hidden-posts-notice.fineprint
 ||danbooru.donmai.us^$removeparam=q
 ||duckduckgo.com^$removeparam=t
-fandom.com##.notifications-placeholder
 www.picuki.com##.sticky-bottom-ads-wrapper
 www.picuki.com##.admin-notice
 www.picnob.com##.be-1.similar
