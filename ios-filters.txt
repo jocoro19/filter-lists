@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: iOS Filter List
-! Version: 2022-05-08.1
+! Version: 2022-05-08.2
 ! Expires: 1 day
 
 ! Blocked websites
@@ -31,7 +31,7 @@ wikipedia.org##.mw-editsection
 wikipedia.org##.ambox 
 
 ! Twitter blocking
-twitter.com##body
+||twimg.com$script,domain=twitter.com
 ||twitter.com^$third-party
 ||twitter.com^$removeparam=t
 ||twitter.com^$removeparam=s
@@ -63,7 +63,8 @@ reddit.com##button.c-btn-primary.c-btn[name="over18"][value="no"]
 reddit.com###header-img
 reddit.com##.side .md
 reddit.com##.side > .spacer:has(.sidebox, .sidecontentbox)
-reddit.com##body > :is([id="2x-container"], shreddit-app, #container)
+reddit.com##body > :is([id="2x-container"], shreddit-app)
+||redditstatic.com/mweb2x/*$script,domain=reddit.com
 i.redd.it##reddit-header-small
 
 ! Mobile YouTube cleanup
