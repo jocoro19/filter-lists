@@ -26,6 +26,7 @@ tiktok.com,douyin.com,facebook.com,instagram.com,messenger.com,whatsapp.com,meta
 @@||10.0.0.95^$generichide
 
 ! Wikipedia cleanup
+wikipedia.org###page-actions-edit
 wikipedia.org##.mw-editsection
 wikipedia.org##.ambox 
 wikipedia.org###mw-data-after-content
