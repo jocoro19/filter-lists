@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: iOS Filter List
-! Version: 2022-05-08.3
+! Version: 2022-05-08.4
 ! Expires: 1 day
 
 ! Blocked websites
@@ -31,6 +31,7 @@ wikipedia.org##.mw-editsection
 wikipedia.org##.ambox 
 
 ! Twitter blocking
+twitter.com###ScriptLoadFailure
 ||twimg.com$script,domain=twitter.com
 ||twitter.com^$third-party
 ||twitter.com^$removeparam=t
