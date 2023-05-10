@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: iOS Filter List
-! Version: 2022-05-08.6
+! Version: 2022-05-10.1
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -27,6 +27,7 @@ tiktok.com,douyin.com,facebook.com,instagram.com,messenger.com,whatsapp.com,meta
 @@||10.0.0.95^$generichide
 
 ! Wikipedia cleanup
+wikipedia.org###page-actions-watch
 wikipedia.org###page-actions-edit
 wikipedia.org##.mw-editsection
 wikipedia.org##.ambox 
@@ -53,6 +54,7 @@ pixiv.net##.popular-search-trial
 pixiv.net##.premium-link
 pixiv.net##.mute-notice-container
 pixiv.net##.pixpedia-lead-wire
+pixiv.net##._gdpr-notify-header
 
 ! Reddit
 reddit.com##.mobile-web-redirect-bar
