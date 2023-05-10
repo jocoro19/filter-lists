@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: iOS Filter List
-! Version: 2022-05-10.1
+! Version: 2022-05-10.2
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -49,12 +49,15 @@ pixiv.net##.list-item:has([alt*="AI-"],[alt*="AI,"],[alt*="ai gen"])
 pixiv.net##.list-item:has(.ai-generated)
 pixiv.net###spa-contents:has(.v-tags > .bold.ai-generated) > * > *:not(header, #vue-search-modal)
 pixiv.net##.ad-frame-container
-pixiv.net##div.geta
+pixiv.net##.description-text
+pixiv.net##.description-signup-header
 pixiv.net##.popular-search-trial
 pixiv.net##.premium-link
+pixiv.net##.premium-lead-t-footer
 pixiv.net##.mute-notice-container
 pixiv.net##.pixpedia-lead-wire
 pixiv.net##._gdpr-notify-header
+pixiv.net##.ui-alert
 
 ! Reddit
 reddit.com##.mobile-web-redirect-bar
