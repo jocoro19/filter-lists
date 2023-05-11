@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: iOS Filter List
-! Version: 2022-05-10.2
+! Version: 2023-05-10.2
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
