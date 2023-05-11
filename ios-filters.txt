@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: iOS Filter List
-! Version: 2023-05-10.3
+! Version: 2023-05-11.1
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -35,7 +35,7 @@ wikipedia.org###mw-data-after-content
 
 ! Twitter blocking
 twitter.com###ScriptLoadFailure
-||twimg.com$script,domain=twitter.com
+||twimg.com^$script,domain=twitter.com
 ||twitter.com^$third-party
 ||twitter.com^$removeparam=t
 ||twitter.com^$removeparam=s
