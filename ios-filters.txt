@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: iOS Filter List
-! Version: 2023-05-10.2
+! Version: 2023-05-10.3
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -52,10 +52,10 @@ pixiv.net##.ad-frame-container
 pixiv.net##.description-text
 pixiv.net##.description-signup-header
 pixiv.net##.popular-search-trial
-pixiv.net##.premium-link
 pixiv.net##.premium-lead-t-footer
 pixiv.net##.mute-notice-container
 pixiv.net##.pixpedia-lead-wire
+pixiv.net##div:has(> .pixpedia-works-navigation)
 pixiv.net##._gdpr-notify-header
 pixiv.net##.ui-alert
 
