@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: iOS Filter List
-! Version: 2023-05-11.1
+! Version: 2023-05-11.2
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -45,7 +45,7 @@ nitter.*,nitter.privacydev.net##.icon-bird, .icon-rss-feed, .nav-item > a[href^=
 nitter.*,nitter.privacydev.net##.timeline-item:has([href*="AIArt"],[href*="AIart"],[href*="aiart"],[href*="AIArtwork"],[href*="AIイラスト"],[href*="StableDiffusion"],[href*="stablediffusion"],[href*="Midjourney"],[href*="midjourney"])
 
 ! Pixiv
-pixiv.net##.list-item:has([alt*="AI-"],[alt*="AI,"],[alt*="ai gen"])
+pixiv.net##.list-item:has([alt*="AI-"],[alt*="AI,"],[alt*=" AI "],[alt*="ai gen"])
 pixiv.net##.list-item:has(.ai-generated)
 pixiv.net###spa-contents:has(.v-tags > .bold.ai-generated) > * > *:not(header, #vue-search-modal)
 pixiv.net##.ad-frame-container
