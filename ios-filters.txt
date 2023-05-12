@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: iOS Filter List
-! Version: 2023-05-11.3
+! Version: 2023-05-12.1
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -69,6 +69,7 @@ reddit.com##.commentsignupbar
 reddit.com##.reddit-infobar
 reddit.com##.locked-tagline
 reddit.com##.active.read-next
+reddit.com##.commentarea .stickied[data-author="AutoModerator"]
 reddit.com##button.c-btn-primary.c-btn[name="over18"][value="no"]
 ||thumbs.redditmedia.com^$css
 reddit.com###header-img
