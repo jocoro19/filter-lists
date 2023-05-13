@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: iOS Filter List
-! Version: 2023-05-12.3
+! Version: 2023-05-13.1
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -77,6 +77,8 @@ reddit.com##.side .md
 reddit.com##.side > .spacer:has(.sidebox, .sidecontentbox)
 reddit.com##body > :is([id="2x-container"], shreddit-app)
 ||redditstatic.com/mweb2x/*$script,domain=reddit.com
+||redditstatic.com/*/top-button$script,domain=i.redd.it
+||redditstatic.com/*/xpromo-bottom-bar$script,domain=i.redd.it
 i.redd.it##reddit-header-small
 
 ! Mobile YouTube cleanup
