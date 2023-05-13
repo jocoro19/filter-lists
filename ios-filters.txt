@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: iOS Filter List
-! Version: 2023-05-12.1
+! Version: 2023-05-12.2
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -41,7 +41,7 @@ twitter.com###ScriptLoadFailure
 ||twitter.com^$removeparam=s
 
 ! Nitter
-nitter.*,nitter.privacydev.net##.icon-bird, .icon-rss-feed, .nav-item > a[href^="https://liberapay.com/"], .verified-icon, .unavailable.timeline-item, .unavailable.quote, .threadunavailable
+nitter.*,nitter.privacydev.net##.icon-bird, .icon-rss-feed, .nav-item > a[href^="https://liberapay.com/"], .verified-icon, .unavailable, .thread-lineunavailable, .threadunavailable
 nitter.*,nitter.privacydev.net##.timeline-item:has([href*="AIArt"],[href*="AIart"],[href*="aiart"],[href*="AIArtwork"],[href*="AIイラスト"],[href*="StableDiffusion"],[href*="stablediffusion"],[href*="Midjourney"],[href*="midjourney"])
 
 ! Pixiv
