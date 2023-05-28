@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
-! Title: iOS Filter List
-! Version: 2023-05-25.2
+! Title: JHS iOS Filter List
+! Version: 2023-05-28.1
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -27,6 +27,8 @@ tiktok.com,douyin.com,facebook.com,instagram.com,messenger.com,whatsapp.com,meta
 @@||10.0.0.95^$generichide
 
 ! Wikipedia cleanup
+||m.wikipedia.org/w/load.php?modules=skins.minerva.icons.wikimedia&image=edit
+||m.wikipedia.org/w/load.php?modules=skins.minerva.icons.wikimedia&image=star
 wikipedia.org###page-actions-watch
 wikipedia.org###page-actions-edit
 wikipedia.org##.mw-editsection
@@ -45,6 +47,7 @@ nitter.*,nitter.privacydev.net##.icon-bird, .icon-rss-feed, .nav-item > a[href^=
 nitter.*,nitter.privacydev.net##.timeline-item:has([href*="AIArt"],[href*="AIart"],[href*="aiart"],[href*="AIArtwork"],[href*="AIイラスト"],[href*="StableDiffusion"],[href*="stablediffusion"],[href*="Midjourney"],[href*="midjourney"])
 
 ! Pixiv
+||pixon.ads-pixiv.net^
 pixiv.net##.list-item:has([alt*="AI-"],[alt*="AI,"],[alt*=" AI "],[alt*="ai gen"])
 pixiv.net##.list-item:has(.ai-generated)
 pixiv.net###spa-contents:has(.v-tags > .bold.ai-generated) > * > *:not(header, #vue-search-modal)
@@ -106,6 +109,7 @@ youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
 ! Fandom
 fandom.com##.notifications-box
 fandom.com##.mobile-community-bar__discussions
+fandom.com##.is-anon
 fandom.com##.beta-stars
 fandom.com##.render-wiki-recommendations
 fandom.com##.recirculation-prefooter
@@ -116,6 +120,8 @@ fandom.com##.mobile-main-page__trending-articles
 fandom.com##.mobile-main-page__popular-categories
 
 ! Other
+pravda.com.ua#top_options_club
+pravda.com.ua#top_options_club_m
 danbooru.donmai.us,e621.net##.hidden-posts-notice
 ||danbooru.donmai.us^$removeparam=q
 ||duckduckgo.com^$removeparam=t
@@ -125,3 +131,5 @@ www.picnob.com##.be-1.similar
 www.picnob.com##.ah-box
 www.picnob.com##.foryou
 medibang.com##.asArtStreetTopNotice
+derpibooru.org###imagespns
+||derpicdn.net/spns/*.gif
