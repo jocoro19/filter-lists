@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filter List
-! Version: 2023-05-30.4
+! Version: 2023-05-30.5
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -133,5 +133,4 @@ www.picnob.com##.be-1.similar
 www.picnob.com##.ah-box
 www.picnob.com##.foryou
 medibang.com##.asArtStreetTopNotice
-derpibooru.org###imagespns
-||derpicdn.net/spns/*$img
+||derpicdn.net/spns/*$image
