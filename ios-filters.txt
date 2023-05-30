@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filter List
-! Version: 2023-05-30.3
+! Version: 2023-05-30.4
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -121,6 +121,7 @@ fandom.com##.mobile-main-page__popular-categories
 
 ! Other
 pravda.com.ua##.unit_top_banner
+pravda.com.ua##.unit_top-banner
 pravda.com.ua##.top_options_club
 pravda.com.ua##.top_options_club_m
 danbooru.donmai.us,e621.net##.hidden-posts-notice
