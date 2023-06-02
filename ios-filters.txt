@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filter List
-! Version: 2023-05-30.5
+! Version: 2023-06-02.1
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -66,7 +66,7 @@ pixiv.net##._gdpr-notify-header
 pixiv.net##.ui-alert
 
 ! Reddit
-reddit.com##.mobile-web-redirect-bar
+reddit.com##+js(set, r.ui.initMWebBanner, null)
 reddit.com##.listingsignupbar
 reddit.com##.commentsignupbar
 reddit.com##.reddit-infobar
@@ -95,6 +95,7 @@ m.youtube.com##.media-item-endorsement-container
 m.youtube.com##ytm-paid-content-overlay-renderer
 m.youtube.com##ytm-compact-radio-renderer
 m.youtube.com##ytm-channel-tagline-renderer
+m.youtube.com##c3-toast:has(a[href="https://yt.be/help/dislike"])
 
 ! Hide YouTube Shorts
 m.youtube.com##ytm-reel-shelf-renderer
