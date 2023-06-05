@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filter List
-! Version: 2023-06-03.1
+! Version: 2023-06-05.1
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -55,6 +55,7 @@ pixiv.net##.ad-frame-container
 pixiv.net##.description-text
 pixiv.net##.description-signup-header
 pixiv.net##.popular-search-trial
+pixiv.net##.premium-link
 pixiv.net##.premium-lead-t-footer
 pixiv.net##.gtm-work-fanbox
 pixiv.net##.user-booth-shop
@@ -119,8 +120,7 @@ fandom.com##.mobile-main-page__trending-articles
 fandom.com##.mobile-main-page__popular-categories
 
 ! Other
-pravda.com.ua##.unit_top_banner
-pravda.com.ua##.unit_top-banner
+pravda.com.ua##[class^="unit_top"]
 pravda.com.ua##.top_options_club
 pravda.com.ua##.top_options_club_m
 danbooru.donmai.us,e621.net##.hidden-posts-notice
