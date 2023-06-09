@@ -9,6 +9,7 @@
 // @grant       none
 // @match       *://reddit.com/*
 // @match       *://www.reddit.com/*
+// @homepageURL https://github.com/jocoro19/filter-lists
 // ==/UserScript==
 
 if(location.href.indexOf('www.reddit.com/poll/') != -1 || location.href.indexOf('www.reddit.com/gallery/') != -1) {
