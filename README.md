@@ -1,16 +1,17 @@
 # JHS Web Improvements (filter-lists)
 
-This repository contains adblocker filter lists, userstyles, and userscripts to improve
+This repository contains adblocker filter lists, custom userstyles, and userscripts to improve your experience on the web.
 
 Feel free to use, modify, and share the files in this repository, but I won't be accepting any contributions at this time.
 
 ## Filter Lists
 
-[ios-filters.txt](ios-filters.txt)
-- A mobile-oriented filter list initially designed for Brave iOS.
-- Currently, strict blocking and `$removeparam` rules do not work on Brave iOS at the moment.
+- [ios-filters.txt](ios-filters.txt)
+  - A mobile-oriented filter list initially designed for Brave iOS.
+  - Currently, strict blocking and `$removeparam` rules do not work on Brave iOS at the moment.
 
 ### Installation
+
 1. Install an adblocker for your platform and browser
     - Windows/Linux/MacOS: 
       - Firefox, Chrome, Edge: [uBlock Origin](https://github.com/gorhill/uBlock)
@@ -19,16 +20,26 @@ Feel free to use, modify, and share the files in this repository, but I won't be
       - [Brave iOS](https://brave.com/ios/) is free and has a decent built-in adblocker
     - Android:
       - uBlock Origin is avaliable for Firefox on Android
-2. Import the filter list into your adblocker
+2. Import the filter list into your adblocker of choice
 
 ## Userstyles
+
 - [reddit.css](styles/reddit.css)
   - Includes fixes for a few subreddits on Old Reddit
   - Removes bloat from images on i.redd.it
 
-[youtube.css](styles/youtube.css)
+- [youtube.css](styles/youtube.css)
 
-### Installation
+### Installation via Stylus
+1. Install the [Stylus](https://github.com/openstyles/stylus) extension on your browser
+2. Click on the extension icon, then the "Manage" button, then click on "Write New Style" (Leave "as Usercss" unchecked)
+3. Paste the contents of the userstyle into the editor
+
+### Installation via `userContent.css` (Firefox only)
+1. Go to `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
+2. Go to `about:support` and click on the "Open Folder" button in the "Profile Folder" row
+3. Create a subfolder named `chrome` and create a file named `userContent.css` in that folder
+4. Paste the contents of the userstyle into `userContent.css` and restart Firefox
 
 ## Userscripts
-- [nitter-redirect.js](styles/nitter-redirect.js)
+- [nitter-redirect.js](scripts/nitter-redirect.js)
