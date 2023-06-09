@@ -8,6 +8,9 @@ Feel free to use, modify, and share the files in this repository, but I won't be
 
 - [ios-filters.txt](ios-filters.txt)
   - A mobile-oriented filter list initially designed for Brave iOS.
+  - Blocks TikTok, Twitter, Instagram, Facebook, and a few other websites
+  - Removes unwanted stuff from YouTube (`m.youtube.com`), Old Reddit, Pixiv, Fandom, Wikipedia, Nitter, and several other websites
+  - Prevents the mobile Reddit website from loading (use `old.reddit.com` instead)
   - Currently, strict blocking and `$removeparam` rules do not work on Brave iOS at the moment.
 
 ### Installation
@@ -26,9 +29,10 @@ Feel free to use, modify, and share the files in this repository, but I won't be
 
 - [reddit.css](styles/reddit.css)
   - Includes fixes for a few subreddits on Old Reddit
-  - Removes bloat from images on i.redd.it
+  - Fixes i.redd.it
 
 - [youtube.css](styles/youtube.css)
+ 
 
 ### Installation via Stylus
 1. Install the [Stylus](https://github.com/openstyles/stylus) extension on your browser
@@ -43,3 +47,4 @@ Feel free to use, modify, and share the files in this repository, but I won't be
 
 ## Userscripts
 - [nitter-redirect.js](scripts/nitter-redirect.js)
+  -  Redirects 
