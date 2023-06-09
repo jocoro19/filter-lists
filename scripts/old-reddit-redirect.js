@@ -10,6 +10,8 @@
 // @match       *://reddit.com/*
 // @match       *://www.reddit.com/*
 // @homepageURL https://github.com/jocoro19/filter-lists
+// @downloadURL https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/old-reddit-redirect.js
+// @updateURL   https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/old-reddit-redirect.js
 // ==/UserScript==
 
 if(location.href.indexOf('www.reddit.com/poll/') != -1 || location.href.indexOf('www.reddit.com/gallery/') != -1) {
