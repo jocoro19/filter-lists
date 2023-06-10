@@ -41,8 +41,8 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 
 ### Installation via Stylus
 1. Install the [Stylus](https://github.com/openstyles/stylus) extension on your browser
-2. Click on the extension icon, then the "Manage" button, then click on "Write New Style" (Leave "as Usercss" unchecked)
-3. Paste the contents of the userstyle into the editor
+2. Click on the extension icon, then the "Manage" button, then click on "Write New Style" (leave "as Usercss" unchecked)
+3. Paste the contents of the userstyle into the editor and save it
 
 ### Installation via `userContent.css` (Firefox only)
 1. Go to `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
