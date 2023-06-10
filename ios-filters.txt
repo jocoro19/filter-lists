@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filter List
-! Version: 2023-06-10.1
+! Version: 2023-06-10.2
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -86,6 +86,7 @@ i.redd.it##reddit-header-small
 ! Mobile YouTube cleanup
 m.youtube.com##ytm-related-chip-cloud-renderer
 m.youtube.com##.rich-grid-sticky-header
+m.youtube.com##ytm-rich-section-renderer
 m.youtube.com##ytm-cinematic-container-renderer
 m.youtube.com##.dialog-container cinematic-setting-component
 m.youtube.com##.icon-avatar_logged_out
