@@ -1,8 +1,8 @@
 # JHS Web Improvements (filter-lists)
 
-This repository contains adblocker filter lists, custom userstyles, and userscripts to improve your experience on the web.
+This repository contains adblocker filter lists, custom userstyles, and userscripts for an improved experience on the web.
 
-Feel free to use, modify, and share the files in this repository, but I won't be accepting any contributions at this time.
+Feel free to use, modify, and share the contents of this repository, but I won't be accepting any contributions at this time.
 
 ## Filter Lists
 
@@ -24,7 +24,7 @@ Feel free to use, modify, and share the files in this repository, but I won't be
       - [Brave iOS](https://brave.com/ios/) is free and has a decent built-in adblocker
     - Android:
       - uBlock Origin is avaliable for Firefox on Android
-2. Import the filter list into your adblocker of choice
+2. Import the filter list into your adblocker of choice (instructions vary between extensions)
 
 ## Userstyles
 
@@ -51,5 +51,10 @@ Feel free to use, modify, and share the files in this repository, but I won't be
 
 ## Userscripts
 - [nitter-redirect.js](scripts/nitter-redirect.js)
-  -  Redirects all Twitter URLs to [Nitter](https://github.com/zedeus/nitter), an alternative frontend for Twitter
+  - Redirects all Twitter URLs to [Nitter](https://github.com/zedeus/nitter), an alternative frontend for Twitter
 - [old-reddit-redirect.js](scripts/old-reddit-redirect.js)
+  - Redirects all Reddit URLs to Old Reddit, even when logged out
+
+### Installation
+1. Install a userscript manager extension such as [Violentmonkey](https://violentmonkey.github.io/) for Firefox/Chrome or [Userscripts](https://github.com/quoid/userscripts) for Safari
+2. Import the userscript in your extension of choice (instructions vary between extensions)
