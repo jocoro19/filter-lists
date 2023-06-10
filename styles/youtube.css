@@ -1,0 +1,89 @@
+@-moz-document url-prefix("https://www.youtube.com") {
+	/* Set maximum width for dislike button */
+	#segmented-dislike-button .cbox {
+		max-width: 80px !important;
+	}
+	
+	/* Remove whitespace and add more columns to home and subscriptions page */
+	ytd-rich-grid-row, #contents.ytd-rich-grid-row {
+		display: contents !important;
+	}
+	:is([page-subtype="home"],[page-subtype="subscriptions"]) #contents.ytd-rich-grid-renderer {
+		justify-content: center !important;
+		width: calc(100% - (var(--ytd-rich-grid-items-per-row) + 1) * 24px) !important;
+		margin: auto !important;
+		padding: 0 !important;
+	}
+	:is([page-subtype="home"],[page-subtype="subscriptions"]) ytd-rich-item-renderer {
+		width: calc(100% / (var(--ytd-rich-grid-items-per-row) + 1) - 16px) !important;
+		margin: 0 8px 32px !important;
+	}
+	:is([page-subtype="home"],[page-subtype="subscriptions"]) #content.ytd-rich-section-renderer {
+		max-width: unset !important;
+		margin: 0 8px !important;
+	}
+	:is([page-subtype="home"],[page-subtype="subscriptions"]) ytd-rich-grid-media {
+		max-width: unset !important;
+	}
+	[page-subtype="home"] #contents.ytd-rich-grid-renderer {
+		padding-top: 24px !important;
+	}
+	
+	/* Make font smaller on video titles and info on home and subscriptions page */
+	ytd-rich-item-renderer {
+		margin-bottom: 32px !important;
+	}
+	yt-formatted-string#video-title {
+		font-size: 1.4rem !important;
+		line-height: 2rem !important;
+	}
+	ytd-rich-grid-renderer #metadata * {
+		font-size: 1.2rem !important;
+		line-height: 1.8rem !important;
+	}
+	
+	/* Make channel info take up less space */
+	#channel-tagline {
+		display: none !important;
+	}
+	#channel-header-container {
+		padding-top: 0 !important;
+		margin: 0 !important;
+		max-width: none !important;
+	}
+	#channel-header-container > #avatar {
+		height: 80px !important;
+		width: 80px !important;
+		margin-bottom: 0 !important;
+	}
+	[page-subtype="channels"] #sponsor-button {
+		order: -1 !important;
+	}
+	[page-subtype="channels"] ytd-feed-filter-chip-bar-renderer {
+		margin-bottom: -8px !important;
+	}
+	
+	/* Prevent video description from expanding when being clicked on */
+	#description {
+		pointer-events: none !important;
+	}
+	#description :is(#expand, #collapse, #info, a) {
+		pointer-events: auto !important;
+	}
+	#description:hover {
+		background-color: var(--yt-spec-badge-chip-background) !important;
+	}
+	
+	/* Increase margin on SponsorBlock label */
+	.sponsorBlockCategoryPill {
+		margin-right: 6px !important;
+	}
+	
+	/* YouTube channel page [Latest][Popular] > [Latest][Most viewed] */
+	[page-subtype="channels"] iron-selector#chips > yt-chip-cloud-chip-renderer:nth-of-type(2) > #text {
+		visibility: hidden !important;
+	}
+	[page-subtype="channels"] iron-selector#chips > yt-chip-cloud-chip-renderer:nth-of-type(2) > #text::after {
+	content: "Most viewed" !important; visibility: visible !important; margin-left: -49.45px !important;
+	}
+}

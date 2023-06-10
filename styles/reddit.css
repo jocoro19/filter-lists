@@ -1,0 +1,65 @@
+/* Old Reddit subreddit fixes */
+@-moz-document url-prefix("https://old.reddit.com/r/dankmemes") {
+	:root {
+		scrollbar-color: #454a4d #202324 !important;
+	}
+	.dropdown.srdrop .selected {
+		color: white !important;
+	}
+	.content {
+		margin-top: 0 !important;
+	}
+	.md > h2 {
+		padding-left: 15px !important;
+		padding-right: 0 !important;
+	}
+	#sr-more-link {
+		background-color: black !important;
+	}
+}
+
+@-moz-document url-prefix("https://old.reddit.com/r/streetmoe") {
+	#header-img {
+		width: 100% !important;
+		object-fit: none !important;
+		object-position: 0 0 !important;
+		margin-right: 0 !important;
+	}
+}
+
+/* i.redd.it */
+@-moz-document url-prefix("https://i.redd.it") {
+	reddit-header-small, shreddit-async-loader {
+		display: none !important;
+	}
+	html[class] > body {
+		width: unset !important;
+		height: unset !important;
+		position: absolute !important;
+		inset: 0 !important;
+		margin: 0 !important;
+		display: flex !important;
+		align-items: center !important;
+	}
+	shreddit-app, .cdn-media-page, main, article, faceplate-tracker, zoomable-img {
+		display: contents !important;
+	}
+	zoomable-img > img {
+		width: unset !important;
+		min-width: unset !important;
+		max-width: unset !important;
+		height: unset !important;
+		display: block !important;
+	}
+	zoomable-img > img.cursor-zoom-in {
+		max-height: 100vh !important;
+		object-fit: contain !important;
+		margin: 0 auto !important;
+		overflow: initial !important;
+	}
+	zoomable-img > img.cursor-zoom-out {
+		inset: 0 !important;
+		margin: auto !important;
+		overflow: initial !important;
+	}
+}
