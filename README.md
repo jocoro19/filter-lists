@@ -51,4 +51,5 @@ Feel free to use, modify, and share the files in this repository, but I won't be
 
 ## Userscripts
 - [nitter-redirect.js](scripts/nitter-redirect.js)
-  -  Redirects all Twitter URLs to [Nitter](https://github.com/zedeus/nitter), an alternative frontend to Twitter
+  -  Redirects all Twitter URLs to [Nitter](https://github.com/zedeus/nitter), an alternative frontend for Twitter
+- [old-reddit-redirect.js](scripts/old-reddit-redirect.js)
