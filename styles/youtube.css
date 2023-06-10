@@ -10,8 +10,8 @@
 	}
 	:is([page-subtype="home"],[page-subtype="subscriptions"]) #contents.ytd-rich-grid-renderer {
 		justify-content: center !important;
-		width: calc(100% - 96px) !important;
-		margin: 0 48px !important;
+		width: calc(100% - (var(--ytd-rich-grid-items-per-row) + 1) * 24px) !important;
+		margin: auto !important;
 		padding: 0 !important;
 	}
 	:is([page-subtype="home"],[page-subtype="subscriptions"]) ytd-rich-item-renderer {
