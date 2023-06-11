@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filter List
-! Version: 2023-06-11.1
+! Version: 2023-06-11.2
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -42,6 +42,7 @@ twitter.com###ScriptLoadFailure, svg
 ||twitter.com^$removeparam=s
 
 ! Nitter
+||nitter.*/logo.png$image
 nitter.*,nitter.privacydev.net##.icon-bird, .icon-rss-feed, .nav-item > a[href^="https://liberapay.com/"], .verified-icon, [class*="unavailable"]
 nitter.*,nitter.privacydev.net##.timeline-item:has([href*="AIArt"],[href*="AIart"],[href*="aiart"],[href*="AIArtwork"],[href*="AIイラスト"],[href*="StableDiffusion"],[href*="stablediffusion"],[href*="Midjourney"],[href*="midjourney"])
 
@@ -77,7 +78,7 @@ reddit.com##button.c-btn-primary.c-btn[name="over18"][value="no"]
 reddit.com###header-img
 reddit.com##.side .md
 reddit.com##.side > .spacer:has(.login-form, .sidebox, .sidecontentbox)
-reddit.com###header-bottom-right > :is(.user, .separator)
+reddit.com##.user, .user + .separator
 reddit.com##body > :is([id="2x-container"], shreddit-app)
 ||redditstatic.com/mweb2x/*$script,domain=reddit.com
 ||redditstatic.com/*/top-button$script,domain=i.redd.it
