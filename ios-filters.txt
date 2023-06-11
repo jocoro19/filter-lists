@@ -18,6 +18,11 @@
 ! Cosmetic filtering fallback
 tiktok.com,douyin.com,facebook.com,instagram.com,messenger.com,whatsapp.com,meta.com,weibo.*,bilibili.*##body
 
+! #Save3rdPartyApps
+||reddit.com^$all
+*$domain=reddit.com
+reddit.com##^head,body
+
 ! Embed blocking
 ##.tiktok-embed
 ##.instagram-media
@@ -42,9 +47,32 @@ twitter.com###ScriptLoadFailure, svg
 ||twitter.com^$removeparam=s
 
 ! Nitter
-||nitter.*/logo.png$image
 nitter.*,nitter.privacydev.net##.icon-bird, .icon-rss-feed, .nav-item > a[href^="https://liberapay.com/"], .verified-icon, [class*="unavailable"]
 nitter.*,nitter.privacydev.net##.timeline-item:has([href*="AIArt"],[href*="AIart"],[href*="aiart"],[href*="AIArtwork"],[href*="AIイラスト"],[href*="StableDiffusion"],[href*="stablediffusion"],[href*="Midjourney"],[href*="midjourney"])
+
+! Mobile YouTube cleanup
+m.youtube.com##ytm-related-chip-cloud-renderer
+m.youtube.com##.rich-grid-sticky-header
+m.youtube.com##ytm-rich-section-renderer
+m.youtube.com##ytm-cinematic-container-renderer
+m.youtube.com##.dialog-container cinematic-setting-component
+m.youtube.com##.icon-avatar_logged_out
+m.youtube.com##.searchbox-voice-search-wrapper
+m.youtube.com##.media-item-endorsement-container
+m.youtube.com##ytm-paid-content-overlay-renderer
+m.youtube.com##ytm-compact-radio-renderer
+m.youtube.com##ytm-channel-tagline-renderer
+m.youtube.com##c3-toast:has(a[href="https://yt.be/help/dislike"])
+
+! Hide YouTube Shorts
+m.youtube.com##ytm-reel-shelf-renderer
+m.youtube.com##[role="tablist"] > a[href*="/shorts"]
+m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
+m.youtube.com##ytm-item-section-renderer:has([data-style="SHORTS"])
+
+! YouTube embeds
+youtube.com,youtube-nocookie.com#@#.ytp-title-channel
+youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
 
 ! Pixiv
 ||pixon.ads-pixiv.net^
@@ -84,30 +112,6 @@ reddit.com##body > :is([id="2x-container"], shreddit-app)
 ||redditstatic.com/*/top-button$script,domain=i.redd.it
 ||redditstatic.com/*/xpromo-bottom-bar$script,domain=i.redd.it
 i.redd.it##reddit-header-small
-
-! Mobile YouTube cleanup
-m.youtube.com##ytm-related-chip-cloud-renderer
-m.youtube.com##.rich-grid-sticky-header
-m.youtube.com##ytm-rich-section-renderer
-m.youtube.com##ytm-cinematic-container-renderer
-m.youtube.com##.dialog-container cinematic-setting-component
-m.youtube.com##.icon-avatar_logged_out
-m.youtube.com##.searchbox-voice-search-wrapper
-m.youtube.com##.media-item-endorsement-container
-m.youtube.com##ytm-paid-content-overlay-renderer
-m.youtube.com##ytm-compact-radio-renderer
-m.youtube.com##ytm-channel-tagline-renderer
-m.youtube.com##c3-toast:has(a[href="https://yt.be/help/dislike"])
-
-! Hide YouTube Shorts
-m.youtube.com##ytm-reel-shelf-renderer
-m.youtube.com##[role="tablist"] > a[href*="/shorts"]
-m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
-m.youtube.com##ytm-item-section-renderer:has([data-style="SHORTS"])
-
-! YouTube embeds
-youtube.com,youtube-nocookie.com#@#.ytp-title-channel
-youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
 
 ! Fandom
 fandom.com##.notifications-box
