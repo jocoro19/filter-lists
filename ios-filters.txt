@@ -21,7 +21,7 @@ tiktok.com,douyin.com,facebook.com,instagram.com,messenger.com,whatsapp.com,meta
 ! #Save3rdPartyApps
 ||reddit.com^$all
 *$domain=reddit.com
-reddit.com##^head,body
+reddit.com##head,body
 
 ! Embed blocking
 ##.tiktok-embed
