@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filter List
-! Version: 2023-06-11.3
+! Version: 2023-06-13.1
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -19,7 +19,7 @@
 tiktok.com,douyin.com,facebook.com,instagram.com,messenger.com,whatsapp.com,meta.com,weibo.*,bilibili.*##body
 
 ! #Save3rdPartyApps
-||reddit.com^$all
+||reddit.com^
 *$domain=reddit.com
 reddit.com##body
 
