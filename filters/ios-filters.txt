@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filter List
-! Version: 2023-06-13.1
+! Version: 2023-06-13.2
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -75,7 +75,7 @@ youtube.com,youtube-nocookie.com#@#.ytp-title-channel
 youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
 
 ! Pixiv
-||ads-pixiv.net^$third-party
+||pixon.ads-pixiv.net^
 pixiv.net###spa-contents:has(.v-tags > .bold.ai-generated) > * > *:not(header, #vue-search-modal)
 pixiv.net##.list-item:has([alt*="AI-"],[alt*="AI,"],[alt*=" AI "],[alt*="ai gen"])
 pixiv.net##.list-item:has(.ai-generated)
