@@ -7,6 +7,7 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 ## Filter Lists
 
 - [ios-filters.txt](filters/ios-filters.txt) (JHS iOS Filter List)
+  - [Raw link](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/ios-filters.txt)    
   - A mobile-oriented filter list initially designed for Brave iOS.
   - Blocks TikTok, Twitter, Meta (Instagram, Facebook, etc.), and some other websites
   - Removes unwanted stuff from the YouTube mobile website (`m.youtube.com`), including YouTube Shorts.
@@ -17,6 +18,7 @@ Feel free to use, modify, and share the contents of this repository, but I won't
   - Currently, strict blocking and `$removeparam` rules don't work on Brave iOS at the moment
 
 - [yt-filters.txt](filters/yt-filters.txt) (JHS Basic YouTube Filter List)
+  - [Raw link](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/yt-filters.txt)
   - Cleans up the YouTube website by hiding unnecessary things
   - Hides YouTRube shorts outside of the subscriptions page
   - Hides everything which isn't related to search results in the search page
