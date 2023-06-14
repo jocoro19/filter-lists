@@ -18,7 +18,7 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 
 - [yt-filters.txt](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/yt-filters.txt) (JHS Basic YouTube Filter List)
   - Cleans up the YouTube website by hiding unnecessary things
-  - Hides YouTRube shorts outside of the subscriptions page
+  - Hides YouTube shorts outside of the subscriptions page
   - Hides everything which isn't related to search results in the search page
 
 ### Installation
