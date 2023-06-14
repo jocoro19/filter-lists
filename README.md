@@ -6,14 +6,20 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 
 ## Filter Lists
 
-- [ios-filters.txt](ios-filters.txt)
+- [ios-filters.txt](filters/ios-filters.txt) (JHS iOS Filter List)
   - A mobile-oriented filter list initially designed for Brave iOS.
   - Blocks TikTok, Twitter, Meta (Instagram, Facebook, etc.), and some other websites
-  - Removes unwanted stuff from YouTube (`m.youtube.com`), including YouTube Shorts.
-  - Prevents the mobile Reddit website from loading (use `old.reddit.com` instead)
-  - Disables custom themes on Old Reddit, hides the sidebar and other unwanted stuff
+  - Removes unwanted stuff from the YouTube mobile website (`m.youtube.com`), including YouTube Shorts.
+  - ~~Prevents the mobile Reddit website from loading (use `old.reddit.com` instead)~~
+  - ~~Disables custom themes on Old Reddit, hides the sidebar and other unwanted stuff~~
+  - **Reddit is currently blocked to support the ongoing protests against Reddit's planned API changes**
   - Removes bloat and unwanted stuff from Pixiv, Fandom, Wikipedia, and some other websites
-  - Currently, strict blocking and `$removeparam` rules do not work on Brave iOS at the moment
+  - Currently, strict blocking and `$removeparam` rules don't work on Brave iOS at the moment
+
+- [yt-filters.txt](filers/yt-filters.txt) (JHS Basic YouTube Filter List)
+  - Cleans up the YouTube website by hiding unnecessary things
+  - Hides YouTRube shorts outside of the subscriptions page
+  - Hides everything which isn't related to search results in the search page
 
 ### Installation
 
@@ -38,6 +44,7 @@ Feel free to use, modify, and share the contents of this repository, but I won't
   - Removes the empty space when an ad or video is hidden on the homepage and subscription page
   - Makes the font size smaller for the video title and info on the homepage and subscription page
   - Makes the channel info section more compact
+  - Works best in conjunction with the JHS Basic YouTube Filter List mentioned above
 
 ### Installation via Stylus
 1. Install the [Stylus](https://github.com/openstyles/stylus) extension on your browser
