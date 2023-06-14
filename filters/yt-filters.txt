@@ -1,0 +1,46 @@
+[AdBlock Plus 2.0]
+! Title: JHS Basic YouTube Filter List
+! Version: 2023-06-13.1
+! Expires: 1 day
+! Homepage: https://github.com/jocoro19/filter-lists
+
+! Hide the buttons on top of homepage and video recommendations
+www.youtube.com##[page-subtype="home"] #header
+www.youtube.com##yt-related-chip-cloud-renderer
+
+! Hide "Search with your voice" button
+www.youtube.com###voice-search-button
+
+! Hide ambient mode from videos
+www.youtube.com###cinematics.ytd-watch-flexy
+
+! Hide YouTube premium download button (use yt-dlp instead)
+www.youtube.com##ytd-download-button-renderer
+
+! Hide bloat from YouTube search and homepage
+www.youtube.com##[page-subtype="home"] ytd-rich-section-renderer
+www.youtube.com##ytd-search ytd-item-section-renderer>#contents>:not(ytd-video-renderer,ytd-channel-renderer,yt-showing-results-for-renderer),ytd-secondary-search-container-renderer
+
+! Hide YouTube Shorts sidabar button
+www.youtube.com##ytd-guide-entry-renderer:has([title="Shorts"])
+www.youtube.com##ytd-mini-guide-entry-renderer[aria-label="Shorts"]
+
+! Hide YouTube Shorts in search results and recommendations
+www.youtube.com##ytd-video-renderer:has(a[href^="/shorts/"])
+www.youtube.com##ytd-grid-video-renderer:has(a[href^="/shorts/"])
+
+! Hide "[channel] viewers also watch this channel"
+www.youtube.com###video-preview #endorsement
+
+! Hide "Includes paid promotion"
+youtube.com,youtube-nocookie.com##.ytp-paid-content-overlay
+
+! Hide "Context" section
+www.youtube.com###clarify-box
+youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
+
+! Unhide channel icon in embeds
+youtube.com,youtube-nocookie.com#@#.ytp-title-channel
+
+! Hide empty layout above the loading icon
+www.youtube.com###ghost-cards
