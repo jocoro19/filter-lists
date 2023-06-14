@@ -6,8 +6,7 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 
 ## Filter Lists
 
-- [ios-filters.txt](filters/ios-filters.txt) (JHS iOS Filter List)
-  - [Raw link](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/ios-filters.txt)    
+- [ios-filters.txt](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/ios-filters.txt) (JHS iOS Filter List)    
   - A mobile-oriented filter list initially designed for Brave iOS.
   - Blocks TikTok, Twitter, Meta (Instagram, Facebook, etc.), and some other websites
   - Removes unwanted stuff from the YouTube mobile website (`m.youtube.com`), including YouTube Shorts.
@@ -17,8 +16,7 @@ Feel free to use, modify, and share the contents of this repository, but I won't
   - Removes bloat and unwanted stuff from Pixiv, Fandom, Wikipedia, and some other websites
   - Currently, strict blocking and `$removeparam` rules don't work on Brave iOS at the moment
 
-- [yt-filters.txt](filters/yt-filters.txt) (JHS Basic YouTube Filter List)
-  - [Raw link](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/yt-filters.txt)
+- [yt-filters.txt](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/yt-filters.txt) (JHS Basic YouTube Filter List)
   - Cleans up the YouTube website by hiding unnecessary things
   - Hides YouTRube shorts outside of the subscriptions page
   - Hides everything which isn't related to search results in the search page
@@ -37,11 +35,11 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 
 ## Userstyles
 
-- [reddit.css](styles/reddit.css)
+- [reddit.css](https://raw.githubusercontent.com/jocoro19/filter-lists/main/styles/reddit.css)
   - Includes fixes for a few subreddits on Old Reddit
   - Fixes i.redd.it
 
-- [youtube.css](styles/youtube.css)
+- [youtube.css](https://raw.githubusercontent.com/jocoro19/filter-lists/main/styles/youtube.css)
   - Adds an video per row on the homepage and subscription page
   - Removes the empty space when an ad or video is hidden on the homepage and subscription page
   - Makes the font size smaller for the video title and info on the homepage and subscription page
@@ -60,9 +58,9 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 4. Paste the contents of the userstyle into `userContent.css` and restart Firefox
 
 ## Userscripts
-- [nitter-redirect.js](scripts/nitter-redirect.js)
+- [nitter-redirect.js](https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/nitter-redirect.js)
   - Redirects all Twitter URLs to [Nitter](https://github.com/zedeus/nitter), an alternative frontend for Twitter
-- [old-reddit-redirect.js](scripts/old-reddit-redirect.js)
+- [old-reddit-redirect.js](https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/old-reddit-redirect.js)
   - Redirects all Reddit URLs to Old Reddit, even when logged out
 
 ### Installation
