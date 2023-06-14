@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filter List
-! Version: 2023-06-13.1
+! Version: 2023-06-14.1
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -28,6 +28,7 @@ www.youtube.com##ytd-mini-guide-entry-renderer[aria-label="Shorts"]
 ! Hide YouTube Shorts in search results and recommendations
 www.youtube.com##ytd-video-renderer:has(a[href^="/shorts/"])
 www.youtube.com##ytd-grid-video-renderer:has(a[href^="/shorts/"])
+www.youtube.com##[page-subtype="trending"] ytd-item-section-renderer:has(ytd-reel-shelf-renderer)
 
 ! Hide "[channel] viewers also watch this channel"
 www.youtube.com###video-preview #endorsement
