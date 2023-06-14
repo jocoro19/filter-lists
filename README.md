@@ -16,7 +16,7 @@ Feel free to use, modify, and share the contents of this repository, but I won't
   - Removes bloat and unwanted stuff from Pixiv, Fandom, Wikipedia, and some other websites
   - Currently, strict blocking and `$removeparam` rules don't work on Brave iOS at the moment
 
-- [yt-filters.txt](filers/yt-filters.txt) (JHS Basic YouTube Filter List)
+- [yt-filters.txt](filters/yt-filters.txt) (JHS Basic YouTube Filter List)
   - Cleans up the YouTube website by hiding unnecessary things
   - Hides YouTRube shorts outside of the subscriptions page
   - Hides everything which isn't related to search results in the search page
