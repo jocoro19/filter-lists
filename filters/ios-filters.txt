@@ -75,7 +75,7 @@ youtube.com,youtube-nocookie.com#@#.ytp-title-channel
 youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
 
 ! Pixiv
-||pixon.ads-pixiv.net^
+||ads-pixiv.net^$third-party
 pixiv.net###spa-contents:has(.v-tags > .bold.ai-generated) > * > *:not(header, #vue-search-modal)
 pixiv.net##.list-item:has([alt*="AI-"],[alt*="AI,"],[alt*=" AI "],[alt*="ai gen"])
 pixiv.net##.list-item:has(.ai-generated)
