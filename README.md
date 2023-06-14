@@ -12,7 +12,7 @@ Feel free to use, modify, and share the contents of this repository, but I won't
   - Removes unwanted stuff from the YouTube mobile website (`m.youtube.com`), including YouTube Shorts.
   - ~~Prevents the mobile Reddit website from loading (use `old.reddit.com` instead)~~
   - ~~Disables custom themes on Old Reddit, hides the sidebar and other unwanted stuff~~
-  - **Reddit is currently blocked to support the ongoing protests against Reddit's planned API changes**
+  - **Reddit is currently blocked in support the ongoing protests against Reddit's planned API changes**
   - Removes bloat and unwanted stuff from Pixiv, Fandom, Wikipedia, and some other websites
   - Currently, strict blocking and `$removeparam` rules don't work on Brave iOS at the moment
 
