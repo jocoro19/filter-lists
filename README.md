@@ -13,7 +13,8 @@ Feel free to use, modify, and share the contents of this repository, but I won't
   - ~~Prevents the mobile Reddit website from loading (use `old.reddit.com` instead)~~
   - ~~Disables custom themes on Old Reddit, hides the sidebar and other unwanted stuff~~
   - **Reddit is currently blocked in support of the ongoing protests against Reddit's planned API changes**
-  - Removes bloat and unwanted stuff from Pixiv, Fandom, Wikipedia, and some other websites
+  - Hides features from Wikipedia that aren't useful for non-editors
+  - Removes bloat and unwanted stuff from Pixiv, Fandom, and some other websites
   - Currently, strict blocking and `$removeparam` rules don't work on Brave iOS at the moment
 
 - [yt-filters.txt](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/yt-filters.txt) (JHS Basic YouTube Filter List)
