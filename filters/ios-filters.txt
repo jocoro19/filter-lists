@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filter List
-! Version: 2023-06-13.2
+! Version: 2023-06-17.1
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -19,7 +19,6 @@
 tiktok.com,douyin.com,facebook.com,instagram.com,messenger.com,whatsapp.com,meta.com,weibo.*,bilibili.*##body
 
 ! #Save3rdPartyApps
-||reddit.com^
 *$domain=reddit.com
 reddit.com##body
 
@@ -48,7 +47,7 @@ twitter.com###ScriptLoadFailure, svg
 
 ! Nitter
 nitter.*,nitter.privacydev.net##.icon-bird, .icon-rss-feed, .nav-item > a[href^="https://liberapay.com/"], .verified-icon, [class*="unavailable"]
-nitter.*,nitter.privacydev.net##.timeline-item:has([href*="AIArt"],[href*="AIart"],[href*="aiart"],[href*="AIArtwork"],[href*="AIイラスト"],[href*="StableDiffusion"],[href*="stablediffusion"],[href*="Midjourney"],[href*="midjourney"])
+nitter.*,nitter.privacydev.net##.timeline-item:has([href*="AIArt"],[href*="AIart"],[href*="aiart"],[href*="AIArtwork"],[href*="AIイラスト"],[href*="AIgirl"],[href*="StableDiffusion"],[href*="stablediffusion"],[href*="Midjourney"],[href*="midjourney"])
 
 ! Mobile YouTube cleanup
 m.youtube.com##ytm-related-chip-cloud-renderer
