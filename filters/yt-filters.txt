@@ -39,7 +39,7 @@ www.youtube.com###video-preview #endorsement
 youtube.com,youtube-nocookie.com##.ytp-paid-content-overlay
 
 ! Hide "View products"
-youtube.com##ytp-suggested-action
+youtube.com##.ytp-suggested-action
 
 ! Hide the products section below the description
 youtube.com##ytd-merch-shelf-renderer
