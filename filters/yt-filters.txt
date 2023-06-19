@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filter List
-! Version: 2023-06-14.1
+! Version: 2023-06-19.1
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -12,7 +12,9 @@ www.youtube.com##yt-related-chip-cloud-renderer
 www.youtube.com###voice-search-button
 
 ! Hide ambient mode from videos
-www.youtube.com###cinematics.ytd-watch-flexy
+www.youtube.com###cinematics
+! Remove ambient mode from videos and remove the ambient mode toggle from video settings (uBlock Origin only)
+www.youtube.com###cinematics:remove()
 
 ! Hide YouTube premium download button (use yt-dlp instead)
 www.youtube.com##ytd-download-button-renderer
@@ -36,6 +38,13 @@ www.youtube.com###video-preview #endorsement
 ! Hide "Includes paid promotion"
 youtube.com,youtube-nocookie.com##.ytp-paid-content-overlay
 
+! Hide "View products"
+youtube.com##ytp-suggested-action
+
+! Hide the products section below the description
+youtube.com##ytd-merch-shelf-renderer
+youtube.com###ticket-shelf
+
 ! Hide "Context" section
 www.youtube.com###clarify-box
 youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
@@ -43,5 +52,5 @@ youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
 ! Unhide channel icon in embeds
 youtube.com,youtube-nocookie.com#@#.ytp-title-channel
 
-! Hide empty layout above the loading icon
+! Hide the empty layout which shows during loading
 www.youtube.com###ghost-cards
