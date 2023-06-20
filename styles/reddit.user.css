@@ -1,3 +1,13 @@
+/* ==UserStyle==
+@name        JHS Reddit Fixes
+@namespace   https://github.com/jocoro19
+@author      JoCoRo19
+@version     1.0
+@description Various fixes for Reddit
+@license     CC0
+@homepageURL https://github.com/jocoro19/filter-lists
+==/UserStyle== */
+
 /* Old Reddit subreddit fixes */
 @-moz-document url-prefix("https://old.reddit.com/r/dankmemes") {
 	:root {
