@@ -1,3 +1,13 @@
+/* ==UserStyle==
+@name        JHS YouTube Fixes
+@namespace   https://github.com/jocoro19
+@author      JoCoRo19
+@version     1.0
+@description Various fixes for YouTube
+@license     CC0
+@homepageURL https://github.com/jocoro19/filter-lists
+==/UserStyle== */
+
 @-moz-document url-prefix("https://www.youtube.com") {
 
 /* Set maximum width for dislike button */
