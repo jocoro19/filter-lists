@@ -1,23 +1,26 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filter List
-! Version: 2023-06-19.1
+! Version: 2023-06-21.1
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
-! Hide the buttons on top of homepage and video recommendations
+! Hide buttons to sort videos by topic on YouTube
 www.youtube.com##[page-subtype="home"] #header
 www.youtube.com##yt-related-chip-cloud-renderer
+www.youtube.com##ytd-compact-video-renderer:nth-of-type(1):style(margin-top: 0 !important;)
+www.youtube.com##ytd-search-header-renderer > #chip-bar
+www.youtube.com##ytd-search-header-renderer:style(height: unset !important; margin-bottom: -16px !important;)
 
 ! Hide "Search with your voice" button
 www.youtube.com###voice-search-button
 
 ! Hide ambient mode from videos
 www.youtube.com###cinematics
-! Remove ambient mode from videos and remove the ambient mode toggle from video settings (uBlock Origin only)
 www.youtube.com###cinematics:remove()
 
 ! Hide YouTube premium download button (use yt-dlp instead)
 www.youtube.com##ytd-download-button-renderer
+www.youtube.com##ytd-menu-service-item-download-renderer
 
 ! Hide bloat from YouTube search and homepage
 www.youtube.com##[page-subtype="home"] ytd-rich-section-renderer
@@ -32,6 +35,9 @@ www.youtube.com##ytd-video-renderer:has(a[href^="/shorts/"])
 www.youtube.com##ytd-grid-video-renderer:has(a[href^="/shorts/"])
 www.youtube.com##[page-subtype="trending"] ytd-item-section-renderer:has(ytd-reel-shelf-renderer)
 
+! Hide message that comments or chat is disabled
+www.youtube.com##:is(#comments, ytd-live-chat-frame):has(yt-formatted-string#message)
+
 ! Hide "[channel] viewers also watch this channel"
 www.youtube.com###video-preview #endorsement
 
@@ -41,9 +47,10 @@ youtube.com,youtube-nocookie.com##.ytp-paid-content-overlay
 ! Hide "View products"
 youtube.com##.ytp-suggested-action
 
-! Hide the products section below the description
-youtube.com##ytd-merch-shelf-renderer
-youtube.com###ticket-shelf
+! Hide sections below the description
+www.youtube.com##ytd-secondary-search-container-renderer
+www.youtube.com##ytd-merch-shelf-renderer
+www.youtube.com###ticket-shelf
 
 ! Hide "Context" section
 www.youtube.com###clarify-box
@@ -52,5 +59,9 @@ youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
 ! Unhide channel icon in embeds
 youtube.com,youtube-nocookie.com#@#.ytp-title-channel
 
-! Hide the empty layout which shows during loading
+! Hide YouTube logo in embeds
+youtube.com,youtube-nocookie.com##.ytp-impression-link
+youtube.com,youtube-nocookie.com##.ytp-watermark
+
+! Hide the empty layout displayed during loading
 www.youtube.com###ghost-cards
