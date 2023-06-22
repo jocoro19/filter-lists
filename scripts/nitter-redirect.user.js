@@ -11,8 +11,8 @@
 // @match       *://www.twitter.com/*
 // @match       *://mobile.twitter.com/*
 // @homepageURL https://github.com/jocoro19/filter-lists
-// @downloadURL https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/nitter-redirect.js
-// @updateURL   https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/nitter-redirect.js
+// @downloadURL https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/nitter-redirect.user.js
+// @updateURL   https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/nitter-redirect.user.js
 // ==/UserScript==
 
 let nitterInstance = "nitter.net";
