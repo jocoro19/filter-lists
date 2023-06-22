@@ -59,6 +59,7 @@ m.youtube.com##ytm-paid-content-overlay-renderer
 m.youtube.com##ytm-compact-radio-renderer
 m.youtube.com##ytm-channel-tagline-renderer
 m.youtube.com##c3-toast:has(a[href="https://yt.be/help/dislike"])
+m.youtube.com##ytm-rich-item-renderer:has(ytm-feed-nudge-renderer)
 
 ! Hide YouTube Shorts
 m.youtube.com##ytm-reel-shelf-renderer
