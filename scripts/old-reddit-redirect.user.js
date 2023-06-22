@@ -4,7 +4,7 @@
 // @author      JoCoRo19
 // @version     1.0
 // @description Redirect all reddit links to Old Reddit
-// @license     CCO
+// @license     CC0
 // @icon        https://www.redditstatic.com/desktop2x/img/favicon/apple-icon-180x180.png
 // @grant       none
 // @match       *://reddit.com/*
