@@ -10,9 +10,8 @@ Feel free to use, modify, and share the contents of this repository, but I won't
   - A mobile-oriented filter list initially designed for Brave iOS.
   - Blocks TikTok, Twitter, Meta (Instagram, Facebook, etc.), and some other websites
   - Removes unwanted stuff from the YouTube mobile website (`m.youtube.com`), including YouTube Shorts.
-  - ~~Prevents the mobile Reddit website from loading (use `old.reddit.com` instead)~~
-  - ~~Disables custom themes on Old Reddit, hides the sidebar and other unwanted stuff~~
-  - **Reddit is currently blocked in support of the ongoing protests against Reddit's planned API changes**
+  - Prevents the mobile Reddit website from loading (use `old.reddit.com` instead)
+  - Disables custom themes on Old Reddit, hides the sidebar and other unwanted stuff
   - Hides features from Wikipedia that aren't useful for non-editors
   - Removes bloat and unwanted stuff from Pixiv, Fandom, and some other websites
   - Currently, strict blocking and `$removeparam` rules don't work on Brave iOS at the moment
