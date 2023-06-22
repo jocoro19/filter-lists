@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filter List
-! Version: 2023-06-17.1
+! Version: 2023-06-21
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -49,7 +49,7 @@ twitter.com###ScriptLoadFailure, svg
 nitter.*,nitter.privacydev.net##.icon-bird, .icon-rss-feed, .nav-item > a[href^="https://liberapay.com/"], .verified-icon, [class*="unavailable"]
 nitter.*,nitter.privacydev.net##.timeline-item:has([href*="AIArt"],[href*="AIart"],[href*="aiart"],[href*="AIArtwork"],[href*="AIイラスト"],[href*="AIgirl"],[href*="StableDiffusion"],[href*="stablediffusion"],[href*="Midjourney"],[href*="midjourney"])
 
-! Mobile YouTube cleanup
+! Mobile YouTube
 m.youtube.com##ytm-related-chip-cloud-renderer
 m.youtube.com##.rich-grid-sticky-header
 m.youtube.com##ytm-rich-section-renderer
@@ -68,6 +68,7 @@ m.youtube.com##ytm-reel-shelf-renderer
 m.youtube.com##[role="tablist"] > a[href*="/shorts"]
 m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
 m.youtube.com##ytm-item-section-renderer:has([data-style="SHORTS"])
+m.youtube.com##ytm-rich-item-renderer:has([href^="/shorts/"])
 
 ! YouTube embeds
 youtube.com,youtube-nocookie.com#@#.ytp-title-channel
@@ -98,7 +99,7 @@ reddit.com##.commentsignupbar
 reddit.com##.reddit-infobar
 reddit.com##.locked-tagline
 reddit.com##.active.read-next
-reddit.com##..happening-now-wrap
+reddit.com##.happening-now-wrap
 reddit.com##.commentarea .stickied[data-author="AutoModerator"]
 reddit.com##button.c-btn-primary.c-btn[name="over18"][value="no"]
 ||thumbs.redditmedia.com^$css
@@ -126,17 +127,19 @@ fandom.com##.mobile-main-page__trending-articles
 fandom.com##.mobile-main-page__popular-categories
 
 ! Other
-pravda.com.ua##[class^="unit_top"]
-pravda.com.ua##[class^="top_options_club"]
-pravda.com.ua##.advtext_mob
+duckduckgo.com##.related-searches
+duckduckgo.com##.footer--mobile
 ||duckduckgo.com^$removeparam=t
 ||danbooru.donmai.us^$removeparam=q
 danbooru.donmai.us,e621.net##.hidden-posts-notice
 medibang.com##.asArtStreetTopNotice
 ||derpicdn.net/spns/*$image
+pravda.com.ua##[class^="unit_top"]
+pravda.com.ua##[class^="top_options_club"]
+pravda.com.ua##.advtext_mob
+www.theverge.com##.duet--media--embed:has(.tiktok-embed, .instagram-media)
 www.picuki.com##.sticky-bottom-ads-wrapper
 www.picuki.com##.admin-notice
 www.picnob.com##.be-1.similar
 www.picnob.com##.ah-box
 www.picnob.com##.foryou
-www.theverge.com##.duet--media--embed:has(.tiktok-embed, .instagram-media)
