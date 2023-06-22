@@ -65,4 +65,4 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 
 ### Installation
 1. Install a userscript manager extension such as [Violentmonkey](https://violentmonkey.github.io/) for Firefox/Chrome or [Userscripts](https://github.com/quoid/userscripts) for Safari
-2. Click on the link of the userstyle to import it into Stylus
+2. Click on the link of the userscript to import it into your userscript manager of choice
