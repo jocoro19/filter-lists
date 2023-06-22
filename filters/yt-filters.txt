@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filter List
-! Version: 2023-06-21.1
+! Version: 2023-06-21.2
 ! Expires: 1 day
 ! Homepage: https://github.com/jocoro19/filter-lists
 
@@ -61,6 +61,7 @@ youtube.com,youtube-nocookie.com#@#.ytp-title-channel
 
 ! Hide YouTube logo in embeds
 youtube.com,youtube-nocookie.com##.ytp-impression-link
+youtube.com,youtube-nocookie.com##.ytp-youtube-button
 youtube.com,youtube-nocookie.com##.ytp-watermark
 
 ! Hide the empty layout displayed during loading
