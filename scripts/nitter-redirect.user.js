@@ -4,7 +4,7 @@
 // @author      JoCoRo19
 // @version     1.0
 // @description Redirect Twitter links to a Nitter instance
-// @license     CCO
+// @license     CC0
 // @icon        https://nitter.net/apple-touch-icon.png
 // @grant       none
 // @match       *://twitter.com/*
