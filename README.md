@@ -49,8 +49,7 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 
 ### Installation via Stylus
 1. Install the [Stylus](https://github.com/openstyles/stylus) extension on your browser
-2. Click on the link for the style and Stylus should open
-3. Click "Install Style"
+2. Click on the link of the userstyle to import it into Stylus
 
 ### Installation via `userContent.css` (Firefox only)
 1. Go to `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
@@ -59,11 +58,11 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 4. Paste the contents of the userstyle into `userContent.css` and restart Firefox
 
 ## Userscripts
-- [nitter-redirect.js](https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/nitter-redirect.js)
+- Nitter Redirect ([nitter-redirect.user.js](https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/nitter-redirect.user.js))
   - Redirects all Twitter URLs to [Nitter](https://github.com/zedeus/nitter), an alternative frontend for Twitter
-- [old-reddit-redirect.js](https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/old-reddit-redirect.js)
+- Old Reddit Redirect ([old-reddit-redirect.user.js](https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/old-reddit-redirect.user.js))
   - Redirects all Reddit URLs to Old Reddit, even when logged out
 
 ### Installation
 1. Install a userscript manager extension such as [Violentmonkey](https://violentmonkey.github.io/) for Firefox/Chrome or [Userscripts](https://github.com/quoid/userscripts) for Safari
-2. Import the userscript in your extension of choice (instructions vary between extensions)
+2. Click on the link of the userstyle to import it into Stylus
