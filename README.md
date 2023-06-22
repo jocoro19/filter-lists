@@ -37,11 +37,11 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 ## Userstyles
 
 - JHS YouTube Fixes ([youtube.user.css](https://raw.githubusercontent.com/jocoro19/filter-lists/main/styles/youtube.user.css))
-  - Adds an video per row on the homepage and subscription page
+  - Adds an exta video per row on the homepage and subscription page
   - Removes the empty space when an ad or video is hidden on the homepage and subscription page
   - Makes the font size smaller for the video title and info on the homepage and subscription page
   - Makes the channel info section more compact
-  - Works best in conjunction with the JHS Basic YouTube Filter List mentioned above
+  - Works best in conjunction with the JHS YouTube Filter List mentioned above
 - JHS Reddit Fixes ([reddit.user.css](https://raw.githubusercontent.com/jocoro19/filter-lists/main/styles/reddit.user.css))
   - Includes fixes for a few subreddits on Old Reddit
   - Fixes i.redd.it
