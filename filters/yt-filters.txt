@@ -36,6 +36,10 @@ www.youtube.com##ytd-video-renderer:has(a[href^="/shorts/"])
 www.youtube.com##ytd-grid-video-renderer:has(a[href^="/shorts/"])
 www.youtube.com##[page-subtype="trending"] ytd-item-section-renderer:has(ytd-reel-shelf-renderer)
 
+! Hide mixes and movies in recommendations
+www.youtube.com##ytd-compact-radio-renderer
+www.youtube.com##ytd-compact-movie-renderer
+
 ! Hide message that comments or chat is disabled
 www.youtube.com##:is(#comments, ytd-live-chat-frame):has(yt-formatted-string#message)
 
