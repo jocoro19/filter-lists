@@ -38,7 +38,7 @@
 }
 
 /* i.redd.it */
-@-moz-document domain("https://i.redd.it"), domain("https://preview.redd.it") {
+@-moz-document domain("i.redd.it"), domain("preview.redd.it") {
 	reddit-header-small, shreddit-async-loader {
 		display: none !important;
 	}
