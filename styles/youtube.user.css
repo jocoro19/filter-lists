@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.1
+@version     1.2
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -87,14 +87,6 @@ ytd-rich-grid-renderer #metadata * {
 /* Increase margin on SponsorBlock label */
 .sponsorBlockCategoryPill {
     margin-right: 6px !important;
-}
-
-/* YouTube channel page [Latest][Popular] > [Latest][Most viewed] */
-[page-subtype="channels"] iron-selector#chips > yt-chip-cloud-chip-renderer:nth-of-type(2) > #text {
-    visibility: hidden !important;
-}
-[page-subtype="channels"] iron-selector#chips > yt-chip-cloud-chip-renderer:nth-of-type(2) > #text::after {
-content: "Most viewed" !important; visibility: visible !important; margin-left: -49.45px !important;
 }
 
 }
