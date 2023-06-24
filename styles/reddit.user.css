@@ -38,7 +38,7 @@
 }
 
 /* i.redd.it */
-@-moz-document url-prefix("https://i.redd.it") {
+@-moz-document url-prefix("https://i.redd.it"), url-prefix("https://preview.redd.it") {
 	reddit-header-small, shreddit-async-loader {
 		display: none !important;
 	}
