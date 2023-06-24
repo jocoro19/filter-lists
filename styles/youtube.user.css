@@ -8,7 +8,7 @@
 @homepageURL https://github.com/jocoro19/filter-lists
 ==/UserStyle== */
 
-@-moz-document domain("https://www.youtube.com") {
+@-moz-document domain("www.youtube.com") {
 
 /* Set maximum width for dislike button */
 #segmented-dislike-button .cbox {
