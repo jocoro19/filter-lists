@@ -27,7 +27,7 @@ Feel free to use, modify, and share the contents of this repository, but I won't
   * Hides everything which isn't related to search results in the search page
  
 * #### JHS YouTube Fixes (Filter list version) ([yt-css-filters.txt](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/yt-css-filters.txt))
-  * An implementation of the JHS YouTube Fixes userstyle (info below) in filter list syntax
+  * An implementation of the [JHS YouTube Fixes](#jhs-youtube-fixes) userstyle (info below) in filter list syntax
   * Includes the JHS Basic YouTube Filter List (uBlock only)
 
 ### Installation
