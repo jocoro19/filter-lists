@@ -1,9 +1,12 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (uBlock)
-! Version: 2023-06-25.1
+! Version: 2023-06-25.2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
+
+! Include JHS Basic YouTube Filter List
+!#include yt-filters.txt
 
 ! Hide YouTube Shorts in subscriptions page
 www.youtube.com##ytd-rich-item-renderer:has(a[href^="/shorts/"])
