@@ -21,15 +21,16 @@ Feel free to use, modify, and share the contents of this repository, but I won't
   * Removes bloat and unwanted stuff from Pixiv, Fandom, and some other websites
   * Currently, strict blocking and `$removeparam` rules don't work on Brave iOS at the moment
 
+* JHS Wikipedia Filter List ([wp-filters.txt](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/wp-filters.txt))
+  * Hides things on Wikipedia (both on desktop and on mobile) which aren't useful to non-editors
+
 * JHS Basic YouTube Filter List ([yt-filters.txt](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/yt-filters.txt))
   * Cleans up the YouTube website by hiding unnecessary things
   * Hides YouTube shorts outside of the subscriptions page
   * Hides everything which isn't related to search results in the search page
+  * Works best with the [JHS YouTube Fixes](https://raw.githubusercontent.com/jocoro19/filter-lists/main/styles/youtube.user.css) userstyle
+  * Included in the [filter list version](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/yt-css-filters.txt) of the JHS YouTube Fixes userstyle (uBlock Origin only)
  
-* JHS YouTube Fixes (Filter list version) ([yt-css-filters.txt](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/yt-css-filters.txt))
-  * An implementation of the JHS YouTube Fixes userstyle (info below) in filter list syntax
-  * Includes the JHS Basic YouTube Filter List (uBlock only)
-
 ### Installation
 
 1. Install an adblocker for your platform and browser
