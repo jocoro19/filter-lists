@@ -1,5 +1,5 @@
 [AdBlock Plus 2.0]
-! Title: JHS YouTube Fixes (uBlock)
+! Title: JHS YouTube Fixes (Filter list version)
 ! Version: 2023-06-25.2
 ! Expires: 1 days
 ! License: CC0-1.0
