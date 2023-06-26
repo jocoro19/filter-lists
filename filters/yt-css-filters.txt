@@ -1,0 +1,44 @@
+[AdBlock Plus 2.0]
+! Title: JHS YouTube Fixes (Filter list version)
+! Version: 2023-06-25.2
+! Expires: 1 days
+! License: CC0-1.0
+! Homepage: https://github.com/jocoro19/filter-lists
+
+! Include JHS Basic YouTube Filter List
+!#include yt-filters.txt
+
+! Hide YouTube Shorts in subscriptions page
+www.youtube.com##ytd-rich-item-renderer:has(a[href^="/shorts/"])
+
+! Remove whitespace and add more columns to home and subscriptions page
+www.youtube.com##[page-subtype="home"] ytd-rich-section-renderer
+www.youtube.com##ytd-rich-grid-row, #contents.ytd-rich-grid-row:style(display: contents !important;)
+www.youtube.com##ytd-browse:not([page-subtype="channels"]) #contents.ytd-rich-grid-renderer:style(justify-content: center !important; width: calc(100% - (var(--ytd-rich-grid-items-per-row) + 1) * 24px) !important; margin: auto !important;)
+www.youtube.com##ytd-browse:not([page-subtype="channels"]) ytd-rich-item-renderer:style(width: calc(100% / (var(--ytd-rich-grid-items-per-row) + 1) - 16px) !important; margin: 0 8px 32px !important;)
+www.youtube.com##ytd-browse:not([page-subtype="channels"]) #content.ytd-rich-section-renderer:style(max-width: unset !important; margin: 0 8px !important;)
+www.youtube.com##ytd-rich-grid-media:style(max-width: unset !important;)
+www.youtube.cocm##[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer:style(padding-top: 0 !important;)
+
+! Make font smaller on video titles and info on home and subscriptions page
+www.youtube.com##ytd-rich-item-renderer:style(margin-bottom: 32px !important;)
+www.youtube.com##yt-formatted-string#video-title:style(font-size: 1.4rem !important; line-height: 2rem !important;)
+www.youtube.com##ytd-rich-grid-renderer #metadata *:style(font-size: 1.2rem !important; line-height: 1.8rem !important;)
+
+! Make channel info take up less space */
+www.youtube.com###channel-tagline
+www.youtube.com###channel-header-container:style(padding-top: 0 !important; margin: 0 !important; max-width: none !important;)
+www.youtube.com###channel-header-container > #avatar:style(height: 80px !important; width: 80px !important; margin-bottom: 0 !important;)
+www.youtube.com##[page-subtype="channels"] #sponsor-button:style(order: -1 !important)
+www.youtube.com##[page-subtype="channels"] ytd-feed-filter-chip-bar-renderer:style(margin-bottom: -8px !important;)
+
+! Prevent video description from expanding when being clicked on */
+www.youtube.com###description:style(pointer-events: none !important;)
+www.youtube.com###description :is(#expand, #collapse, #info, a):style(pointer-events: auto !important;)
+www.youtube.com###description:hover:style(background-color: var(--yt-spec-badge-chip-background) !important;)
+
+! Set maximum width for dislike button
+#segmented-dislike-button .cbox:style(max-width: 80px !important;)  
+
+! Increase margin on SponsorBlock label */
+www.youtube.com##.sponsorBlockCategoryPill:style(margin-right: 6px !important;)
