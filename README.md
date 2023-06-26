@@ -22,16 +22,17 @@ Feel free to use, modify, and share the contents of this repository, but I won't
   * Removes bloat and unwanted stuff from Pixiv, Fandom, and some other websites
   * Currently, strict blocking and `$removeparam` rules don't work on Brave iOS at the moment
 
-* JHS Wikipedia Filters (wp-filters.txt)
-  * [Install](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2Fjocoro19%2Ffilter-lists%2Fmain%2Ffilters%2Fwp-filters.txt&title=JHS%20Wikipedia%20Filters) or [view raw](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/wp-filters.txt)
-  * Hides things on Wikipedia (both on desktop and on mobile) which aren't useful to non-editors
-
 * JHS Basic YouTube Filters (yt-filters.txt)
   * [Install](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2Fjocoro19%2Ffilter-lists%2Fmain%2Ffilters%2Fyt-filters.txt&title=JHS%20Basic%20FYouTube%20Filters) or [view raw](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/yt-filters.txt)
   * Cleans up the YouTube website by hiding unnecessary things
   * Hides YouTube shorts outside of the subscriptions page
   * Hides everything which isn't related to search results in the search page
   * Works best with the [JHS YouTube Fixes](https://raw.githubusercontent.com/jocoro19/filter-lists/main/styles/youtube.user.css) userstyle
+ 
+* JHS Wikipedia Filters (wp-filters.txt)
+  * [Install](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2Fjocoro19%2Ffilter-lists%2Fmain%2Ffilters%2Fwp-filters.txt&title=JHS%20Wikipedia%20Filters) or [view raw](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/wp-filters.txt)
+  * Hides things on Wikipedia (both on desktop and on mobile) which aren't useful to non-editors
+  * Makes Wikipedia full width by default
  
 ### Installation
 
