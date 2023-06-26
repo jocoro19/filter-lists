@@ -29,7 +29,6 @@ Feel free to use, modify, and share the contents of this repository, but I won't
   * Hides YouTube shorts outside of the subscriptions page
   * Hides everything which isn't related to search results in the search page
   * Works best with the [JHS YouTube Fixes](https://raw.githubusercontent.com/jocoro19/filter-lists/main/styles/youtube.user.css) userstyle
-  * Included in the [filter list version](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/yt-css-filters.txt) of the JHS YouTube Fixes userstyle (uBlock Origin only)
  
 ### Installation
 
