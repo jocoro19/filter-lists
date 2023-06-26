@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (Filter list version)
-! Version: 2023-06-25.2
+! Version: 2023-06-26.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -25,14 +25,14 @@ www.youtube.com##ytd-rich-item-renderer:style(margin-bottom: 32px !important;)
 www.youtube.com##yt-formatted-string#video-title:style(font-size: 1.4rem !important; line-height: 2rem !important;)
 www.youtube.com##ytd-rich-grid-renderer #metadata *:style(font-size: 1.2rem !important; line-height: 1.8rem !important;)
 
-! Make channel info take up less space */
+! Make channel info take up less space
 www.youtube.com###channel-tagline
 www.youtube.com###channel-header-container:style(padding-top: 0 !important; margin: 0 !important; max-width: none !important;)
 www.youtube.com###channel-header-container > #avatar:style(height: 80px !important; width: 80px !important; margin-bottom: 0 !important;)
 www.youtube.com##[page-subtype="channels"] #sponsor-button:style(order: -1 !important)
 www.youtube.com##[page-subtype="channels"] ytd-feed-filter-chip-bar-renderer:style(margin-bottom: -8px !important;)
 
-! Prevent video description from expanding when being clicked on */
+! Prevent video description from expanding when being clicked on
 www.youtube.com###description:style(pointer-events: none !important;)
 www.youtube.com###description :is(#expand, #collapse, #info, a):style(pointer-events: auto !important;)
 www.youtube.com###description:hover:style(background-color: var(--yt-spec-badge-chip-background) !important;)
@@ -40,5 +40,5 @@ www.youtube.com###description:hover:style(background-color: var(--yt-spec-badge-
 ! Set maximum width for dislike button
 #segmented-dislike-button .cbox:style(max-width: 80px !important;)  
 
-! Increase margin on SponsorBlock label */
+! Increase margin on SponsorBlock video title label */
 www.youtube.com##.sponsorBlockCategoryPill:style(margin-right: 6px !important;)
