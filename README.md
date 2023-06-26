@@ -47,13 +47,16 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 
 ## Userstyles
 
-* JHS YouTube Fixes ([youtube.user.css](https://raw.githubusercontent.com/jocoro19/filter-lists/main/styles/youtube.user.css))
+* JHS YouTube Fixes (youtube.user.css)
+  * [Install (UserCSS)](https://raw.githubusercontent.com/jocoro19/filter-lists/main/styles/youtube.user.css), [install (filter list)](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2Fjocoro19%2Ffilter-lists%2Fmain%2Ffilters%2Fyt-css-filters.txt&title=JHS%20Basic%20YouTube%20Fixes%20%28filter%20list%29) or [view raw (filter list)](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/yt-css-filters.txt)
   * Adds an exta video per row on the homepage and subscription page
   * Removes the empty space when an ad or video is hidden on the homepage and subscription page
   * Makes the font size smaller for the video title and info on the homepage and subscription page
   * Makes the channel info section more compact
-  * Works best in conjunction with the JHS Basic YouTube Filter List mentioned above
-* JHS Reddit Fixes ([reddit.user.css](https://raw.githubusercontent.com/jocoro19/filter-lists/main/styles/reddit.user.css))
+  * Works best in conjunction with the JHS Basic YouTube Filters mentioned above
+  * Filter list version includes the JHS Basic YouTube Filters (uBlock only)
+* JHS Reddit Fixes
+  * ([Install (UserCSS)](https://raw.githubusercontent.com/jocoro19/filter-lists/main/styles/reddit.user.css))
   * Includes fixes for a few subreddits on Old Reddit
   * Fixes i.redd.it
 
@@ -69,9 +72,11 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 4. Paste the contents of the userstyle into `userContent.css` and restart Firefox
 
 ## Userscripts
-* Nitter Redirect ([nitter-redirect.user.js](https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/nitter-redirect.user.js))
+* Nitter Redirect (nitter-redirect.user.js)
+  * [Install Userscript](https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/nitter-redirect.user.js)
   * Redirects all Twitter URLs to [Nitter](https://github.com/zedeus/nitter), an alternative frontend for Twitter
-* Old Reddit Redirect ([old-reddit-redirect.user.js](https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/old-reddit-redirect.user.js))
+* Old Reddit Redirect (old-reddit-redirect.user.js)
+  * [Install Userscript](https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/old-reddit-redirect.user.js)
   * Redirects all Reddit URLs to Old Reddit, even when logged out
 
 ### Installation
