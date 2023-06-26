@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
-! Title: JHS Basic YouTube Filter List
-! Version: 2023-06-25.1
+! Title: JHS Basic YouTube Filters
+! Version: 2023-06-26.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
