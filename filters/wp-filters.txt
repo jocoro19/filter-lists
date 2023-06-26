@@ -1,6 +1,23 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Wikipedia Filters
-! Version: 2023-06-25.1
+! Version: 2023-06-26.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
+
+! Hide the lock icon on protected articles
+wikipedia.org##[id^="mw-indicator-pp"]
+wikipedia.org##[id^="mw-indicator-protect"]
+
+! Hide "Edit" and "View source" buttons
+wikipedia.org###ca-edit
+wikipedia.org###ca-viewsource
+wikipedia.org###ca-current
+wikipedia.org###mw-fr-revisiontag
+wikipedia.org##.mw-editsection
+wikipedia.org##.mw-editsection-like
+
+! Make Wikipedia full width by default
+wikipedia.org##.vector-settings
+wikipedia.org##.mw-page-container, .mw-content-container, .vector-header-container:style(max-width: none !important; width: 100% !important;)
+wikipedia.org##.mw-body:style(grid-template-columns: minmax(0,1fr) min-content !important;)
