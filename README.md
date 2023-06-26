@@ -11,7 +11,8 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 
 ## Filter Lists
 
-* JHS iOS Filter List ([ios-filters.txt](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/ios-filters.txt))
+* JHS iOS Filter List (ios-filters.txt)
+  * [Install](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2Fjocoro19%2Ffilter-lists%2Fmain%2Ffilters%2Fios-filters.txt&title=JHS%20iOS%20Filter%20List) or [view raw](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/ios-filters.txt)
   * A mobile-oriented filter list initially designed for Brave iOS.
   * Blocks TikTok, Twitter, Meta (Instagram, Facebook, etc.), and some other websites
   * Removes unwanted stuff from the YouTube mobile website (`m.youtube.com`), including YouTube Shorts.
@@ -21,10 +22,12 @@ Feel free to use, modify, and share the contents of this repository, but I won't
   * Removes bloat and unwanted stuff from Pixiv, Fandom, and some other websites
   * Currently, strict blocking and `$removeparam` rules don't work on Brave iOS at the moment
 
-* JHS Wikipedia Filter List ([wp-filters.txt](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/wp-filters.txt))
+* JHS Wikipedia Filters (wp-filters.txt)
+  * [Install](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2Fjocoro19%2Ffilter-lists%2Fmain%2Ffilters%2Fwp-filters.txt&title=JHS%20Wikipedia%20Filters) or [view raw](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/wp-filters.txt)
   * Hides things on Wikipedia (both on desktop and on mobile) which aren't useful to non-editors
 
-* JHS Basic YouTube Filter List ([yt-filters.txt](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/yt-filters.txt))
+* JHS Basic YouTube Filters (yt-filters.txt)
+  * [Install](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2Fjocoro19%2Ffilter-lists%2Fmain%2Ffilters%2Fyt-filters.txt&title=JHS%20Basic%20FYouTube%20Filters) or [view raw](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/yt-filters.txt)
   * Cleans up the YouTube website by hiding unnecessary things
   * Hides YouTube shorts outside of the subscriptions page
   * Hides everything which isn't related to search results in the search page
@@ -40,7 +43,7 @@ Feel free to use, modify, and share the contents of this repository, but I won't
       * [Brave iOS](https://brave.com/ios/) is free and has a decent built-in adblocker
     * Android:
       * uBlock Origin is avaliable for Firefox on Android
-3. Import the filter list into your adblocker of choice (instructions vary between extensions)
+3. Click the install link for the filter list to import it (or click the "View raw" link if it doesn't work)
 
 ## Userstyles
 
