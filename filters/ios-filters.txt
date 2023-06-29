@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-06-27.1
+! Version: 2023-06-28.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -141,6 +141,7 @@ pravda.com.ua##[class^="top_options_club"]
 pravda.com.ua##.advtext_mob
 www.theverge.com##.duet--media--embed:has(.tiktok-embed, .instagram-media)
 www.theverge.com,simpleflying.com##.twitter-tweet:style(color: gray !important)
+flightradar24.com##.bottom-22
 ||danbooru.donmai.us^$removeparam=q
 danbooru.donmai.us,e621.net##.hidden-posts-notice
 medibang.com##.asArtStreetTopNotice
