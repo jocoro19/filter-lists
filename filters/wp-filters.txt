@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Wikipedia Filters
-! Version: 2023-06-26.1
+! Version: 2023-06-29.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -16,6 +16,7 @@ wikipedia.org###ca-current
 wikipedia.org###mw-fr-revisiontag
 wikipedia.org##.mw-editsection
 wikipedia.org##.mw-editsection-like
+wikipedia.org###page-actions-edit
 
 ! Make Wikipedia full width by default
 wikipedia.org##.vector-settings
