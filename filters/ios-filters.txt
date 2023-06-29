@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-06-29.2
+! Version: 2023-06-29.3
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -146,6 +146,7 @@ flightradar24.com##span.bg-yellow-600
 flightradar24.com##.bottom-menu:style(margin-bottom: 1.6rem !important)
 flightradar24.com###map_canvas img[alt="Google"]
 flightradar24.com###map_canvas .gmnoprint
+github.com##.navigation-focus:style(background-color: inherit !important;)
 ||danbooru.donmai.us^$removeparam=q
 danbooru.donmai.us,e621.net##.hidden-posts-notice
 medibang.com##.asArtStreetTopNotice
