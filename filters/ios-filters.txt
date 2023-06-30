@@ -26,7 +26,7 @@ tiktok.com,douyin.com,facebook.com,instagram.com,messenger.com,whatsapp.com,meta
 ! Disable generic filtering on local pages
 @@||10.0.0.95^$generichide
 
-! Wikipedia cleanup
+! Wikipedia
 ||m.wikipedia.org/w/load.php?modules=skins.minerva.icons.wikimedia&image=edit
 ||m.wikipedia.org/w/load.php?modules=skins.minerva.icons.wikimedia&image=star
 wikipedia.org###page-actions-watch
@@ -34,6 +34,7 @@ wikipedia.org###page-actions-edit
 wikipedia.org##.mw-editsection
 wikipedia.org##.ambox 
 wikipedia.org###mw-data-after-content
+wikipedia.org##[x-apple-data-detectors="true"]:style(pointer-events: none !important; color: inherit !important;)
 
 ! Twitter blocking
 twitter.com###ScriptLoadFailure, svg
@@ -139,7 +140,7 @@ duckduckgo.com##.footer--mobile
 pravda.com.ua##[class^="unit_top"]
 pravda.com.ua##[class^="top_options_club"]
 pravda.com.ua##.advtext_mob
-www.theverge.com##.duet--media--embed:has(.tiktok-embed, .instagram-media)
+www.theverge.com##.duet--media--embed:style(min-height: unset !important;)
 www.theverge.com,simpleflying.com##.twitter-tweet:style(color: gray !important)
 flightradar24.com##.bottom-22
 flightradar24.com##span.bg-yellow-600
