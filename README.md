@@ -7,7 +7,6 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 ## Contents
 * [Filter Lists](#filter-lists)
 * [Userstyles](#userstyles)
-* [Userscripts](#userscripts)
 
 ## Filter Lists
 
@@ -71,15 +70,3 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 2. Go to `about:support` and click on the "Open Folder" button in the "Profile Folder" row
 3. Create a subfolder named `chrome` and create a file named `userContent.css` in that folder
 4. Paste the contents of the userstyle into `userContent.css` and restart Firefox
-
-## Userscripts
-* Nitter Redirect (nitter-redirect.user.js)
-  * [Install Userscript](https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/nitter-redirect.user.js)
-  * Redirects all Twitter URLs to [Nitter](https://github.com/zedeus/nitter), an alternative frontend for Twitter
-* Old Reddit Redirect (old-reddit-redirect.user.js)
-  * [Install Userscript](https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/old-reddit-redirect.user.js)
-  * Redirects all Reddit URLs to Old Reddit, even when logged out
-
-### Installation
-1. Install a userscript manager extension such as [Violentmonkey](https://violentmonkey.github.io/) for Firefox/Chrome or [Userscripts](https://github.com/quoid/userscripts) for Safari
-2. Click on the link of the userscript to import it into your userscript manager of choice
