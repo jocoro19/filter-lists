@@ -173,5 +173,5 @@ www.picuki.com##.admin-notice
 www.picnob.com##.be-1.similar
 www.picnob.com##.ah-box
 www.picnob.com##.foryou
-www.threads.net##*:has(> * > [href^="/download])
+www.threads.net##*:has(> * > [href^="/download"])
 www.threads.net##*:has(> * > * > [aria-label="Like"])
