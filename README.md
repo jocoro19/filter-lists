@@ -7,6 +7,7 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 ## Contents
 * [Filter Lists](#filter-lists)
 * [Userstyles](#userstyles)
+* [Userscripts](#userscripts)
 
 ## Filter Lists
 
@@ -70,3 +71,7 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 2. Go to `about:support` and click on the "Open Folder" button in the "Profile Folder" row
 3. Create a subfolder named `chrome` and create a file named `userContent.css` in that folder
 4. Paste the contents of the userstyle into `userContent.css` and restart Firefox
+
+## Userscripts
+
+TBD
