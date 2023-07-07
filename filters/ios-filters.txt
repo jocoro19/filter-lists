@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-07-04.4
+! Version: 2023-07-07.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -10,11 +10,11 @@
 ||douyin.com^
 ||facebook.com^
 ||instagram.com^
+||threads.net^$third-party
 ||messenger.com^
 ||whatsapp.com^
 ||meta.com^
-||weibo.*/$document
-||bilibili.*/$document
+*$domain=tiktok.com|douyin.com|facebook.com|instagram.com|messenger.com|whatsapp.com|meta.com
 
 ! Cosmetic filtering fallback
 tiktok.com,douyin.com,facebook.com,instagram.com,messenger.com,whatsapp.com,meta.com,weibo.*,bilibili.*##body
@@ -150,6 +150,9 @@ flightradar24.com##span.bg-yellow-600
 flightradar24.com##.bottom-menu:style(margin-bottom: 1.2rem !important)
 flightradar24.com###map_canvas img[alt="Google"]
 flightradar24.com###map_canvas .gmnoprint
+flightaware.com##.flightPagePremiumUpsell
+flightaware.com##.flightPagePromoMessage
+
 misskey.io##.xF6dY
 github.com##.navigation-focus:style(background-color: inherit !important;)
 developer.mozilla.org##a[href$="/ai-help/"]
@@ -170,3 +173,5 @@ www.picuki.com##.admin-notice
 www.picnob.com##.be-1.similar
 www.picnob.com##.ah-box
 www.picnob.com##.foryou
+www.threads.net##*:has(> * > [href^="/download])
+www.threads.net##*:has(> * > * > [aria-label="Like"])
