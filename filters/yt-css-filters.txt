@@ -38,7 +38,7 @@ www.youtube.com###description :is(#expand, #collapse, #info, a):style(pointer-ev
 www.youtube.com###description:hover:style(background-color: var(--yt-spec-badge-chip-background) !important;)
 
 ! Set maximum width for dislike button
-#segmented-dislike-button .cbox:style(max-width: 80px !important;)  
+www.youtube.com###segmented-dislike-button .cbox:style(max-width: 80px !important;)  
 
 ! Increase margin on SponsorBlock video title label */
 www.youtube.com##.sponsorBlockCategoryPill:style(margin-right: 6px !important;)
