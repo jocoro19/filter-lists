@@ -2,7 +2,7 @@
 @name        JHS Reddit Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.2
+@version     1.3
 @description Various fixes for Reddit
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -43,8 +43,8 @@
 		display: none !important;
 	}
 	html[class] > body {
-		width: unset !important;
-		height: unset !important;
+		width: 100% !important;
+		height: 100% !important;
 		position: absolute !important;
 		inset: 0 !important;
 		margin: 0 !important;
@@ -53,6 +53,7 @@
 	}
 	shreddit-app, .cdn-media-page, main, article, faceplate-tracker, zoomable-img {
 		display: contents !important;
+		visibility: visible !important;
 	}
 	zoomable-img > img {
 		width: unset !important;
@@ -60,16 +61,13 @@
 		max-width: unset !important;
 		height: unset !important;
 		display: block !important;
+		overflow: initial !important;
+		margin: auto !important;
+		inset: 0 !important;
 	}
 	zoomable-img > img.cursor-zoom-in {
 		max-height: 100vh !important;
 		object-fit: contain !important;
 		margin: 0 auto !important;
-		overflow: initial !important;
-	}
-	zoomable-img > img.cursor-zoom-out {
-		inset: 0 !important;
-		margin: auto !important;
-		overflow: initial !important;
 	}
 }
