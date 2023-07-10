@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 2023-06-29.1
+! Version: 2023-07-09.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
