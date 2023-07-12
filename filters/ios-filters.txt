@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-07-09.2
+! Version: 2023-07-12.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -150,6 +150,12 @@ pravda.com.ua##[class^="top_options_club"]
 pravda.com.ua##.advtext_mob
 www.theverge.com##.duet--media--embed:style(min-height: unset !important;)
 www.theverge.com,simpleflying.com##.twitter-tweet:style(color: gray !important)
+www.dexerto.com##div[id^="article"] > div.items-center:has(> div.flex > div.sticky > div[data-ad-unit-id])
+www.dexerto.com##[data-cy="Ad"]
+globalnews.ca##.c-adChoices
+nasaspaceflight.com##div[style^="text-align:"]
+developer.mozilla.org##a[href$="/ai-help/"]
+github.com##.navigation-focus:style(background-color: inherit !important;)
 flightradar24.com##.bottom-22
 flightradar24.com##span.bg-yellow-600
 flightradar24.com##.bottom-menu:style(margin-bottom: 1.2rem !important)
@@ -157,25 +163,22 @@ flightradar24.com###map_canvas img[alt="Google"]
 flightradar24.com###map_canvas .gmnoprint
 flightaware.com##.flightPagePremiumUpsell
 flightaware.com##.flightPagePromoMessage
-
-misskey.io##.xF6dY
-github.com##.navigation-focus:style(background-color: inherit !important;)
-developer.mozilla.org##a[href$="/ai-help/"]
-nasaspaceflight.com##div[style^="text-align:"]
 imgur.io##.App-topSidebar
 imgur.io##.PostButtons-container
 imgur.io##.Gallery-moreOnImgur
 imgur.io##div[style^="width: 100%"]
 imgur.io##.GalleryHandler-postContainer:not(:has(.Gallery-moreOnImgur))
-||danbooru.donmai.us^$removeparam=q
-danbooru.donmai.us,e621.net##.hidden-posts-notice
 medibang.com##.asArtStreetTopNotice
 medibang.com##div[class*="AdBlock"]
 medibang.com##.mdbnContestList__footerMenu
 ||derpicdn.net/spns/*$image
+||danbooru.donmai.us^$removeparam=q
+danbooru.donmai.us,e621.net##.hidden-posts-notice
+misskey.io##.xF6dY
 www.picuki.com##.sticky-bottom-ads-wrapper
 www.picuki.com##.admin-notice
-www.picnob.com##.be-1.similar
+www.picuki.com##[class*="promote"]
+www.picnob.com##.similar
 www.picnob.com##.ah-box
 www.picnob.com##.foryou
 www.threads.net##div:has(> div > [href^="/download"])
