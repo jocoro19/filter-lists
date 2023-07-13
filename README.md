@@ -25,7 +25,7 @@ Feel free to use, modify, and share the contents of this repository, but I won't
  
 * JHS iOS Filters (ios-filters.txt)
   * [Install](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2Fjocoro19%2Ffilter-lists%2Fmain%2Ffilters%2Fios-filters.txt&title=JHS%20iOS%20Filters) or [view raw](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/ios-filters.txt)
-  * A mobile-oriented filter list initially designed for Brave iOS.
+  * A mobile-oriented filter list initially designed for Brave on iOS.
   * Blocks TikTok, Twitter, Meta (Instagram, Facebook, etc.), and some other websites
   * Removes unwanted stuff from the YouTube mobile website (`m.youtube.com`), including YouTube Shorts.
   * Prevents the mobile Reddit website from loading (use `old.reddit.com` instead)
