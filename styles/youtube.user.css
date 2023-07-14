@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.3
+@version     1.4
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -10,16 +10,15 @@
 
 @-moz-document domain("www.youtube.com") {
 
-/* Remove whitespace and add more columns to home and subscriptions page */
+/* Remove whitespace and add an extra video per row to home and subscriptions page */
 ytd-rich-grid-row, #contents.ytd-rich-grid-row {
     display: contents !important;
 }
 ytd-browse:not([page-subtype="channels"]) #contents.ytd-rich-grid-renderer {
-    justify-content: center !important;
     width: calc(100% - (var(--ytd-rich-grid-items-per-row) + 1) * 24px) !important;
     margin: auto !important;
 }
-ytd-browse:not([page-subtype="channels"]) ytd-rich-item-renderer {
+ytd-browse:not([page-subtype="channels"]) ytd-rich-item-renderer:not([is-shelf-item]) {
     width: calc(100% / (var(--ytd-rich-grid-items-per-row) + 1) - 16px) !important;
     margin: 0 8px 32px !important;
 }
@@ -33,12 +32,12 @@ ytd-rich-grid-media {
 [page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer {
     padding-top: 0 !important;
 }
-
-/* Make font smaller on video titles and info on home and subscriptions page */
+    
+/* Make font smaller for video titles and info in home and subscriptions page */
 ytd-rich-item-renderer {
     margin-bottom: 32px !important;
 }
-yt-formatted-string#video-title {
+ytd-rich-grid-renderer #video-title {
     font-size: 1.4rem !important;
     line-height: 2rem !important;
 }
@@ -79,12 +78,12 @@ ytd-rich-grid-renderer #metadata * {
     background-color: var(--yt-spec-badge-chip-background) !important;
 }
 
-/* Set maximum width for dislike button */
+/* Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable) */
 #segmented-dislike-button .cbox {
     max-width: 80px !important;
 }
 
-/* Increase margin on SponsorBlock label */
+/* Increase margin on SponsorBlock video title label */
 .sponsorBlockCategoryPill {
     margin-right: 6px !important;
 }
