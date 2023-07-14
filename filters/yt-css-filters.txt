@@ -5,9 +5,6 @@
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
-! Include JHS Basic YouTube Filter List (uBlock only)
-!#include yt-filters.txt
-
 ! Hide YouTube Shorts in homepage and subscriptions page
 www.youtube.com##ytd-rich-item-renderer:has(a[href^="/shorts/"])
 
