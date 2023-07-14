@@ -55,7 +55,6 @@ Feel free to use, modify, and share the contents of this repository, but I won't
   * Makes the font size smaller for the video title and info on the homepage and subscription page
   * Makes the channel info section more compact
   * Works best in conjunction with the JHS Basic YouTube Filters mentioned above
-  * Filter list version includes the JHS Basic YouTube Filters (uBlock only)
 * JHS Reddit Fixes
   * [Install (UserCSS)](https://raw.githubusercontent.com/jocoro19/filter-lists/main/styles/reddit.user.css)
   * Includes fixes for a few subreddits on Old Reddit
