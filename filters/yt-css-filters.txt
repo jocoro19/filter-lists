@@ -13,6 +13,7 @@ www.youtube.com##ytd-rich-item-renderer:has(a[href^="/shorts/"])
 
 ! Remove whitespace and add more columns to home and subscriptions page
 www.youtube.com##[page-subtype="home"] ytd-rich-section-renderer
+www.youtube.com##[page-subtype="subscriptions"] ytd-rich-section-renderer:has(ytd-rich-shelf-renderer)
 www.youtube.com##ytd-rich-grid-row, #contents.ytd-rich-grid-row:style(display: contents !important;)
 www.youtube.com##ytd-browse:not([page-subtype="channels"]) #contents.ytd-rich-grid-renderer:style(justify-content: center !important; width: calc(100% - (var(--ytd-rich-grid-items-per-row) + 1) * 24px) !important; margin: auto !important;)
 www.youtube.com##ytd-browse:not([page-subtype="channels"]) ytd-rich-item-renderer:style(width: calc(100% / (var(--ytd-rich-grid-items-per-row) + 1) - 16px) !important; margin: 0 8px 32px !important;)
