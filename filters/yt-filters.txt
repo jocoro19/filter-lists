@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filters
-! Version: 2023-07-07.1
+! Version: 2023-07-14.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -21,9 +21,9 @@ www.youtube.com###cinematics:remove()
 www.youtube.com##ytd-download-button-renderer
 www.youtube.com##ytd-menu-service-item-download-renderer
 
-! Hide bloat from YouTube homepage and search
+! Hide bloat from YouTube homepage, subscriptions, and search
 www.youtube.com##ytd-rich-item-renderer:has(ytd-ad-slot-renderer)
-www.youtube.com##[page-subtype="home"] ytd-rich-section-renderer
+www.youtube.com##ytd-rich-grid-renderer ytd-rich-section-renderer:not(:first-child)
 www.youtube.com##ytd-search ytd-item-section-renderer>#contents>:not(ytd-video-renderer,ytd-channel-renderer,yt-showing-results-for-renderer),ytd-secondary-search-container-renderer
 
 ! Hide YouTube Shorts sidabar button
