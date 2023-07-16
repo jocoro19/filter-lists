@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filters
-! Version: 2023-07-14.1
+! Version: 2023-07-15.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -43,7 +43,7 @@ www.youtube.com##ytd-compact-movie-renderer
 www.youtube.com##:is(#comments, ytd-live-chat-frame):has(yt-formatted-string#message)
 
 ! Hide "[channel] viewers also watch this channel"
-www.youtube.com###video-preview #endorsement
+www.youtube.com##ytd-thumbnail-overlay-endorsement-renderer
 
 ! Hide "Includes paid promotion"
 youtube.com,youtube-nocookie.com##.ytp-paid-content-overlay
