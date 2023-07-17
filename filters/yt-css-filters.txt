@@ -1,12 +1,9 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 2023-07-14.2
+! Version: 2023-07-17.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
-
-! Hide YouTube Shorts in homepage and subscriptions page
-www.youtube.com##ytd-rich-item-renderer:has(a[href^="/shorts/"])
 
 ! Remove whitespace and add more columns to home and subscriptions page
 www.youtube.com##ytd-rich-grid-row, #contents.ytd-rich-grid-row:style(display: contents !important;)
