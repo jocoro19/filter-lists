@@ -50,16 +50,13 @@ Feel free to use, modify, and share the contents of this repository, but I won't
 
 * JHS YouTube Fixes (youtube.user.css)
   * [Install (UserCSS)](https://raw.githubusercontent.com/jocoro19/filter-lists/main/styles/youtube.user.css), [install (filter list)](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2Fjocoro19%2Ffilter-lists%2Fmain%2Ffilters%2Fyt-css-filters.txt&title=JHS%20Basic%20YouTube%20Fixes%20%28filter%20list%29) or [view raw (filter list)](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/yt-css-filters.txt)
-  * Adds an extra video per row on the homepage and subscription page if there is less than 5 videos per row by default
-  * Removes the empty space when an ad or video is hidden on the homepage and subscription page
-  * Makes the font size smaller for the video title and info on the homepage and subscription page
+  * Improves the layout of the homepage and subscriptions page in various ways
   * Makes the channel info section more compact
   * Works best in conjunction with the JHS Basic YouTube Filters mentioned above
 * JHS Reddit Fixes
   * [Install (UserCSS)](https://raw.githubusercontent.com/jocoro19/filter-lists/main/styles/reddit.user.css)
-  * Includes fixes for a few subreddits on Old Reddit
   * Fixes i.redd.it
-
+  * Includes fixes for a few subreddits on Old Reddit
 
 ### Installation via Stylus
 1. Install the [Stylus](https://github.com/openstyles/stylus) extension on your browser
