@@ -11,7 +11,7 @@ www.youtube.com##ytd-browse:not([page-subtype="channels"]) #contents.ytd-rich-gr
 www.youtube.com##ytd-browse:not([page-subtype="channels"]) ytd-rich-item-renderer:not([is-shelf-item]):style(width: calc(100% / max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) - 16px) !important; margin: 0 8px 32px !important;)
 www.youtube.com##ytd-browse:not([page-subtype="channels"]) #content.ytd-rich-section-renderer:style(max-width: unset !important; margin: 0 8px !important;)
 www.youtube.com##ytd-rich-grid-media:style(max-width: unset !important;)
-www.youtube.cocm##[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer:style(padding-top: 0 !important;)
+www.youtube.com##[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer:style(padding-top: 0 !important;)
 
 ! Make font smaller on video titles and info on home and subscriptions page
 www.youtube.com##ytd-rich-item-renderer:style(margin-bottom: 32px !important;)
