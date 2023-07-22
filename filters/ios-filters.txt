@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-07-19.3
+! Version: 2023-07-22.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -121,7 +121,7 @@ reddit.com###header-img
 reddit.com##.side .md
 reddit.com##.side > .spacer:has(.login-form, .sidebox, .sidecontentbox)
 reddit.com##.user, .user + .separator
-www.reddit.com,new.reddit.com##html.theme-beta > body
+reddit.com,~embed.reddit.com##html.theme-beta > body
 ||redditstatic.com/mweb2x/*$script,domain=reddit.com
 ||redditstatic.com/*/top-button$script,domain=i.redd.it|preview.redd.it
 ||redditstatic.com/*/faceplate$script,domain=i.redd.it|preview.redd.it
@@ -189,3 +189,6 @@ www.picnob.com##.ah-box
 www.picnob.com##.foryou
 www.threads.net##div:has(> div > [href^="/download"])
 www.threads.net##div:has(> div > div > [aria-label="Like"])
+
+! Temp fixes
+reddit.com##a.outbound[data-outbound-url]:style(display: initial !important;)
