@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-07-22.1
+! Version: 2023-07-23.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -25,6 +25,8 @@ tiktok.com,douyin.com,facebook.com,instagram.com,messenger.com,whatsapp.com,meta
 
 ! Disable generic filtering on local pages
 @@||10.0.0.95^$generichide
+
+!#if env_mobile
 
 ! Wikipedia
 ||m.wikipedia.org/w/load.php?modules=skins.minerva.icons.wikimedia&image=edit
@@ -85,8 +87,8 @@ m.youtube.com##ytm-media-item:has([data-style="SHORTS"])
 m.youtube.com##ytm-rich-item-renderer:has([href^="/shorts/"])
 
 ! YouTube embeds
-youtube.com,youtube-nocookie.com#@#.ytp-title-channel
 youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
+youtube.com,youtube-nocookie.com##.ytp-title-channel:style(display: initial !important;)
 
 ! Pixiv
 ||ads-pixiv.net^$third-party
@@ -192,3 +194,5 @@ www.threads.net##div:has(> div > div > [aria-label="Like"])
 
 ! Temp fixes
 reddit.com##a.outbound[data-outbound-url]:style(display: initial !important;)
+
+!#endif
