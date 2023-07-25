@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filters
-! Version: 2023-07-24.1
+! Version: 2023-07-25.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -10,7 +10,7 @@ www.youtube.com##[page-subtype="home"] #header
 www.youtube.com##yt-related-chip-cloud-renderer
 www.youtube.com##ytd-compact-video-renderer:nth-of-type(1):style(margin-top: 0 !important;)
 www.youtube.com##ytd-search-header-renderer > :not(#filter-button)
-www.youtube.com##ytd-search-header-renderer:style(justify-content: right !important; height: unset !important;)
+www.youtube.com##ytd-search-header-renderer:style(justify-content: right !important; height: unset !important; max-width: 1096px !important; margin: auto !important;)
 
 ! Hide "Search with your voice" button
 www.youtube.com###voice-search-button
