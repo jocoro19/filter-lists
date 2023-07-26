@@ -23,6 +23,13 @@ Feel free to use, modify, and share the contents of this repository, but I won't
   * Hides things on Wikipedia (both on desktop and on mobile) which aren't useful to non-editors
   * Makes Wikipedia full width by default
  
+* JHS Miscellaneous Filters (misc-filters.txt)
+  * [Install](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2Fjocoro19%2Ffilter-lists%2Fmain%2Ffilters%2Fmisc-filters.txt&title=JHS%20Miscellaneous%20Filters) or [view raw](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/misc-filters.txt)
+  * Various other filters are placed inside this list
+  * Hides TikTok and Instagram embeds
+  * Prevents Twitter/X from loading
+  * Removes some annoyances on other websites
+ 
 * JHS iOS Filters (ios-filters.txt)
   * [Install](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2Fjocoro19%2Ffilter-lists%2Fmain%2Ffilters%2Fios-filters.txt&title=JHS%20iOS%20Filters) or [view raw](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/ios-filters.txt)
   * A mobile-oriented filter list initially designed for Brave on iOS
