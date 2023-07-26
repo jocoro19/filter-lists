@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-07-23.1
+! Version: 2023-07-26.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -38,12 +38,13 @@ wikipedia.org##.ambox
 wikipedia.org###mw-data-after-content
 wikipedia.org##[x-apple-data-detectors="true"]:style(pointer-events: none !important; color: inherit !important;)
 
-! Twitter blocking
-twitter.com###ScriptLoadFailure, svg
-||twimg.com^$script,domain=twitter.com
+! Twitter/X blocking
+twitter.com,x.com###ScriptLoadFailure, svg
+*$domain=twitter.com|x.com
 ||twitter.com^$third-party
-||twitter.com^$removeparam=t
-||twitter.com^$removeparam=s
+||x.com^$third-party
+*$removeparam=s,domain=twitter.com|x.com|nitter.*|nitter.privacydev.net
+*$removeparam=t,domain=twitter.com|x.com|nitter.*|nitter.privacydev.net
 
 ! Nitter
 nitter.*,nitter.privacydev.net##.icon-bird, .icon-rss-feed, .nav-item > a[href^="https://liberapay.com/"], .verified-icon, [class*="unavailable"]
