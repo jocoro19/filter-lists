@@ -1,1 +1,49 @@
+[AdBlock Plus 2.0]
+! Title: JHS Miscellaneous Filters
+! Version: 2023-07-26.1
+! Expires: 1 days
+! License: CC0-1.0
+! Homepage: https://github.com/jocoro19/filter-lists
 
+! Block/hide Instagram and TikTok embeds
+||tiktok.com^$third-party
+||instagram.com^$third-party
+||threads.net^$third-party
+##.tiktok-embed
+##.instagram-media
+
+! Twitter/X blocking
+twitter.com,x.com###body
+*$domain=twitter.com|x.com
+||twitter.com^$third-party
+||x.com^$third-party
+*$removeparam=s,domain=twitter.com|x.com
+*$removeparam=t,domain=twitter.com|x.com
+
+! Hide things on DuckDuckGo
+duckduckgo.com##.badge-link
+duckduckgo.com##.header--aside__item
+duckduckgo.com##.feedback-btn.btn
+duckduckgo.com##.related-searches
+duckduckgo.com##.js-text-promo
+||duckduckgo.com^$removeparam=t
+
+! Hide side panel in Google Drive, Google Docs, etc.
+docs.google.com##.docs-ui-unprintable.docs-explore-widget
+docs.google.com##.waffle-assistant-entry
+docs.google.com##.docs-companion-app-switcher-container
+drive.google.com##.oLzOxb
+
+! Fandom Annoyances
+fandom.com##.notifications-placeholder
+fandom.com###WikiaBar:has(.wikia-bar-anon)
+fandom.com###mixed-content-footer
+fandom.com###mw-data-after-content
+fandom.com##.page__right-rail
+fandom.com##.unified-search__layout__right-rail
+
+! Other
+misskey.io##.xF6dY
+danbooru.donmai.us##.hidden-posts-notice.fineprint
+||danbooru.donmai.us^$removeparam=q
+www.openstreetmap.org##.welcome.visible
