@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.5
+@version     1.6
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -10,7 +10,7 @@
 
 @-moz-document domain("www.youtube.com") {
 
-/* Remove whitespace and add an extra video per row to home and subscriptions page */
+/* Improve home and subscriptions page layout */
 ytd-rich-grid-row, #contents.ytd-rich-grid-row {
     display: contents !important;
 }
