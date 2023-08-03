@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Miscellaneous Filters
-! Version: 2023-07-26.1
+! Version: 2023-08-03.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -35,6 +35,8 @@ docs.google.com##.docs-companion-app-switcher-container
 drive.google.com##.oLzOxb
 
 ! Fandom Annoyances
+||services.fandom.com/icbm/api/loader$script
+fandom.com###highlight__main-container
 fandom.com##.notifications-placeholder
 fandom.com###WikiaBar:has(.wikia-bar-anon)
 fandom.com###mixed-content-footer
