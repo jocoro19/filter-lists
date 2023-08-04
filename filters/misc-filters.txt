@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Miscellaneous Filters
-! Version: 2023-08-03.1
+! Version: 2023-08-04.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -33,6 +33,12 @@ docs.google.com##.docs-ui-unprintable.docs-explore-widget
 docs.google.com##.waffle-assistant-entry
 docs.google.com##.docs-companion-app-switcher-container
 drive.google.com##.oLzOxb
+
+! Twitch Annoyances
+www.twitch.tv###twilight-sticky-footer-root
+www.twitch.tv###channel-player-disclosures
+www.twitch.tv##.extensions-dock__layout
+www.twitch.tv##.prime-offers
 
 ! Fandom Annoyances
 ||services.fandom.com/icbm/api/loader$script
