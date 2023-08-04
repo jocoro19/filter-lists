@@ -2,14 +2,14 @@
 @name        JHS Reddit Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.5
+@version     1.6
 @description Various fixes for Reddit
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
 ==/UserStyle== */
 
 /* i.redd.it */
-@-moz-document domain("i.redd.it"), domain("preview.redd.it") {
+@-moz-document domain("i.redd.it"), domain("preview.redd.it"), domain("external-preview.redd.it") {
 	reddit-header-small, shreddit-async-loader, post-bottom-bar, .cdn-media-page > div {
 		display: none !important;
 	}
