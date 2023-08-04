@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.6
+@version     1.7
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -71,7 +71,7 @@ ytd-rich-grid-renderer #metadata * {
 #description {
     pointer-events: none !important;
 }
-#description :is(#expand, #collapse, #info, a) {
+#description :is(#expand, #collapse, #info, #info-container > div, a) {
     pointer-events: auto !important;
 }
 #description:hover {
