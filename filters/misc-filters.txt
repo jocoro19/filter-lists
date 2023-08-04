@@ -1,18 +1,19 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Miscellaneous Filters
-! Version: 2023-08-04.1
+! Version: 2023-08-04.2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
 ! Block/hide Instagram and TikTok embeds
 ||tiktok.com^$third-party
+||facebook.com$^third-party
 ||instagram.com^$third-party
 ||threads.net^$third-party
 ##.tiktok-embed
 ##.instagram-media
 
-! Twitter/X blocking
+! Twitter/X blocking (strict blocking is not used to allow for redirection)
 twitter.com,x.com###body
 *$domain=twitter.com|x.com
 ||twitter.com^$third-party
