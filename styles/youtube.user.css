@@ -2,35 +2,17 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.7
+@version     1.8
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
 ==/UserStyle== */
 
 @-moz-document domain("www.youtube.com") {
-
-/* Improve home and subscriptions page layout */
-ytd-rich-grid-row, #contents.ytd-rich-grid-row {
-    display: contents !important;
-}
-ytd-browse:not([page-subtype="channels"]) #contents.ytd-rich-grid-renderer {
-    width: calc(100% - max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) * 24px) !important;
-    margin: auto !important;
-}
-ytd-browse:not([page-subtype="channels"]) ytd-rich-item-renderer:not([is-shelf-item]) {
-    width: calc(100% / max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) - 16px) !important;
-    margin: 0 8px 32px !important;
-}
-ytd-browse:not([page-subtype="channels"]) #content.ytd-rich-section-renderer {
-    max-width: unset !important;
-    margin: 0 8px !important;
-}
-ytd-rich-grid-media {
-    max-width: unset !important;
-}
-[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer {
-    padding-top: 0 !important;
+    
+/* Variables */
+:root {
+    --yt-css-width: calc(100% - max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) * 24px);
 }
     
 /* Make font smaller for video titles and info in home and subscriptions page */
@@ -46,25 +28,69 @@ ytd-rich-grid-renderer #metadata * {
     line-height: 1.8rem !important;
 }
 
-/* Make channel info take up less space */
-#channel-tagline {
-    display: none !important;
+/* Improve home and subscriptions page layout */
+ytd-rich-grid-row, #contents.ytd-rich-grid-row {
+    display: contents !important;
+}
+ytd-browse:not([page-subtype="channels"]) #contents.ytd-rich-grid-renderer {
+    width: var(--yt-css-width) !important;
+    margin: auto !important;
+}
+ytd-browse:not([page-subtype="channels"]) ytd-rich-item-renderer:not([is-slim-media]) {
+    width: calc(100% / max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) - 16px) !important;
+    margin: 0 8px 32px !important;
+}
+ytd-browse:not([page-subtype="channels"]) #content.ytd-rich-section-renderer {
+    max-width: unset !important;
+    margin: 0 8px !important;
+}
+ytd-rich-grid-media {
+    max-width: unset !important;
+}
+[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer {
+    padding-top: 0 !important;
+}
+
+/* Improve channel page layout */
+#channel-header {
+    padding-left: unset !important;
+    padding-right: unset !important;
 }
 #channel-header-container {
+    width: calc(var(--yt-css-width) - 16px) !important;
+    max-width: unset !important;
     padding-top: 0 !important;
-    margin: 0 !important;
-    max-width: none !important;
+    margin: auto !important;
 }
 #channel-header-container > #avatar {
     height: 80px !important;
     width: 80px !important;
     margin-bottom: 0 !important;
 }
+#channel-tagline {
+    display: none !important;
+}
 [page-subtype="channels"] #sponsor-button {
     order: -1 !important;
 }
 [page-subtype="channels"] ytd-feed-filter-chip-bar-renderer {
     margin-bottom: -8px !important;
+}
+[page-subtype="channels"] tp-yt-paper-tabs {
+    margin-left: calc((100% - var(--yt-css-width)) / 2) !important;
+    margin-right: calc((100% - var(--yt-css-width)) / 2) !important;
+}
+[page-subtype="channels"] ytd-rich-grid-renderer > #header {
+    width: calc(var(--yt-css-width) - 16px) !important;
+    margin: auto !important;
+}
+[page-subtype="channels"] #contents.ytd-rich-grid-renderer {
+    width: var(--yt-css-width) !important;
+    margin: auto !important;
+}
+[page-subtype="channels"] ytd-rich-item-renderer:not([is-slim-media]) {
+    width: calc(100% / max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) - 16px) !important;
+    margin: 0 8px 32px !important;
 }
 
 /* Prevent video description from expanding when being clicked on */
