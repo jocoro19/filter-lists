@@ -15,7 +15,7 @@
     --yt-css-width: calc(100% - max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) * 24px);
 }
     
-/* Make font smaller for video titles and info in home and subscriptions page */
+/* Make font smaller for video titles and video information */
 ytd-rich-item-renderer {
     margin-bottom: 32px !important;
 }
