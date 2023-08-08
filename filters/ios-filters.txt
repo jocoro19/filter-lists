@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-08-06.1
+! Version: 2023-08-08.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -90,8 +90,13 @@ m.youtube.com##ytm-media-item:has([data-style="SHORTS"])
 m.youtube.com##ytm-rich-item-renderer:has([href^="/shorts/"])
 
 ! YouTube embeds
-youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
 youtube.com,youtube-nocookie.com##.ytp-title-channel:style(display: initial !important;)
+youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
+youtube.com,youtube-nocookie.com##.ytp-impression-link
+youtube.com,youtube-nocookie.com##.ytp-copylink-button
+youtube.com,youtube-nocookie.com##.ytp-overflow-button
+youtube.com,youtube-nocookie.com##.ytp-youtube-button
+youtube.com,youtube-nocookie.com##.ytp-watermark
 
 ! Pixiv
 ||ads-pixiv.net^$third-party
@@ -126,17 +131,12 @@ reddit.com###header-img
 reddit.com##.side .md
 reddit.com##.side > .spacer:has(.login-form, .sidebox, .sidecontentbox)
 reddit.com##.user, .user + .separator
-reddit.com,~embed.reddit.com##html.theme-beta > body
-||redditstatic.com/mweb2x/*$script,domain=reddit.com
-||redditstatic.com/shreddit/*$script,domain=reddit.com
-
-! i.redd.it
-||redditstatic.com/*/top-button$script,domain=i.redd.it|preview.redd.it
-||redditstatic.com/*/faceplate$script,domain=i.redd.it|preview.redd.it
-||redditstatic.com/*/xpromo$script,domain=i.redd.it|preview.redd.it
-i.redd.it,preview.redd.it##reddit-header-small
-i.redd.it,preview.redd.it##html[class] > body:style(width: 100% !important; height: 100% !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important;)
-i.redd.it,preview.redd.it##shreddit-app, .cdn-media-page, main, article, faceplate-tracker, zoomable-img:style(display: contents !important; visibility: visible !important;)
+reddit.com,~embed.reddit.com##html.theme-beta:not(:has(.cdn-media-page)) > body
+||redditstatic.com/shreddit$script
+@@||redditstatic.com/shreddit/*/shell$script
+reddit.com,redd.it##reddit-header-small
+reddit.com,redd.it##html.theme-beta > body:style(width: 100% !important; height: 100% !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important;)
+reddit.com,redd.it##shreddit-app, .cdn-media-page, main, article, faceplate-tracker, zoomable-img:style(display: contents !important; visibility: visible !important;)
 
 ! Fandom
 ||services.fandom.com/icbm/api/loader$script
