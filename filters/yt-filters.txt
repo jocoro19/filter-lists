@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filters
-! Version: 2023-08-02.1
+! Version: 2023-08-08.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -27,6 +27,9 @@ www.youtube.com##ytd-menu-service-item-download-renderer
 www.youtube.com##ytd-rich-item-renderer:has(ytd-ad-slot-renderer)
 www.youtube.com##ytd-rich-grid-renderer ytd-rich-section-renderer:not(:first-child)
 www.youtube.com##ytd-search ytd-item-section-renderer>#contents>:not(ytd-video-renderer,ytd-channel-renderer,yt-showing-results-for-renderer),ytd-secondary-search-container-renderer
+
+! Hide "More From YouTube" from sidebar
+www.youtube.com##ytd-guide-section-renderer.ytd-guide-renderer:nth-last-of-type(2)
 
 ! Hide YouTube Shorts sidabar button
 www.youtube.com##ytd-guide-entry-renderer:has([title="Shorts"])
