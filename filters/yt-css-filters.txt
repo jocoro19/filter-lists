@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 2023-08-08.1
+! Version: 2023-08-08.2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -22,16 +22,11 @@ www.youtube.com##ytd-rich-grid-media:style(max-width: unset !important;)
 www.youtube.com##[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer:style(padding-top: 0 !important;)
 
 ! Improve channel page layout
-www.youtube.com###channel-header:style(padding-left: unset !important; padding-right: unset !important;)
-www.youtube.com###channel-header-container:style(width: calc(var(--yt-css-width) - 16px) !important; max-width: unset !important; padding-top: 0 !important; margin: auto !important;)
+www.youtube.com###channel-header-container:style(max-width: unset !important; padding-top: 0 !important; margin: auto !important;)
 www.youtube.com###channel-header-container > #avatar:style(height: 80px !important; width: 80px !important; margin-bottom: 0 !important;)
 www.youtube.com###channel-tagline
 www.youtube.com##[page-subtype="channels"] #sponsor-button:style(order: -1 !important;)
 www.youtube.com##[page-subtype="channels"] ytd-feed-filter-chip-bar-renderer:style(margin-bottom: -8px !important;)
-www.youtube.com##[page-subtype="channels"] tp-yt-paper-tabs:style(margin-left: calc((100% - var(--yt-css-width)) / 2) !important; margin-right: calc((100% - var(--yt-css-width)) / 2) !important;)
-www.youtube.com##[page-subtype="channels"] ytd-rich-grid-renderer > #header:style(width: calc(var(--yt-css-width) - 16px) !important; margin: auto !important;)
-www.youtube.com##[page-subtype="channels"] #contents.ytd-rich-grid-renderer:style(width: var(--yt-css-width) !important; margin: auto !important;)
-www.youtube.com##[page-subtype="channels"] ytd-rich-item-renderer:not([is-slim-media]):style(width: calc(100% / max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) - 16px) !important; margin: 0 8px 32px !important;)
 
 ! Prevent video description from expanding when being clicked on
 www.youtube.com###description:style(pointer-events: none !important;)
