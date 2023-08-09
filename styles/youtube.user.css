@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.8
+@version     1.9
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -52,12 +52,7 @@ ytd-rich-grid-media {
 }
 
 /* Improve channel page layout */
-#channel-header {
-    padding-left: unset !important;
-    padding-right: unset !important;
-}
 #channel-header-container {
-    width: calc(var(--yt-css-width) - 16px) !important;
     max-width: unset !important;
     padding-top: 0 !important;
     margin: auto !important;
@@ -76,9 +71,23 @@ ytd-rich-grid-media {
 [page-subtype="channels"] ytd-feed-filter-chip-bar-renderer {
     margin-bottom: -8px !important;
 }
+/* Wide layout (disabled) 
+@supports selector(x:has(y)) {
+    
+#channel-header-container {
+    width: calc(var(--yt-css-width) - 16px) !important;
+}
+#channel-header {
+    padding-left: unset !important;
+    padding-right: unset !important;
+}
 [page-subtype="channels"] tp-yt-paper-tabs {
     margin-left: calc((100% - var(--yt-css-width)) / 2) !important;
     margin-right: calc((100% - var(--yt-css-width)) / 2) !important;
+}
+[page-subtype="channels"] ytd-two-column-browse-results-renderer:not(:has(ytd-item-section-renderer)) {
+    width: 100% !important;
+    max-width: unset !important;
 }
 [page-subtype="channels"] ytd-rich-grid-renderer > #header {
     width: calc(var(--yt-css-width) - 16px) !important;
@@ -92,6 +101,8 @@ ytd-rich-grid-media {
     width: calc(100% / max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) - 16px) !important;
     margin: 0 8px 32px !important;
 }
+
+} */
 
 /* Prevent video description from expanding when being clicked on */
 #description {
