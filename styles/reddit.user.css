@@ -2,7 +2,7 @@
 @name        JHS Reddit Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.8
+@version     1.9
 @description Various fixes for Reddit
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -14,8 +14,8 @@
 		display: none !important;
 	}
 	html[class] > body {
-		width: 100vw !important;
-		height: 100vh !important;
+		width: 100% !important;
+		height: 100% !important;
 		position: absolute !important;
 		inset: 0 !important;
 		margin: 0 !important;
