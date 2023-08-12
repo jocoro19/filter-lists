@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-08-11.1
+! Version: 2023-08-11.2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -60,6 +60,7 @@ m.youtube.com##.dialog-container cinematic-setting-component
 m.youtube.com##.icon-avatar_logged_out
 m.youtube.com##.searchbox-voice-search-wrapper
 m.youtube.com##.mobile-topbar-header-voice-search-button
+m.youtube.com##.searchbox-input-wrapper:style(margin-right: 12px !important;)
 m.youtube.com##.media-item-endorsement-container
 m.youtube.com##ytm-paid-content-overlay-renderer
 m.youtube.com##ytm-compact-radio-renderer
@@ -72,6 +73,7 @@ m.youtube.com##.ytm-autonav-bar
 m.youtube.com###related-chips-sentinel
 m.youtube.com##.related-chips-slot-wrapper:style(transform: none !important; -webkit-transform: none !important;)
 m.youtube.com##ytm-comments-simplebox-renderer, ytm-comments-entry-point-teaser-renderer
+m.youtube.com##ytm-comments-entry-point-header-renderer:style(padding-top: 8px !important; padding-bottom: 8px !important;)
 m.youtube.com##ytm-item-section-renderer:has(ad-slot-renderer)
 m.youtube.com##body > c3-overlay
 m.youtube.com##.ytm-bottom-sheet-overlay-container
@@ -133,9 +135,10 @@ reddit.com##.user, .user + .separator
 reddit.com,~embed.reddit.com##html.theme-beta:not(:has(.cdn-media-page)) > body
 ||redditstatic.com/shreddit$script
 @@||redditstatic.com/shreddit/*/shell$script
-reddit.com,redd.it##reddit-header-small
+reddit.com,redd.it##reddit-header-small, post-bottom-bar
 reddit.com,redd.it##html.theme-beta > body:style(width: 100% !important; height: 100% !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important;)
-reddit.com,redd.it##shreddit-app, .cdn-media-page, main, article, faceplate-tracker, zoomable-img:style(display: contents !important; visibility: visible !important;)
+reddit.com,redd.it##html.theme-beta :is(shreddit-app, .cdn-media-page, main, article, faceplate-tracker, zoomable-img):style(display: contents !important; visibility: visible !important;)
+reddit.com,redd.it##html.theme-beta faceplate-tracker img:style(max-width: 100% !important; max-height: 100% !important; margin: 0 !important;)
 
 ! Fandom
 ||services.fandom.com/icbm/api/loader$script
