@@ -26,8 +26,6 @@ tiktok.com,douyin.com,facebook.com,instagram.com,messenger.com,whatsapp.com,meta
 ! Disable generic filtering on local pages
 @@||10.0.0.95^$generichide
 
-!#if env_mobile
-
 ! Wikipedia
 ||m.wikipedia.org/w/load.php?modules=skins.minerva.icons.wikimedia&image=edit
 ||m.wikipedia.org/w/load.php?modules=skins.minerva.icons.wikimedia&image=star
@@ -200,6 +198,4 @@ www.picnob.com##.similar
 www.picnob.com##.ah-box
 www.picnob.com##.foryou
 www.threads.net##div:has(> div > [href^="/download"])
-www.threads.net##div:has(> div > div > [aria-label="Like"])
-
-!#endif
+www.threads.net##div:has(> div > div > [aria-label="Like"]
