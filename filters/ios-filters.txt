@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-08-12.1
+! Version: 2023-08-17.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -116,6 +116,7 @@ pixiv.net##[data-intersection-key="recommend-infinite-illust-grid-list-discovery
 pixiv.net##.pixpedia-lead-wire
 pixiv.net##div:has(> .pixpedia-works-navigation)
 pixiv.net##._gdpr-notify-header
+pixiv.net##+js(href-sanitizer, a[href^="/jump.php?url=http"], ?url)
 
 ! Reddit
 reddit.com##.mobile-web-redirect-bar
@@ -132,13 +133,19 @@ reddit.com###header-img
 reddit.com##.side .md
 reddit.com##.side > .spacer:has(.login-form, .sidebox, .sidecontentbox)
 reddit.com##.user, .user + .separator
+reddit.com##li.share
+reddit.com##._1GdKQyDUWvhTFBDr0FsAkj:style(visibility: hidden !important;)
+reddit.com##.Zo-DKBkkLRYQJrXWLL0uI
+reddit.com##._23h0-EcaBUorIHC-JZyh6J
+reddit.com##._1oQyIsiPHYt6nx7VOmd1sz:style(padding-left: 0 !important;)
+reddit.com##._2fiIRtMpITeCAzXc4cANKp:style(margin-left: 10px !important;)
 reddit.com,~embed.reddit.com##html.theme-beta:not(:has(.cdn-media-page)) > body
-||redditstatic.com/shreddit$script
+||redditstatic.com/shreddit$script,domain=~embed.reddit.com
 @@||redditstatic.com/shreddit/*/shell$script
-reddit.com,redd.it##reddit-header-small, post-bottom-bar
-reddit.com,redd.it##html.theme-beta > body:style(width: 100% !important; height: 100% !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important;)
-reddit.com,redd.it##html.theme-beta :is(shreddit-app, .cdn-media-page, main, article, faceplate-tracker, zoomable-img):style(display: contents !important; visibility: visible !important;)
-reddit.com,redd.it##html.theme-beta faceplate-tracker img:style(max-width: 100% !important; max-height: 100% !important; margin: 0 !important;)
+reddit.com,~embed.reddit.com,redd.it##reddit-header-small, post-bottom-bar
+reddit.com,~embed.reddit.com,redd.it##html.theme-beta > body:style(width: 100% !important; height: 100% !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important;)
+reddit.com,~embed.reddit.com,redd.it##html.theme-beta :is(shreddit-app, .cdn-media-page, main, article, faceplate-tracker, zoomable-img):style(display: contents !important; visibility: visible !important;)
+reddit.com,~embed.reddit.com,redd.it##html.theme-beta faceplate-tracker img:style(max-width: 100% !important; max-height: 100% !important; margin: 0 !important;)
 
 ! Fandom
 ||services.fandom.com/icbm/api/loader$script
@@ -158,14 +165,20 @@ fandom.com##.unified-search__layout__right-rail
 fandom.com##.top-results__item:has(.top-results__label)
 
 ! Other
+||improving.duckduckgo.com^
+||duckduckgo.com^$removeparam=t
 duckduckgo.com##.related-searches
 duckduckgo.com##.footer--mobile
-||duckduckgo.com^$removeparam=t
-www.theverge.com##.duet--media--embed:style(min-height: unset !important;)
 www.theverge.com,simpleflying.com##.twitter-tweet:style(color: gray !important)
+www.theverge.com##.duet--media--embed:style(min-height: unset !important;)
+www.theverge.com##div:has(> div > .duet--article--share-buttons)
+arstechnica.com##.ad_crown
 arstechnica.com##.instream-wrap
+arstechnica.com##.superscroll-ad
 www.dexerto.com##div[id^="article"] > div.items-center:has(> div.flex > div.sticky > div[data-ad-unit-id])
 www.dexerto.com##[data-cy="Ad"]
+www.dexerto.com##[data-cy="HomepageAdWrapper"]
+www.dexerto.com##[data-cy="Container"]:has(> div.col-span-full > div.flex > div.flex > div.top-0 > div[data-ad-unit-id])
 globalnews.ca##.c-adChoices
 pravda.com.ua##[class^="unit_top"]
 pravda.com.ua##[class^="top_options_club"]
