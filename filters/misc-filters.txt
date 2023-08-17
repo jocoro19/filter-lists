@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Miscellaneous Filters
-! Version: 2023-08-17.1
+! Version: 2023-08-17.2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -21,14 +21,15 @@ twitter.com,x.com###body
 *$removeparam=s,domain=twitter.com|x.com
 *$removeparam=t,domain=twitter.com|x.com
 
-! Hide things on DuckDuckGo
+! DuckDuckGo
+||improving.duckduckgo.com^
+||duckduckgo.com^$removeparam=t
 duckduckgo.com##.badge-link
 duckduckgo.com##.header--aside__item
 duckduckgo.com##.feedback-btn.btn
 duckduckgo.com##.related-searches
 duckduckgo.com##.js-text-promo
 duckduckgo.com##.footer
-||duckduckgo.com^$removeparam=t
 
 ! Hide side panel in Google Drive, Google Docs, etc.
 docs.google.com##.docs-ui-unprintable.docs-explore-widget
@@ -36,13 +37,13 @@ docs.google.com##.waffle-assistant-entry
 docs.google.com##.docs-companion-app-switcher-container
 drive.google.com##.oLzOxb
 
-! Twitch Annoyances
+! Twitch
 www.twitch.tv###twilight-sticky-footer-root
 www.twitch.tv###channel-player-disclosures
 www.twitch.tv##.extensions-dock__layout
 www.twitch.tv##.prime-offers
 
-! Fandom Annoyances
+! Fandom
 ||services.fandom.com/icbm/api/loader$script
 fandom.com###highlight__main-container
 fandom.com##.notifications-placeholder
