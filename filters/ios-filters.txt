@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-08-17.1
+! Version: 2023-08-18.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -98,6 +98,12 @@ youtube.com,youtube-nocookie.com##.ytp-copylink-button
 youtube.com,youtube-nocookie.com##.ytp-overflow-button
 youtube.com,youtube-nocookie.com##.ytp-youtube-button
 youtube.com,youtube-nocookie.com##.ytp-watermark
+youtube.com,youtube-nocookie.com##.ytp-paid-content-overlay
+youtube.com,youtube-noocokie.com##.annotation.iv-branding
+youtube.com,youtube-noocokie.com##.annotation.iv-promo
+youtube.com,youtube-noocokie.com##.iv-promo-video
+youtube.com,youtube-noocokie.com##.video-annotations
+youtube.com,youtube-noocokie.com##.ytp-cards-teaser
 
 ! Pixiv
 ||ads-pixiv.net^$third-party
@@ -126,14 +132,14 @@ reddit.com##.reddit-infobar
 reddit.com##.locked-tagline
 reddit.com##.active.read-next
 reddit.com##.happening-now-wrap
-reddit.com##.commentarea .stickied[data-author="AutoModerator"]
-reddit.com##button.c-btn-primary.c-btn[name="over18"][value="no"]
 ||thumbs.redditmedia.com^$css
 reddit.com###header-img
 reddit.com##.side .md
 reddit.com##.side > .spacer:has(.login-form, .sidebox, .sidecontentbox)
 reddit.com##.user, .user + .separator
 reddit.com##li.share
+reddit.com##.commentarea .stickied[data-author="AutoModerator"]
+reddit.com##button.c-btn-primary.c-btn[name="over18"][value="no"]
 reddit.com##._1GdKQyDUWvhTFBDr0FsAkj:style(visibility: hidden !important;)
 reddit.com##.Zo-DKBkkLRYQJrXWLL0uI
 reddit.com##._23h0-EcaBUorIHC-JZyh6J
@@ -175,10 +181,13 @@ www.theverge.com##div:has(> div > .duet--article--share-buttons)
 arstechnica.com##.ad_crown
 arstechnica.com##.instream-wrap
 arstechnica.com##.superscroll-ad
+www.dexerto.com##.adhesiveWrapper
 www.dexerto.com##div[id^="article"] > div.items-center:has(> div.flex > div.sticky > div[data-ad-unit-id])
 www.dexerto.com##[data-cy="Ad"]
 www.dexerto.com##[data-cy="HomepageAdWrapper"]
 www.dexerto.com##[data-cy="Container"]:has(> div.col-span-full > div.flex > div.flex > div.top-0 > div[data-ad-unit-id])
+www.dexerto.com##label.rounded-full
+www.dexerto.com##[data-cy="SignupWidget"]
 globalnews.ca##.c-adChoices
 pravda.com.ua##[class^="unit_top"]
 pravda.com.ua##[class^="top_options_club"]
