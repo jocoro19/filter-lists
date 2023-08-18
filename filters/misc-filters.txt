@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Miscellaneous Filters
-! Version: 2023-08-17.2
+! Version: 2023-08-17.3
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -58,3 +58,5 @@ misskey.io##.xF6dY
 danbooru.donmai.us##.hidden-posts-notice.fineprint
 ||danbooru.donmai.us^$removeparam=q
 www.openstreetmap.org##.welcome.visible
+wikimedia.org,wiktionary.org###siteNotice
+@@||commons.wikimedia.org^$generichide
