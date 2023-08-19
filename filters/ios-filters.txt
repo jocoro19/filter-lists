@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-08-18.3
+! Version: 2023-08-19.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -222,7 +222,7 @@ www.picuki.com##.sticky-bottom-ads-wrapper
 www.picuki.com##.admin-notice
 www.picuki.com##[class*="promote"]
 www.picnob.com##.similar
-www.picnob.com##.ah-box
+www.picnob.com##[class^="ah-box"]
 www.picnob.com##.foryou
 www.threads.net##div:has(> div > [href^="/download"])
 www.threads.net##div:has(> div > div > [aria-label="Like"])
