@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-08-20.1
+! Version: 2023-08-20.2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -139,7 +139,7 @@ reddit.com###header-img
 reddit.com##.side .md
 reddit.com##.side > .spacer:has(.login-form, .sidebox, .sidecontentbox)
 reddit.com##.user, .user + .separator
-reddit.com##li.share
+reddit.com##li:has(> .comments) ~ li
 reddit.com##.commentarea .stickied[data-author="AutoModerator"]
 reddit.com##button.c-btn-primary.c-btn[name="over18"][value="no"]
 reddit.com##._1GdKQyDUWvhTFBDr0FsAkj:style(visibility: hidden !important;)
@@ -197,6 +197,8 @@ pravda.com.ua##.advtext_mob
 liveuamap.com##.mobile-navigation
 liveuamap.com##.footer-news.phones
 nasaspaceflight.com##div[style^="text-align:"]
+w3schools.com##.sidesection
+w3schools.com###footer > div:has(> .bottomad), #footer > div:has(> .bottomad) + hr
 developer.mozilla.org##a[href$="/ai-help/"]
 github.com##.navigation-focus:style(background-color: inherit !important;)
 flightradar24.com##.bottom-22
