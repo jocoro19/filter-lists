@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.9
+@version     1.10
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -70,6 +70,16 @@ ytd-rich-grid-media {
 }
 [page-subtype="channels"] ytd-feed-filter-chip-bar-renderer {
     margin-bottom: -8px !important;
+}
+.page-header-banner {
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+#channel-header-container > #inner-header-container {
+    flex-direction: row !important;
+}
+#channel-header-container #meta {
+    width: unset !important;
 }
 
 /* Prevent video description from expanding when being clicked on */
