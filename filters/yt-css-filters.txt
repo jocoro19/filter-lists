@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 2023-08-08.2
+! Version: 2023-08-21.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -27,6 +27,9 @@ www.youtube.com###channel-header-container > #avatar:style(height: 80px !importa
 www.youtube.com###channel-tagline
 www.youtube.com##[page-subtype="channels"] #sponsor-button:style(order: -1 !important;)
 www.youtube.com##[page-subtype="channels"] ytd-feed-filter-chip-bar-renderer:style(margin-bottom: -8px !important;)
+www.youtube.com##.page-header-banner:style(margin: 0 !important; border-radius: 0 !important;)
+www.youtube.com###channel-header-container > #inner-header-container:style(flex-direction: row !important;)
+www.youtube.com###channel-header-container #meta:style(width: unset !important;)
 
 ! Prevent video description from expanding when being clicked on
 www.youtube.com###description:style(pointer-events: none !important;)
