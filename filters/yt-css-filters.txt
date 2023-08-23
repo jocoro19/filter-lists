@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 2023-08-21.1
+! Version: 1.11
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -24,12 +24,14 @@ www.youtube.com##[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer
 ! Improve channel page layout
 www.youtube.com###channel-header-container:style(max-width: unset !important; padding-top: 0 !important; margin: auto !important;)
 www.youtube.com###channel-header-container > #avatar:style(height: 80px !important; width: 80px !important; margin-bottom: 0 !important;)
-www.youtube.com###channel-tagline
+www.youtube.com###channel-header-container > #inner-header-container:style(margin-top: 16px !important; flex-direction: row !important;)
+www.youtube.com###channel-header-container #meta:style(width: unset !important;)
+www.youtube.com###channel-tagline, #channel-header-links
 www.youtube.com##[page-subtype="channels"] #sponsor-button:style(order: -1 !important;)
 www.youtube.com##[page-subtype="channels"] ytd-feed-filter-chip-bar-renderer:style(margin-bottom: -8px !important;)
 www.youtube.com##.page-header-banner:style(margin: 0 !important; border-radius: 0 !important;)
-www.youtube.com###channel-header-container > #inner-header-container:style(flex-direction: row !important;)
-www.youtube.com###channel-header-container #meta:style(width: unset !important;)
+www.youtube.com###left-column.ytd-channel-about-metadata-renderer:style(display: flex !important; flex-direction: column !important;)
+www.youtube.com###links-container.ytd-channel-about-metadata-renderer:style(order: -1 !important;)
 
 ! Prevent video description from expanding when being clicked on
 www.youtube.com###description:style(pointer-events: none !important;)
