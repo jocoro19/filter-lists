@@ -13,7 +13,7 @@
 ##.tiktok-embed
 ##.instagram-media
 
-! Twitter/X blocking (strict blocking is not used to allow for redirection)
+! Twitter/"X" blocking (strict blocking is not used to allow for redirection to something like Nitter)
 twitter.com,x.com###body
 *$domain=twitter.com|x.com
 ||twitter.com^$third-party
