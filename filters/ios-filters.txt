@@ -36,7 +36,7 @@ wikipedia.org##.ambox
 wikipedia.org###mw-data-after-content
 wikipedia.org##[x-apple-data-detectors="true"]:style(pointer-events: none !important; color: inherit !important;)
 
-! Twitter/X blocking
+! Twitter/"X" blocking
 twitter.com,x.com###ScriptLoadFailure, svg
 *$domain=twitter.com|x.com
 ||twitter.com^$third-party
