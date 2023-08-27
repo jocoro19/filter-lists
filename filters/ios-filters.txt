@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-08-24.1
+! Version: 2023-08-26.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -72,7 +72,12 @@ m.youtube.com##ytm-channel-about-metadata-renderer > .user-text:style(margin: 8p
 m.youtube.com##yt-channel-external-link-view-model:style(order: -1 !important;)
 m.youtube.com##yt-channel-external-link-view-model > img
 m.youtube.com##ytm-clarification-renderer
+m.youtube.com##ytm-watch-metadata-app-promo-renderer
 m.youtube.com##ytm-video-description-gaming-section-renderer
+m.youtube.com##.expandable-video-description-container .collapsed-string:style(max-height: unset !important; mask-image: none !important; -webkit-mask-image: none !important;)
+m.youtube.com##.slim-video-metadata-header .secondary-text:style(mask-image: none !important; -webkit-mask-image: none !important;)
+m.youtube.com##.slim-video-metadata-information-inline-badge
+m.youtube.com##.slim-video-information-show-more
 m.youtube.com##c3-toast:has(a[href="https://yt.be/help/dislike"])
 m.youtube.com##ytm-rich-item-renderer:has(ytm-feed-nudge-renderer)
 m.youtube.com##.ytm-autonav-bar
@@ -81,7 +86,7 @@ m.youtube.com##.related-chips-slot-wrapper:style(transform: none !important; -we
 m.youtube.com##ytm-comments-simplebox-renderer, ytm-comments-entry-point-teaser-renderer
 m.youtube.com##ytm-comments-entry-point-header-renderer:style(padding-top: 8px !important; padding-bottom: 8px !important;)
 m.youtube.com##ytm-item-section-renderer:has(ad-slot-renderer)
-m.youtube.com##body > c3-overlay
+m.youtube.com##body > .bottom-sheet-overlay-scrim
 m.youtube.com##.ytm-bottom-sheet-overlay-container
 m.youtube.com##body:has(.ytm-bottom-sheet-overlay-container):style(position: static !important;)
 m.youtube.com##ytm-shelf-renderer:has([data-type="BADGE_STYLE_TYPE_MEMBERS_ONLY"])
@@ -189,13 +194,12 @@ www.theverge.com##div:has(> div > .duet--article--share-buttons)
 arstechnica.com##.ad_crown
 arstechnica.com##.instream-wrap
 arstechnica.com##.superscroll-ad
-www.dexerto.com##.adhesiveWrapper
-www.dexerto.com##div[id^="article"] > div.items-center:has(> div.flex > div.sticky > div[data-ad-unit-id])
+www.dexerto.com##div.flex.bg-neutral-grey
 www.dexerto.com##[data-cy="Ad"]
 www.dexerto.com##[data-cy="HomepageAdWrapper"]
+www.dexerto.com##div[id^="article"] > div.items-center:has(> div.flex > div.sticky > div[data-ad-unit-id])
 www.dexerto.com##[data-cy="Container"]:has(> div.col-span-full > div.flex > div.flex > div.top-0 > div[data-ad-unit-id])
 www.dexerto.com##label.rounded-full
-www.dexerto.com##[data-cy="SignupWidget"]
 globalnews.ca##.c-adChoices
 pravda.com.ua##[class^="unit_top"]
 pravda.com.ua##[class^="top_options_club"]
