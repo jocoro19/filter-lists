@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filters
-! Version: 2023-08-11.1
+! Version: 2023-08-31.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -22,6 +22,10 @@ www.youtube.com###cinematics:remove()
 ! Hide YouTube premium download button (use yt-dlp instead)
 www.youtube.com##ytd-download-button-renderer
 www.youtube.com##ytd-menu-service-item-download-renderer
+
+! Hide some advertising for YouTube Premium
+www.youtube.com###premium-upsell-link
+www.youtube.com##.ytp-premium-label
 
 ! Hide bloat from YouTube homepage, subscriptions, and search
 www.youtube.com##ytd-rich-item-renderer:has(ytd-ad-slot-renderer)
