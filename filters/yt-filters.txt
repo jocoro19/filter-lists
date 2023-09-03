@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filters
-! Version: 2023-09-02.1
+! Version: 2023-09-02.2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -74,9 +74,6 @@ www.youtube.com###ticket-shelf
 ! Hide "Context" section
 www.youtube.com###clarify-box
 youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
-
-! Unhide channel icon in embeds
-youtube.com,youtube-nocookie.com#@#.ytp-title-channel
 
 ! Hide YouTube logo in embeds
 youtube.com,youtube-nocookie.com##.ytp-impression-link
