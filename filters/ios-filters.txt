@@ -204,7 +204,7 @@ www.dexerto.com##[data-cy="HomepageAdWrapper"]
 www.dexerto.com##div[id^="article"] > div.items-center:has(> div.flex > div.sticky > div[data-ad-unit-id])
 www.dexerto.com##[data-cy="Container"]:has(> div.col-span-full > div.flex > div.flex > div.top-0 > div[data-ad-unit-id])
 www.dexerto.com##label.rounded-full
-www.dexerto.com##[data-cy="SignupWidget")
+www.dexerto.com##[data-cy="SignupWidget"]
 globalnews.ca##.c-adChoices
 pravda.com.ua##[class^="unit_top"]
 pravda.com.ua##[class^="top_options_club"]
