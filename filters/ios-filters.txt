@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-09-01.1
+! Version: 2023-09-02.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -199,12 +199,12 @@ www.theverge.com##div:has(> div > .duet--article--share-buttons)
 arstechnica.com##.ad_crown
 arstechnica.com##.instream-wrap
 arstechnica.com##.superscroll-ad
-www.dexerto.com##div.flex.bg-neutral-grey
 www.dexerto.com##[data-cy="Ad"]
 www.dexerto.com##[data-cy="HomepageAdWrapper"]
 www.dexerto.com##div[id^="article"] > div.items-center:has(> div.flex > div.sticky > div[data-ad-unit-id])
 www.dexerto.com##[data-cy="Container"]:has(> div.col-span-full > div.flex > div.flex > div.top-0 > div[data-ad-unit-id])
 www.dexerto.com##label.rounded-full
+www.dexerto.com##[data-cy="SignupWidget")
 globalnews.ca##.c-adChoices
 pravda.com.ua##[class^="unit_top"]
 pravda.com.ua##[class^="top_options_club"]
