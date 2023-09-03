@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-08-30.1
+! Version: 2023-09-01.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -69,7 +69,7 @@ m.youtube.com##ytm-compact-radio-renderer
 m.youtube.com##ytm-channel-tagline-renderer
 m.youtube.com##ytm-channel-header-links-view-model
 m.youtube.com##.c4-tabbed-header-modern-details:style(margin-bottom: 8px !important;)
-m.youtube.com##ytm-profile-icon:style(max-height: 112px !important; max-width: 112px !important;)
+m.youtube.com##ytm-profile-icon:style(max-height: 106px !important; max-width: 106px !important;)
 m.youtube.com##ytm-channel-about-metadata-renderer:style(display: flex !important; flex-direction: column !important; margin-top: -12px !important;)
 m.youtube.com##ytm-channel-about-metadata-renderer > .user-text:style(margin: 8px 0 !important;)
 m.youtube.com##yt-channel-external-link-view-model:style(order: -1 !important;)
@@ -108,7 +108,6 @@ m.youtube.com##ytm-rich-item-renderer:has([href^="/shorts/"])
 m.youtube.com##.playlist-chip-bar
 
 ! YouTube embeds
-youtube.com,youtube-nocookie.com##.ytp-title-channel:style(display: initial !important;)
 youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
 youtube.com,youtube-nocookie.com##.ytp-impression-link
 youtube.com,youtube-nocookie.com##.ytp-copylink-button
