@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.11
+@version     1.12
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -63,7 +63,6 @@ ytd-rich-grid-media {
 }
 #channel-header-container > #inner-header-container {
     margin-top: 16px !important;
-    flex-direction: row !important;
 }
 #channel-header-container #meta {
     width: unset !important;
@@ -77,16 +76,24 @@ ytd-rich-grid-media {
 [page-subtype="channels"] ytd-feed-filter-chip-bar-renderer {
     margin-bottom: -8px !important;
 }
-.page-header-banner {
-    margin: 0 !important;
-    border-radius: 0 !important;
-}
 #left-column.ytd-channel-about-metadata-renderer {
     display: flex !important;
     flex-direction: column !important;
 }
 #links-container.ytd-channel-about-metadata-renderer {
     order: -1 !important;
+}
+[use-page-header-style] #channel-header-container > #inner-header-container {
+    flex-direction: row !important;
+    align-items: center !important;
+    margin-top: 0 !important;
+}
+[use-page-header-style] #subscribe-button {
+    margin-left: 8px !important;
+}
+[use-page-header-style] .page-header-banner  {
+    margin: 0 !important;
+    border-radius: 0 !important;
 }
 
 /* Prevent video description from expanding when being clicked on */
