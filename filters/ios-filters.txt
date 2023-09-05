@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-09-03.1
+! Version: 2023-09-04.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -196,9 +196,9 @@ duckduckgo.com##.footer--mobile
 www.theverge.com,simpleflying.com##.twitter-tweet:style(color: gray !important)
 www.theverge.com##.duet--media--embed:style(min-height: unset !important;)
 www.theverge.com##div:has(> div > .duet--article--share-buttons)
-arstechnica.com##.ad_crown
+arstechnica.com##.ad.ad.ad.ad_crown
 arstechnica.com##.instream-wrap
-arstechnica.com##.superscroll-ad
+arstechnica.com##.superscroll-separator
 www.dexerto.com##[data-cy="Ad"]
 www.dexerto.com##[data-cy="HomepageAdWrapper"]
 www.dexerto.com##div[id^="article"] > div.items-center:has(> div.flex > div.sticky > div[data-ad-unit-id])
@@ -235,8 +235,7 @@ medibang.com##.mdbnContestList__footerMenu
 danbooru.donmai.us,e621.net##.hidden-posts-notice
 misskey.io##.xF6dY
 www.picuki.com##.sticky-bottom-ads-wrapper
-www.picuki.com##.admin-notice
-www.picuki.com##[class*="promote"]
+www.picuki.com##li:has(> .box-photo.adv)
 www.picnob.com##.similar
 www.picnob.com##[class^="ah-box"]
 www.picnob.com##.foryou
