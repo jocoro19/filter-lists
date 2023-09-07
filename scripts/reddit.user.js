@@ -13,11 +13,10 @@
 // @exclude-match https://www.reddit.com/gallery/*
 // ==/UserScript==
 
-window.stop() // Stop Reddit page from loading
 if (location.pathname !== "/media") {
 	location.hostname = "old.reddit.com" // Redirect to Old Reddit if URL is not for a media page
 } else {
-	// Replace Reddit media viewer with a custom one
+	window.stop() // Stop Reddit page from loading so that a custom one can be created
 	if (document.head === null) {
 		document.documentElement.appendChild(document.createElement("head")) // Add head if there isn't a head element
 	}
@@ -38,7 +37,7 @@ if (location.pathname !== "/media") {
 		img.zoomed-in.overflow-x { left: 0; }
 		img.zoomed-in.overflow-y { top: 0; }
 	</style>`
-	if (url !== null) {``
+	if (url !== null) {
 		const loadImage = new Image()
 		loadImage.src = url
 		if (!loadImage.complete) {
