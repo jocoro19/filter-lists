@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name          JHS Reddit fixes (Userstyle)
+// @name          JHS Reddit fixes (Userscript)
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
 // @version       1.0
