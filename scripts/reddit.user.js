@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name        	JHS Reddit fixes (Userstyle)
-// @namespace   	https://github.com/jocoro19
-// @author      	JoCoRo19
-// @version     	1.0
-// @run-at      	document-start
-// @description 	Redirects all Reddit links to Old Reddit and fixes image links by using a custom image viewer
-// @grant       	none
-// @match       	https://www.reddit.com/*
-// @match			https://new.reddit.com/*
-// @match			https://sh.reddit.com/*
+// @name          JHS Reddit fixes (Userstyle)
+// @namespace     https://github.com/jocoro19
+// @author        JoCoRo19
+// @version       1.0
+// @run-at        document-start
+// @description   Redirects all Reddit links to Old Reddit and fixes image links by using a custom image viewer
+// @grant         none
+// @match         https://www.reddit.com/*
+// @match         https://new.reddit.com/*
+// @match         https://sh.reddit.com/*
 // @exclude-match https://www.reddit.com/poll/*
 // @exclude-match https://www.reddit.com/gallery/*
 // ==/UserScript==
