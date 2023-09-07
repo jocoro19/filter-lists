@@ -79,4 +79,5 @@ I won't be accepting any contributions at this time.
 
 ## Userscripts
 
-WIP
+* [JHS Reddit Fixes](https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/reddit.user.js)
+* [JHS X-iter](https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/twitter.user.js)
