@@ -1,16 +1,16 @@
 /* ==UserStyle==
-@name        JHS Reddit Fixes
+@name        JHS Reddit Fixes (Userstyle)
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.10
+@version     1.11
 @description Various fixes for Reddit
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
 ==/UserStyle== */
 
-/* i.redd.it */
-@-moz-document domain("redd.it"), url-prefix("https://www.reddit.com/media") {
-	reddit-header-small, shreddit-async-loader, post-bottom-bar, .cdn-media-page > div {
+/* Reddit media viewer */
+@-moz-document domain("redd.it"), url-prefix("https://www.reddit.com/media") { 
+	reddit-header-small, reddit-header-large, shreddit-async-loader, post-bottom-bar, shreddit-app > div {
 		display: none !important;
 	}
 	html[class] > body {
@@ -22,7 +22,7 @@
 		display: flex !important;
 		align-items: center !important;
 	}
-	shreddit-app, .cdn-media-page, main, article, faceplate-tracker, zoomable-img {
+	shreddit-app, main, article, faceplate-tracker, zoomable-img {
 		display: contents !important;
 		visibility: visible !important;
 	}
@@ -43,4 +43,3 @@
 		margin: 0 auto !important;
 	}
 }
-
