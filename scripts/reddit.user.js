@@ -7,7 +7,7 @@
 // @description   Redirects all Reddit links to Old Reddit and fixes image links by using a custom image viewer
 // @grant         none
 // @match         https://www.reddit.com/*
-// @match         https://old.reddit.com./*
+// @match         https://old.reddit.com/*
 // @match         https://new.reddit.com/*
 // @match         https://sh.reddit.com/*
 // @exclude-match https://www.reddit.com/poll/*
