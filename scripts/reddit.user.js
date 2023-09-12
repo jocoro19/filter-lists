@@ -1,28 +1,37 @@
 // ==UserScript==
-// @name          JHS Reddit fixes (Userscript)
+// @name          JHS Reddit Fixes
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       1.0
+// @version       1.1
 // @run-at        document-start
 // @description   Redirects all Reddit links to Old Reddit and fixes image links by using a custom image viewer
 // @grant         none
 // @match         https://www.reddit.com/*
+// @match         https://old.reddit.com./*
 // @match         https://new.reddit.com/*
 // @match         https://sh.reddit.com/*
 // @exclude-match https://www.reddit.com/poll/*
 // @exclude-match https://www.reddit.com/gallery/*
 // ==/UserScript==
 
-if (location.pathname !== "/media") {
+if (!(document.cookie.includes("over18"))) {
+	document.cookie = "over18=1;domain=.reddit.com" // Set some cookies automatically
+	location.reload()
+}
+
+if (location.hostname !== "old.reddit.com" && location.pathname !== "/media") {
+	document.title = "reddit: the front page of the internet" // Set title to old default title before redirect is finished
 	location.hostname = "old.reddit.com" // Redirect to Old Reddit if URL is not for a media page
-} else {
+} else if (location.hostname !== "old.reddit.com") {
 	window.stop() // Stop Reddit page from loading so that a custom one can be created
+	const rootElement = document.documentElement
 	if (document.head === null) {
-		document.documentElement.appendChild(document.createElement("head")) // Add head if there isn't a head element
+		rootElement.appendChild(document.createElement("head")) // Add head if there isn't a head element
 	}
 	if (document.body === null) {
-		document.documentElement.appendChild(document.createElement("body")) // Add body if there isn't a body element
+		rootElement.appendChild(document.createElement("body")) // Add body if there isn't a body element
 	}
+	rootElement.removeAttribute("class") // Remove classes from HTML element to prevent breakage
 	document.body.innerHTML = '' // Delete everything in the body for now
 	const urlParams = new URLSearchParams(window.location.search)
 	const url = urlParams.get("url")
