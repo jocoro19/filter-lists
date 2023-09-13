@@ -15,7 +15,7 @@
 // ==/UserScript==
 
 // Config
-const autoNsfw = false // Automatically show NSFW posts
+const autoNsfw = false // Automatically show NSFW posts (Works best for browsing in private tabs)
 
 if (autoNsfw && !(document.cookie.includes("over18"))) {
 	document.cookie = "over18=1;domain=.reddit.com" // Set some cookies automatically
