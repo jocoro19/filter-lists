@@ -29,13 +29,13 @@ I won't be accepting any contributions at this time.
   * [Install](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2Fjocoro19%2Ffilter-lists%2Fmain%2Ffilters%2Fmisc-filters.txt&title=JHS%20Miscellaneous%20Filters) or [view raw](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/misc-filters.txt)
   * Various other filters are placed inside this list
   * Hides TikTok and Instagram embeds
-  * Prevents Twitter/X from loading
+  * Prevents Twitter/"X" from loading
   * Removes some annoyances on other websites
  
 * JHS iOS Filters (ios-filters.txt)
   * [Install](https://subscribe.adblockplus.org/?location=https%3A%2F%2Fraw.githubusercontent.com%2Fjocoro19%2Ffilter-lists%2Fmain%2Ffilters%2Fios-filters.txt&title=JHS%20iOS%20Filters) or [view raw](https://raw.githubusercontent.com/jocoro19/filter-lists/main/filters/ios-filters.txt)
   * A mobile-oriented filter list initially designed for Brave on iOS
-  * Blocks TikTok, Twitter/X, Meta (Instagram, Facebook, etc.), and some other websites
+  * Blocks TikTok, Twitter/"X", Meta (Instagram, Facebook, etc.), and some other websites
   * Removes unwanted stuff from the YouTube mobile website (`m.youtube.com`), including YouTube Shorts.
   * Prevents the mobile Reddit website from loading (use `old.reddit.com` instead)
   * Disables custom themes on Old Reddit, hides the sidebar and other unwanted stuff
