@@ -2,7 +2,7 @@
 // @name          JHS Reddit Fixes
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       1.1.2
+// @version       1.2
 // @run-at        document-start
 // @description   Redirects all Reddit links to Old Reddit and fixes image links by using a custom image viewer
 // @grant         none
@@ -16,10 +16,17 @@
 
 // Config
 const autoNsfw = false // Automatically show NSFW posts (Works best for browsing in private tabs)
+const autoOpenImg = true // Automatically expand images in posts
 
 if (autoNsfw && !(document.cookie.includes("over18"))) {
 	document.cookie = "over18=1;domain=.reddit.com"
 	location.reload()
+}
+
+if (autoOpenImg && location.hostname === "old.reddit.com") {
+	window.onload = () => {
+		document.querySelectorAll(".expando-button.video.collapsed").forEach(element => element.click())
+	}
 }
 
 if (location.hostname !== "old.reddit.com" && location.pathname !== "/media") {
