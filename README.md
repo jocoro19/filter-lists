@@ -1,6 +1,6 @@
 # JHS Web Improvements
 
-This repository contains adblocker filter lists, custom userstyles, and userscripts for an improved experience on the web.
+This repository contains ad blocking filter lists, custom userstyles, and userscripts for an improved experience on the web.
 
 This repository is dedicated to the public domain through CC0. Feel free to use, modify, and share the contents of this repository.
 
