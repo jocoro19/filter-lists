@@ -1,8 +1,8 @@
-// ==UserScript==
+ // ==UserScript==
 // @name          JHS Reddit Fixes
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       1.1.1
+// @version       1.1.2
 // @run-at        document-start
 // @description   Redirects all Reddit links to Old Reddit and fixes image links by using a custom image viewer
 // @grant         none
@@ -18,14 +18,16 @@
 const autoNsfw = false // Automatically show NSFW posts (Works best for browsing in private tabs)
 
 if (autoNsfw && !(document.cookie.includes("over18"))) {
-	document.cookie = "over18=1;domain=.reddit.com" // Set some cookies automatically
+	document.cookie = "over18=1;domain=.reddit.com"
 	location.reload()
 }
 
 if (location.hostname !== "old.reddit.com" && location.pathname !== "/media") {
 	document.title = "reddit: the front page of the internet" // Set title to old default title before redirect is finished
 	location.hostname = "old.reddit.com" // Redirect to Old Reddit if URL is not for a media page
-} else if (location.hostname !== "old.reddit.com") {
+}
+
+if (location.hostname !== "old.reddit.com" && location.pathname === "/media") {
 	window.stop() // Stop Reddit page from loading so that a custom one can be created
 	const rootElement = document.documentElement
 	if (document.head === null) {
