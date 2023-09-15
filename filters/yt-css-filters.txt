@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.12
+! Version: 1.13
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -37,7 +37,7 @@ www.youtube.com##.page-header-banner:style(margin: 0 !important; border-radius: 
 
 ! Prevent video description from expanding when being clicked on
 www.youtube.com###description:style(pointer-events: none !important;)
-www.youtube.com###description :is(#expand, #collapse, #info, #info-container > div, a):style(pointer-events: auto !important;)
+www.youtube.com###description :is(#expand, #collapse, #info-container, #items, a):style(pointer-events: auto !important;)
 www.youtube.com###description:hover:style(background-color: var(--yt-spec-badge-chip-background) !important;)
 
 ! Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable)
