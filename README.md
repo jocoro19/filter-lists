@@ -2,7 +2,7 @@
 
 This repository contains ad blocking filter lists, custom userstyles, and userscripts for an improved experience on the web.
 
-This repository is dedicated to the public domain through CC0. Feel free to use, modify, and share the contents of this repository.
+This repository is in the public domain through CC0. Feel free to use, modify, and share the contents of this repository.
 
 I won't be accepting any contributions at this time.
 
