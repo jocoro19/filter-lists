@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-09-23.1
+! Version: 2023-09-25.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -234,6 +234,11 @@ imgur.io##.GalleryHandler-postContainer:not(:has(.Gallery-moreOnImgur))
 medibang.com##.asArtStreetTopNotice
 medibang.com##div[class*="AdBlock"]
 medibang.com##.mdbnContestList__footerMenu
+@@||commons.wikimedia.org^$generichide
+wikimedia.org,wiktionary.org,minecraft.wiki,wiki.gg###siteNotice
+minecraft.wiki##.page-actions-menu
+minecraft.wiki##.mw-editsection
+||minecraft.wiki/load.php?format=original&image=edit
 ||danbooru.donmai.us^$removeparam=q
 danbooru.donmai.us,e621.net##.hidden-posts-notice
 misskey.*##.xF6dY
