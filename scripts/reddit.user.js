@@ -16,7 +16,7 @@
 
 // Config
 const autoNsfw = false // Automatically show NSFW posts (Works best for browsing in private tabs)
-const autoOpenImg = true // Automatically expand images in posts
+const autoOpenImg = true // Automatically expand images and videos in posts
 
 if (autoNsfw && !(document.cookie.includes("over18"))) {
 	document.cookie = "over18=1;domain=.reddit.com"
