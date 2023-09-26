@@ -2,7 +2,7 @@
 // @name          JHS Reddit Fixes
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       1.2.2
+// @version       1.2.3
 // @run-at        document-start
 // @description   Redirects all Reddit links to Old Reddit and fixes image links by using a custom image viewer
 // @grant         none
@@ -36,6 +36,7 @@ if (location.hostname !== "old.reddit.com" && location.pathname !== "/media") {
 
 if (location.hostname !== "old.reddit.com" && location.pathname === "/media") {
 	window.stop() // Stop Reddit page from loading so that a custom one can be created
+	document.title = ""
 	const rootElement = document.documentElement
 	if (document.head === null) {
 		rootElement.appendChild(document.createElement("head")) // Add head if there isn't a head element
@@ -45,7 +46,7 @@ if (location.hostname !== "old.reddit.com" && location.pathname === "/media") {
 	}
 	rootElement.removeAttribute("class") // Remove classes from HTML element to prevent breakage
 	document.body.innerHTML = "" // Delete everything in the body for now
-	document.head.innerHTML = `<title>reddit: the front page of the internet</tltle><style>
+	document.head.innerHTML = `<style>
 		body { margin: 0 }
 		.overlay { position: fixed; inset: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; margin: 0; overflow: auto; }
 		img.no-zoom { max-height: 100vh; max-width: 100vw; object-fit: contain; margin: 0 auto; }
