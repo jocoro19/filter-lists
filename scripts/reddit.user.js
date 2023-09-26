@@ -2,7 +2,7 @@
 // @name          JHS Reddit Fixes
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       1.2.1
+// @version       1.2.2
 // @run-at        document-start
 // @description   Redirects all Reddit links to Old Reddit and fixes image links by using a custom image viewer
 // @grant         none
@@ -44,12 +44,8 @@ if (location.hostname !== "old.reddit.com" && location.pathname === "/media") {
 		rootElement.appendChild(document.createElement("body")) // Add body if there isn't a body element
 	}
 	rootElement.removeAttribute("class") // Remove classes from HTML element to prevent breakage
-	document.body.innerHTML = '' // Delete everything in the body for now
-	const urlParams = new URLSearchParams(window.location.search)
-	const url = urlParams.get("url")
-	const filename = url.match(/[^/]+$/)[0]
-	document.title = filename
-	document.head.innerHTML = `<style>
+	document.body.innerHTML = "" // Delete everything in the body for now
+	document.head.innerHTML = `<title>reddit: the front page of the internet</tltle><style>
 		body { margin: 0 }
 		.overlay { position: fixed; inset: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; margin: 0; overflow: auto; }
 		img.no-zoom { max-height: 100vh; max-width: 100vw; object-fit: contain; margin: 0 auto; }
@@ -58,6 +54,9 @@ if (location.hostname !== "old.reddit.com" && location.pathname === "/media") {
 		img.zoomed-in.overflow-x { left: 0; }
 		img.zoomed-in.overflow-y { top: 0; }
 	</style>`
+	const urlParams = new URLSearchParams(window.location.search)
+	const url = urlParams.get("url")
+	const filename = url.match(/[^/]+$/)[0]
 	if (url !== null) {
 		const loadImage = new Image()
 		loadImage.src = url
