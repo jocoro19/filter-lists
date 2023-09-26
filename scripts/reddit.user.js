@@ -2,7 +2,7 @@
 // @name          JHS Reddit Fixes
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       1.2
+// @version       1.2.1
 // @run-at        document-start
 // @description   Redirects all Reddit links to Old Reddit and fixes image links by using a custom image viewer
 // @grant         none
@@ -84,7 +84,7 @@ if (location.hostname !== "old.reddit.com" && location.pathname === "/media") {
 				img.className = "no-zoom"
 			}
 			function zoomIn(event) {
-				// Get the location of the mouse click as a percentage of the height/width of the image
+				// Get the location of the mouse click as a percentage of the height/width of the image before it's zoomed in
 				const rect = img.getBoundingClientRect()
 				let offsetX = (event.clientX - rect.left) / img.clientWidth
 				let offsetY = (event.clientY - rect.top) / img.clientHeight
@@ -103,6 +103,8 @@ if (location.hostname !== "old.reddit.com" && location.pathname === "/media") {
 				img.removeEventListener("click", zoomOut)
 				img.addEventListener("click", zoomIn)
 			}
+		} else {
+			img.className = "no-zoom"
 		}
 	}
 }
