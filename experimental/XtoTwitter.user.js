@@ -1,24 +1,30 @@
 // ==UserScript==
-// @name          xToTwitter
+// @name          XtoTwitter
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       1.0
+// @version       2.0
 // @run-at        document-start
-// @description   Replaces ALL mentions of "X" with "Twitter" on almost all websites
+// @description   Replaces many mentions of "X" with "Twitter" on many websites
 // @grant         none
 // @match         http*://*/*
-// @exclude-match https://developer.mozilla.org/*
-// @exclude-match https://*.wikipedia.org/*
 // ==/UserScript==
 
+/* EXPERIMENTAL: USE AT YOUR OWN RISK!
+ * This userscript will replace all mentions "X" with "Twitter" and removes text like "Formerly known as Twitter".
+ * There may be some issues with the script such as "Xbox Series X" being changed to "Xbox Series Twitter".
+ */
+
 document.addEventListener("DOMContentLoaded", () => {
-	const elements = (document.querySelectorAll("title, body *"))
+	const elements = (document.querySelectorAll("title, body *:not(script, iframe, svg, svg *, math, math *)"))
 	xToTwitter(elements)
-	observer.observe(document.body, observerConfig)
+	if (document.body !== null) {
+		observer.observe(document.body, observerConfig)
+	}
 })
 function xToTwitter(elements) {
 	const replace = /(?<!-|<[^>]*)(?:\bX\b|"X"|'X')(?![^<]*>|-)/g // Regex that matches what to replace with "Twitter"
-	const remove = / ?\bFormerly(?: known as)? Twitter\b| ?\(Formerly(?: known as)? Twitter\)/gi // Regex that matches what to completely remove from the page
+//	const replace = /\bX\b|"X"|'X'/g // Regex that matches what to replace with "Twitter"
+	const remove = /(?: |, )?\bformerly(?: known as)? Twitter\b,?| ?\(formerly(?: known as)? Twitter\)/gi // Regex that matches what to completely remove from the page
 	// Create an array containing the elements to change
 	if (elements instanceof NodeList) {
 		elements = Array.from(elements)
@@ -27,8 +33,6 @@ function xToTwitter(elements) {
 		const elementsToChange = elements.filter(element => {
 			if (element.nodeName === "TITLE") {
 				return true // Include title elements in the list of elements to change
-			} else if (getComputedStyle(element).display === "none") {
-				return false
 			} else {
 				for (const node of element.childNodes) {
 					if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== "") {
@@ -39,8 +43,22 @@ function xToTwitter(elements) {
 			}
 		})
 		elementsToChange.forEach(element => {
-			element.innerHTML = element.innerHTML.replace(replace, "Twitter")
-			element.innerHTML = element.innerHTML.replace(remove, "")
+			if (!(/<\/.*>/.test(element.innerHTML))) {
+				// Replace and remove text for elements that don't have nested non-void elements like <a> but not <br>
+				if (!(/^(?:X|"X"|'X')$/.test(element.innerHTML))) {
+					element.innerHTML = element.innerHTML.replace(replace, "Twitter") // Replace X with Twitter according to the regex if X isn't the only content
+				}
+				element.innerHTML = element.innerHTML.replace(remove, "")
+			} else {
+				for (const node of element.childNodes) {
+					if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== "") {
+						if (!(/^(?:X|"X"|'X')$/.test(node.textContent))) {
+							node.textContent = node.textContent.replace(replace, "Twitter")
+						}
+						node.textContent = node.textContent.replace(remove, "")
+					}
+				}
+			}
 		})
 	}
 }
@@ -51,14 +69,14 @@ function handleChanges(mutationsList) {
 		// Check if new nodes have been added
 		if (mutation.type === "childList") {
 			mutation.addedNodes.forEach(node => {
-				if (node.nodeType === Node.ELEMENT_NODE) {
+				if (node.nodeType === Node.ELEMENT_NODE && !(node.matches("script, iframe, svg, svg *, math, math *"))) {
 					let elements
 					if (node.children.length > 0) {
-						elements = node.querySelectorAll("*")
+						elements = Array.from(node.querySelectorAll("*:not(script, iframe, svg, svg *, math, math *)"))
 					} else {
 						elements = [node]
 					}
-					console.log(elements)
+					xToTwitter([node])
 					xToTwitter(elements)
 				}
 			})
