@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 function xToTwitter(elements) {
 	const replace = /(?<!-|<[^>]*)(?:\bX\b|"X"|'X')(?![^<]*>|-)/g // Regex that matches what to replace with "Twitter"
-//	const replace = /\bX\b|"X"|'X'/g // Regex that matches what to replace with "Twitter"
 	const remove = /(?: |, )?\bformerly(?: known as)? Twitter\b,?| ?\(formerly(?: known as)? Twitter\)/gi // Regex that matches what to completely remove from the page
 	// Create an array containing the elements to change
 	if (elements instanceof NodeList) {
