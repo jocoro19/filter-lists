@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-10-09.1
+! Version: 2023-10-09.2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -50,7 +50,8 @@ twitter.com,x.com###ScriptLoadFailure, svg
 
 ! Nitter
 @@||nitter.net^$removeparam=referer
-nitter.*,nitter.privacydev.net##+js(ra, href|title, .nav-item a.icon-bird\, .nav-item a[href^="https://liberapay.com/"])
+nitter.*,nitter.privacydev.net##+js(ra, href|title, .nav-item a.icon-bird)
+nitter.*,nitter.privacydev.net##+js(ra, href, .nav-item a[href^="https://liberapay.com/"])
 nitter.*,nitter.privacydev.net##.icon-bird, .icon-rss-feed, .nav-item > a[href^="https://liberapay.com/"], .verified-icon, [class*="unavailable"]
 nitter.*,nitter.privacydev.net##.timeline-item:has([href*="AIArt"],[href*="AIart"],[href*="aiart"],[href*="AIイラスト"],[href*="AIgirl"],[href*="StableDiffusion"],[href*="stablediffusion"],[href*="Midjourney"],[href*="midjourney"])
 
