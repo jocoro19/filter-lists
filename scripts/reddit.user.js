@@ -2,7 +2,7 @@
 // @name          JHS Reddit Fixes
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       1.2.3
+// @version       1.3
 // @run-at        document-start
 // @description   Redirects all Reddit links to Old Reddit and fixes image links by using a custom image viewer
 // @grant         none
@@ -54,7 +54,7 @@ if (location.hostname !== "old.reddit.com" && location.pathname === "/media") {
 		img.zoomed-in { margin: auto !important; position: absolute; cursor: zoom-out; }
 		img.zoomed-in.overflow-x { left: 0; }
 		img.zoomed-in.overflow-y { top: 0; }
-	</style>`
+	</style><meta name="viewport" content="width=device-width, initial-scale=1.0">`
 	const urlParams = new URLSearchParams(window.location.search)
 	const url = urlParams.get("url")
 	const filename = url.match(/[^/]+$/)[0]
@@ -66,6 +66,9 @@ if (location.hostname !== "old.reddit.com" && location.pathname === "/media") {
 		} else {
 			imgViewer()
 		}
+	}
+	if (document.querySelector("head:empty") !== null) {
+		document.querySelector("head:empty").remove() // Remove an extra empty head element if there is one
 	}
 	function imgViewer() {
 		document.body.outerHTML = `<body><div class="overlay"><img src="${url}"></div></body>`
