@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.13
+@version     1.14
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -108,7 +108,7 @@ ytd-rich-grid-media {
 }
 
 /* Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable) */
-#segmented-dislike-button .cbox {
+#segmented-dislike-button .cbox, #segmented-dislike-button .yt-spec-button-shape-next__button-text-content {
     max-width: 80px !important;
 }
 
