@@ -2,7 +2,7 @@
 @name        JHS Reddit Fixes (Userstyle)
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.11
+@version     1.12
 @description Various fixes for Reddit
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -13,24 +13,21 @@
 	reddit-header-small, reddit-header-large, shreddit-async-loader, post-bottom-bar, shreddit-app > div {
 		display: none !important;
 	}
-	html[class] > body {
+	zoomable-img {
 		width: 100% !important;
 		height: 100% !important;
 		position: absolute !important;
 		inset: 0 !important;
 		margin: 0 !important;
+		padding: 0 !important;
 		display: flex !important;
 		align-items: center !important;
-	}
-	shreddit-app, main, article, faceplate-tracker, zoomable-img {
-		display: contents !important;
-		visibility: visible !important;
 	}
 	zoomable-img > img {
 		width: unset !important;
 		min-width: unset !important;
-		max-width: unset !important;
 		height: unset !important;
+		min-height: unset !important;
 		display: block !important;
 		overflow: initial !important;
 		margin: auto !important;
