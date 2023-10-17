@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.14
+@version     1.15
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -112,9 +112,12 @@ ytd-rich-grid-media {
     max-width: 80px !important;
 }
 
-/* Increase margin on SponsorBlock video title label */
+/* Increase margin for SponsorBlock UI */
 .sponsorBlockCategoryPill {
     margin-right: 6px !important;
+}
+#sponsorBlockPopupContainer {
+    margin-bottom: 12px !important;
 }
 
 }
