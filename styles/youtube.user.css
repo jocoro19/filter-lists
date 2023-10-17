@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.15.1
+@version     1.15.2
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -117,8 +117,10 @@ ytd-rich-grid-media {
     margin-right: 6px !important;
 }
 #sponsorBlockPopupContainer {
-    width: 100% !important;
     margin-bottom: 12px !important;
+}
+#sponsorBlockPopupContainer > iframe {
+    width: 100% !important;
 }
 
 }
