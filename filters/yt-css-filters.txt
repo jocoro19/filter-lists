@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.14
+! Version: 1.15
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -43,5 +43,6 @@ www.youtube.com###description:hover:style(background-color: var(--yt-spec-badge-
 ! Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable)
 www.youtube.com###segmented-dislike-button .cbox, #segmented-dislike-button .yt-spec-button-shape-next__button-text-content:style(max-width: 80px !important;)
 
-!Increase margin on SponsorBlock video title label
-www.youtube.com##.sponsorBlockCategoryPill:style(margin-right: 6px !important)
+! Increase margin for SponsorBlock UI
+www.youtube.com##.sponsorBlockCategoryPill:style(margin-right: 6px !important;)
+www.youtube.com###sponsorBlockPopupContainer:style(margin-bottom: 12px !important;)
