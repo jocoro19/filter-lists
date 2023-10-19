@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.15.2
+@version     1.15.3
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -51,6 +51,7 @@ ytd-rich-grid-media {
     padding-top: 0 !important;
 }
 
+/* Make channel layout compact again */
 #channel-header-container {
     max-width: unset !important;
     padding-top: 0 !important;
@@ -107,20 +108,20 @@ ytd-rich-grid-media {
     background-color: var(--yt-spec-badge-chip-background) !important;
 }
 
-/* Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable) */
-#segmented-dislike-button .cbox, #segmented-dislike-button .yt-spec-button-shape-next__button-text-content {
-    max-width: 80px !important;
-}
-
-/* Improve SponsorBlock UI */
+/* SponsorBlock UI */
 .sponsorBlockCategoryPill {
     margin-right: 6px !important;
 }
 #sponsorBlockPopupContainer {
-    margin-bottom: 12px !important;
+    margin-bottom: 8px !important;
 }
 #sponsorBlockPopupContainer > iframe {
     width: 100% !important;
+}
+
+/* Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable) */
+#segmented-dislike-button .cbox, #segmented-dislike-button .yt-spec-button-shape-next__button-text-content {
+    max-width: 80px !important;
 }
 
 }
