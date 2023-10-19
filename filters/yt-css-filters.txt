@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.15.2
+! Version: 1.15.3
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -21,7 +21,7 @@ www.youtube.com##ytd-browse:not([page-subtype="channels"]) #content.ytd-rich-sec
 www.youtube.com##ytd-rich-grid-media:style(max-width: unset !important;)
 www.youtube.com##[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer:style(padding-top: 0 !important;)
 
-! Improve channel page layout
+! Make channel page layout compact again
 www.youtube.com###channel-header-container:style(max-width: unset !important; padding-top: 0 !important; margin: auto !important;)
 www.youtube.com###channel-header-container > #avatar:style(height: 80px !important; width: 80px !important; margin-bottom: 0 !important;)
 www.youtube.com###channel-header-container > #inner-header-container:style(margin-top: 16px !important;)
@@ -40,10 +40,10 @@ www.youtube.com###description:style(pointer-events: none !important;)
 www.youtube.com###description :is(#expand, #collapse, #info-container, #items, a):style(pointer-events: auto !important;)
 www.youtube.com###description:hover:style(background-color: var(--yt-spec-badge-chip-background) !important;)
 
-! Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable)
-www.youtube.com###segmented-dislike-button .cbox, #segmented-dislike-button .yt-spec-button-shape-next__button-text-content:style(max-width: 80px !important;)
-
 ! Improve SponsorBlock UI
 www.youtube.com##.sponsorBlockCategoryPill:style(margin-right: 6px !important;)
-www.youtube.com###sponsorBlockPopupContainer:style(margin-bottom: 12px !important;)
+www.youtube.com###sponsorBlockPopupContainer:style(margin-bottom: 8px !important;)
 www.youtube.com###sponsorBlockPopupContainer > iframe:style(width: 100% !important;)
+
+! Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable)
+www.youtube.com###segmented-dislike-button .cbox, #segmented-dislike-button .yt-spec-button-shape-next__button-text-content:style(max-width: 80px !important;)
