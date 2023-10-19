@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filters
-! Version: 2023-09-02.2
+! Version: 2023-10-18.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -8,9 +8,9 @@
 ! Hide buttons to sort videos by topic
 www.youtube.com##[page-subtype="home"] #header
 www.youtube.com##yt-related-chip-cloud-renderer
-www.youtube.com##ytd-compact-video-renderer:nth-of-type(1):style(margin-top: 0 !important;)
+www.youtube.com##ytd-compact-video-renderer:nth-child(1), ytd-compact-playlist-renderer:nth-child(1) yt-search-query-correction:style(margin-top: 0 !important;)
 www.youtube.com##ytd-search-header-renderer > :not(#filter-button)
-www.youtube.com##ytd-search-header-renderer:style(justify-content: right !important; height: unset !important; max-width: 1096px !important; margin: auto !important;)
+www.youtube.com##ytd-search-header-renderer:style(height: 36px !important; max-width: 1096px !important; margin: 0 auto !important; justify-content: right !important;)
 
 ! Hide "Search with your voice" button
 www.youtube.com###voice-search-button
@@ -30,7 +30,8 @@ www.youtube.com##.ytp-premium-label
 ! Hide bloat from YouTube homepage, subscriptions, and search
 www.youtube.com##ytd-rich-item-renderer:has(ytd-ad-slot-renderer)
 www.youtube.com##ytd-rich-grid-renderer ytd-rich-section-renderer:not(:first-child)
-www.youtube.com##ytd-search ytd-item-section-renderer>#contents>:not(ytd-video-renderer,ytd-channel-renderer,yt-showing-results-for-renderer),ytd-secondary-search-container-renderer
+www.youtube.com##ytd-search ytd-item-section-renderer > #contents > :not(ytd-video-renderer, ytd-channel-renderer, ytd-playlist-renderer, ytd-showing-for-results-renderer)
+www.youtube.com##ytd-secondary-search-container-renderer
 
 ! Hide "More From YouTube" from sidebar
 www.youtube.com##ytd-guide-section-renderer.ytd-guide-renderer:nth-last-of-type(2)
