@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filters
-! Version: 2023-10-18.1
+! Version: 2023-10-18.2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -8,7 +8,8 @@
 ! Hide buttons to sort videos by topic
 www.youtube.com##[page-subtype="home"] #header
 www.youtube.com##yt-related-chip-cloud-renderer
-www.youtube.com##ytd-compact-video-renderer:nth-child(1), ytd-compact-playlist-renderer:nth-child(1) yt-search-query-correction:style(margin-top: 0 !important;)
+www.youtube.com##yt-related-chip-cloud-renderer + ytd-item-section-renderer:style(margin-top: -8px !important;)
+www.youtube.com##yt-search-query-correction:style(margin-top: 0 !important;)
 www.youtube.com##ytd-search-header-renderer > :not(#filter-button)
 www.youtube.com##ytd-search-header-renderer:style(height: 36px !important; max-width: 1096px !important; margin: 0 auto !important; justify-content: right !important;)
 
@@ -30,7 +31,7 @@ www.youtube.com##.ytp-premium-label
 ! Hide bloat from YouTube homepage, subscriptions, and search
 www.youtube.com##ytd-rich-item-renderer:has(ytd-ad-slot-renderer)
 www.youtube.com##ytd-rich-grid-renderer ytd-rich-section-renderer:not(:first-child)
-www.youtube.com##ytd-search ytd-item-section-renderer > #contents > :not(ytd-video-renderer, ytd-channel-renderer, ytd-playlist-renderer, ytd-showing-for-results-renderer)
+www.youtube.com##ytd-search ytd-item-section-renderer > #contents > :not(ytd-video-renderer, ytd-channel-renderer, ytd-playlist-renderer, yt-showing-results-for-renderer)
 www.youtube.com##ytd-secondary-search-container-renderer
 
 ! Hide "More From YouTube" from sidebar
