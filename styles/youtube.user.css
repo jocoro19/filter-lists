@@ -51,7 +51,7 @@ ytd-rich-grid-media {
     padding-top: 0 !important;
 }
 
-/* Make channel layout compact again */
+/* Make channel page layout compact again */
 #channel-header-container {
     max-width: unset !important;
     padding-top: 0 !important;
