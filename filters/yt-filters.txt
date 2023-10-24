@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filters
-! Version: 2023-10-18.2
+! Version: 2023-10-23.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -77,7 +77,7 @@ www.youtube.com###ticket-shelf
 www.youtube.com###clarify-box
 youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
 
-! Hide YouTube logo in embeds
+! Hide YouTube branding in embeds
 youtube.com,youtube-nocookie.com##.ytp-impression-link
 youtube.com,youtube-nocookie.com##.ytp-youtube-button
 youtube.com,youtube-nocookie.com##.ytp-watermark
@@ -88,3 +88,7 @@ www.youtube.com###ghost-cards
 
 ! Bypass redirect for links to external websites
 www.youtube.com##+js(href-sanitizer, a[href^="https://www.youtube.com/redirect"][href*="q=http"], ?q)
+
+! Make Return Youtube Dislike bar width change with the like and dislike buttons
+www.youtube.com##.ryd-tooltip-new-design:style(width: calc(100% - 100.2px) !important;)
+www.youtube.com##.ryd-tooltip-new-design #ryd-bar-container:style(width: 100% !important;)
