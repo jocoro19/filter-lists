@@ -2,39 +2,42 @@
 // @name          JHS X-iter
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       1.1
+// @version       1.2
 // @run-at        document-start
-// @description   Redirects all Twitter/"X" links to nitter.net and adds a wey to switch to nitter.privacydev.net
+// @description   X-it Twitter
 // @grant         none
 // @match         https://twitter.com/*
 // @match         https://x.com/*
-// @match         https://nitter.net/*
-// @match         https://nitter.privacydev.net/*
+// @match         https://nitter.*/*
 // ==/UserScript==
 
-const nitter = "nitter.net" // Official, primary instance
-const privacydev = "nitter.privacydev.net" // Secondary instance which shows NSFW tweets
-const redirectLink = true // Replace twitter link in upper right corner with a link to switch between instances
+const nitter1 = "nitter.net" // Primary instance (default is nitter.net, the official instance)
+const nitter2 = "nitter.privacydev.net" // Secondary instance (default is nitter.privacydev.net, which has support for NSFW tweets)
+const redirectLink = true // Replace Twitter link in upper right corner with a link to switch between instances
+const code1 = "N" // Code for the primary instance
+const code2 = "P" // Code for the secondary instance
 
-// Redirect Twitter/"X" to nitter.net
+// Redirect Twitter/"X" to nitter instance 1
 const twitterUrls = /^(?:www\.|mobile\.)?(?:twitter|x)\.com$/
 if (location.hostname.match(twitterUrls)) {
-	location.hostname = nitter
+	const url = new URL(location.href)
+	url.hostname = nitter1
+	location.replace(url.href)
 }
 
 // Change the link to Twitter to a link to switch between instances
 if (redirectLink) {
 	window.onload = () => {
 		const link = document.querySelector(".icon-bird")
-		if (link !== null && location.hostname === nitter) {
-			document.head.insertAdjacentHTML("beforeend", '<style>.icon-bird::before { content: "P"; font-weight: bold; }</style>')
+		if (link !== null && location.hostname === nitter1) {
+			document.head.insertAdjacentHTML("beforeend", `<style>.icon-bird::before { content: "${code2}"; font-weight: bold; }</style>`)
 			link.title = "Open in nitter.privacydev.net"
-			link.href = location.href.replace(/^https:\/\/nitter\.net\//, "https://nitter.privacydev.net/")
+			link.href = location.href.replace(nitter1, nitter2)
 		}
-		if (link !== null && location.hostname === privacydev) {
-			document.head.insertAdjacentHTML("beforeend", '<style>.icon-bird::before { content: "N"; font-weight: bold; }</style>')
+		if (link !== null && location.hostname === nitter2) {
+			document.head.insertAdjacentHTML("beforeend", `<style>.icon-bird::before { content: "${code1}"; font-weight: bold; }</style>`)
 			link.title = "Open in nitter.net"
-			link.href = location.href.replace(/^https:\/\/nitter\.privacydev\.net\//, "https://nitter.net/")
+			link.href = location.href.replace(nitter2, nitter1)
 		}
 	}
 }
