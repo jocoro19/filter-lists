@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.15.4
+@version     1.16
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -13,7 +13,7 @@
 	:root {
 		--yt-css-width: calc(100% - max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) * 24px);
 	}
-
+	
 	/* Make font smaller for video titles and video information */
 	ytd-rich-item-renderer {
 		margin-bottom: 32px !important;
@@ -50,7 +50,7 @@
 		padding-top: 0 !important;
 	}
 
-	/* Make channel page layout compact again */
+	/* Improve layout of channel page */
 	#channel-header-container {
 		max-width: unset !important;
 		padding-top: 0 !important;
@@ -83,6 +83,13 @@
 	#links-container.ytd-channel-about-metadata-renderer {
 		order: -1 !important;
 	}
+	/* Improvements for new layout */
+	[use-page-header-style][has-channel-art] #wrapper > #contentContainer {
+		padding-top: calc(16.25% + 148px) !important;
+	}
+	[use-page-header-style]:not([has-channel-art]) #wrapper > #contentContainer {
+		padding-top: 148px !important;
+	}
 	[use-page-header-style] #channel-header-container > #inner-header-container {
 		flex-direction: row !important;
 		align-items: center !important;
@@ -91,11 +98,28 @@
 	[use-page-header-style] #subscribe-button {
 		margin-left: 8px !important;
 	}
+	[use-page-header-style] .page-header-banner-sizer {
+		padding-top: 16.25% !important;
+	}
 	[use-page-header-style] .page-header-banner  {
 		margin: 0 !important;
 		border-radius: 0 !important;
 	}
-
+	[use-page-header-style] .page-header-banner-image {
+		background-position: 0 0 !important;
+	}
+	[use-page-header-style] .yt-tab-shape-wiz {
+		padding: 0 6px !important;
+	}
+	[use-page-header-style] .yt-tab-group-shape-wiz__slider {
+		display: none !important;
+	}
+	[use-page-header-style] .yt-tab-shape-wiz__tab-bar--tab-bar-selected {
+		background-color: var(--yt-spec-text-primary) !important;
+		border-radius: 1px !important;
+		height: 2px !important;
+	}
+	
 	/* Prevent video description from expanding when being clicked on */
 	#description {
 		pointer-events: none !important;
