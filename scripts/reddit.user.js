@@ -2,7 +2,7 @@
 // @name          JHS Reddit Fixes
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       1.4.1
+// @version       1.4.2
 // @run-at        document-start
 // @description   Redirects all Reddit links to Old Reddit and fixes image links by using a custom image viewer
 // @grant         none
@@ -17,7 +17,7 @@
 // Config
 const redirect = true // Redirect Reddit links to old.reddit.com
 const autoNsfw = false // Automatically show NSFW posts (Works best for browsing in private tabs)
-const autoExpandImg = false // Automatically expand images and videos in posts
+const autoExpandImg = false // Automatically expand images in posts
 
 // Redirect Reddit links to old.reddit.com
 if (redirect && location.hostname !== "old.reddit.com" && location.pathname !== "/media") {
@@ -34,10 +34,10 @@ if (autoNsfw && !(document.cookie.includes("over18"))) {
 	location.reload()
 }
 
-// Automatically expand images and videos in posts
+// Automatically expand images in posts
 if (autoExpandImg && location.hostname === "old.reddit.com") {
 	window.onload = () => {
-		document.querySelectorAll(".expando-button.video.collapsed").forEach(element => element.click())
+		document.querySelectorAll('.thing:not([data-kind="video"]) .expando-button.video.collapsed').forEach(element => element.click())
 	}
 }
 
