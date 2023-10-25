@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-10-11.1
+! Version: 2023-10.24.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -71,14 +71,6 @@ m.youtube.com##.searchbox-input-wrapper:style(margin-right: 12px !important;)
 m.youtube.com##.media-item-endorsement-container
 m.youtube.com##ytm-paid-content-overlay-renderer
 m.youtube.com##ytm-compact-radio-renderer
-m.youtube.com##ytm-channel-tagline-renderer
-m.youtube.com##ytm-channel-header-links-view-model
-m.youtube.com##.c4-tabbed-header-modern-details:style(margin-bottom: 8px !important;)
-m.youtube.com##ytm-profile-icon:style(max-height: 106px !important; max-width: 106px !important;)
-m.youtube.com##ytm-channel-about-metadata-renderer:style(display: flex !important; flex-direction: column !important; margin-top: -12px !important;)
-m.youtube.com##ytm-channel-about-metadata-renderer > .user-text:style(margin: 8px 0 !important;)
-m.youtube.com##yt-channel-external-link-view-model:style(order: -1 !important;)
-m.youtube.com##yt-channel-external-link-view-model > img
 m.youtube.com##ytm-clarification-renderer
 m.youtube.com##ytm-watch-metadata-app-promo-renderer
 m.youtube.com##ytm-video-description-gaming-section-renderer
@@ -103,10 +95,25 @@ m.youtube.com##.single-column-browse-results-tab-bar:has([tab-identifier="FEhash
 m.youtube.com##ytm-multi-page-menu-section-renderer:has(a[href^="https://www.youtubekids.com"])
 m.youtube.com##+js(href-sanitizer, a[href^="https://www.youtube.com/redirect"][href*="q=http"], ?q)
 
+! Mobile YouTube channel page layout improvements
+m.youtube.com##ytm-channel-tagline-renderer
+m.youtube.com##ytm-channel-header-links-view-model
+m.youtube.com##.c4-tabbed-header-modern-details:style(margin-bottom: 8px !important;)
+m.youtube.com##ytm-profile-icon:style(max-height: 106px !important; max-width: 106px !important;)
+m.youtube.com##ytm-channel-about-metadata-renderer:style(display: flex !important; flex-direction: column !important; margin-top: -12px !important;)
+m.youtube.com##ytm-channel-about-metadata-renderer > .user-text:style(margin: 8px 0 !important;)
+m.youtube.com##yt-channel-external-link-view-model:style(order: -1 !important;)
+m.youtube.com##yt-channel-external-link-view-model > img
+m.youtube.com##.c4-tabbed-header-page-header-banner:style(height: initial !important; padding: 0 !important; margin: 0 -12px !important; border-radius: 0 !important;)
+m.youtube.com##.c4-tabbed-header-page-header-banner-img:style(position: static !important;)
+m.youtube.com##.yt-tab-group-shape-wiz__slider
+m.youtube.com##.yt-tab-shape-wiz__tab-bar
+
 ! Hide YouTube Shorts
 m.youtube.com##ytm-reel-shelf-renderer
 m.youtube.com##ytm-item-section-renderer:style(border-bottom: none !important;)
 m.youtube.com##[role="tablist"] > a[href*="/shorts"]
+m.youtube.com##.yt-tab-shape-wiz[tab-title="Shorts"]
 m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
 m.youtube.com##ytm-media-item:has([data-style="SHORTS"])
 m.youtube.com##ytm-rich-item-renderer:has([href^="/shorts/"])
