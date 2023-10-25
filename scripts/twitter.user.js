@@ -2,7 +2,7 @@
 // @name          JHS X-iter
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       1.2
+// @version       1.2.1
 // @run-at        document-start
 // @description   X-it Twitter
 // @grant         none
@@ -31,12 +31,12 @@ if (redirectLink) {
 		const link = document.querySelector(".icon-bird")
 		if (link !== null && location.hostname === nitter1) {
 			document.head.insertAdjacentHTML("beforeend", `<style>.icon-bird::before { content: "${code2}"; font-weight: bold; }</style>`)
-			link.title = "Open in nitter.privacydev.net"
+			link.title = `Open in ${nitter2}`
 			link.href = location.href.replace(nitter1, nitter2)
 		}
 		if (link !== null && location.hostname === nitter2) {
 			document.head.insertAdjacentHTML("beforeend", `<style>.icon-bird::before { content: "${code1}"; font-weight: bold; }</style>`)
-			link.title = "Open in nitter.net"
+			link.title = `Open in ${nitter1}`
 			link.href = location.href.replace(nitter2, nitter1)
 		}
 	}
