@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.15.3
+! Version: 1.16
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -21,7 +21,7 @@ www.youtube.com##ytd-browse:not([page-subtype="channels"]) #content.ytd-rich-sec
 www.youtube.com##ytd-rich-grid-media:style(max-width: unset !important;)
 www.youtube.com##[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer:style(padding-top: 0 !important;)
 
-! Make channel page layout compact again
+! Improve layout of channel page
 www.youtube.com###channel-header-container:style(max-width: unset !important; padding-top: 0 !important; margin: auto !important;)
 www.youtube.com###channel-header-container > #avatar:style(height: 80px !important; width: 80px !important; margin-bottom: 0 !important;)
 www.youtube.com###channel-header-container > #inner-header-container:style(margin-top: 16px !important;)
@@ -31,9 +31,17 @@ www.youtube.com##[page-subtype="channels"] #sponsor-button:style(order: -1 !impo
 www.youtube.com##[page-subtype="channels"] ytd-feed-filter-chip-bar-renderer:style(margin-bottom: -8px !important;)
 www.youtube.com###left-column.ytd-channel-about-metadata-renderer:style(display: flex !important; flex-direction: column !important;)
 www.youtube.com###links-container.ytd-channel-about-metadata-renderer:style(order: -1 !important;)
+! Improvements for new layout
+www.youtube.com##[use-page-header-style][has-channel-art] #wrapper > #contentContainer:style(padding-top: calc(16.25% + 148px) !important;)
+www.youtube.com##[use-page-header-style]:not([has-channel-art]) #wrapper > #contentContainer:style(padding-top: 148px !important;)
 www.youtube.com##[use-page-header-style] #channel-header-container > #inner-header-container:style(flex-direction: row !important; align-items: center !important; margin-top: 0 !important;)
 www.youtube.com##[use-page-header-style] #subscribe-button:style(margin-left: 8px !important;)
+www.youtube.com##[use-page-header-style] .page-header-banner-sizer:style(padding-top: 16.25% !important;)
 www.youtube.com##.page-header-banner:style(margin: 0 !important; border-radius: 0 !important;)
+www.youtube.com##[use-page-header-style] .page-header-banner-image:style(background-position: 0 0 !important;)
+www.youtube.com##[use-page-header-style] .yt-tab-shape-wiz:style(padding: 0 6px !important;)
+www.youtube.com##[use-page-header-style] .yt-tab-group-shape-wiz__slider
+www.youtube.com##[use-page-header-style] .yt-tab-shape-wiz__tab-bar--tab-bar-selected:style(background-color: var(--yt-spec-text-primary) !important; border-radius: 1px !important; height: 2px !important;)
 
 ! Prevent video description from expanding when being clicked on
 www.youtube.com###description:style(pointer-events: none !important;)
