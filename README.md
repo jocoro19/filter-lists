@@ -67,9 +67,9 @@ I won't be accepting any contributions at this time.
   * Fixes i.redd.it
   * Includes fixes for a few subreddits on Old Reddit
 
-### Installation via Stylus
-1. Install the [Stylus](https://github.com/openstyles/stylus) extension on your browser
-2. Click on the link of the userstyle to import it into Stylus
+### Installation via extension
+1. Install a userstyle manager extension such as [Stylus](https://github.com/openstyles/stylus) (Firefox/Chrome)
+2. Click on the link of the userstyle to import it into your extension of choice
 
 ### Installation via `userContent.css` (Firefox only)
 1. Go to `about:config` and set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`
@@ -81,3 +81,7 @@ I won't be accepting any contributions at this time.
 
 * [JHS Reddit Fixes](https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/reddit.user.js)
 * [JHS X-iter](https://raw.githubusercontent.com/jocoro19/filter-lists/main/scripts/twitter.user.js)
+
+### Installation
+1. Install a userscript manager extension such as [Violentmonkey](https://violentmonkey.github.io/) or [Tampermonkey](https://www.tampermonkey.net/) (Firefox/Chrome) or [Userscripts](https://github.com/quoid/userscripts) (Safari)
+2. Click on the link of the userscript to import it into your extension of choice
