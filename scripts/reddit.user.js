@@ -2,7 +2,7 @@
 // @name          JHS Reddit Fixes
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       1.4.2
+// @version       1.4.3
 // @run-at        document-start
 // @description   Redirects all Reddit links to Old Reddit and fixes image links by using a custom image viewer
 // @grant         none
@@ -47,14 +47,17 @@ if (location.hostname !== "old.reddit.com" && location.pathname === "/media") {
 	window.stop() // Stop Reddit page from loading any further
 	const rootElement = document.documentElement
 	if (document.head === null) {
-		rootElement.appendChild(document.createElement("head")) // Add head if there isn't a head element
+		rootElement.appendChild(document.createElement("head")) // Add head if there isn't a head element yet
+		document.head.insertAdjacentHTML("beforeend", '<link href="https://www.redditstatic.com/shreddit/assets/favicon/64x64.png" rel="icon shortcut" sizes="64x64">') // Add icon
 	}
 	if (document.body === null) {
-		rootElement.appendChild(document.createElement("body")) // Add body if there isn't a body element
+		rootElement.appendChild(document.createElement("body")) // Add body if there isn't a body element yet
 	}
 	rootElement.removeAttribute("class") // Remove classes from <HTML element to prevent breakage
-	rootElement.querySelectorAll('head > :not(title)').forEach(element => element.remove())
+	document.head.removeAttribute("prefix")
+	document.head.querySelectorAll('script, style[nonce], link:not([rel="icon shortcut"]), meta:not([name="viewport"])').forEach(element => element.remove())
 	document.body.innerHTML = "" // Delete everything in the body for now
+	document.body.removeAttribute("class")
 	const urlParams = new URLSearchParams(window.location.search)
 	const url = urlParams.get("url")
 	const filename = url.match(/[^/]+$/)[0]
@@ -65,7 +68,7 @@ if (location.hostname !== "old.reddit.com" && location.pathname === "/media") {
 		location.replace(`https://www.reddit.com/media?url=${realUrl}`)
 		return
 	}
-	document.head.insertAdjacentHTML("beforeend", `<style>
+	document.head.insertAdjacentHTML("beforeend", `<meta name="viewport" content="width=device-width, initial-scale=1.0"><style>
 		body { margin: 0 }
 		.overlay { position: fixed; inset: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; margin: 0; overflow: auto; }
 		img.no-zoom { max-height: 100vh; max-width: 100vw; object-fit: contain; margin: 0 auto; }
@@ -73,7 +76,7 @@ if (location.hostname !== "old.reddit.com" && location.pathname === "/media") {
 		img.zoomed-in { margin: auto !important; position: absolute; cursor: zoom-out; }
 		img.zoomed-in.overflow-x { left: 0; }
 		img.zoomed-in.overflow-y { top: 0; }
-	</style><meta name="viewport" content="width=device-width, initial-scale=1.0">`)
+	</style>`)
 	if (url !== null) {
 		const loadImage = new Image()
 		loadImage.src = url
@@ -83,11 +86,8 @@ if (location.hostname !== "old.reddit.com" && location.pathname === "/media") {
 			imgViewer()
 		}
 	}
-	if (document.querySelector("head:empty") !== null) {
-		document.querySelector("head:empty").remove() // Remove an extra empty head element if there is one
-	}
 	function imgViewer() {
-		document.body.outerHTML = `<body><div class="overlay"><img src="${url}"></div></body>`
+		document.body.innerHTML = `<div class="overlay"><img src="${url}"></div>`
 		const overlay = document.querySelector(".overlay")
 		const img = document.querySelector(".overlay > img")
 		document.title = `${filename} (${img.clientWidth}×${img.clientHeight})`
