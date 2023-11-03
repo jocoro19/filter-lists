@@ -53,7 +53,7 @@ if (location.hostname !== "old.reddit.com" && location.pathname === "/media") {
 	if (document.body === null) {
 		rootElement.appendChild(document.createElement("body")) // Add body if there isn't a body element yet
 	}
-	rootElement.removeAttribute("class") // Remove classes from <HTML element to prevent breakage
+	rootElement.removeAttribute("class") // Remove classes from <HTML> element to prevent breakage
 	document.head.removeAttribute("prefix")
 	document.head.querySelectorAll('script, style[nonce], link:not([rel="icon shortcut"]), meta:not([name="viewport"])').forEach(element => element.remove())
 	document.body.innerHTML = "" // Delete everything in the body for now
