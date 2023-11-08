@@ -41,8 +41,8 @@ wikipedia.org##[x-apple-data-detectors="true"]:style(pointer-events: none !impor
 www.wikipedia.org##+js(set-cookie, hideWikipediaPortalBanner, 1)
 
 ! Twitter/"X" blocking
-twitter.com, x.com##+js(ra, href|src|d|rel|name|content|media)
-twitter.com, x.com##+js(rmnt, script, /[\s\S]/)
+twitter.com,x.com##+js(ra, href|src|d|rel|name|content|media)
+twitter.com,x.com##+js(rmnt, script, /[\s\S]/)
 *$domain=twitter.com|x.com
 ||twitter.com^$third-party
 ||x.com^$third-party
