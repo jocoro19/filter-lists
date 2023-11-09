@@ -2,7 +2,7 @@
 // @name          JHS Reddit Fixes
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       1.5.3
+// @version       1.5.4
 // @run-at        document-start
 // @description   Redirects all Reddit links to Old Reddit and fixes image links by using a custom image viewer
 // @grant         none
@@ -46,7 +46,7 @@ if (autoExpandImg && location.hostname === "old.reddit.com") {
 	}
 	if (!exempted) {
 		window.onload = () => {
-			document.querySelectorAll('.thing:not(.stickied, [data-kind="video"], [data-target-root-type="video"], [data-domain="youtube.com"])').forEach(element => {
+			document.querySelectorAll('.thing:not(.stickied, [data-kind="video"], [data-target-root-type="video"], [data-domain="youtube.com"], [data-domain="youtu.be"])').forEach(element => {
 				const button = element.querySelector(".expando-button.collapsed:is(.video, .crosspost)")
 				if (button !== null) {
 					button.click()
