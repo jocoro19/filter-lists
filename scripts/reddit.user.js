@@ -2,7 +2,7 @@
 // @name          JHS Reddit Fixes
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       1.5.1
+// @version       1.5.2
 // @run-at        document-start
 // @description   Redirects all Reddit links to Old Reddit and fixes image links by using a custom image viewer
 // @grant         none
@@ -18,7 +18,7 @@
 const redirect = true // Redirect Reddit links to old.reddit.com
 const autoNsfw = false // Automatically show NSFW posts (Works best for browsing in private tabs)
 const autoExpandImg = true // Automatically expand images in posts
-const exemptedSubreddits = [] // Subreddits to be exempted from automatic image expanding (An array of subbreddit names as strings, case-insensitive)
+const exemptedSubreddits = [""] // Subreddits to be exempted from automatic image expanding (An array of subbreddit names as strings, case-insensitive)
 
 // Redirect Reddit links to old.reddit.com
 if (redirect && location.hostname !== "old.reddit.com" && location.pathname !== "/media") {
@@ -37,8 +37,14 @@ if (autoNsfw && !(document.cookie.includes("over18"))) {
 
 // Automatically expand images in posts
 if (autoExpandImg && location.hostname === "old.reddit.com") {
-	const subredditName = /(?<=\/r\/)[^\/]*/.exec(location.pathname)[0].toLowerCase()
-	if (!(exemptedSubreddits.some(name => name.toLowerCase() === subredditName))) {
+	let exempted
+	if (location.pathname.startsWith("/r/")) {
+		const subredditName = /(?<=\/r\/)[^\/]*/.exec(location.pathname)[0].toLowerCase()
+		exempted = (exemptedSubreddits.some(name => name.toLowerCase() === subredditName))
+	} else {
+		exempted = false;
+	}
+	if (!exempted) {
 		window.onload = () => {
 			document.querySelectorAll('.thing:not(.stickied, [data-kind="video"], [data-target-root-type="video"])').forEach(element => {
 				const button = element.querySelector(".expando-button.collapsed:is(.video, .crosspost)")
