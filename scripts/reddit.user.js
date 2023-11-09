@@ -18,7 +18,7 @@
 const redirect = true // Redirect Reddit links to old.reddit.com
 const autoNsfw = false // Automatically show NSFW posts (Works best for browsing in private tabs)
 const autoExpandImg = true // Automatically expand images in posts
-const exemptedSubreddits = [""] // Subreddits to be exempted from automatic image expanding (An array of subbreddit names as strings, case-insensitive)
+const exemptedSubreddits = [] // Subreddits to be exempted from automatic image expanding (An array of subbreddit names as strings, case-insensitive)
 
 // Redirect Reddit links to old.reddit.com
 if (redirect && location.hostname !== "old.reddit.com" && location.pathname !== "/media") {
