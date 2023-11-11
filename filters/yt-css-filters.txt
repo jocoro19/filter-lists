@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.16
+! Version: 1.17
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -8,12 +8,7 @@
 ! Variables
 www.youtube.com##:root:style(--yt-css-width: calc(100% - max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) * 24px);)
 
-! Make font smaller for video titles and video information 
-www.youtube.com##ytd-rich-item-renderer:style(margin-bottom: 32px !important)
-www.youtube.com##ytd-rich-grid-renderer #video-title:style(font-size: 1.4rem !important; line-height: 2rem !important;)
-www.youtube.com##ytd-rich-grid-renderer #metadata *:style(font-size: 1.2rem !important; line-height: 1.8rem !important;)
-
-! Improve home and subscriptions page layout
+! Improve home and subscriptions page layout and hide the empty space when a blocker is used
 www.youtube.com##ytd-rich-grid-row, #contents.ytd-rich-grid-row:style(display: contents !important;)
 www.youtube.com##ytd-browse:not([page-subtype="channels"]) #contents.ytd-rich-grid-renderer:style(width: var(--yt-css-width) !important; margin: auto !important;)
 www.youtube.com##ytd-browse:not([page-subtype="channels"]) ytd-rich-item-renderer:not([is-slim-media]):style(width: calc(100% / max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) - 16px) !important; margin: 0 8px 32px !important;)
@@ -21,34 +16,48 @@ www.youtube.com##ytd-browse:not([page-subtype="channels"]) #content.ytd-rich-sec
 www.youtube.com##ytd-rich-grid-media:style(max-width: unset !important;)
 www.youtube.com##[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer:style(padding-top: 0 !important;)
 
-! Improve layout of channel page
-www.youtube.com###channel-header-container:style(max-width: unset !important; padding-top: 0 !important; margin: auto !important;)
-www.youtube.com###channel-header-container > #avatar:style(height: 80px !important; width: 80px !important; margin-bottom: 0 !important;)
-www.youtube.com###channel-header-container > #inner-header-container:style(margin-top: 16px !important;)
-www.youtube.com###channel-header-container #meta:style(width: unset !important;)
-www.youtube.com###channel-tagline, #channel-header-links
-www.youtube.com##[page-subtype="channels"] #sponsor-button:style(order: -1 !important;)
-www.youtube.com##[page-subtype="channels"] ytd-feed-filter-chip-bar-renderer:style(margin-bottom: -8px !important;)
-www.youtube.com###left-column.ytd-channel-about-metadata-renderer:style(display: flex !important; flex-direction: column !important;)
-www.youtube.com###links-container.ytd-channel-about-metadata-renderer:style(order: -1 !important;)
-! Improvements for new layout
+! Make the channel page layout more compact
 www.youtube.com##[use-page-header-style][has-channel-art] #wrapper > #contentContainer:style(padding-top: calc(16.25% + 148px) !important;)
 www.youtube.com##[use-page-header-style]:not([has-channel-art]) #wrapper > #contentContainer:style(padding-top: 148px !important;)
-www.youtube.com##[use-page-header-style] #channel-header-container > #inner-header-container:style(flex-direction: row !important; align-items: center !important; margin-top: 0 !important;)
-www.youtube.com##[use-page-header-style] #subscribe-button:style(margin-left: 8px !important;)
-www.youtube.com##[use-page-header-style] .page-header-banner-sizer:style(padding-top: 16.25% !important;)
+www.youtube.com##.page-header-banner-sizer:style(padding-top: 16.25% !important;)
 www.youtube.com##.page-header-banner:style(margin: 0 !important; border-radius: 0 !important;)
-www.youtube.com##[use-page-header-style] .page-header-banner-image:style(background-position: 0 0 !important;)
-www.youtube.com##[use-page-header-style] .yt-tab-shape-wiz:style(padding: 0 6px !important;)
-www.youtube.com##[use-page-header-style] .yt-tab-group-shape-wiz__slider
+www.youtube.com##.page-header-banner-image:style(background-position: 0 0 !important;)
+www.youtube.com###channel-header-container:style(max-width: unset !important; margin: auto !important;)
+www.youtube.com###channel-header-container > #avatar:style(height: 80px !important; width: 80px !important;)
+www.youtube.com###channel-header-container > #inner-header-container:style(flex-direction: row !important; align-items: center !important; margin-top: 0 !important;)
+www.youtube.com###channel-header-container #meta:style(width: unset !important;)
+www.youtube.com###videos-count::after:style(content: "‧"; padding: 0 4px;)
+www.youtube.com###channel-tagline:style(display: inline-block !important;)
+www.youtube.com###channel-tagline > ytd-channel-tagline-renderer:style(padding: 0 !important;)
+www.youtube.com###channel-tagline #wrapper::before:style(content: "About this channel"; color: var(--yt-spec-text-secondary); font-size: 1.4rem; line-height: 2rem;)
+www.youtube.com###channel-tagline #content
+www.youtube.com###channel-tagline #more-icon:style(height: 20px !important; width: 20px !important; margin: -2px 0 0 2px !important; color: var(--yt-spec-text-secondary) !important;)
+www.youtube.com###channel-header-links:style(display: none !important;)
+www.youtube.com##[page-subtype="channels"] #subscribe-button:style(margin-left: 8px !important;)
+www.youtube.com##[page-subtype="channels"] #sponsor-button:style(order: -1 !important;)
+www.youtube.com##[page-subtype="channels"] ytd-feed-filter-chip-bar-renderer:style(margin-bottom: -8px !important;)
+www.youtube.com##.yt-tab-shape-wiz:style(padding: 0 6px !important;)
+www.youtube.com##.yt-tab-group-shape-wiz__slider
 www.youtube.com##[use-page-header-style] .yt-tab-shape-wiz__tab-bar--tab-bar-selected:style(background-color: var(--yt-spec-text-primary) !important; border-radius: 1px !important; height: 2px !important;)
+
+! New about channel popup
+www.youtube.com##ytd-popup-container > tp-yt-paper-dialog > ytd-engagement-panel-section-list-renderer:style(margin: 0 !important;)
+www.youtube.com##ytd-about-channel-renderer #about-container:style(max-height: unset !important; display: flex !important; flex-direction: column !important;)
+www.youtube.com##ytd-about-channel-renderer #description-container:style(order: 1 !important; padding: 12px 0 0 !important;)
+www.youtube.com##ytd-about-channel-renderer #button-container:style(order: 2 !important;)
+www.youtube.com##yt-channel-external-link-view-model > img
+
+! Make font smaller for video titles and video information 
+www.youtube.com##ytd-rich-item-renderer:style(margin-bottom: 32px !important)
+www.youtube.com##ytd-rich-grid-renderer #video-title:style(font-size: 1.4rem !important; line-height: 2rem !important;)
+www.youtube.com##ytd-rich-grid-renderer #metadata *:style(font-size: 1.2rem !important; line-height: 1.8rem !important;)
 
 ! Prevent video description from expanding when being clicked on
 www.youtube.com###description:style(pointer-events: none !important;)
 www.youtube.com###description :is(#expand, #collapse, #info-container, #items, a):style(pointer-events: auto !important;)
 www.youtube.com###description:hover:style(background-color: var(--yt-spec-badge-chip-background) !important;)
 
-! Improve SponsorBlock UI
+! SponsorBlock UI
 www.youtube.com##.sponsorBlockCategoryPill:style(margin-right: 6px !important;)
 www.youtube.com###sponsorBlockPopupContainer:style(margin-bottom: 8px !important;)
 www.youtube.com###sponsorBlockPopupContainer > iframe:style(width: 100% !important;)
