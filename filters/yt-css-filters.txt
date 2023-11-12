@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.17
+! Version: 1.17.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -43,6 +43,7 @@ www.youtube.com##[use-page-header-style] .yt-tab-shape-wiz__tab-bar--tab-bar-sel
 ! New about channel popup
 www.youtube.com##ytd-popup-container > tp-yt-paper-dialog > ytd-engagement-panel-section-list-renderer:style(margin: 0 !important;)
 www.youtube.com##ytd-about-channel-renderer #about-container:style(max-height: unset !important; display: flex !important; flex-direction: column !important;)
+www.youtube.com##ytd-about-channel-renderer #links-section:style(order: -1 !important;)
 www.youtube.com##ytd-about-channel-renderer #description-container:style(order: 1 !important; padding: 12px 0 0 !important;)
 www.youtube.com##ytd-about-channel-renderer #button-container:style(order: 2 !important;)
 www.youtube.com##yt-channel-external-link-view-model > img
