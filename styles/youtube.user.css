@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.17
+@version     1.17.1
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -133,6 +133,9 @@ It is important to note that using a blocker is NOT theft. Do not fall for this 
 		max-height: unset !important;
 		display: flex !important;
 		flex-direction: column !important;
+	}
+	ytd-about-channel-renderer #links-section {
+		order: -1 !important;
 	}
 	ytd-about-channel-renderer #description-container {
 		order: 1 !important;
