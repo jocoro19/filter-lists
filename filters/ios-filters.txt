@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-11-12.2
+! Version: 2023-11-13.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -76,12 +76,13 @@ m.youtube.com##ytm-compact-radio-renderer
 m.youtube.com##ytm-compact-channel-renderer:style(margin-top: 0 !important;)
 m.youtube.com##ytm-clarification-renderer
 m.youtube.com##ytm-watch-metadata-app-promo-renderer
-m.youtube.com##ytm-video-description-gaming-section-renderer
 m.youtube.com##.music-metadata-premium-upsell-link
 m.youtube.com##.slim-video-metadata-header .secondary-text:style(mask-image: none !important; -webkit-mask-image: none !important;)
 m.youtube.com##.slim-video-metadata-information-inline-badge
 m.youtube.com##.slim-video-information-show-more
+m.youtube.com##video-attributes-section-view-model-c3
 m.youtube.com##ytm-video-description-header-renderer :is(.title, .cbox, ytm-sentiment-factoid-renderer)
+m.youtube.com##ytm-structured-description-content-renderer ytm-reel-shelf-renderer
 m.youtube.com##.ytm-video-description-infocards-section-header, .ytm-video-description-infocards-action-buttons
 m.youtube.com##ytm-structured-description-content-renderer:style(padding-bottom: 0 !important; margin-bottom: -24px !important;)
 m.youtube.com##c3-toast:has(a[href="https://yt.be/help/dislike"])
