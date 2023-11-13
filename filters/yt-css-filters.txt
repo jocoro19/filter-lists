@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.18
+! Version: 1.18.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -32,7 +32,7 @@ www.youtube.com###channel-tagline > ytd-channel-tagline-renderer:style(padding: 
 www.youtube.com###channel-tagline #wrapper::before:style(content: "About this channel"; color: var(--yt-spec-text-secondary); font-size: 1.4rem; line-height: 2rem;)
 www.youtube.com###channel-tagline #content
 www.youtube.com###channel-tagline #more-icon:style(height: 20px !important; width: 20px !important; margin: -2px 0 0 2px !important; color: var(--yt-spec-text-secondary) !important;)
-www.youtube.com###channel-header-links:style(display: none !important;)
+www.youtube.com###channel-header-links
 www.youtube.com##[page-subtype="channels"] #subscribe-button:style(margin-left: 8px !important;)
 www.youtube.com##[page-subtype="channels"] #sponsor-button:style(order: -1 !important;)
 www.youtube.com##[page-subtype="channels"] ytd-feed-filter-chip-bar-renderer:style(margin-bottom: -8px !important;)
@@ -59,7 +59,8 @@ www.youtube.com###description :is(#expand, #collapse, #info-container, #items, a
 www.youtube.com###description:hover:style(background-color: var(--yt-spec-badge-chip-background) !important;)
 www.youtube.com###description #structured-description > #items:style(display: flex !important; flex-direction: column !important;)
 www.youtube.com##ytd-video-description-infocards-section-renderer:style(padding: 0 !important;)
-www.youtube.com##ytd-video-description-infocards-section-renderer > :not(#infocards-section):style(display: none !important;)
+www.youtube.com##ytd-video-description-infocards-section-renderer > :not(#infocards-section)
+www.youtube.com##ytd-structured-description-content-renderer ytd-reel-shelf-renderer
 www.youtube.com##ytd-video-description-transcript-section-renderer:style(padding: 0 !important; margin-top: 10px !important; order: 1 !important;)
 
 ! SponsorBlock UI
