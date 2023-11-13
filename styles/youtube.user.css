@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.17.2
+@version     1.18
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -161,7 +161,7 @@ It is important to note that using a blocker is NOT theft. Do not fall for this 
 		line-height: 1.8rem !important;
 	}
 	
-	/* Prevent video description from expanding when being clicked on */
+	/* Improve layout of video description */
 	#description {
 		pointer-events: none !important;
 	}
@@ -170,6 +170,21 @@ It is important to note that using a blocker is NOT theft. Do not fall for this 
 	}
 	#description:hover {
 		background-color: var(--yt-spec-badge-chip-background) !important;
+	}
+	#description #structured-description > #items {
+		display: flex !important;
+		flex-direction: column !important;
+	}
+	ytd-video-description-infocards-section-renderer {
+		padding: 0 !important;
+	}
+	ytd-video-description-infocards-section-renderer > :not(#infocards-section) {
+		display: none !important;
+	}
+	ytd-video-description-transcript-section-renderer {
+		padding: 0 !important;
+		margin-top: 10px !important;
+		order: 1 !important;
 	}
 
 	/* SponsorBlock UI */
