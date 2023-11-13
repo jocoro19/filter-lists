@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.17.1
+! Version: 1.18
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -38,7 +38,7 @@ www.youtube.com##[page-subtype="channels"] #sponsor-button:style(order: -1 !impo
 www.youtube.com##[page-subtype="channels"] ytd-feed-filter-chip-bar-renderer:style(margin-bottom: -8px !important;)
 www.youtube.com##.yt-tab-shape-wiz:style(padding: 0 6px !important;)
 www.youtube.com##.yt-tab-group-shape-wiz__slider
-www.youtube.com##[use-page-header-style] .yt-tab-shape-wiz__tab-bar--tab-bar-selected:style(background-color: var(--yt-spec-text-primary) !important; border-radius: 1px !important; height: 2px !important;)
+www.youtube.com##.yt-tab-shape-wiz__tab-bar--tab-bar-selected:style(background-color: var(--yt-spec-text-primary) !important; border-radius: 1px !important; height: 2px !important;)
 
 ! New about channel popup
 www.youtube.com##ytd-popup-container > tp-yt-paper-dialog > ytd-engagement-panel-section-list-renderer:style(margin: 0 !important;)
@@ -53,10 +53,14 @@ www.youtube.com##ytd-rich-item-renderer:style(margin-bottom: 32px !important)
 www.youtube.com##ytd-rich-grid-renderer #video-title:style(font-size: 1.4rem !important; line-height: 2rem !important;)
 www.youtube.com##ytd-rich-grid-renderer #metadata *:style(font-size: 1.2rem !important; line-height: 1.8rem !important;)
 
-! Prevent video description from expanding when being clicked on
+! Improve layout of video description
 www.youtube.com###description:style(pointer-events: none !important;)
 www.youtube.com###description :is(#expand, #collapse, #info-container, #items, a):style(pointer-events: auto !important;)
 www.youtube.com###description:hover:style(background-color: var(--yt-spec-badge-chip-background) !important;)
+www.youtube.com###description #structured-description > #items:style(display: flex !important; flex-direction: column !important;)
+www.youtube.com##ytd-video-description-infocards-section-renderer:style(padding: 0 !important;)
+www.youtube.com##ytd-video-description-infocards-section-renderer > :not(#infocards-section):style(display: none !important;)
+www.youtube.com##ytd-video-description-transcript-section-renderer:style(padding: 0 !important; margin-top: 10px !important; order: 1 !important;)
 
 ! SponsorBlock UI
 www.youtube.com##.sponsorBlockCategoryPill:style(margin-right: 6px !important;)
