@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.18
+@version     1.18.2
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -179,6 +179,9 @@ It is important to note that using a blocker is NOT theft. Do not fall for this 
 		padding: 0 !important;
 	}
 	ytd-video-description-infocards-section-renderer > :not(#infocards-section) {
+		display: none !important;
+	}
+	ytd-structured-description-content-renderer ytd-reel-shelf-renderer {
 		display: none !important;
 	}
 	ytd-video-description-transcript-section-renderer {
