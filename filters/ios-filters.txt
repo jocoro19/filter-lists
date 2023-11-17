@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-11-13.1
+! Version: 2023-11-17.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -80,8 +80,9 @@ m.youtube.com##.music-metadata-premium-upsell-link
 m.youtube.com##.slim-video-metadata-header .secondary-text:style(mask-image: none !important; -webkit-mask-image: none !important;)
 m.youtube.com##.slim-video-metadata-information-inline-badge
 m.youtube.com##.slim-video-information-show-more
-m.youtube.com##video-attributes-section-view-model-c3
+m.youtube.com##yt-video-attributes-section-view-model
 m.youtube.com##ytm-video-description-header-renderer :is(.title, .cbox, ytm-sentiment-factoid-renderer)
+m.youtube.com##ytm-video-description-header-renderer ytm-view-count-factoid-renderer:style(display: flex !important; flex: 1 !important;)
 m.youtube.com##ytm-structured-description-content-renderer ytm-reel-shelf-renderer
 m.youtube.com##.ytm-video-description-infocards-section-header, .ytm-video-description-infocards-action-buttons
 m.youtube.com##ytm-structured-description-content-renderer:style(padding-bottom: 0 !important; margin-bottom: -24px !important;)
@@ -93,8 +94,8 @@ m.youtube.com##.related-chips-slot-wrapper:style(transform: none !important; -we
 m.youtube.com##ytm-comments-simplebox-renderer
 m.youtube.com##ytm-comments-entry-point-teaser-renderer
 m.youtube.com##ytm-item-section-renderer:has(ad-slot-renderer)
-m.youtube.com##body > .bottom-sheet-overlay-scrim
 m.youtube.com##.ytm-bottom-sheet-overlay-container
+m.youtube.com##body > #global-loader > ytw-scrim
 m.youtube.com##body:has(.ytm-bottom-sheet-overlay-container):style(position: static !important;)
 m.youtube.com##ytm-shelf-renderer:has([data-type="BADGE_STYLE_TYPE_MEMBERS_ONLY"])
 m.youtube.com##.single-column-browse-results-tab-bar:has([tab-identifier="FEhashtag"])
