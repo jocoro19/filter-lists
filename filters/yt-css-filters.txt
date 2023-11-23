@@ -1,16 +1,13 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.18.1
+! Version: 1.19
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
-! Variables
-www.youtube.com##:root:style(--yt-css-width: calc(100% - max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) * 24px);)
-
-! Improve home and subscriptions page layout and hide the empty space when a blocker is used
+! Improve home and subscriptions page layout and hide empty space when ads are blocked
 www.youtube.com##ytd-rich-grid-row, #contents.ytd-rich-grid-row:style(display: contents !important;)
-www.youtube.com##ytd-browse:not([page-subtype="channels"]) #contents.ytd-rich-grid-renderer:style(width: var(--yt-css-width) !important; margin: auto !important;)
+www.youtube.com##ytd-browse:not([page-subtype="channels"]) #contents.ytd-rich-grid-renderer:style(width: calc(100% - max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) * 24px) !important; margin: auto !important;)
 www.youtube.com##ytd-browse:not([page-subtype="channels"]) ytd-rich-item-renderer:not([is-slim-media]):style(width: calc(100% / max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) - 16px) !important; margin: 0 8px 32px !important;)
 www.youtube.com##ytd-browse:not([page-subtype="channels"]) #content.ytd-rich-section-renderer:style(max-width: unset !important; margin: 0 8px !important;)
 www.youtube.com##ytd-rich-grid-media:style(max-width: unset !important;)
@@ -40,7 +37,7 @@ www.youtube.com##.yt-tab-shape-wiz:style(padding: 0 6px !important;)
 www.youtube.com##.yt-tab-group-shape-wiz__slider
 www.youtube.com##.yt-tab-shape-wiz__tab-bar--tab-bar-selected:style(background-color: var(--yt-spec-text-primary) !important; border-radius: 1px !important; height: 2px !important;)
 
-! New about channel popup
+! About channel popup
 www.youtube.com##ytd-popup-container > tp-yt-paper-dialog > ytd-engagement-panel-section-list-renderer:style(margin: 0 !important;)
 www.youtube.com##ytd-about-channel-renderer #about-container:style(max-height: unset !important; display: flex !important; flex-direction: column !important;)
 www.youtube.com##ytd-about-channel-renderer #links-section:style(order: -1 !important;)
@@ -48,7 +45,12 @@ www.youtube.com##ytd-about-channel-renderer #description-container:style(order: 
 www.youtube.com##ytd-about-channel-renderer #button-container:style(order: 2 !important;)
 www.youtube.com##yt-channel-external-link-view-model > img
 
-! Make font smaller for video titles and video information 
+! "For You" section on channel home tab
+www.youtube.com##[page-subtype="channels"] [should-use-mixed-list-height]:style(--ytd-grid-video-width: unset !important; --ytd-grid-video-thumbnail-height: unset !important;)
+www.youtube.com##[page-subtype="channels"] [should-use-mixed-list-height] #thumbnail:style(border-radius: 8px !important;)
+www.youtube.com##[page-subtype="channels"] [override-arrow-position-for-mixed-shelf] :is(#left-arrow, #right-arrow):style(height: 118px !important;)
+
+! Make font smaller for video titles and video information
 www.youtube.com##ytd-rich-item-renderer:style(margin-bottom: 32px !important)
 www.youtube.com##ytd-rich-grid-renderer #video-title:style(font-size: 1.4rem !important; line-height: 2rem !important;)
 www.youtube.com##ytd-rich-grid-renderer #metadata *:style(font-size: 1.2rem !important; line-height: 1.8rem !important;)
