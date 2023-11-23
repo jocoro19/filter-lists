@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-11-17.1
+! Version: 2023-11.23.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -62,7 +62,7 @@ nitter.*,nitter.privacydev.net##.timeline-item:has([href*="AIArt"],[href*="AIart
 ! Mobile YouTube
 m.youtube.com##ytm-related-chip-cloud-renderer
 m.youtube.com##.rich-grid-sticky-header
-m.youtube.com##ytm-rich-section-renderer
+m.youtube.com##ytm-rich-section-renderer  
 m.youtube.com##ytm-cinematic-container-renderer
 m.youtube.com##.dialog-container cinematic-setting-component
 m.youtube.com##.mobile-topbar-header-background:style(z-index: 1 !important;)
@@ -77,15 +77,6 @@ m.youtube.com##ytm-compact-channel-renderer:style(margin-top: 0 !important;)
 m.youtube.com##ytm-clarification-renderer
 m.youtube.com##ytm-watch-metadata-app-promo-renderer
 m.youtube.com##.music-metadata-premium-upsell-link
-m.youtube.com##.slim-video-metadata-header .secondary-text:style(mask-image: none !important; -webkit-mask-image: none !important;)
-m.youtube.com##.slim-video-metadata-information-inline-badge
-m.youtube.com##.slim-video-information-show-more
-m.youtube.com##yt-video-attributes-section-view-model
-m.youtube.com##ytm-video-description-header-renderer :is(.title, .cbox, ytm-sentiment-factoid-renderer)
-m.youtube.com##ytm-video-description-header-renderer ytm-view-count-factoid-renderer:style(display: flex !important; flex: 1 !important;)
-m.youtube.com##ytm-structured-description-content-renderer ytm-reel-shelf-renderer
-m.youtube.com##.ytm-video-description-infocards-section-header, .ytm-video-description-infocards-action-buttons
-m.youtube.com##ytm-structured-description-content-renderer:style(padding-bottom: 0 !important; margin-bottom: -24px !important;)
 m.youtube.com##c3-toast:has(a[href="https://yt.be/help/dislike"])
 m.youtube.com##ytm-rich-item-renderer:has(ytm-feed-nudge-renderer)
 m.youtube.com##.ytm-autonav-bar
@@ -121,6 +112,21 @@ m.youtube.com##.about-channel-section:has(yt-channel-external-link-view-model):s
 m.youtube.com##.about-channel-section:has(> span > span):style(order: 1 !important; margin-top: 0 !important;)
 m.youtube.com##.about-channel-action-button-container:style(min-height: unset !important; order: 2 !important;)
 m.youtube.com##yt-channel-external-link-view-model > img
+m.youtube.com##ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge)
+m.youtube.com##ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) + *:style(border-top: none !important;)
+! m.youtube.com##.horizontal-card-list-card-thumbnail-xlarge:style(width: 200px !important;)
+
+! Mobile YouTube video description layout improvements
+m.youtube.com##.slim-video-metadata-header .secondary-text:style(mask-image: none !important; -webkit-mask-image: none !important;)
+m.youtube.com##.slim-video-metadata-information-inline-badge
+m.youtube.com##.slim-video-information-show-more
+m.youtube.com##yt-video-attributes-section-view-model
+m.youtube.com##ytm-video-description-header-renderer :is(.title, .cbox, ytm-sentiment-factoid-renderer)
+m.youtube.com##ytm-video-description-header-renderer ytm-view-count-factoid-renderer:style(display: flex !important; flex: 1 !important;)
+m.youtube.com##ytm-structured-description-content-renderer ytm-reel-shelf-renderer
+m.youtube.com##.ytm-video-description-infocards-section-header, .ytm-video-description-infocards-action-buttons
+m.youtube.com##ytm-structured-description-content-renderer:style(padding-bottom: 0 !important; margin-bottom: -24px !important;)
+! m.youtube.com##.expandable-video-description-container .collapsed-string:style(max-height: unset !important; mask-image: none !important; -webkit-mask-image: none !important;)
 
 ! Hide YouTube Shorts
 m.youtube.com##ytm-reel-shelf-renderer
