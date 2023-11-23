@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.18.1
+@version     1.19
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -15,26 +15,23 @@ It is important to note that using a blocker is NOT theft. Do not fall for this 
 */
 
 @-moz-document domain("www.youtube.com") {
-	/* Variables */
-	:root {
-		--yt-css-width: calc(100% - max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) * 24px);
-	}
-	
-	/* Improve home and subscriptions page layout and hide the empty space when a blocker is used */
+	/* Improve home and subscriptions page layout and hide empty space when ads are blocked */
 	ytd-rich-grid-row, #contents.ytd-rich-grid-row {
 		display: contents !important;
 	}
-	ytd-browse:not([page-subtype="channels"]) #contents.ytd-rich-grid-renderer {
-		width: var(--yt-css-width) !important;
-		margin: auto !important;
-	}
-	ytd-browse:not([page-subtype="channels"]) ytd-rich-item-renderer:not([is-slim-media]) {
-		width: calc(100% / max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) - 16px) !important;
-		margin: 0 8px 32px !important;
-	}
-	ytd-browse:not([page-subtype="channels"]) #content.ytd-rich-section-renderer {
-		max-width: unset !important;
-		margin: 0 8px !important;
+	ytd-browse:not([page-subtype="channels"]) {
+		& #contents.ytd-rich-grid-renderer {
+			width: calc(100% - max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) * 24px) !important;
+			margin: auto !important;
+		}
+		& ytd-rich-item-renderer:not([is-slim-media]) {
+			width: calc(100% / max(var(--ytd-rich-grid-items-per-row), min(5, (var(--ytd-rich-grid-items-per-row) + 1))) - 16px) !important;
+			margin: 0 8px 32px !important;
+		}
+		& #content.ytd-rich-section-renderer {
+			max-width: unset !important;
+			margin: 0 8px !important;
+		}
 	}
 	ytd-rich-grid-media {
 		max-width: unset !important;
@@ -63,18 +60,18 @@ It is important to note that using a blocker is NOT theft. Do not fall for this 
 	#channel-header-container {
 		max-width: unset !important;
 		margin: auto !important;
-	}
-	#channel-header-container > #avatar {
-		height: 80px !important;
-		width: 80px !important;
-	}
-	#channel-header-container > #inner-header-container {
-		flex-direction: row !important;
-		align-items: center !important;
-		margin-top: 0 !important;
-	}
-	#channel-header-container #meta {
-		width: unset !important;
+		& > #avatar {
+			height: 80px !important;
+			width: 80px !important;
+		}
+		& > #inner-header-container {
+			flex-direction: row !important;
+			align-items: center !important;
+			margin-top: 0 !important;
+		}
+		& #meta {
+			width: unset !important;
+		}
 	}
 	#videos-count::after {
 		content: "‧";
@@ -82,36 +79,38 @@ It is important to note that using a blocker is NOT theft. Do not fall for this 
 	}
 	#channel-tagline {
 		display: inline-block !important;
-	}
-	#channel-tagline > ytd-channel-tagline-renderer {
-		padding: 0 !important;
-	}
-	#channel-tagline #wrapper::before {
-		content: "About this channel";
-		color: var(--yt-spec-text-secondary);
-		font-size: 1.4rem;
-		line-height: 2rem;
-	}
-	#channel-tagline #content {
-		display: none !important;
-	}
-	#channel-tagline #more-icon {
-		height: 20px !important;
-		width: 20px !important;
-		margin: -2px 0 0 2px !important;
-		color: var(--yt-spec-text-secondary) !important;
+		& > ytd-channel-tagline-renderer {
+			padding: 0 !important;
+		}
+		& #wrapper::before {
+			content: "About this channel";
+			color: var(--yt-spec-text-secondary);
+			font-size: 1.4rem;
+			line-height: 2rem;
+		}
+		& #content {
+			display: none !important;
+		}
+		& #more-icon {
+			height: 20px !important;
+			width: 20px !important;
+			margin: -2px 0 0 2px !important;
+			color: var(--yt-spec-text-secondary) !important;
+		}
 	}
 	#channel-header-links {
 		display: none !important;
 	}
-	[page-subtype="channels"] #subscribe-button {
-		margin-left: 8px !important;
-	}
-	[page-subtype="channels"] #sponsor-button {
-		order: -1 !important;
-	}
-	[page-subtype="channels"] ytd-feed-filter-chip-bar-renderer {
-		margin-bottom: -8px !important;
+	[page-subtype="channels"] {
+		& #subscribe-button {
+			margin-left: 8px !important;
+		}
+		& #sponsor-button {
+			order: -1 !important;
+		}
+		& ytd-feed-filter-chip-bar-renderer {
+			margin-bottom: -8px !important;
+		}
 	}
 	.yt-tab-shape-wiz {
 		padding: 0 6px !important;
@@ -124,62 +123,76 @@ It is important to note that using a blocker is NOT theft. Do not fall for this 
 		border-radius: 1px !important;
 		height: 2px !important;
 	}
-	
-	/* New about channel popup */
+	/* About channel popup */
 	ytd-popup-container > tp-yt-paper-dialog > ytd-engagement-panel-section-list-renderer {
 		margin: 0 !important;
 	}
-	ytd-about-channel-renderer #about-container {
-		max-height: unset !important;
-		display: flex !important;
-		flex-direction: column !important;
-	}
-	ytd-about-channel-renderer #links-section {
-		order: -1 !important;
-	}
-	ytd-about-channel-renderer #description-container {
-		order: 1 !important;
-		padding: 12px 0 0 !important;
-	}
-	ytd-about-channel-renderer #button-container {
-		order: 2 !important;
+	ytd-about-channel-renderer {
+		& #about-container {
+			max-height: unset !important;
+			display: flex !important;
+			flex-direction: column !important;
+		}
+		& #links-section {
+			order: -1 !important;
+		}
+		& #description-container {
+			order: 1 !important;
+			padding: 12px 0 0 !important;
+		}
+		& #button-container {
+			order: 2 !important;
+		}
 	}
 	yt-channel-external-link-view-model > img {
 		display: none !important;
+	}
+	/* "For You" section on channel home tab */
+	[page-subtype="channels"] [should-use-mixed-list-height] {
+		--ytd-grid-video-width: unset !important;
+		--ytd-grid-video-thumbnail-height: unset !important;
+		& #thumbnail {
+			border-radius: 8px !important;
+		}
+	}
+	[page-subtype="channels"] [override-arrow-position-for-mixed-shelf] :is(#left-arrow, #right-arrow) {
+		height: 118px !important;
 	}
 	
 	/* Make font smaller for video titles and video information */
 	ytd-rich-item-renderer {
 		margin-bottom: 32px !important;
 	}
-	ytd-rich-grid-renderer #video-title {
-		font-size: 1.4rem !important;
-		line-height: 2rem !important;
-	}
-	ytd-rich-grid-renderer #metadata * {
-		font-size: 1.2rem !important;
-		line-height: 1.8rem !important;
+	ytd-rich-grid-renderer {
+		& #video-title {
+			font-size: 1.4rem !important;
+			line-height: 2rem !important;
+		}
+		& #metadata * {
+			font-size: 1.2rem !important;
+			line-height: 1.8rem !important;
+		}
 	}
 	
 	/* Improve layout of video description */
 	#description {
 		pointer-events: none !important;
-	}
-	#description :is(#expand, #collapse, #info-container, #items, a) {
-		pointer-events: auto !important;
-	}
-	#description:hover {
-		background-color: var(--yt-spec-badge-chip-background) !important;
-	}
-	#description #structured-description > #items {
-		display: flex !important;
-		flex-direction: column !important;
+		& :is(#expand, #collapse, #info-container, #items, a) {
+			pointer-events: auto !important;
+		}
+		&:hover {
+			background-color: var(--yt-spec-badge-chip-background) !important;
+		}
+		& #structured-description > #items {
+			display: flex !important;
+			flex-direction: column !important;
+		}
 	}
 	ytd-video-description-infocards-section-renderer {
 		padding: 0 !important;
-	}
-	ytd-video-description-infocards-section-renderer > :not(#infocards-section) {
-		display: none !important;
+		& > :not(#infocards-section) {
+			display: none !important;
+		}
 	}
 	ytd-structured-description-content-renderer ytd-reel-shelf-renderer {
 		display: none !important;
@@ -196,9 +209,9 @@ It is important to note that using a blocker is NOT theft. Do not fall for this 
 	}
 	#sponsorBlockPopupContainer {
 		margin-bottom: 8px !important;
-	}
-	#sponsorBlockPopupContainer > iframe {
-		width: 100% !important;
+		& > iframe {
+			width: 100% !important;
+		}
 	}
 
 	/* Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable) */
