@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-12.01.3
+! Version: 2023-12.01.4
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -73,7 +73,6 @@ m.youtube.com##.searchbox-input-wrapper:style(margin-right: 12px !important;)
 m.youtube.com##.media-item-endorsement-container
 m.youtube.com##ytm-paid-content-overlay-renderer
 m.youtube.com##ytm-compact-radio-renderer
-m.youtube.com##ytm-compact-channel-renderer:style(margin-top: 0 !important;)
 m.youtube.com##ytm-clarification-renderer
 m.youtube.com##ytm-watch-metadata-app-promo-renderer
 m.youtube.com##.music-metadata-premium-upsell-link
