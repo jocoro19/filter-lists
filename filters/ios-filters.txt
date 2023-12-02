@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-12.01.5
+! Version: 2023-12.01.6
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -98,7 +98,7 @@ m.youtube.com##.c4-tabbed-header-page-header-banner:style(height: initial !impor
 m.youtube.com##.c4-tabbed-header-page-header-banner-img:style(position: static !important;)
 m.youtube.com##.c4-tabbed-header-page-header-section:style(position: relative !important;)
 m.youtube.com##ytm-profile-icon:style(max-height: 112px !important; max-width: 112px !important;)
-m.youtube.com##[use-page-header-style] ytm-channel-tagline-renderer:style(position: absolute !important; right: 0 !important; top: 9px !important;)
+m.youtube.com##ytm-channel-tagline-renderer[is-page-header]:style(display: block !important; visibility: visible !important; position: absolute !important; right: 0 !important; top: 9px !important;)
 m.youtube.com##.channel-tagline-text
 m.youtube.com##.channel-tagline-wrapper::before:style(content: "About this channel";)
 m.youtube.com##.channel-tagline-icon:style(width: 18px !important; height: 18px !important;)
@@ -134,10 +134,14 @@ m.youtube.com##ytm-item-section-renderer:style(border-bottom: none !important;)
 m.youtube.com##[role="tablist"] > a[href*="/shorts"]
 m.youtube.com##.yt-tab-shape-wiz[tab-title="Shorts"]  
 m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
-m.youtube.com##+js(set-attr, ytm-pivot-bar-item-renderer:has(.pivot-shorts), hidden, '')
 m.youtube.com##ytm-media-item:has([data-style="SHORTS"])
 m.youtube.com##ytm-rich-item-renderer:has([href^="/shorts/"])
 m.youtube.com##.playlist-chip-bar
+
+! Additional YouTube filters
+m.youtube.com##+js(set-attr, ytm-pivot-bar-item-renderer:has(.pivot-shorts), hidden, '')
+m.youtube.com##+js(set-attr, ytm-channel-tagline-renderer, hidden, '')
+m.youtube.com##+js(set-attr, ytm-channel-header-links-view-model, hidden, '')
 
 ! YouTube embeds
 youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
@@ -200,6 +204,7 @@ reddit.com##._2fiIRtMpITeCAzXc4cANKp:style(margin-left: 10px !important;)
 reddit.com,~embed.reddit.com##html.theme-beta:not(:has([pagetype="cdn_media_page"])) > :is(head, body)
 ||redditstatic.com/shreddit$script,domain=~embed.reddit.com
 @@||redditstatic.com/shreddit/*/shell$script
+reddit.com##+js(set-attr, reddit-header-small, hidden, '')
 reddit.com,~embed.reddit.com,redd.it##+js(ra, d|r|rx|ry, #reddit-logo *)
 reddit.com,~embed.reddit.com,redd.it##reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-overlay-display
 reddit.com,~embed.reddit.com,redd.it##html.theme-beta > body:style(width: 100% !important; height: 100% !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important;)
