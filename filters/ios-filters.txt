@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-12.01.4
+! Version: 2023-12.01.5
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -51,6 +51,7 @@ twitter.com,x.com##+js(rmnt, script, /[\s\S]/)
 
 ! Nitter
 @@||nitter.net^$removeparam=referer
+nitter.*,nitter.privacydev.net##+js(rc, verified-icon|icon-ok)
 nitter.*,nitter.privacydev.net##+js(ra, href|title, .icon-bird\, .icon-rss-feed)
 nitter.*,nitter.privacydev.net##+js(ra, href, .nav-item > a[href^="https://liberapay.com/"])
 nitter.*,nitter.privacydev.net##.icon-bird, .icon-rss-feed, .nav-item > a:has(.lp), .verified-icon, [class*="unavailable"]
@@ -133,6 +134,7 @@ m.youtube.com##ytm-item-section-renderer:style(border-bottom: none !important;)
 m.youtube.com##[role="tablist"] > a[href*="/shorts"]
 m.youtube.com##.yt-tab-shape-wiz[tab-title="Shorts"]  
 m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
+m.youtube.com##+js(set-attr, ytm-pivot-bar-item-renderer:has(.pivot-shorts), hidden, '')
 m.youtube.com##ytm-media-item:has([data-style="SHORTS"])
 m.youtube.com##ytm-rich-item-renderer:has([href^="/shorts/"])
 m.youtube.com##.playlist-chip-bar
@@ -198,7 +200,7 @@ reddit.com##._2fiIRtMpITeCAzXc4cANKp:style(margin-left: 10px !important;)
 reddit.com,~embed.reddit.com##html.theme-beta:not(:has([pagetype="cdn_media_page"])) > :is(head, body)
 ||redditstatic.com/shreddit$script,domain=~embed.reddit.com
 @@||redditstatic.com/shreddit/*/shell$script
-reddit.com,~embed.reddit.com,redd.it##+js(ra, height|viewBox, #reddit-logo svg)
+reddit.com,~embed.reddit.com,redd.it##+js(ra, d|r|rx|ry, #reddit-logo *)
 reddit.com,~embed.reddit.com,redd.it##reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-overlay-display
 reddit.com,~embed.reddit.com,redd.it##html.theme-beta > body:style(width: 100% !important; height: 100% !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important;)
 reddit.com,~embed.reddit.com,redd.it##html.theme-beta :is(shreddit-app, main, article, faceplate-tracker, zoomable-img):style(display: contents !important; visibility: visible !important;)
