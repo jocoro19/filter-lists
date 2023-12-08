@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.19
+@version     1.19.1
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -215,7 +215,7 @@ It is important to note that using a blocker is NOT theft. Do not fall for this 
 	}
 
 	/* Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable) */
-	#segmented-dislike-button .cbox, #segmented-dislike-button .yt-spec-button-shape-next__button-text-content {
+	#segmented-dislike-button .cbox, :is(#segmented-dislike-button, dislike-button-view-model) .yt-spec-button-shape-next__button-text-content {
 		max-width: 80px !important;
 	}
 }
