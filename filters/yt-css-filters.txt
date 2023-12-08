@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.19
+! Version: 1.19.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -71,4 +71,4 @@ www.youtube.com###sponsorBlockPopupContainer:style(margin-bottom: 8px !important
 www.youtube.com###sponsorBlockPopupContainer > iframe:style(width: 100% !important;)
 
 ! Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable)
-www.youtube.com###segmented-dislike-button .cbox, #segmented-dislike-button .yt-spec-button-shape-next__button-text-content:style(max-width: 80px !important;)
+www.youtube.com###segmented-dislike-button .cbox, :is(#segmented-dislike-button, dislike-button-view-model) .yt-spec-button-shape-next__button-text-content:style(max-width: 80px !important;)
