@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-12.01.7
+! Version: 2023-12.08.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -208,7 +208,8 @@ reddit.com##._2fiIRtMpITeCAzXc4cANKp:style(margin-left: 10px !important;)
 reddit.com,~embed.reddit.com##html.theme-beta:not(:has([pagetype="cdn_media_page"])) > :is(head, body)
 ||redditstatic.com/shreddit$script,domain=~embed.reddit.com
 @@||redditstatic.com/shreddit/*/shell$script
-reddit.com##+js(set-attr, reddit-header-small, hidden, '')
+||redditstatic.com/shreddit/assets^$image
+reddit.com,~embed.reddit.com,redd.it##+js(set-attr, reddit-header-small, hidden, '')
 reddit.com,~embed.reddit.com,redd.it##+js(ra, d|r|rx|ry, #reddit-logo *)
 reddit.com,~embed.reddit.com,redd.it##reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-overlay-display
 reddit.com,~embed.reddit.com,redd.it##html.theme-beta > body:style(width: 100% !important; height: 100% !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important;)
