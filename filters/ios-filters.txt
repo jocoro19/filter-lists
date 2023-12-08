@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-12.08.3
+! Version: 2023-12.08.4
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -80,7 +80,7 @@ m.youtube.com##.music-metadata-premium-upsell-link
 m.youtube.com##c3-toast:has(a[href="https://yt.be/help/dislike"])
 m.youtube.com##ytm-rich-item-renderer:has(ytm-feed-nudge-renderer)
 m.youtube.com##.ytm-autonav-bar
-m.youtube.com##.fresh-feeds-dismissals
+m.youtube.com##ytm-rich-item-renderer:has(ad-slot-renderer)
 m.youtube.com###related-chips-sentinel
 m.youtube.com##.related-chips-slot-wrapper:style(transform: none !important; -webkit-transform: none !important;)
 m.youtube.com##ytm-comments-simplebox-renderer
@@ -146,7 +146,7 @@ m.youtube.com##+js(set-attr, ytm-channel-header-links-view-model, hidden, '')
 m.youtube.com##+js(set-attr, .yt-tab-shape-wiz[tab-title="Shorts"], hidden, '')
 m.youtube.com##+js(set-attr, ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge), hidden, '')
 m.youtube.com##+js(set-attr, .rich-grid-sticky-header, hidden, '')
-m.youtube.com##+js(set-attr, .fresh-feeds-dismissals, hidden, '')
+m.youtube.com##+js(set-attr, ytm-rich-item-renderer:has(ad-slot-renderer), hidden, '')
 m.youtube.com##+js(set-attr, ytm-pivot-bar-item-renderer:has(.pivot-shorts), hidden, '')
 
 ! YouTube embeds
