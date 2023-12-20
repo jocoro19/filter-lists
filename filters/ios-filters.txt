@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-12.13.2
+! Version: 2023-12.20.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -269,7 +269,10 @@ nasaspaceflight.com##div[style^="text-align:"]
 w3schools.com##.sidesection
 w3schools.com###footer > div:has(> .bottomad), #footer > div:has(> .bottomad) + hr
 developer.mozilla.org##a[href$="/ai-help/"]
-minify-js.com##.fixed.bottom-0
+minify-js.com,minify-css.com##.fixed.bottom-0
+simpleflying.com##+js(cookie-remover, articlesRead)
+simpleflying.com##+js(set, window.trackUnauthenticatedArticleViews, noopFunc)
+simpleflying.com##+js(rmnt, script, https://frequentflesh.com/)
 flightradar24.com##.bottom-22
 flightradar24.com##.bottom-menu:style(margin-bottom: 1.2rem !important)
 flightradar24.com###map_canvas img[alt="Google"]
