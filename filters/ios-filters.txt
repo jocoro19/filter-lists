@@ -246,6 +246,7 @@ fandom.com##.top-results
 ||duckduckgo.com^$removeparam=t
 duckduckgo.com##.related-searches
 duckduckgo.com##.footer--mobile
+duckduckgo.com##.js-atb-banner
 www.theverge.com,simpleflying.com##.twitter-tweet:style(color: gray !important)
 www.theverge.com##.duet--media--embed:style(min-height: unset !important;)
 www.theverge.com##div:has(> div > .duet--article--share-buttons)
