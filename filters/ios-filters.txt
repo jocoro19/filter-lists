@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-12.26.1
+! Version: 2023-12.30.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -140,6 +140,7 @@ m.youtube.com##ytm-rich-item-renderer:has([href^="/shorts/"])
 m.youtube.com##.playlist-chip-bar
 
 ! Additional YouTube filters
+!#if !ext_ublock
 m.youtube.com##+js(set-attr, ytm-channel-tagline-renderer, hidden, '')
 m.youtube.com##ytm-channel-tagline-renderer[is-page-header]:style(display: block !important; visibility: visible !important;)
 m.youtube.com##+js(set-attr, ytm-channel-header-links-view-model, hidden, '')
@@ -152,6 +153,7 @@ m.youtube.com##+js(set-attr, .rich-grid-sticky-header, hidden, '')
 m.youtube.com##+js(set-attr, ytm-pivot-bar-item-renderer:has(.pivot-shorts), hidden, '')
 m.youtube.com##+js(set-attr, ytm-comments-simplebox-renderer, hidden, '')
 m.youtube.com##+js(set-attr, ytm-comments-entry-point-teaser-renderer, hidden, '')
+!#endif
 
 ! YouTube embeds
 youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
@@ -215,8 +217,10 @@ reddit.com,~embed.reddit.com##html.theme-beta:not(:has([pagetype="cdn_media_page
 ||redditstatic.com/shreddit$script,domain=~embed.reddit.com
 @@||redditstatic.com/shreddit/*/shell$script
 ||redditstatic.com/shreddit/assets^$image
+!#if !ext_ublock
 reddit.com,~embed.reddit.com,redd.it##+js(set-attr, reddit-header-small, hidden, '')
 reddit.com,~embed.reddit.com,redd.it##+js(ra, d|r|rx|ry, #reddit-logo *)
+!#endif
 reddit.com,~embed.reddit.com,redd.it##reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-overlay-display
 reddit.com,~embed.reddit.com,redd.it##html.theme-beta > body:style(width: 100% !important; height: 100% !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important;)
 reddit.com,~embed.reddit.com,redd.it##html.theme-beta :is(shreddit-app, main, article, faceplate-tracker, zoomable-img):style(display: contents !important; visibility: visible !important;)
@@ -271,6 +275,9 @@ w3schools.com##.sidesection
 w3schools.com###footer > div:has(> .bottomad), #footer > div:has(> .bottomad) + hr
 developer.mozilla.org##a[href$="/ai-help/"]
 minify-js.com,minify-css.com##.fixed.bottom-0
+!#if !ext_ublock
+stackexchange.com##+js(rpnt, script, /window\.dataLayer/, document.cookie = "OptanonAlertBoxClosed=0;domain=stackexchange.com"; window.dataLayer)
+!#endif
 simpleflying.com##+js(cookie-remover, articlesRead)
 simpleflying.com##+js(set, window.trackUnauthenticatedArticleViews, noopFunc)
 simpleflying.com##+js(rmnt, script, https://frequentflesh.com/)
@@ -298,7 +305,7 @@ danbooru.donmai.us,e621.net##.hidden-posts-notice
 misskey.*##.xF6dY
 www.picuki.com##.sticky-bottom-ads-wrapper, div[class*="promote"], .admin-notice, .stats-profile-button
 www.picnob.com##.share
-www.picnob.com##.similar
-www.picnob.com##[class^="ah-box"]
-www.picnob.com##.foryou
-www.picnob.com##div[style^="display: block;"]:first-of-type
+www.pixwox.com##.similar
+www.pixwox.com##[class^="ah-box"]
+www.pixwox.com##.foryou
+www.pixwox.com##div[style^="display: block;"]:first-of-type
