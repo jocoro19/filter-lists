@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2023-12.30.1
+! Version: 2023-12.30.2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -17,7 +17,7 @@
 *$domain=tiktok.com|douyin.com|facebook.com|instagram.com|messenger.com|whatsapp.com|meta.com
 
 ! Cosmetic filtering fallback
-tiktok.com,douyin.com,facebook.com,instagram.com,messenger.com,whatsapp.com,meta.com,weibo.*,bilibili.*##body
+tiktok.com,douyin.com,facebook.com,instagram.com,messenger.com,whatsapp.com,meta.com##body
 
 ! Embed blocking
 ##.tiktok-embed
