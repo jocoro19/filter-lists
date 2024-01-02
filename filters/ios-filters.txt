@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-01-01.1
+! Version: 2024-01-02.01
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -66,11 +66,12 @@ m.youtube.com##.rich-grid-sticky-header
 m.youtube.com##ytm-rich-section-renderer
 m.youtube.com##ytm-cinematic-container-renderer
 m.youtube.com##.dialog-container cinematic-setting-component
-m.youtube.com##.mobile-topbar-header-background:style(z-index: 1 !important;)
+m.youtube.com##.mobile-topbar-header-background:style(z-index: 2 !important;)
 m.youtube.com##.mobile-topbar-header-sign-in-button
 m.youtube.com##.searchbox-voice-search-wrapper
 m.youtube.com##.mobile-topbar-header-voice-search-button
 m.youtube.com##.searchbox-input-wrapper:style(margin-right: 12px !important;)
+m.youtube.com##.smartimation__background:style(z-index: 4 !important;)
 m.youtube.com##.media-item-endorsement-container
 m.youtube.com##ytm-paid-content-overlay-renderer
 m.youtube.com##ytm-compact-radio-renderer
@@ -125,7 +126,8 @@ m.youtube.com##yt-video-attributes-section-view-model
 m.youtube.com##ytm-video-description-header-renderer :is(.title, .cbox, ytm-sentiment-factoid-renderer)
 m.youtube.com##ytm-video-description-header-renderer ytm-view-count-factoid-renderer:style(display: flex !important; flex: 1 !important;)
 m.youtube.com##ytm-structured-description-content-renderer ytm-reel-shelf-renderer
-m.youtube.com##.ytm-video-description-infocards-section-header, .ytm-video-description-infocards-action-buttons, .ytm-infocards-creator-custom-url-buttons
+m.youtube.com##ytm-video-description-infocards-section-renderer:style(padding: 0 !important;)
+m.youtube.com##ytm-video-description-infocards-section-renderer > :not(.ytm-video-description-infocards-list)
 m.youtube.com##ytm-structured-description-content-renderer:style(padding-bottom: 0 !important; margin-bottom: -24px !important;)
 ! m.youtube.com##.expandable-video-description-container .collapsed-string:style(max-height: unset !important; mask-image: none !important; -webkit-mask-image: none !important;)
 
