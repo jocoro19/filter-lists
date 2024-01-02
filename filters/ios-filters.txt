@@ -304,7 +304,7 @@ minecraft.wiki##.mw-editsection
 danbooru.donmai.us,e621.net##.hidden-posts-notice
 misskey.*##.xF6dY
 www.picuki.com##.sticky-bottom-ads-wrapper, div[class*="promote"], .admin-notice, .stats-profile-button
-www.picnob.com##.share
+www.pixwox.com##.share
 www.pixwox.com##.similar
 www.pixwox.com##[class^="ah-box"]
 www.pixwox.com##.foryou
