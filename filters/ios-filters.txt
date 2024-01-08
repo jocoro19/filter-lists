@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-01-07.3
+! Version: 2024-01-08.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -202,7 +202,7 @@ reddit.com##.reddit-infobar
 reddit.com##.locked-tagline
 reddit.com##.active.read-next
 reddit.com##.happening-now-wrap
-||thumbs.redditmedia.com^$css
+||thumbs.redditmedia.com^$first-party,css
 reddit.com###header-img
 reddit.com##.side .md
 reddit.com##.side > .spacer:has(.login-form, .sidebox, .sidecontentbox)
@@ -210,6 +210,9 @@ reddit.com##.user, .user + .separator
 reddit.com##li.share, li.login-required
 reddit.com##.commentarea .stickied[data-author="AutoModerator"]
 reddit.com##button.c-btn-primary.c-btn[name="over18"][value="no"]
+!#if !ext_ublock
+reddit.com##+js(rpnt, script, /(var BETA_HOST.*)/, document.querySelector(document.querySelector("#header-img").remove()))
+!#endif
 reddit.com##._1GdKQyDUWvhTFBDr0FsAkj:style(visibility: hidden !important;)
 reddit.com##.Zo-DKBkkLRYQJrXWLL0uI
 reddit.com##._23h0-EcaBUorIHC-JZyh6J
@@ -266,6 +269,10 @@ www.dexerto.com##label.rounded-full
 www.dexerto.com##[data-cy="SignupWidget"]
 www.dexerto.com##[data-cy="QuickBack"]
 www.dexerto.com##.bg-neutral-grey.justify-center.flex[data-cy="LinkButton"]:style(display: flex !important;)
+www.dexerto.com##[data-nosnippet="true"]:style(min-height: unset !important;)
+!#if !ext_ublock
+www.dexerto.com##+js(rpnt, script, /(window.au=window.au)/, window.onload = () => document.querySelectorAll(".top-0.justify-center, label.rounded-full").forEach(x => xremove()); $1)
+!#endif
 pravda.com.ua##[class^="unit_top"]
 pravda.com.ua##[class^="top_options_club"]
 pravda.com.ua##.advtext_mob
@@ -277,7 +284,7 @@ w3schools.com###footer > div:has(> .bottomad), #footer > div:has(> .bottomad) + 
 developer.mozilla.org##a[href$="/ai-help/"]
 minify-js.com,minify-css.com##.fixed.bottom-0
 !#if !ext_ublock
-stackexchange.com##+js(rpnt, script, /window\.dataLayer/, document.cookie = "OptanonAlertBoxClosed=0;domain=stackexchange.com"; window.dataLayer)
+stackexchange.com##+js(rpnt, script, /(window\.dataLayer)/, document.cookie = "OptanonAlertBoxClosed=0;domain=stackexchange.com"; $1)
 !#endif
 simpleflying.com##+js(cookie-remover, articlesRead)
 simpleflying.com##+js(set, window.trackUnauthenticatedArticleViews, noopFunc)
