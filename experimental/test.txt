@@ -1,10 +1,11 @@
 [AdBlock Plus 2.0]
 ! Title: Test
-! Version: 1
+! Version: 2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
-reddit.com##+js(rpnt, script, /(var BETA_HOST.*)/, document.querySelector(document.querySelector("#header-img").remove()))
-stackoverflow.com,superuser.com,askubuntu.com,stackexchange.com##+js(rpnt, script, /(window\.dataLayer)/, document.head.insertAdjacentHTML("beforeend"\, "<style>.js-consent-banner { display: none !important; }</style>"); $1)
+! reddit.com##+js(rpnt, script, /(var BETA_HOST.*)/, document.body.querySelector(document.querySelector("#header-img").remove()))
+reddit.com##+js(rpnt, script, /(var BETA_HOST.*)/, document.body.insertAdjacentHTML("beforeend"\, "<style>#header-img { display: none !important; }</style>"))
+stackoverflow.com,superuser.com,askubuntu.com,stackexchange.com##+js(rpnt, script, /(window\.dataLayer)/, document.body.insertAdjacentHTML("beforeend"\, "<style>.js-consent-banner { display: none !important; }</style>"); $1)
 ! stackexchange.com##+js(rpnt, script, /(window\.dataLayer)/, document.cookie = "OptanonAlertBoxClosed=0;domain=stackexchange.com"; $1)
