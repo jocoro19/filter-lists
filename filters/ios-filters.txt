@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-01-02.01
+! Version: 2024-01-07.01
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -226,7 +226,8 @@ reddit.com,~embed.reddit.com,redd.it##+js(ra, d|r|rx|ry, #reddit-logo *)
 reddit.com,~embed.reddit.com,redd.it##reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-overlay-display
 reddit.com,~embed.reddit.com,redd.it##html.theme-beta > body:style(width: 100% !important; height: 100% !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important;)
 reddit.com,~embed.reddit.com,redd.it##html.theme-beta :is(shreddit-app, main, article, faceplate-tracker, zoomable-img):style(display: contents !important; visibility: visible !important;)
-reddit.com,~embed.reddit.com,redd.it##html.theme-beta faceplate-tracker img:style(max-width: 100% !important; max-height: 100% !important; margin: 0 !important;)
+reddit.com,~embed.reddit.com,redd.it##devvit-effect-wrapper:style(display: contents !important;)
+reddit.com,~embed.reddit.com,redd.it##html.theme-beta faceplate-tracker img:style(max-width: 100vw !important; max-height: 100vh !important; margin: 0 !important;)
 
 ! Fandom
 ||services.fandom.com/icbm/api/loader$script
@@ -307,7 +308,5 @@ danbooru.donmai.us,e621.net##.hidden-posts-notice
 misskey.*##.xF6dY
 www.picuki.com##.sticky-bottom-ads-wrapper, div[class*="promote"], .admin-notice, .stats-profile-button
 www.pixwox.com##.share
-www.pixwox.com##.similar
 www.pixwox.com##[class^="ah-box"]
-www.pixwox.com##.foryou
 www.pixwox.com##div[style^="display: block;"]:first-of-type
