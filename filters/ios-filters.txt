@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-01-08.1
+! Version: 2024-01-08.2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -202,7 +202,7 @@ reddit.com##.reddit-infobar
 reddit.com##.locked-tagline
 reddit.com##.active.read-next
 reddit.com##.happening-now-wrap
-||thumbs.redditmedia.com^$first-party,css
+||thumbs.redditmedia.com^$css
 reddit.com###header-img
 reddit.com##.side .md
 reddit.com##.side > .spacer:has(.login-form, .sidebox, .sidecontentbox)
@@ -271,7 +271,7 @@ www.dexerto.com##[data-cy="QuickBack"]
 www.dexerto.com##.bg-neutral-grey.justify-center.flex[data-cy="LinkButton"]:style(display: flex !important;)
 www.dexerto.com##[data-nosnippet="true"]:style(min-height: unset !important;)
 !#if !ext_ublock
-www.dexerto.com##+js(rpnt, script, /(window.au=window.au)/, window.onload = () => document.querySelectorAll(".top-0.justify-center, label.rounded-full").forEach(x => xremove()); $1)
+www.dexerto.com##+js(rpnt, script, /(window.au=window.au)/, document.head.insertAdjacentHTML("beforeend"\, ".top-0.justify-center\, .label.rounded-rull\, #bottom-adhesion {display: none !important;}"); $1)
 !#endif
 pravda.com.ua##[class^="unit_top"]
 pravda.com.ua##[class^="top_options_club"]
