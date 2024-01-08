@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-01-08.7
+! Version: 2024-01-08.8
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -204,7 +204,7 @@ reddit.com##.happening-now-wrap
 ||thumbs.redditmedia.com^$css
 reddit.com###header-img
 reddit.com##.side .md
-reddit.com##.side > .spacer:has(.login-form, .sidebox, .sidecontentbox)
+reddit.com##.side > .spacer:not(:has(#search, .titlebox))
 reddit.com##.user, .user + .separator
 reddit.com##li.share, li.login-required, li:has(.hide-button)
 reddit.com##.commentarea .stickied[data-author="AutoModerator"]
