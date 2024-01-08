@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: Test
-! Version: 4
+! Version: 5
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
