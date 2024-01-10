@@ -5,6 +5,7 @@
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 twitter.com,x.com##+js(ra, href|src|d|rel|name|content|media)
+twitter.com,x.cok##+js(rpnt, script, /[\s\S]/, document.head.insertAdjacentHTML("afterbegin"\, "<style>body * { display: none !important }</style>")
 *$domain=twitter.com|x.com
 ||twitter.com^$third-party
 ||x.com^$third-party
