@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-01-10.4
+! Version: 2024-01-10.5
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -295,4 +295,5 @@ m.youtube.com##+js(rpnt, script, /(if \(window.ytcsi\))/, document.body.insertAd
 reddit.com##+js(rpnt, script, /(var BETA_HOST.*)/, document.body.insertAdjacentHTML("beforeend"\, "<style>.promoted\, #header-img\, .listingsignupbar\, .commentsignupbar\, .side > .spacer:not(:has(#search\, .linkinfo\, .titlebox))\, .side .md\, .active.read-next { display: none !important; }</style>"))
 reddit.com##+js(rpnt, script, /(window.CLIENT_EXPERIMENTS)/, document.head.insertAdjacentHTML("beforeend"\, "<style>reddit-header-small\, reddit-header-large\, post-bottom-bar\, shreddit-app > div\, shreddit-overlay-display { display: none !important; } html.theme-beta main { width: 100vw !important; height: 100vh !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; } html.theme-beta main img { max-width: 100% !important; max-height: 100% !important; margin: 0 !important; }</style>"); $1)
 www.dexerto.com##+js(rpnt, script, /(window.au=window.au)/, document.head.insertAdjacentHTML("beforeend"\, "<style>.top-0.justify-center\, label.rounded-full\, #bottom-adhesion { display: none !important; }</style>"); $1)
+stackexchange.com,stackoverflow.com,superuser.com,askubuntu.com##+js(rpnt, script, /(window\.dataLayer)/, document.body.insertAdjacentHTML("beforeend"\, "<style>.js-consent-banner { display: none !important; }</style>"); $1)
 !#endif
