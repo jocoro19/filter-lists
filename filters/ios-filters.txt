@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-01-10.5
+! Version: 2024-01-11.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -259,6 +259,7 @@ w3schools.com##.sidesection
 w3schools.com###footer > div:has(> .bottomad), #footer > div:has(> .bottomad) + hr
 developer.mozilla.org##a[href$="/ai-help/"]
 minify-js.com,minify-css.com##.fixed.bottom-0
+simpleflying.com##.w-rich:style(min-height: unset !important;)
 simpleflying.com##+js(cookie-remover, articlesRead)
 simpleflying.com##+js(set, window.trackUnauthenticatedArticleViews, noopFunc)
 simpleflying.com##+js(rmnt, script, https://frequentflesh.com/)
@@ -289,7 +290,7 @@ www.pixwox.com##.share
 www.pixwox.com##[class^="ah-box"]
 www.pixwox.com##div[style^="display: block;"]:first-of-type
 
-! Special filters for non-uBlock ad blockers
+! Special CSS injection filters
 !#if !ext_ublock
 m.youtube.com##+js(rpnt, script, /(if \(window.ytcsi\))/, document.body.insertAdjacentHTML("beforeend"\, "<style>ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) + * { border-top: none !important; } ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge)\, .yt-tab-shape-wiz[tab-title='Shorts']\, ytm-pivot-bar-item-renderer:has(.pivot-shorts)\, .rich-grid-sticky-header\, ytm-comments-simplebox-renderer\, ytm-comments-entry-point-teaser-renderer\, .channel-tagline-text\, ytm-channel-header-links-view-model\, .yt-tab-group-shape-wiz__slider\, .yt-tab-shape-wiz__tab-bar { display: none !important; } .c4-tabbed-header-page-header-banner { height: initial !important; padding: 0 !important; margin: 0 -12px !important; border-radius: 0 !important; } .c4-tabbed-header-page-header-banner-img { position: static !important } .c4-tabbed-header-page-header-section { position: relative !important; } ytm-profile-icon { max-height: 112px !important; max-width: 112px !important; } ytm-channel-tagline-renderer[is-page-header] { position: absolute !important; right: 0 !important; top: 9px !important; } .channel-tagline-wrapper::before { content: 'About this channel'; } .channel-tagline-icon { width: 18px !important; height: 18px !important; } .c4-tabbed-header-page-header-buttons { padding: 8px 0 !important; } .c4-tabbed-header-page-header-button { max-width: 50% !important; }</style>"); $1)
 reddit.com##+js(rpnt, script, /(var BETA_HOST.*)/, document.body.insertAdjacentHTML("beforeend"\, "<style>.promoted\, #header-img\, .listingsignupbar\, .commentsignupbar\, .side > .spacer:not(:has(#search\, .linkinfo\, .titlebox))\, .side .md\, .active.read-next { display: none !important; }</style>"))
