@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filters
-! Version: 2024-01-07.1
+! Version: 2024-01-10.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -76,6 +76,7 @@ www.youtube.com###expandable-metadata
 
 ! Hide "Context" section
 www.youtube.com###clarify-box
+www.youtube.com###middle-row.ytd-watch-metadata
 youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
 
 ! Hide YouTube branding in embeds
