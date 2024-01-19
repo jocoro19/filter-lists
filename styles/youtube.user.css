@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.19.2
+@version     1.19.3
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -72,7 +72,7 @@ It is important to note that using a blocker is NOT theft. Do not fall for this 
 		& #meta {
 			width: unset !important;
 		}
-		& .meta-item:has(+ #channel-tagline)::after {
+		& .meta-item:not(:has(~ .meta-item:not([hidden])))::after {
 			content: "‧";
 			padding: 0 4px;
 		}
