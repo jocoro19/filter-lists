@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.19.1
+! Version: 1.19.5
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -23,7 +23,7 @@ www.youtube.com###channel-header-container:style(max-width: unset !important; ma
 www.youtube.com###channel-header-container > #avatar:style(height: 80px !important; width: 80px !important;)
 www.youtube.com###channel-header-container > #inner-header-container:style(flex-direction: row !important; align-items: center !important; margin-top: 0 !important;)
 www.youtube.com###channel-header-container #meta:style(width: unset !important;)
-www.youtube.com###videos-count::after:style(content: "‧"; padding: 0 4px;)
+www.youtube.com###channel-header-container .meta-item:not(:has(~ .meta-item:not([hidden])))::after:style(content: "‧"; margin: 0 4px;)
 www.youtube.com###channel-tagline:style(display: inline-block !important;)
 www.youtube.com###channel-tagline > ytd-channel-tagline-renderer:style(padding: 0 !important;)
 www.youtube.com###channel-tagline #wrapper::before:style(content: "About this channel"; color: var(--yt-spec-text-secondary); font-size: 1.4rem; line-height: 2rem;)
@@ -37,8 +37,9 @@ www.youtube.com##.yt-tab-shape-wiz:style(padding: 0 6px !important;)
 www.youtube.com##.yt-tab-group-shape-wiz__slider
 www.youtube.com##.yt-tab-shape-wiz__tab-bar--tab-bar-selected:style(background-color: var(--yt-spec-text-primary) !important; border-radius: 1px !important; height: 2px !important;)
 
-! About channel popup
-www.youtube.com##ytd-popup-container > tp-yt-paper-dialog > ytd-engagement-panel-section-list-renderer:style(margin: 0 !important;)
+! "About channel" popup
+www.youtube.com##tp-yt-paper-dialog:has(ytd-about-channel-renderer):style(margin: 48px !important;)
+www.youtube.com##ytd-engagement-panel-section-list-renderer:has(ytd-about-channel-renderer):style(margin: 0 !important;)
 www.youtube.com##ytd-about-channel-renderer #about-container:style(max-height: unset !important; display: flex !important; flex-direction: column !important;)
 www.youtube.com##ytd-about-channel-renderer #links-section:style(order: -1 !important;)
 www.youtube.com##ytd-about-channel-renderer #description-container:style(order: 1 !important; padding: 12px 0 0 !important;)
