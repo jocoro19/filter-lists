@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-01-17.2
+! Version: 2024-01-20.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -74,6 +74,7 @@ m.youtube.com##.searchbox-input-wrapper:style(margin-right: 12px !important;)
 m.youtube.com##.smartimation__background:style(z-index: 4 !important;)
 m.youtube.com##.media-item-endorsement-container
 m.youtube.com##ytm-paid-content-overlay-renderer
+m.youtube.com##ytm-statement-banner-renderer
 m.youtube.com##ytm-compact-radio-renderer
 m.youtube.com##ytm-clarification-renderer
 m.youtube.com##ytm-watch-metadata-app-promo-renderer
@@ -90,9 +91,9 @@ m.youtube.com##ytm-comments-simplebox-renderer
 m.youtube.com##ytm-comments-entry-point-teaser-renderer
 m.youtube.com##.comment-icon-container:style(height: 48px !important;)
 m.youtube.com##ytm-item-section-renderer:has(ad-slot-renderer)
-m.youtube.com##.ytm-bottom-sheet-overlay-container
-m.youtube.com##body > #global-loader > ytw-scrim
-m.youtube.com##body:has(.ytm-bottom-sheet-overlay-container):style(position: static !important;)
+m.youtube.com##.ytm-bottom-sheet-overlay-container:has([aria-label="Open YouTube"])
+m.youtube.com###global-loader:has(+ .ytm-bottom-sheet-overlay-container [aria-label="Open YouTube"])
+m.youtube.com##body:has(.ytm-bottom-sheet-overlay-container [aria-label="Open YouTube"]):style(position: static !important;)
 m.youtube.com##ytm-shelf-renderer:has([data-type="BADGE_STYLE_TYPE_MEMBERS_ONLY"])
 m.youtube.com##.single-column-browse-results-tab-bar:has([tab-identifier="FEhashtag"])
 m.youtube.com##ytm-multi-page-menu-section-renderer:has(a[href^="https://www.youtubekids.com"])
