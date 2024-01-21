@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-01-20.3
+! Version: 2024-01-21.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -287,7 +287,7 @@ minecraft.wiki##.mw-editsection
 danbooru.donmai.us,e621.net##.hidden-posts-notice
 misskey.*##.xF6dY
 www.picuki.com##.sticky-bottom-ads-wrapper, div[class*="promote"], .admin-notice, .stats-profile-button
-www.pixwox.com##[class^="ah-box"], .share, .similar, div[style^="display: block;"]:first-of-type
+www.pixwox.com##[class^="ah-box"], .share, .similar
 
 ! Special CSS injection filters
 !#if !ext_ublock
