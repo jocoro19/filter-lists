@@ -1,8 +1,9 @@
 [AdBlock Plus 2.0]
 ! Title: Test
-! Version: 15
+! Version: 16
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
-! stackexchange.com##+js(rpnt, script, /(window\.dataLayer)/, document.cookie = "OptanonAlertBoxClosed=0;domain=stackexchange.com"; $1)
+! Disable autoplay on Mobile YouTube homepage
+m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, var x = new MutationObserver(() => { var y = document.querySelector("ytm-pages-dwell-detection"); y && y.remove() }); x.observe(document.body\, { subtree: true\, childList: true }); $1 )
