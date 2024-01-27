@@ -8,5 +8,5 @@
 ! Disable autoplay on Mobile YouTube homepage
 m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, var x = new MutationObserver(() => { var y = document.querySelector("ytm-pages-dwell-detection"); y && y.remove() }); x.observe(document.body\, { subtree: true\, childList: true }); $1 )
 
-medibang.com##+js(rpnt, script, /(var ROOT_URL =)/, var x = new MutationObserver(() => document.querySelectorAll(".illust-item_box a").forEach(y => y.href = y.href.replace(".com/picture/viewer/"\, ".com/picture/"))); location.pathname === "/contentsSearch/" && x.observe(document.querySelector(".illust-list")\, { childList: true }); /^\/picture\//.test(location.pathname) && document.querySelectorAll(".pictureDetails__image > a").forEach(z => z.href = z.dataset.zoomUrl); $1 )
+medibang.com##+js(rpnt, script, /(var ROOT_URL =)/, var x = new MutationObserver(() => document.querySelectorAll(".illust-item_box a").forEach(y => y.href = y.href.replace(".com/picture/viewer/"\, ".com/picture/"))); location.pathname === "/contentsSearch/" && x.observe(document.querySelector(".illust-list")\, { childList: true }); /^\/picture\//.test(location.pathname) && document.querySelectorAll(".pictureDetails__image > a").forEach(z => delete z.dataset.zoomUrl && (z.href = z.querySelector("img").src.replace("/1280_960/"\, "/"))); $1 )
 pixwox.com##+js(ra, target, .pic > a)
