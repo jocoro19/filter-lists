@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-01-27.3
+! Version: 2024-01-27.4
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -120,9 +120,9 @@ m.youtube.com##.about-channel-section:has(yt-channel-external-link-view-model):s
 m.youtube.com##.about-channel-section:has(> span > span):style(order: 1 !important; margin-top: 0 !important;)
 m.youtube.com##.about-channel-action-button-container:style(min-height: unset !important; order: 2 !important;)
 m.youtube.com##yt-channel-external-link-view-model > img
+m.youtube.com##.horizontal-card-list-card-thumbnail-xlarge:style(width: 200px !important;)
 m.youtube.com##ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge)
 m.youtube.com##ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) + *:style(border-top: none !important;)
-! m.youtube.com##.horizontal-card-list-card-thumbnail-xlarge:style(width: 200px !important;)
 
 ! Mobile YouTube video description layout improvements
 m.youtube.com##.slim-video-metadata-header .secondary-text:style(mask-image: none !important; -webkit-mask-image: none !important;)
@@ -292,11 +292,13 @@ minecraft.wiki##.mw-editsection
 ###misskey_app .xF6dY
 www.picuki.com##.sticky-bottom-ads-wrapper, div[class*="promote"], .admin-notice, .stats-profile-button
 www.pixwox.com##[class^="ah-box"], .share, .similar
+www.pixwox.com##+js(ra, target, .pic > a)
 
-! Special CSS injection filters
+! Special CSS/JS injection filters
 !#if !ext_ublock
 m.youtube.com##+js(rpnt, script, /(var ytInitialPlayerResponse = null;)/, document.body.insertAdjacentHTML("afterbegin"\, "<style>ytm-rich-item-renderer:has(ad-slot-renderer)\, ytm-rich-section-renderer\, ytm-pivot-bar-item-renderer:has(.pivot-shorts)\, .yt-tab-shape-wiz[tab-title='Shorts']\, .rich-grid-sticky-header\, ytm-statement-banner-renderer\, .media-item-endorsement-container\, ytm-comments-simplebox-renderer\, ytm-comments-entry-point-teaser-renderer\, .channel-tagline-text\, ytm-channel-header-links-view-model\, .yt-tab-group-shape-wiz__slider\, .yt-tab-shape-wiz__tab-bar\, ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) { display: none !important; } ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) + * { border-top: none !important; } .c4-tabbed-header-page-header-banner { height: initial !important; padding: 0 !important; margin: 0 -12px !important; border-radius: 0 !important; } .c4-tabbed-header-page-header-banner-img { position: static !important } .c4-tabbed-header-page-header-section { position: relative !important; } ytm-profile-icon { max-height: 112px !important; max-width: 112px !important; } ytm-channel-tagline-renderer[is-page-header] { position: absolute !important; right: 0 !important; top: 9px !important; } .channel-tagline-wrapper::before { content: 'About this channel'; } .channel-tagline-icon { width: 18px !important; height: 18px !important; } .c4-tabbed-header-page-header-buttons { padding: 8px 0 !important; } .c4-tabbed-header-page-header-button { max-width: 50% !important; }</style>"); $1)
 reddit.com##+js(rpnt, script, /(var BETA_HOST.*)/, document.body.insertAdjacentHTML("afterbegin"\, "<style>.promoted\, #header-img\, .listingsignupbar\, .commentsignupbar\, .side > .spacer:not(:has(#search\, .linkinfo\, .titlebox))\, .side .md\, .active.read-next { display: none !important; }</style>"))
 reddit.com##+js(rpnt, script, /(window.CLIENT_EXPERIMENTS)/, document.head.insertAdjacentHTML("afterbegin"\, "<style>reddit-header-small\, reddit-header-large\, post-bottom-bar\, shreddit-app > div\, shreddit-overlay-display { display: none !important; } html.theme-beta main { width: 100vw !important; height: 100vh !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; } html.theme-beta main img { max-width: 100% !important; max-height: 100% !important; margin: 0 !important; }</style>"); $1)
 dexerto.com##+js(rpnt, script, /!\(function\(o\,_name\)[\s\S]*/, document.head.insertAdjacentHTML("afterbegin"\, "<style>.top-0.justify-center\, label.rounded-full\, #bottom-adhesion { display: none !important; }</style>");)
+medibang.com##+js(rpnt, script, /(var ROOT_URL =)/, var x = new MutationObserver(() => document.querySelectorAll(".illust-item_box a").forEach(y => y.href = y.href.replace(".com/picture/viewer/"\, ".com/picture/"))); location.pathname === "/contentsSearch/" && x.observe(document.querySelector(".illust-list")\, { childList: true }); /^\/picture\//.test(location.pathname) && document.querySelectorAll(".pictureDetails__image > a").forEach(z => { delete z.dataset.zoomUrl; z.href = z.querySelector("img").src.replace("/1280_960/"\, "/") }); $1 )
 !#endif
