@@ -1,9 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: Test
-! Version: 21
+! Version: 22
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
-
-! Disable autoplay on Mobile YouTube homepage
-m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, var x = new MutationObserver(() => { var y = document.querySelector("ytm-pages-dwell-detection"); y && y.remove() }); x.observe(document.body\, { subtree: true\, childList: true }); $1 )
