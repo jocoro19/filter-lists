@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-01-27.4
+! Version: 2024-01-27.5
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -301,4 +301,7 @@ reddit.com##+js(rpnt, script, /(var BETA_HOST.*)/, document.body.insertAdjacentH
 reddit.com##+js(rpnt, script, /(window.CLIENT_EXPERIMENTS)/, document.head.insertAdjacentHTML("afterbegin"\, "<style>reddit-header-small\, reddit-header-large\, post-bottom-bar\, shreddit-app > div\, shreddit-overlay-display { display: none !important; } html.theme-beta main { width: 100vw !important; height: 100vh !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; } html.theme-beta main img { max-width: 100% !important; max-height: 100% !important; margin: 0 !important; }</style>"); $1)
 dexerto.com##+js(rpnt, script, /!\(function\(o\,_name\)[\s\S]*/, document.head.insertAdjacentHTML("afterbegin"\, "<style>.top-0.justify-center\, label.rounded-full\, #bottom-adhesion { display: none !important; }</style>");)
 medibang.com##+js(rpnt, script, /(var ROOT_URL =)/, var x = new MutationObserver(() => document.querySelectorAll(".illust-item_box a").forEach(y => y.href = y.href.replace(".com/picture/viewer/"\, ".com/picture/"))); location.pathname === "/contentsSearch/" && x.observe(document.querySelector(".illust-list")\, { childList: true }); /^\/picture\//.test(location.pathname) && document.querySelectorAll(".pictureDetails__image > a").forEach(z => { delete z.dataset.zoomUrl; z.href = z.querySelector("img").src.replace("/1280_960/"\, "/") }); $1 )
+
+! Disable autoplay on Mobile YouTube homepage
+m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, var x = new MutationObserver(() => { var y = document.querySelector("ytm-pages-dwell-detection"); y && y.remove() }); x.observe(document.body\, { subtree: true\, childList: true }); $1 )
 !#endif
