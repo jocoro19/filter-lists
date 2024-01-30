@@ -1,9 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: Test
-! Version: 23
+! Version: 24
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
-
-m.youtube.com##+js(rpnt, script, /(if \(document\.fonts &&)/, var z = new MutationObserver(() => { document.querySelectorAll(".watch-below-the-player ytm-badge-and-byline-renderer > span").forEach(a => /^((?:No|[0-9]{0\,3}) views?|(?:[1-4]?[0-9]) watching)$/.test(a.innerText) && (a.closest("ytm-video-with-context-renderer").style.backgroundColor = "red")) }); z.observe(document.body\, { subtree: true\, childList: true }); $1 )
-
