@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-01-27.7
+! Version: 2024-01-30.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -87,12 +87,12 @@ m.youtube.com##ytm-rich-item-renderer:has(ytm-feed-nudge-renderer)
 m.youtube.com##ytm-rich-item-renderer:has(ytm-radio-renderer)
 m.youtube.com###related-chips-sentinel
 m.youtube.com##.related-chips-slot-wrapper:style(transform: none !important; -webkit-transform: none !important;)
+m.youtube.com##.player-controls-middle-core-buttons > button:not(.player-control-play-pause-icon)
 m.youtube.com##ytm-comments-simplebox-renderer
 m.youtube.com##ytm-comments-entry-point-teaser-renderer
 m.youtube.com##.comment-icon-container:style(height: 48px !important;)
 m.youtube.com##ytm-comments-header-renderer + lazy-list:style(display: flex !important; flex-direction: column !important;)
 m.youtube.com##ytm-comment-thread-renderer:has(ytm-pinned-comment-badge-renderer):style(order: -1 !important;)
-m.youtube.com##ytm-item-section-renderer:has(ad-slot-renderer)
 m.youtube.com##.ytm-bottom-sheet-overlay-container:has([aria-label="Open YouTube"])
 m.youtube.com###global-loader:has(+ .ytm-bottom-sheet-overlay-container [aria-label="Open YouTube"])
 m.youtube.com##body:has(.ytm-bottom-sheet-overlay-container [aria-label="Open YouTube"]):style(position: static !important;)
