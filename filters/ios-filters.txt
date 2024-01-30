@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-01-30.2
+! Version: 2024-01-30.3
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -87,13 +87,14 @@ m.youtube.com##ytm-rich-item-renderer:has(ytm-feed-nudge-renderer)
 m.youtube.com##ytm-rich-item-renderer:has(ytm-radio-renderer)
 m.youtube.com###related-chips-sentinel
 m.youtube.com##.related-chips-slot-wrapper:style(transform: none !important; -webkit-transform: none !important;)
-m.youtube.com##.player-controls-middle-core-buttons.player-control-play-pause-icon:style(margin: 20px !important;)
+m.youtube.com##.player-controls-middle-core-buttons .player-control-play-pause-icon:style(margin: 20px !important;)
 m.youtube.com##.player-controls-middle-core-buttons > button:not(.player-control-play-pause-icon)
 m.youtube.com##ytm-comments-simplebox-renderer
 m.youtube.com##ytm-comments-entry-point-teaser-renderer
 m.youtube.com##.comment-icon-container:style(height: 48px !important;)
 m.youtube.com##ytm-comments-header-renderer + lazy-list:style(display: flex !important; flex-direction: column !important;)
 m.youtube.com##ytm-comment-thread-renderer:has(ytm-pinned-comment-badge-renderer):style(order: -1 !important;)
+m.youtube.com##ytm-compact-autoplay-renderer > ytm-video-with-context-renderer:style(margin-bottom: 12px !important;)
 m.youtube.com##.ytm-bottom-sheet-overlay-container:has([aria-label="Open YouTube"])
 m.youtube.com###global-loader:has(+ .ytm-bottom-sheet-overlay-container [aria-label="Open YouTube"])
 m.youtube.com##body:has(.ytm-bottom-sheet-overlay-container [aria-label="Open YouTube"]):style(position: static !important;)
@@ -132,7 +133,6 @@ m.youtube.com##.slim-video-information-show-more
 m.youtube.com##yt-video-attributes-section-view-model
 m.youtube.com##ytm-video-description-header-renderer :is(.title, .cbox, ytm-sentiment-factoid-renderer)
 m.youtube.com##ytm-video-description-header-renderer ytm-view-count-factoid-renderer:style(display: flex !important; flex: 1 !important;)
-m.youtube.com##ytm-structured-description-content-renderer ytm-reel-shelf-renderer
 m.youtube.com##ytm-video-description-infocards-section-renderer:style(padding: 0 !important;)
 m.youtube.com##ytm-video-description-infocards-section-renderer > :not(.ytm-video-description-infocards-list)
 m.youtube.com##ytm-structured-description-content-renderer:style(padding-bottom: 0 !important; margin-bottom: -24px !important;)
@@ -296,12 +296,14 @@ www.pixwox.com##+js(ra, target, .pic > a)
 
 ! Special CSS/JS injection filters
 !#if !ext_ublock
-m.youtube.com##+js(rpnt, script, /(var ytInitialPlayerResponse = null;)/, document.body.insertAdjacentHTML("afterbegin"\, "<style>ytm-rich-item-renderer:has(ad-slot-renderer)\, ytm-rich-section-renderer\, ytm-pivot-bar-item-renderer:has(.pivot-shorts)\, .yt-tab-shape-wiz[tab-title='Shorts']\, .rich-grid-sticky-header\, ytm-statement-banner-renderer\, .media-item-endorsement-container\, ytm-comments-simplebox-renderer\, ytm-comments-entry-point-teaser-renderer\, .channel-tagline-text\, ytm-channel-header-links-view-model\, .yt-tab-group-shape-wiz__slider\, .yt-tab-shape-wiz__tab-bar\, ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) { display: none !important; } ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) + * { border-top: none !important; } .c4-tabbed-header-page-header-banner { height: initial !important; padding: 0 !important; margin: 0 -12px !important; border-radius: 0 !important; } .c4-tabbed-header-page-header-banner-img { position: static !important } .c4-tabbed-header-page-header-section { position: relative !important; } ytm-profile-icon { max-height: 112px !important; max-width: 112px !important; } ytm-channel-tagline-renderer[is-page-header] { position: absolute !important; right: 0 !important; top: 9px !important; } .channel-tagline-wrapper::before { content: 'About this channel'; } .channel-tagline-icon { width: 18px !important; height: 18px !important; } .c4-tabbed-header-page-header-buttons { padding: 8px 0 !important; } .c4-tabbed-header-page-header-button { max-width: 50% !important; }</style>"); $1)
+m.youtube.com##+js(rpnt, script, /(var ytInitialPlayerResponse = null;)/, document.body.insertAdjacentHTML("afterbegin"\, "<style>ytm-rich-item-renderer:has(ad-slot-renderer)\, ytm-rich-section-renderer\, ytm-pivot-bar-item-renderer:has(.pivot-shorts)\, .yt-tab-shape-wiz[tab-title='Shorts']\, ytm-reel-shelf-renderer\, .rich-grid-sticky-header\, ytm-statement-banner-renderer\, .media-item-endorsement-container\, ytm-comments-simplebox-renderer\, ytm-comments-entry-point-teaser-renderer\, .channel-tagline-text\, ytm-channel-header-links-view-model\, .yt-tab-group-shape-wiz__slider\, .yt-tab-shape-wiz__tab-bar\, ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) { display: none !important; } ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) + * { border-top: none !important; } .c4-tabbed-header-page-header-banner { height: initial !important; padding: 0 !important; margin: 0 -12px !important; border-radius: 0 !important; } .c4-tabbed-header-page-header-banner-img { position: static !important } .c4-tabbed-header-page-header-section { position: relative !important; } ytm-profile-icon { max-height: 112px !important; max-width: 112px !important; } ytm-channel-tagline-renderer[is-page-header] { position: absolute !important; right: 0 !important; top: 9px !important; } .channel-tagline-wrapper::before { content: 'About this channel'; } .channel-tagline-icon { width: 18px !important; height: 18px !important; } .c4-tabbed-header-page-header-buttons { padding: 8px 0 !important; } .c4-tabbed-header-page-header-button { max-width: 50% !important; }</style>"); $1)
 reddit.com##+js(rpnt, script, /(var BETA_HOST.*)/, document.body.insertAdjacentHTML("afterbegin"\, "<style>.promoted\, #header-img\, .listingsignupbar\, .commentsignupbar\, .side > .spacer:not(:has(#search\, .linkinfo\, .titlebox))\, .side .md\, .active.read-next { display: none !important; }</style>"))
 reddit.com##+js(rpnt, script, /(window.CLIENT_EXPERIMENTS)/, document.head.insertAdjacentHTML("afterbegin"\, "<style>reddit-header-small\, reddit-header-large\, post-bottom-bar\, shreddit-app > div\, shreddit-overlay-display { display: none !important; } html.theme-beta main { width: 100vw !important; height: 100vh !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; } html.theme-beta main img { max-width: 100% !important; max-height: 100% !important; margin: 0 !important; }</style>"); $1)
 dexerto.com##+js(rpnt, script, /!\(function\(o\,_name\)[\s\S]*/, document.head.insertAdjacentHTML("afterbegin"\, "<style>.top-0.justify-center\, label.rounded-full\, #bottom-adhesion { display: none !important; }</style>");)
 medibang.com##+js(rpnt, script, /(var ROOT_URL =)/, var x = new MutationObserver(() => document.querySelectorAll(".illust-item_box a").forEach(y => y.href = y.href.replace(".com/picture/viewer/"\, ".com/picture/"))); location.pathname === "/contentsSearch/" && x.observe(document.querySelector(".illust-list")\, { childList: true }); /^\/picture\//.test(location.pathname) && document.querySelectorAll(".pictureDetails__image > a").forEach(z => { delete z.dataset.zoomUrl; z.href = z.querySelector("img").src.replace("/1280_960/"\, "/") }); $1 )
 
 ! Disable autoplay on Mobile YouTube homepage
-m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, var x = new MutationObserver(() => { var y = document.querySelector("ytm-pages-dwell-detection"); y && y.remove() }); x.observe(document.body\, { subtree: true\, childList: true }); $1 )
+m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, var x = new MutationObserver(() => { var y = document.querySelector("ytm-pages-dwell-detection"); y && y.remove() }); x.observe(document.body\, { subtree: true\, childList: true }); $1)
+! Hide videos with less than 1000 views and streams with less than 50 watching
+m.youtube.com##+js(rpnt, script, /(if \(document\.fonts &&)/, var z = new MutationObserver(() => { document.querySelectorAll(".watch-below-the-player ytm-badge-and-byline-renderer > span").forEach(a => /^((?:No|[0-9]{0\,3}) views?|(?:[1-4]?[0-9]) watching)$/.test(a.innerText) && (a.closest("ytm-video-with-context-renderer").style.display = "none")) }); z.observe(document.body\, { subtree: true\, childList: true }); $1)
 !#endif
