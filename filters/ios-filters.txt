@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-02-05.1
+! Version: 2024-02-08.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -272,11 +272,9 @@ flightradar24.com###map_canvas img[alt="Google"]
 flightradar24.com###map_canvas .gmnoprint
 flightaware.com##.flightPagePremiumUpsell
 flightaware.com##.flightPagePromoMessage
-imgur.io##.App-topSidebar
-imgur.io##.PostButtons-container
-imgur.io##.Gallery-moreOnImgur
-imgur.io##div[style^="width: 100%"]
-imgur.io##.GalleryHandler-postContainer:not(:has(.Gallery-moreOnImgur))
+imgur.com##.Navigation-buttons, .Info-Wrapper, .GalleryPage-bg, .Gallery-EngagementBar, .BottomRecirc
+imgur.com##.Gallery-Byline:style(margin: 0 !important;)
+imgur.com##+js(aeld, /touchend/)
 medibang.com##.asArtStreetTopNotice
 medibang.com##div[class*="AdBlock"]
 medibang.com##.mdbnContestList__footerMenu
