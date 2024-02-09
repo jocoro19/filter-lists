@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-02-09.3
+! Version: 2024-02-09.4
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -307,5 +307,5 @@ www.pixwox.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insert
 ! Disable autoplay on Mobile YouTube homepage
 m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, `var w = new MutationObserver(() => { var x = document.querySelector("ytm-pages-dwell-detection"); x && x.remove() }); w.observe(document.body, { subtree: true, childList: true }); $1`)
 ! Hide videos with less than 1000 views and streams with less than 50 watching
-m.youtube.com##+js(rpnt, script, /(if \(document\.fonts &&)/, `var y = new MutationObserver(() => document.querySelectorAll(".watch-below-the-player ytm-video-with-context-renderer, [tab-identifier='FEwhat_to_watch'] ytm-rich-item-renderer").forEach(a => a.querySelectorAll("ytm-badge-and-byline-renderer > span").forEach(b => /^((?:No|[0-9]{0,3})M views?|(?:[1-4]?[0-9]) watching)$/.test(b.textContent) && (a.style.backgroundColor = "red"))));  y.observe(document.body, { subtree: true, childList: true }); $1`)
+m.youtube.com##+js(rpnt, script, /(if \(document\.fonts &&)/, `var y = new MutationObserver(() => document.querySelectorAll(".watch-below-the-player ytm-video-with-context-renderer, [tab-identifier='FEwhat_to_watch'] ytm-rich-item-renderer").forEach(a => a.querySelectorAll("ytm-badge-and-byline-renderer > span").forEach(b => /^((?:No|[0-9]{0,3}) views?|(?:[1-4]?[0-9]) watching)$/.test(b.textContent) && (a.style.display = "none"))));  y.observe(document.body, { subtree: true, childList: true }); $1`)
 !#endif
