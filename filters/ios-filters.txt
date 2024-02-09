@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-02-09.2
+! Version: 2024-02-09.3
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -300,7 +300,7 @@ reddit.com##+js(rpnt, script, /(window.CLIENT_EXPERIMENTS)/, `document.head.inse
 
 dexerto.com##+js(rpnt, script, /!\(function\(o\,_name\)[\s\S]*/, `document.head.insertAdjacentHTML("afterbegin", "<style>.top-0.justify-center, label.rounded-full, #bottom-adhesion { display: none !important; }</style>");`)
 medibang.com##+js(rpnt, script, /(var ROOT_URL =)/, `var x = new MutationObserver(() => document.querySelectorAll(".illust-item_box a").forEach(a => a.href = a.href.replace(".com/picture/viewer/", ".com/picture/"))); location.pathname === "/contentsSearch/" && x.observe(document.body, { subtree: true, childList: true }); /^\/picture\//.test(location.pathname) && document.querySelectorAll(".pictureDetails__image > a").forEach(b => { delete b.dataset.zoomUrl; b.href = b.querySelector("img").src.replace("/1280_960/", "/") }); $1`)
-imgur.com##+js(rpnt, script, /(dataLayer=\[])/, `document.head.insertAdjacentHTML("afterbegin", "<style>div[class^="SeeImgurOIA-"], .Navigation-buttons, .Info-Wrapper, .GalleryPage-bg, .Gallery-EngagementBar, .BottomRecirc { display: none !important; } .Gallery-Byline { margin: 0 !important;)</style>"); $1`)
+imgur.com##+js(rpnt, script, /(dataLayer=\[])/, `document.head.insertAdjacentHTML("afterbegin", "<style>div[class^='SeeImgurOIA-'], .Navigation-buttons, .Info-Wrapper, .GalleryPage-bg, .Gallery-EngagementBar, .BottomRecirc { display: none !important; } .Gallery-Byline { margin: 0 !important;)</style>"); $1`)
 www.picuki.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.sticky-bottom-ads-wrapper, div[class*='promote'], .admin-notice, .stats-profile-button, .show_stories_button {display: none !important;}</style>"); $1`)
 www.pixwox.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>[class^='ah-box'], .share, .similar, .swbtn_igtv, .swbtn_stories { display: none !important; }</style>"); $1`)
 
