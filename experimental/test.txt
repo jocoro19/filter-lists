@@ -1,28 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: Test
-! Version: 25
+! Version: 26
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
-
-! Mobile YouTube channel page layout improvements
-m.youtube.com##.c4-tabbed-header-page-header-banner:style(padding-top: 17.5% !important; margin: 0 -12px !important; border-radius: 0 !important;)
-m.youtube.com##.c4-tabbed-header-page-header-section:style(position: relative !important;)
-m.youtube.com##ytm-profile-icon:style(max-height: 112px !important; max-width: 112px !important;)
-m.youtube.com##ytm-channel-tagline-renderer[is-page-header]:style(position: absolute !important; right: 0 !important; top: 9px !important;)
-m.youtube.com##.channel-tagline-text
-m.youtube.com##.channel-tagline-wrapper::before:style(content: "About this channel";)
-m.youtube.com##.channel-tagline-icon:style(width: 18px !important; height: 18px !important;)
-m.youtube.com##ytm-channel-header-links-view-model
-m.youtube.com##.c4-tabbed-header-page-header-buttons:style(padding: 8px 0 !important;)
-m.youtube.com##.c4-tabbed-header-page-header-button:style(max-width: 50% !important;)
-m.youtube.com##.yt-tab-group-shape-wiz__slider
-m.youtube.com##.yt-tab-shape-wiz__tab-bar
-m.youtube.com##.about-channel-container:style(display: flex !important; flex-direction: column !important;)
-m.youtube.com##.about-channel-section:has(yt-channel-external-link-view-model):style(order: -1 !important;)
-m.youtube.com##.about-channel-section:has(> span > span):style(order: 1 !important; margin-top: 0 !important;)
-m.youtube.com##.about-channel-action-button-container:style(min-height: unset !important; order: 2 !important;)
-m.youtube.com##yt-channel-external-link-view-model > img
-m.youtube.com##.horizontal-card-list-card-thumbnail-xlarge:style(width: 200px !important;)
-m.youtube.com##ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge)
-m.youtube.com##ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) + *:style(border-top: none !important;)
