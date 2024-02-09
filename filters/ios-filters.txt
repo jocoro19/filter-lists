@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-02-09.4
+! Version: 2024-02-09.5
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -289,6 +289,7 @@ minecraft.wiki##.mw-editsection
 ###misskey_app .xF6dY
 www.picuki.com##.sticky-bottom-ads-wrapper, div[class*="promote"], .admin-notice, .stats-profile-button, .show_stories_button
 www.pixwox.com##[class^="ah-box"], .share, .similar, .swbtn_igtv, .swbtn_stories
+www.pixwox.com##.swbtn:style(width: 50% !important;)
 www.pixwox.com##+js(ra, target, .pic > a)
 
 ! Special CSS/JS injection filters
@@ -302,7 +303,7 @@ dexerto.com##+js(rpnt, script, /!\(function\(o\,_name\)[\s\S]*/, `document.head.
 medibang.com##+js(rpnt, script, /(var ROOT_URL =)/, `var x = new MutationObserver(() => document.querySelectorAll(".illust-item_box a").forEach(a => a.href = a.href.replace(".com/picture/viewer/", ".com/picture/"))); location.pathname === "/contentsSearch/" && x.observe(document.body, { subtree: true, childList: true }); /^\/picture\//.test(location.pathname) && document.querySelectorAll(".pictureDetails__image > a").forEach(b => { delete b.dataset.zoomUrl; b.href = b.querySelector("img").src.replace("/1280_960/", "/") }); $1`)
 imgur.com##+js(rpnt, script, /(dataLayer=\[])/, `document.head.insertAdjacentHTML("afterbegin", "<style>div[class^='SeeImgurOIA-'], .Navigation-buttons, .Info-Wrapper, .GalleryPage-bg, .Gallery-EngagementBar, .BottomRecirc { display: none !important; } .Gallery-Byline { margin: 0 !important;)</style>"); $1`)
 www.picuki.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.sticky-bottom-ads-wrapper, div[class*='promote'], .admin-notice, .stats-profile-button, .show_stories_button {display: none !important;}</style>"); $1`)
-www.pixwox.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>[class^='ah-box'], .share, .similar, .swbtn_igtv, .swbtn_stories { display: none !important; }</style>"); $1`)
+www.pixwox.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>[class^='ah-box'], .share, .similar, .swbtn_igtv, .swbtn_stories { display: none !important; } .swbtn { width: 50% !important; }</style>"); $1`)
 
 ! Disable autoplay on Mobile YouTube homepage
 m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, `var w = new MutationObserver(() => { var x = document.querySelector("ytm-pages-dwell-detection"); x && x.remove() }); w.observe(document.body, { subtree: true, childList: true }); $1`)
