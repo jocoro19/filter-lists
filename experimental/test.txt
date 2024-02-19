@@ -1,6 +1,10 @@
 [AdBlock Plus 2.0]
 ! Title: Test
-! Version: 26
+! Version: 27
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
+
+gelbooru.com##div:has(> #ts_ad_native_nhurt)
+gelbooru.com##.showEditBox, #favoriteUpvote
+gelbooru.com##div[style="width: 100%;"]
