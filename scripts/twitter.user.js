@@ -2,9 +2,10 @@
 // @name          JHS X-iter
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       1.2.1
+// @version       1.2.2
 // @run-at        document-start
 // @description   X-it Twitter
+// @icon          https://raw.githubusercontent.com/jocoro19/filter-lists/main/j.png
 // @grant         none
 // @match         https://twitter.com/*
 // @match         https://x.com/*
