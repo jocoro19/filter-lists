@@ -1,10 +1,9 @@
 [AdBlock Plus 2.0]
 ! Title: Test
-! Version: 27
+! Version: 28
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
-gelbooru.com##div:has(> #ts_ad_native_nhurt)
-gelbooru.com##.showEditBox, #favoriteUpvote
-gelbooru.com##div[style="width: 100%;"]
+danbooru.donmai.us##+js(rpnt, script, /(\$\(function\(\))/, `if (/^\/posts\/\d*$/.test(location.pathname)) { var x = new URL(location.href); x.searchParams.delete("q"); history.replaceState("", "", x.href) }; $1`)
+gelbooru.com##+js(rpnt, script, /(function responsiveViewToggle\(\))/, `document.head.insertAdjacentHTML("afterbegin", "<style>div:has(> [id^='ts_ad_']), .showEditBox { display: none !important; }</style>"); var x = document.querySelectorAll(".thumbnail-container"); location.search.includes("s=list") && x.length == 2 && (x[0].innerHTML += x[1].innerHTML, x[1].remove()); document.querySelectorAll(".thumbnail-preview a").forEach(a => { var b = new URL(a.href); b.searchParams.delete("tags"); a.href = b.href }); $1`)
