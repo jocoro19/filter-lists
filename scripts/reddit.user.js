@@ -2,9 +2,10 @@
 // @name          JHS Reddit Fixes
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       1.5.4
+// @version       1.5.5
 // @run-at        document-start
 // @description   Redirects all Reddit links to Old Reddit and fixes image links by using a custom image viewer
+// @icon          https://raw.githubusercontent.com/jocoro19/filter-lists/main/j.png
 // @grant         none
 // @match         https://www.reddit.com/*
 // @match         https://old.reddit.com/*
@@ -123,8 +124,8 @@ if (location.hostname !== "old.reddit.com" && location.pathname === "/media") {
 				let offsetX = (event.clientX - rect.left) / img.clientWidth
 				let offsetY = (event.clientY - rect.top) / img.clientHeight
 				img.className = "zoomed-in"
-				if (overflowX) { img.classList.add("overflow-x") }
-				if (overflowY) { img.classList.add("overflow-y") }
+				overflowX && img.classList.add("overflow-x")
+				overflowY && img.classList.add("overflow-y")
 				// Calculate the location to scroll to using the location of the mouse click
 				let scrollX = img.clientWidth * offsetX - overlay.clientWidth / 2
 				let scrollY = img.clientHeight * offsetY - overlay.clientHeight / 2
