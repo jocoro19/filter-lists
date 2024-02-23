@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-02-17.2
+! Version: 2024-02-22.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -271,6 +271,17 @@ flightradar24.com###map_canvas img[alt="Google"]
 flightradar24.com###map_canvas .gmnoprint
 flightaware.com##.flightPagePremiumUpsell
 flightaware.com##.flightPagePromoMessage
+@@||commons.wikimedia.org^$generichide
+wikimedia.org,wiktionary.org,minecraft.wiki,wiki.gg###siteNotice
+minecraft.wiki##.page-actions-menu
+minecraft.wiki##.mw-editsection
+||minecraft.wiki/load.php?format=original&image=edit
+###posts .hidden-posts-notice
+||gelbooru.com/index.php*s=view$removeparam=tags
+@@||gelbooru.com/extras/howtosearch$image
+gelbooru.com##div:has(> [id^="ts_ad_"])
+gelbooru.com##.showEditBox
+###misskey_app .xF6dY
 medibang.com##.asArtStreetTopNotice
 medibang.com##div[class*="AdBlock"]
 medibang.com##.mdbnContestList__footerMenu
@@ -278,14 +289,6 @@ medibang.com##.mdbnPictureViewer #viewerImage:style(pointer-events: auto !import
 imgur.com##div[class^="SeeImgurOIA-"], .Navigation-buttons, .Info-Wrapper, .GalleryPage-bg, .Gallery-EngagementBar, .BottomRecirc
 imgur.com##.Gallery-Byline:style(margin: 0 !important;)
 imgur.com##+js(aeld, /touchend/)
-@@||commons.wikimedia.org^$generichide
-wikimedia.org,wiktionary.org,minecraft.wiki,wiki.gg###siteNotice
-minecraft.wiki##.page-actions-menu
-minecraft.wiki##.mw-editsection
-||minecraft.wiki/load.php?format=original&image=edit
-||danbooru.donmai.us^$removeparam=q
-###posts .hidden-posts-notice
-###misskey_app .xF6dY
 www.picuki.com##.sticky-bottom-ads-wrapper, div[class*="promote"], .admin-notice, .stats-profile-button, .show_stories_button
 www.pixwox.com##[class^="ah-box"], .share, .similar, .swbtn_igtv, .swbtn_stories
 www.pixwox.com##.swbtn:style(width: 50% !important;)
@@ -293,19 +296,21 @@ www.pixwox.com##+js(ra, target, .pic > a)
 
 ! Special CSS/JS injection filters
 !#if !ext_ublock
-m.youtube.com##+js(rpnt, script, /(var ytInitialPlayerResponse = null;)/, `document.head.insertAdjacentHTML("afterbegin", "<style>ytm-item-section-renderer:has(ad-slot-renderer), ytm-rich-section-renderer, ytm-pivot-bar-item-renderer:has(.pivot-shorts), .yt-tab-shape-wiz[tab-title='Shorts'], ytm-reel-shelf-renderer, .rich-grid-sticky-header, ytm-statement-banner-renderer, .media-item-endorsement-container, ytm-comments-simplebox-renderer, ytm-comments-entry-point-teaser-renderer, #global-loader:has(.YtWebScrimDialogContainer), .ytm-bottom-sheet-overlay-container:has([style*='/open-app.svg']), .channel-tagline-text, ytm-channel-header-links-view-model, .yt-tab-group-shape-wiz__slider, .yt-tab-shape-wiz__tab-bar, ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) { display: none !important; } ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) + * { border-top: none !important; } .c4-tabbed-header-page-header-banner { padding-top: 17.5% !important; margin: 0 -12px !important; border-radius: 0 !important; } .c4-tabbed-header-page-header-section { position: relative !important; } ytm-profile-icon { max-height: 112px !important; max-width: 112px !important; } ytm-channel-tagline-renderer[is-page-header] { position: absolute !important; right: 0 !important; top: 9px !important; } .channel-tagline-wrapper::before { content: 'About this channel'; } .channel-tagline-icon { width: 18px !important; height: 18px !important; } .c4-tabbed-header-page-header-buttons { padding: 8px 0 !important; } .c4-tabbed-header-page-header-button { max-width: 50% !important; }</style>"); $1`)
+m.youtube.com##+js(rpnt, script, /(var ytInitialPlayerResponse = null;)/, `document.head.insertAdjacentHTML("afterbegin", "<style>ytm-item-section-renderer:has(ad-slot-renderer), ytm-rich-section-renderer, ytm-pivot-bar-item-renderer:has(.pivot-shorts), .yt-tab-shape-wiz[tab-title='Shorts'], ytm-reel-shelf-renderer, .rich-grid-sticky-header, ytm-related-chip-cloud-renderer, ytm-statement-banner-renderer, .media-item-endorsement-container, .ytm-comments-simplebox-renderer, ytm-comments-entry-point-teaser-renderer, #global-loader:has(.YtWebScrimDialogContainer), .ytm-bottom-sheet-overlay-container:has([style*='/open-app.svg']), .channel-tagline-text, ytm-channel-header-links-view-model, .yt-tab-group-shape-wiz__slider, .yt-tab-shape-wiz__tab-bar, ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) { display: none !important; } ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) + * { border-top: none !important; } .c4-tabbed-header-page-header-banner { padding-top: 17.5% !important; margin: 0 -12px !important; border-radius: 0 !important; } .c4-tabbed-header-page-header-section { position: relative !important; } ytm-profile-icon { max-height: 112px !important; max-width: 112px !important; } ytm-channel-tagline-renderer[is-page-header] { position: absolute !important; right: 0 !important; top: 9px !important; } .channel-tagline-wrapper::before { content: 'About this channel'; } .channel-tagline-icon { width: 18px !important; height: 18px !important; } .c4-tabbed-header-page-header-buttons { padding: 8px 0 !important; } .c4-tabbed-header-page-header-button { max-width: 50% !important; }</style>"); $1`)
 m.wikipedia.org##+js(rpnt, script, /(^\(RLQ\=window\.RLQ\|\|)/, `document.head.insertAdjacentHTML("afterbegin", "<style>#page-actions-watch, #page-actions-edit, #page-actions-viewsource, .mw-editsection, .ambox, #mw-data-after-content, #siteNotice, #frb-inline, #frb-nag {display: none !important;}</style>"); $1`)
 reddit.com##+js(rpnt, script, /(var BETA_HOST.*)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.promoted, #header-img, .listingsignupbar, .commentsignupbar, .side > .spacer:not(:has(#search, .linkinfo, .titlebox)), .side .md, .active.read-next { display: none !important; }</style>"); $1`)
 reddit.com##+js(rpnt, script, /(window.CLIENT_EXPERIMENTS)/, `document.head.insertAdjacentHTML("afterbegin", "<style>reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-overlay-display { display: none !important; } html.theme-beta main { width: 100vw !important; height: 100vh !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; } html.theme-beta main img { max-width: 100% !important; max-height: 100% !important; margin: 0 !important; }</style>"); $1`)
 
-dexerto.com##+js(rpnt, script, /!\(function\(o\,_name\)[\s\S]*/, `document.head.insertAdjacentHTML("afterbegin", "<style>.top-0.justify-center, label.rounded-full, #bottom-adhesion { display: none !important; }</style>");`)
+danbooru.donmai.us##+js(rpnt, script, /(\$\(function\(\))/, `if (/^\/posts\/\d*$/.test(location.pathname)) { var x = new URL(location.href); x.searchParams.delete("q"); history.replaceState("", "", x.href) }; $1`)
+gelbooru.com##+js(rpnt, script, /(function responsiveViewToggle\(\))/, `document.head.insertAdjacentHTML("afterbegin", "<style>div:has(> [id^='ts_ad_']), .showEditBox { display: none !important; }</style>"); var x = document.querySelectorAll(".thumbnail-container"); location.search.includes("s=list") && x.length == 2 && (x[0].innerHTML += x[1].innerHTML, x[1].remove()); document.querySelectorAll(".thumbnail-preview a").forEach(a => { var b = new URL(a.href); b.searchParams.delete("tags"); a.href = b.href }); $1`)
 medibang.com##+js(rpnt, script, /(var ROOT_URL =)/, `var x = new MutationObserver(() => document.querySelectorAll(".illust-item_box a").forEach(a => a.href = a.href.replace(".com/picture/viewer/", ".com/picture/"))); location.pathname === "/contentsSearch/" && x.observe(document.body, { subtree: true, childList: true }); /^\/picture\//.test(location.pathname) && document.querySelectorAll(".pictureDetails__image > a").forEach(b => { delete b.dataset.zoomUrl; b.href = b.querySelector("img").src.replace("/1280_960/", "/") }); $1`)
 imgur.com##+js(rpnt, script, /(dataLayer=\[])/, `document.head.insertAdjacentHTML("afterbegin", "<style>div[class^='SeeImgurOIA-'], .Navigation-buttons, .Info-Wrapper, .GalleryPage-bg, .Gallery-EngagementBar, .BottomRecirc { display: none !important; } .Gallery-Byline { margin: 0 !important;)</style>"); $1`)
 www.picuki.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.sticky-bottom-ads-wrapper, div[class*='promote'], .admin-notice, .stats-profile-button, .show_stories_button {display: none !important;}</style>"); $1`)
 www.pixwox.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>[class^='ah-box'], .share, .similar, .swbtn_igtv, .swbtn_stories { display: none !important; } .swbtn { width: 50% !important; }</style>"); $1`)
+dexerto.com##+js(rpnt, script, /!\(function\(o\,_name\)[\s\S]*/, `document.head.insertAdjacentHTML("afterbegin", "<style>.top-0.justify-center, label.rounded-full, #bottom-adhesion { display: none !important; }</style>");`)
 
 ! Disable autoplay on Mobile YouTube homepage and hide "Open App" message
 m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, `var x = new MutationObserver(() => { var a = document.querySelector("ytm-pages-dwell-detection"); a && a.remove(); var b = document.querySelector("[style*='/open-app.svg'] button"); b && b.click() }); x.observe(document.body, { subtree: true, childList: true }); $1`)
 ! Hide videos with less than 1000 views and streams with less than 50 watching
-m.youtube.com##+js(rpnt, script, /(if \(document\.fonts &&)/, `var y = new MutationObserver(() => document.querySelectorAll(".watch-below-the-player ytm-video-with-context-renderer, [tab-identifier='FEwhat_to_watch'] ytm-rich-item-renderer").forEach(a => a.querySelectorAll("ytm-badge-and-byline-renderer > span").forEach(b => /^((?:No|[0-9]{0,3}) views?|(?:[1-4]?[0-9]) watching)$/.test(b.textContent) && (a.style.display = "none"))));  y.observe(document.body, { subtree: true, childList: true }); $1`)
+m.youtube.com##+js(rpnt, script, /(if \(document\.fonts &&)/, `var y = new MutationObserver(() => document.querySelectorAll(".watch-below-the-player ytm-video-with-context-renderer, [tab-identifier='FEwhat_to_watch'] ytm-rich-item-renderer").forEach(a => a.querySelectorAll("ytm-badge-and-byline-renderer > span").forEach(b => /^((?:No|[0-9]{0,3}) views?|(?:[1-4]?[0-9]) watching)$/.test(b.textContent) && (a.style.display = "none")))); y.observe(document.body, { subtree: true, childList: true }); $1`)
 !#endif
