@@ -2,9 +2,10 @@
 // @name          XtoTwitter
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       2.0
+// @version       2.1
 // @run-at        document-start
 // @description   Replaces many mentions of "X" with "Twitter" on many websites
+// @icon          https://raw.githubusercontent.com/jocoro19/filter-lists/main/j.png
 // @grant         none
 // @match         http*://*/*
 // ==/UserScript==
