@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.19.5
+! Version: 1.20
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -66,10 +66,15 @@ www.youtube.com##ytd-video-description-infocards-section-renderer > :not(#infoca
 www.youtube.com##ytd-structured-description-content-renderer ytd-reel-shelf-renderer
 www.youtube.com##ytd-video-description-transcript-section-renderer:style(padding: 0 !important; margin-top: 10px !important; order: 1 !important;)
 
-! SponsorBlock UI
-www.youtube.com##.sponsorBlockCategoryPill:style(margin-right: 6px !important;)
-www.youtube.com###sponsorBlockPopupContainer:style(margin-bottom: 8px !important;)
-www.youtube.com###sponsorBlockPopupContainer > iframe:style(width: 100% !important;)
-
 ! Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable)
 www.youtube.com###segmented-dislike-button .cbox, :is(#segmented-dislike-button, dislike-button-view-model) .yt-spec-button-shape-next__button-text-content:style(max-width: 80px !important;)
+
+! SponsorBlock UI
+www.youtube.com##.sponsorBlockCategoryPill:style(margin-right: 6px !important;)
+www.youtube.com###sponsorBlockPopupContainer:style(margin-bottom: 12px !important;)
+www.youtube.com###sponsorBlockPopupContainer > iframe:style(width: 100% !important;)
+
+! Live stream chat
+www.youtube.com##ytd-live-chat-frame:style(margin-bottom: 12px !important;)
+www.youtube.com##ytd-live-chat-frame #show-hide-button:style(margin: 0 !important;)
+www.youtube.com##yt-live-chat-renderer iron-pages:has(> #input-panel):style(border-bottom: none !important;)
