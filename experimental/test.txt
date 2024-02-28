@@ -1,10 +1,10 @@
 [AdBlock Plus 2.0]
 ! Title: Test
-! Version: 42
+! Version: 43
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
 m.youtube.com##+js(rpnt, script, /(var ytInitialPlayerResponse = null;)/, `const script=document.createElement("script");script.src="https://cdn.jsdelivr.net/npm/eruda",document.body.appendChild(script),script.onload=()=>{eruda.init()}; $1`)
 
-m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, `document.head.insertAdjacentHTML("afterbegin", "<style></style"); var w = new MutationObserver(() => { var b = document.querySelector("#player[playable='true'] .ytp-unmute:not([style])"); b && console.log(document.querySelector("#player").outerHTML); b && (b.click()); }); w.observe(document.body, { subtree: true, childList: true }); $1`)
+m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, `document.head.insertAdjacentHTML("afterbegin", "<style></style"); var w = new MutationObserver(() => { var a = document.querySelector("ytm-custom-control > div"); var b = document.querySelector(".ytp-unmute"); a && b && b.click(); }); w.observe(document.body, { subtree: true, childList: true }); $1`)
