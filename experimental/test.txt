@@ -7,4 +7,4 @@
 
 m.youtube.com##+js(rpnt, script, /(var ytInitialPlayerResponse = null;)/, `const script=document.createElement("script");script.src="https://cdn.jsdelivr.net/npm/eruda",document.body.appendChild(script),script.onload=()=>{eruda.init()}; $1`)
 
-m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.ytp-unmute { display: none !important; }</style"); var w = new MutationObserver(() => { var b = document.querySelector(".ytp-unmute"); b && console.log(document.querySelector(".html5-video-player").outerHTML); b && b.click(); }); w.observe(document.body, { subtree: true, childList: true }); $1`)
+m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.ytp-unmute { display: none !important; }</style"); var w = new MutationObserver(() => { var b = document.querySelector(".ytp-unmute"); b && console.log(document.querySelector("#player").outerHTML); b && b.click(); }); w.observe(document.body, { subtree: true, childList: true }); $1`)
