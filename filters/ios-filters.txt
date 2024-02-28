@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-02-27.1
+! Version: 2024-02-28.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -311,8 +311,8 @@ www.picuki.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insert
 www.pixwox.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>[class^='ah-box'], .share, .similar, .swbtn_igtv, .swbtn_stories { display: none !important; } .swbtn { width: 50% !important; }</style>"); $1`)
 dexerto.com##+js(rpnt, script, /!\(function\(o\,_name\)[\s\S]*/, `document.head.insertAdjacentHTML("afterbegin", "<style>.top-0.justify-center, label.rounded-full, #bottom-adhesion { display: none !important; }</style>");`)
 
-! Disable autoplay on Mobile YouTube homepage and hide "Open App" message
-m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, `var x = new MutationObserver(() => { var a = document.querySelector("ytm-pages-dwell-detection"); a && a.remove(); var b = document.querySelector("[style*='/open-app.svg'] button"); b && b.click() }); x.observe(document.body, { subtree: true, childList: true }); $1`)
+! Disable autoplay on Mobile YouTube homepage, unmute videos by default, and hide "Open App" message
+m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.ytp-unmute { display: none !important; }</style"); var w = new MutationObserver(() => { var a = document.querySelector("ytm-pages-dwell-detection"); a && a.remove(); var b = document.querySelector(".ytp-unmute"); b && b.click(); var c = document.querySelector("[style*='/open-app.svg'] button"); c && c.click() }); w.observe(document.body, { subtree: true, childList: true }); $1`)
 ! Hide videos with less than 1000 views and streams with less than 50 watching
 m.youtube.com##+js(rpnt, script, /(if \(document\.fonts &&)/, `var y = new MutationObserver(() => document.querySelectorAll(".watch-below-the-player ytm-video-with-context-renderer, [tab-identifier='FEwhat_to_watch'] ytm-rich-item-renderer").forEach(a => a.querySelectorAll("ytm-badge-and-byline-renderer > span").forEach(b => /^((?:No|[0-9]{0,3}) views?|(?:[1-4]?[0-9]) watching)$/.test(b.textContent) && (a.style.display = "none")))); y.observe(document.body, { subtree: true, childList: true }); $1`)
 !#endif
