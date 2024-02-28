@@ -1,10 +1,10 @@
 [AdBlock Plus 2.0]
 ! Title: Test
-! Version: 33
+! Version: 34
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
 m.youtube.com##+js(rpnt, script, /(var ytInitialPlayerResponse = null;)/, `const script=document.createElement("script");script.src="https://cdn.jsdelivr.net/npm/eruda",document.body.appendChild(script),script.onload=()=>{eruda.init()}; $1`)
 
-m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.ytp-unmute { display: none !important; }</style"); var w = new MutationObserver(() => { var a = document.querySelector("ytm-pages-dwell-detection"); a && a.remove(); var b = document.querySelector(".html5-video-player:has(.ytp-unmute:not([style]))");b && b.click(); var c = document.querySelector("[style*='/open-app.svg'] button"); c && c.click() }); w.observe(document.body, { subtree: true, childList: true }); $1`)
+m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.ytp-unmute { display: none !important; }</style"); var w = new MutationObserver(() => { var b = document.querySelector(".ytp-unmute"); b && console.log(document.querySelector(".html5-video-player").innerHTML); b && b.click(); }); w.observe(document.body, { subtree: true, childList: true }); $1`)
