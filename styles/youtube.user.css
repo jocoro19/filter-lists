@@ -2,14 +2,15 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.19.5
+@version     1.20
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
 ==/UserStyle== */
 
 /*
-It is important to note that using a blocker is NOT theft. Do not fall for this creepy idea. The ultimate logical consequence of blocking = theft is the criminalization of the inalienable right to privacy.
+"It is important to note that using a blocker is NOT theft. Do not fall for this creepy idea.
+The ultimate logical consequence of blocking = theft is the criminalization of the inalienable right to privacy."
 
 (https://github.com/gorhill/uBlock)
 */
@@ -205,20 +206,30 @@ It is important to note that using a blocker is NOT theft. Do not fall for this 
 		margin-top: 10px !important;
 		order: 1 !important;
 	}
-
+	/* Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable) */
+	#segmented-dislike-button .cbox, :is(#segmented-dislike-button, dislike-button-view-model) .yt-spec-button-shape-next__button-text-content {
+		max-width: 80px !important;
+	}
+	
 	/* SponsorBlock UI */
 	.sponsorBlockCategoryPill {
 		margin-right: 6px !important;
 	}
 	#sponsorBlockPopupContainer {
-		margin-bottom: 8px !important;
+		margin-bottom: 12px !important;
 		& > iframe {
 			width: 100% !important;
 		}
 	}
-
-	/* Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable) */
-	#segmented-dislike-button .cbox, :is(#segmented-dislike-button, dislike-button-view-model) .yt-spec-button-shape-next__button-text-content {
-		max-width: 80px !important;
+	
+	/* Live stream chat */
+	ytd-live-chat-frame {
+		margin-bottom: 12px !important;
+		& #show-hide-button ytd-button-renderer {
+			margin: 0 !important;
+		}
+	}
+	yt-live-chat-renderer iron-pages:has(> #input-panel) {
+		border-bottom: none !important;
 	}
 }
