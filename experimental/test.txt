@@ -1,6 +1,11 @@
 [AdBlock Plus 2.0]
 ! Title: Test
-! Version: 47
+! Version: 48
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
+
+m.youtube.com##.ytm-bottom-sheet-overlay-container:has([style*='/open-app.svg'])
+m.youtube.com###global-loader:has(~ .ytm-bottom-sheet-overlay-container [style*='/open-app.svg'])
+m.youtube.com##body:has(.ytm-bottom-sheet-overlay-container [style*='/open-app.svg']):style(position: static !important;)
+m.youtube.com##body[engagement-panel-open]:style(position: static !important;)
