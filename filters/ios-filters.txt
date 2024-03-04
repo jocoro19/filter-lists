@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-03-03.4
+! Version: 2024-03-04.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -198,7 +198,7 @@ reddit.com###header-img
 reddit.com##.side .md
 reddit.com##.side > .spacer:not(:has(#search, .linkinfo, .titlebox))
 reddit.com##.user, .user + .separator
-reddit.com##li.share, li.login-required, li:has(.hide-button)
+reddit.com##li.share, li:has(.embed-comment, .hide-button), .li.login-required
 reddit.com##.commentarea .stickied[data-author="AutoModerator"]
 reddit.com##button.c-btn-primary.c-btn[name="over18"][value="no"]
 reddit.com##._1GdKQyDUWvhTFBDr0FsAkj:style(visibility: hidden !important;)
@@ -215,6 +215,8 @@ reddit.com,~embed.reddit.com,redd.it##html.theme-beta faceplate-tracker img:styl
 
 ! Fandom
 ||services.fandom.com/icbm/api/loader$script
+fandom.com##.top-ads-container
+fandom.com##.ad-slot-placeholder
 fandom.com##.notifications-box
 fandom.com##.mobile-community-bar__discussions
 fandom.com##.is-anon
@@ -311,7 +313,7 @@ www.picuki.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insert
 www.pixwox.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>[class^='ah-box'], .share, .similar, .swbtn_igtv, .swbtn_stories { display: none !important; } .swbtn { width: 50% !important; }</style>"); $1`)
 imgur.com##+js(rpnt, script, /(dataLayer=\[])/, `document.head.insertAdjacentHTML("afterbegin", "<style>div[class^='SeeImgurOIA-'], .Navigation-buttons, .Info-Wrapper, .GalleryPage-bg, .Gallery-EngagementBar, .BottomRecirc { display: none !important; } .Gallery-Byline { margin: 0 !important;)</style>"); $1`)
 dexerto.com##+js(rpnt, script, /!\(function\(o\,_name\)[\s\S]*/, `document.head.insertAdjacentHTML("afterbegin", "<style>.top-0.justify-center, label.rounded-full, #bottom-adhesion { display: none !important; }</style>");`)
-fandom.com##+js(rpnt, script, /(^document\.documentElement\.className=)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.notifications-box, .mobile-community-bar__discussions, .is-anon, .beta-stars, .render-wiki-recommendations, .trfc-147, .trfc161, .article-comments-collapsible-menu, .recirculation-prefooter, .wiki-page-header > .has-edit-link > div, .section-edit-link, .section-edit-link + .vertical-separator, .mobile-main-page__trending-articles, .mobile-main-page__popular-categories, .unified-search__layout__right-rail, .top-results { display: none !important; }</style>"); $1`)
+fandom.com##+js(rpnt, script, /(^document\.documentElement\.className=)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.top-ads-container, .ad-slot-placeholder, .notifications-box, .mobile-community-bar__discussions, .is-anon, .beta-stars, .render-wiki-recommendations, .wiki-page-header > .has-edit-link > div, .section-edit-link, .section-edit-link + .vertical-separator, .mobile-main-page__trending-articles, .mobile-main-page__popular-categories { display: none !important; }</style>"); $1`)
 
 ! Disable muted autoplay on Mobile YouTube homepage, unmute videos by default, and hide "Open App" message
 m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.ytp-unmute, .ytm-bottom-sheet-overlay-container:has([style*='/open-app.svg']), #global-loader:has(~ .ytm-bottom-sheet-overlay-container [style*='/open-app.svg']) { display: none !important; }</style>"); var w = new MutationObserver(() => { var a = document.querySelector("ytm-pages-dwell-detection"); a && a.remove(); var b = document.querySelector(".ytp-unmute:not([style])"); b && (b.click(), b.remove()); var c = document.querySelector("[style*='/open-app.svg'] button"); c && c.click() }); w.observe(document.body, { subtree: true, childList: true }); $1`)
