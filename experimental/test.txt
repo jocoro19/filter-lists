@@ -1,11 +1,8 @@
 [AdBlock Plus 2.0]
 ! Title: Test
-! Version: 48
+! Version: 49
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
-m.youtube.com##.ytm-bottom-sheet-overlay-container:has([style*='/open-app.svg'])
-m.youtube.com###global-loader:has(~ .ytm-bottom-sheet-overlay-container [style*='/open-app.svg'])
-m.youtube.com##body:has(.ytm-bottom-sheet-overlay-container [style*='/open-app.svg']):style(position: static !important;)
-m.youtube.com##body[engagement-panel-open]:style(position: static !important;)
+www.youtube.com##+js(rpnt, script, /(var ytcfg=)/, `(location.pathname === "/live_chat" && window.frameElement === null) && document.head.insertAdjacentHTML("afterbegin", "<style>body { transform: scale(2); transform-origin: 0 0; } yt-live-chat-app { width: 50vw !important; height: 50vh !important; } tp-yt-iron-dropdown { left: 25vw !important; top: 25vh !important; transform: translate(-50%, -50%) !important; } yt-live-chat-app:has(tp-yt-iron-dropdown:not([style*='display: none'])) > #contents { filter: brightness(0.5); }</style>"); /^\/(?:@|channel/)/.test(location.pathname) && location.hostname = m.youtube.com; $1`)
