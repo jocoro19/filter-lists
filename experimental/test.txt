@@ -1,8 +1,8 @@
 [AdBlock Plus 2.0]
 ! Title: Test
-! Version: 58
+! Version: 59
 ! Expires: 1 days  
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
-www.youtube.com##+js(rpnt, script, /(var ytcfg=)/, `(location.pathname === "/live_chat" && window.frameElement === null) && document.head.insertAdjacentHTML("afterbegin", "<style>body { width: 50vw !important; height: 50vw !important; background-color: var(--yt-spec-base-background) !important; transform: scale(2); transform-origin: 0 0; overflow: clip !important;} yt-live-chat-app { width: 50vw !important; height: 50vh !important; } tp-yt-iron-dropdown { left: 25vw !important; top: 25vh !important; transform: translate(-50%, -50%) !important; } yt-live-chat-app:has(tp-yt-iron-dropdown:not([style*='display: none'])) > #contents { filter: brightness(0.5); } yt-live-chat-renderer iron-pages:has(> #input-panel) { border-bottom: none !important; } #show-more { z-index: 99 !important; }</style>"); $1`)
+www.youtube.com##+js(rpnt, script, /(var ytcfg=)/, `const script = document.createElement("script"); script.src = "https://cdn.jsdelivr.net/npm/eruda"; document.head.appendChild(script); script.onload = () => { eruda.init(); eruda.scale(2.5) }; (location.pathname === "/live_chat" && window.frameElement === null) && document.head.insertAdjacentHTML("afterbegin", "<style>body { width: 50vw !important; height: 50vw !important; background-color: var(--yt-spec-base-background) !important; transform: scale(2); transform-origin: 0 0; overflow: clip !important;} yt-live-chat-app { width: 50vw !important; height: 50vh !important; } tp-yt-iron-dropdown { left: 25vw !important; top: 25vh !important; transform: translate(-50%, -50%) !important; } yt-live-chat-app:has(tp-yt-iron-dropdown:not([style*='display: none'])) > #contents { filter: brightness(0.5); } yt-live-chat-renderer iron-pages:has(> #input-panel) { border-bottom: none !important; } #show-more { z-index: 99 !important; }</style>"); $1`)
