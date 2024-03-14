@@ -1,8 +1,8 @@
 [AdBlock Plus 2.0]
 ! Title: Test
-! Version: 50
+! Version: 51
 ! Expires: 1 days  
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
-www.youtube.com##+js(rpnt, script, /(var ytcfg=)/, `(location.pathname === "/live_chat" && window.frameElement === null) && document.head.insertAdjacentHTML("afterbegin", "<style>body { transform: scale(2); transform-origin: 0 0; overflow: hidden !important;} yt-live-chat-app { width: 50vw !important; height: 50vh !important; } tp-yt-iron-dropdown { left: 25vw !important; top: 25vh !important; transform: translate(-50%, -50%) !important; } yt-live-chat-app:has(tp-yt-iron-dropdown:not([style*='display: none'])) > #contents { filter: brightness(0.5); }</style>"); $1`)
+www.youtube.com##+js(rpnt, script, /(var ytcfg=)/, `const script = document.createElement("script"); script.src = "https://cdn.jsdelivr.net/npm/eruda"; document.head.appendChild(script); script.onload = () => eruda.init(); (location.pathname === "/live_chat" && window.frameElement === null) && document.head.insertAdjacentHTML("afterbegin", "<style>body { transform: scale(2); transform-origin: 0 0; overflow: hidden !important;} yt-live-chat-app { width: 50vw !important; height: 50vh !important; } tp-yt-iron-dropdown { left: 25vw !important; top: 25vh !important; transform: translate(-50%, -50%) !important; } yt-live-chat-app:has(tp-yt-iron-dropdown:not([style*='display: none'])) > #contents { filter: brightness(0.5); }</style>"); $1`)
