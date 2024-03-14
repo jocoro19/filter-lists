@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filters
-! Version: 2024-01-10.1
+! Version: 2024-03-14.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -11,7 +11,7 @@ www.youtube.com##yt-related-chip-cloud-renderer
 www.youtube.com##yt-related-chip-cloud-renderer + ytd-item-section-renderer:style(margin-top: -8px !important;)
 www.youtube.com##yt-search-query-correction:style(margin-top: 0 !important;)
 www.youtube.com##ytd-search-header-renderer > :not(#filter-button)
-www.youtube.com##ytd-search-header-renderer:style(height: 36px !important; max-width: 1096px !important; margin: 0 auto !important; justify-content: right !important;)
+www.youtube.com##ytd-search-header-renderer:style(height: 36px !important; margin: 0 auto !important; justify-content: right !important;)
 
 ! Hide "Search with your voice" button
 www.youtube.com###voice-search-button
@@ -19,14 +19,15 @@ www.youtube.com###voice-search-button
 ! Hide ambient mode from videos
 www.youtube.com###cinematics
 www.youtube.com###cinematics:remove()
+www.youtube.com###background.ytd-masthead:style(opacity: 1 !important;)
 
 ! Hide YouTube premium download button (use yt-dlp instead)
 www.youtube.com##ytd-download-button-renderer
 www.youtube.com##ytd-menu-service-item-download-renderer
 
 ! Hide some advertising for YouTube Premium
+www.youtube.com##.ytp-menuitem:has(.ytp-premium-label)
 www.youtube.com###premium-upsell-link
-www.youtube.com##.ytp-premium-label
 
 ! Hide bloat from YouTube homepage, subscriptions, and search
 www.youtube.com##ytd-rich-item-renderer:has(ytd-ad-slot-renderer)
@@ -46,7 +47,6 @@ www.youtube.com##ytd-watch-next-secondary-results-renderer ytd-reel-shelf-render
 www.youtube.com##ytd-video-renderer:has(.ytd-thumbnail[href^="/shorts/"])
 www.youtube.com##ytd-grid-video-renderer:has(.ytd-thumbnail[href^="/shorts/"])
 www.youtube.com##ytd-compact-video-renderer:has(.ytd-thumbnail[href^="/shorts/"])
-
 www.youtube.com##[page-subtype="trending"] ytd-item-section-renderer:has(ytd-reel-shelf-renderer)
 
 ! Hide mixes and movies in recommendations
