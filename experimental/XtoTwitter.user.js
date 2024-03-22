@@ -2,29 +2,36 @@
 // @name          XtoTwitter
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       2.1
-// @run-at        document-start
-// @description   Replaces many mentions of "X" with "Twitter" on many websites
+// @version       3.0
+// @run-at        document-end
+// @description   Replaces any mention of "X" with "Twitter"
 // @icon          https://raw.githubusercontent.com/jocoro19/filter-lists/main/j.png
 // @grant         none
 // @match         http*://*/*
 // ==/UserScript==
 
 /* EXPERIMENTAL: USE AT YOUR OWN RISK!
- * This userscript will replace all mentions "X" with "Twitter" and removes text like "Formerly known as Twitter".
+ * This userscript will replace ALL mentions of "X" with "Twitter" and removes text like "Formerly known as Twitter".
  * There may be some issues with the script such as "Xbox Series X" being changed to "Xbox Series Twitter".
  */
 
-document.addEventListener("DOMContentLoaded", () => {
-	const elements = (document.querySelectorAll("title, body *:not(script, iframe, svg, svg *, math, math *)"))
-	xToTwitter(elements)
-	if (document.body !== null) {
-		observer.observe(document.body, observerConfig)
-	}
-})
+const replace = /(?<!-|<[^>]*)(?:\bX\b|"X"|'X')(?![^<]*>|-)/g // Regex that matches what to replace with "Twitter"
+const remove = /(?: |, )?\bformerly(?: known as)? Twitter\b,?| ?\(formerly(?: known as)? Twitter\)|Twitter\/(?=Twitter)/gi // Regex that matches what to completely remove from the page
+const onlyX = /^(?:X|"X"|'X')$/ // Regex that matches "X" with or without quotation marks if there's nothing else
+const excludedElements = "script, iframe, svg, svg *, math, math *"//, .CodeMirror *" // Elements to not be changed by the script
+const altName = "EKKUSU" // Alternate name to be used in lieu of "Twitter"
+
+const twt = altName || "Twitter"
+const elements = (document.querySelectorAll(`title, body *:not(${excludedElements})`))
+xToTwitter(elements)
+const observer = new MutationObserver(handleChanges)
+const observerConfig = {
+	childList: true,
+	subtree: true,
+}
+observer.observe(document.body, observerConfig)
+
 function xToTwitter(elements) {
-	const replace = /(?<!-|<[^>]*)(?:\bX\b|"X"|'X')(?![^<]*>|-)/g // Regex that matches what to replace with "Twitter"
-	const remove = /(?: |, )?\bformerly(?: known as)? Twitter\b,?| ?\(formerly(?: known as)? Twitter\)/gi // Regex that matches what to completely remove from the page
 	// Create an array containing the elements to change
 	if (elements instanceof NodeList) {
 		elements = Array.from(elements)
@@ -36,7 +43,7 @@ function xToTwitter(elements) {
 			} else {
 				for (const node of element.childNodes) {
 					if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== "") {
-						return true
+						return true // Only include elements with a text node directly under it
 					}
 				}
 				return false
@@ -44,16 +51,26 @@ function xToTwitter(elements) {
 		})
 		elementsToChange.forEach(element => {
 			if (!(/<\/.*>/.test(element.innerHTML))) {
-				// Replace and remove text for elements that don't have nested non-void elements like <a> but not <br>
-				if (!(/^(?:X|"X"|'X')$/.test(element.innerHTML))) {
-					element.innerHTML = element.innerHTML.replace(replace, "Twitter") // Replace X with Twitter according to the regex if X isn't the only content
+				// Replace and remove text for elements that don't have text nodes mixed with non-void elements
+				const a = element.tagName === "A" ? element : element.closest("a")
+				if (!onlyX.test(element.innerHTML)) {
+					if (replace.test(element.innerHTML)) {
+						element.innerHTML = element.innerHTML.replace(replace, twt) // Replace "X" in elements if it isn't the only content in the element
+					}
+				} else if (a && /(?:twitter|x)\.com\//.test(a.href)) {
+					if (replace.test(element.innerHTML)) {
+						element.innerHTML = element.innerHTML.replace(replace, twt) // Replace "X" in <A> elements or descendents of <A> elements if it's the only content in the element
+					}
 				}
-				element.innerHTML = element.innerHTML.replace(remove, "")
+				if (remove.test(element.innerHTML)) {
+					element.innerHTML = element.innerHTML.replace(remove, "")
+				}
 			} else {
 				for (const node of element.childNodes) {
 					if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== "") {
-						if (!(/^(?:X|"X"|'X')$/.test(node.textContent))) {
-							node.textContent = node.textContent.replace(replace, "Twitter")
+						// Iterate through non-empty text nodes
+						if (!onlyX.test(node.textContent)) {
+							node.textContent = node.textContent.replace(replace, twt)
 						}
 						node.textContent = node.textContent.replace(remove, "")
 					}
@@ -69,23 +86,19 @@ function handleChanges(mutationsList) {
 		// Check if new nodes have been added
 		if (mutation.type === "childList") {
 			mutation.addedNodes.forEach(node => {
-				if (node.nodeType === Node.ELEMENT_NODE && !(node.matches("script, iframe, svg, svg *, math, math *"))) {
-					let elements
-					if (node.children.length > 0) {
-						elements = Array.from(node.querySelectorAll("*:not(script, iframe, svg, svg *, math, math *)"))
-					} else {
-						elements = [node]
-					}
+				if (node.nodeType === Node.ELEMENT_NODE && !(node.matches(excludedElements))) {
 					xToTwitter([node])
-					xToTwitter(elements)
+					if (node.childElementCount > 0) {
+						const newElements = Array.from(node.querySelectorAll(":scope, *:not(script, iframe, svg, svg *, math, math *)"))
+						xToTwitter(newElements)
+					}
+				} else if (node.nodeType === Node.TEXT_NODE) {
+					if (!onlyX.test(node.textContent)) {
+						node.textContent = node.textContent.replace(replace, twt)
+					}
+					node.textContent = node.textContent.replace(remove, "")
 				}
 			})
 		}
 	})
-}
-
-const observer = new MutationObserver(handleChanges)
-const observerConfig = {
-	childList: true,
-	subtree: true,
 }
