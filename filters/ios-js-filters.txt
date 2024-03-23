@@ -1,13 +1,13 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters (JS)
-! Version: 2024-03-22.1
+! Version: 2024-03-23.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
 ! Mobile YouTube
 ! Hide videos with less than 1000 views and streams with less than 50 watching
-m.youtube.com##+js(rpnt, script, /(if \(document\.fonts &&)/, `var y = new MutationObserver(() => document.querySelectorAll(".watch-below-the-player ytm-video-with-context-renderer, [tab-identifier='FEwhat_to_watch'] ytm-rich-item-renderer").forEach(a => a.querySelectorAll("ytm-badge-and-byline-renderer > span").forEach(b => /^((?:No|[0-9]{0,3}) views?|(?:[1-4]?[0-9]) watching)$/.test(b.textContent) && (a.style.display = "none")))); y.observe(document.body, { subtree: true, childList: true }); $1`)
+m.youtube.com##+js(rpnt, script, /(if \(document\.fonts &&)/, `var y = new MutationObserver(() => document.querySelectorAll(".watch-below-the-player ytm-video-with-context-renderer, [tab-identifier='FEwhat_to_watch'] ytm-rich-item-renderer").forEach(a => a.querySelectorAll("ytm-badge-and-byline-renderer > span").forEach(b => /^((?:No|[0-9]{0,3}) views?|(?:[1-4]?[0-9]) watching)$/.test(b.textContent) && (a.hidden = true)))); y.observe(document.body, { subtree: true, childList: true }); $1`)
 
 ! Disable muted autoplay on Mobile YouTube homepage, unmute videos by default, and hide "Open App" message
 m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.ytp-unmute, .ytm-bottom-sheet-overlay-container:has([style*='/open-app.svg']), #global-loader:has(~ .ytm-bottom-sheet-overlay-container [style*='/open-app.svg']) { display: none !important; }</style>"); var w = new MutationObserver(() => { var a = document.querySelector("ytm-pages-dwell-detection"); a && a.remove(); var b = document.querySelector(".ytp-unmute:not([style])"); b && (b.click(), b.remove()); var c = document.querySelector("[style*='/open-app.svg'] button"); c && c.click() }); w.observe(document.body, { subtree: true, childList: true }); $1`)
