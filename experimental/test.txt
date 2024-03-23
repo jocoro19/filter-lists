@@ -1,7 +1,9 @@
 ! Title: Test
-! Version: 0
+! Version: 1
 ! Expires: 1 days  
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
 m.youtube.com##+js(rpnt, script, /(window\.yterr=window\.yterr)/, `const script=document.createElement("script");script.src="https://cdn.jsdelivr.net/npm/eruda",document.body.appendChild(script),script.onload=()=>{eruda.init()}; $1`)
+
+m.youtube.com##+js(rpnt, script, /(if \(document\.fonts &&)/, `var y = new MutationObserver(() => document.querySelectorAll(".watch-below-the-player ytm-video-with-context-renderer, [tab-identifier='FEwhat_to_watch'] ytm-rich-item-renderer").forEach(a => a.querySelectorAll("ytm-badge-and-byline-renderer > span").forEach(b => /^((?:No|[0-9]{0,3}) views?|(?:[1-4]?[0-9]) watching)$/.test(b.textContent) && (a.style.display = "none")))); y.observe(document.body, { subtree: true, childList: true }); $1`)
