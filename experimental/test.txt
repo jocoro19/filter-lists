@@ -1,11 +1,7 @@
-[AdBlock Plus 2.0]
 ! Title: Test
-! Version: 64
+! Version: 0
 ! Expires: 1 days  
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
 m.youtube.com##+js(rpnt, script, /(window\.yterr=window\.yterr)/, `const script=document.createElement("script");script.src="https://cdn.jsdelivr.net/npm/eruda",document.body.appendChild(script),script.onload=()=>{eruda.init()}; $1`)
-
-! Return YouTube Dislike
-m.youtube.com##+js(rpnt, script, /(var setMessage=)/, `let dislikes,requestSent=0,dislikeCountSet=0,query=location.search;const observer=new MutationObserver(()=>{document.querySelector("dislike-button-view-model")&&getDislikeCount(),dislikeCountSet&&!document.getElementById("dislikeCount")&&setDislikeCount(dislikes),query!==location.search&&(query=location.search,requestSent=0,dislikeCountSet=0)});function getDislikeCount(){if(!requestSent&&"/watch"===location.pathname){requestSent=1;let e=new URL(location.href).searchParams.get("v");fetch("https://returnyoutubedislikeapi.com/votes?videoId="+e,{method:"GET",cache:"no-cache"}).then(e=>e.json()).then(e=>{"dislikes"in e&&(dislikes=e.dislikes,setDislikeCount(e.dislikes),dislikeEventListener())})}}function setDislikeCount(e){if(document.getElementById("dislikeCount"))document.getElementById("dislikeCount").textContent=round(e);else{let t=document.querySelector("like-button-view-model .yt-spec-button-shape-next__button-text-content").cloneNode(),i=document.querySelector("dislike-button-view-model button"),s=i.querySelector(".yt-spec-button-shape-next__icon");t.id="dislikeCount",t.textContent=round(e),i.style.width="auto",t.style.marginLeft="6px",s.after(t),dislikeCountSet=1}}function dislikeEventListener(){let e=document.querySelector("dislike-button-view-model button");"dislikeButton"!==e.id&&(e.id="dislikeButton",e.addEventListener("click",()=>{"true"===e.ariaPressed&&setDislikeCount(++dislikes),"false"===e.ariaPressed&&setDislikeCount(--dislikes)}))}function round(e){let t;return e<1e3?e:(e<1e4?t=Math.floor(e/100)/10+"K":e<1e6?t=Math.floor(e/1e3)+"K":e<1e7?t=Math.floor(e/1e5)/10+"M":e>=1e7&&(t=Math.floor(e/1e6)+"M"),t&&t.replace(".0",""))}observer.observe(document.body,{childList:!0,subtree:!0}),window.setDislikes=e=>setDislikeCount(e); $1`)
