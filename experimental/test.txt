@@ -5,5 +5,3 @@
 ! Homepage: https://github.com/jocoro19/filter-lists
 
 m.youtube.com##+js(rpnt, script, /(window\.yterr=window\.yterr)/, `const script=document.createElement("script");script.src="https://cdn.jsdelivr.net/npm/eruda",document.body.appendChild(script),script.onload=()=>{eruda.init()}; $1`)
-
-m.youtube.com##+js(rpnt, script, /(if \('undef)/, `document.head.insertAdjacentHTML("beforebegin", "<style>* { font-family: cursive !important; }</style>"); $1`)
