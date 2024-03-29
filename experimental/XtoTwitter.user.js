@@ -2,7 +2,7 @@
 // @name          XtoTwitter
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       4.0
+// @version       4.1
 // @run-at        document-end
 // @description   Replaces any mention of "X" with "Twitter"
 // @icon          https://raw.githubusercontent.com/jocoro19/filter-lists/main/j.png
@@ -74,7 +74,7 @@ function xToTwitter(elements) {
 		// Titles
 		elements.forEach(element => {
 			const a = element.tagName === "A" ? element : element.closest("a")
-			if (element.title) {
+			if (typeof element.title === "string") {
 				if (!onlyX.test(element.title)) {
 					element.title = element.title.replace(replace, twt)
 				} else if (a && hostnames.test(a.hostname)) {
