@@ -2,7 +2,7 @@
 // @name          XtoTwitter
 // @namespace     https://github.com/jocoro19
 // @author        JoCoRo19
-// @version       4.1
+// @version       4.2
 // @run-at        document-end
 // @description   Replaces any mention of "X" with "Twitter"
 // @icon          https://raw.githubusercontent.com/jocoro19/filter-lists/main/j.png
@@ -19,7 +19,7 @@ const replace = /(?<!-)(?:\bX\b|"X"|'X'|\u{1D54F}|\u{1D569})(?!-)/gu // Regex th
 const remove = /(?: |, )?\bformerly(?: known as)? Twitter\b,?| ?\(formerly(?: known as)? Twitter\)|Twitter(?:\/(?=Twitter))/gi // Regex that matches what to completely remove from the page
 const onlyX = /^(?:X|"X"|'X'|\u{1D54F}|\u{1D569})$/u // Regex that matches "X" with or without quotation marks if there's nothing else
 const hostnames = /\b(?:twitter\.com|x\.com|t\.co)$/ // Hostnames for links to Twitter
-const excludedElements = "script, iframe, svg, svg *, math, math *" // Elements not to be changed by the script
+const excludedElements = "script, style, iframe, svg, svg *, math, math *" // Elements not to be changed by the script
 const altName = "" // Alternate name to be used in lieu of "Twitter" (leave empty to disable)
 
 const twt = altName || "Twitter"
