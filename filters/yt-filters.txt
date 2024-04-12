@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filters
-! Version: 2024-03-14.1
+! Version: 2024-04-12.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -64,6 +64,7 @@ youtube.com,youtube-nocookie.com##.annotation.iv-branding
 
 ! Hide "Includes paid promotion"
 youtube.com,youtube-nocookie.com##.ytp-paid-content-overlay
+www.youtube.com##ytm-paid-content-overlay-renderer
 
 ! Hide "View products"
 youtube.com##.ytp-suggested-action
