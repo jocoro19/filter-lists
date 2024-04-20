@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters (JS)
-! Version: 2024-04-19.1
+! Version: 2024-04-20.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -10,7 +10,7 @@
 m.youtube.com##+js(rpnt, script, /(if \(document\.fonts &&)/, `var y = new MutationObserver(() => document.querySelectorAll(".watch-below-the-player ytm-video-with-context-renderer, [tab-identifier='FEwhat_to_watch'] ytm-rich-item-renderer").forEach(a => a.querySelectorAll("ytm-badge-and-byline-renderer > span").forEach(b => /^((?:No|[0-9]{0,3}) views?|(?:[1-4]?[0-9]) watching)$/.test(b.textContent) && (a.hidden = true)))); y.observe(document.body, { subtree: true, childList: true }); $1`)
 
 ! Disable muted autoplay on Mobile YouTube homepage, unmute videos by default, and hide "Open App" message
-m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.ytp-unmute, .ytm-bottom-sheet-overlay-container:has([style*='/open-app.svg']), #global-loader:has(~ .ytm-bottom-sheet-overlay-container [style*='/open-app.svg']) { display: none !important; }</style>"); var w = new MutationObserver(() => { var a = document.querySelector("ytm-pages-dwell-detection"); a && a.remove(); var b = document.querySelector(".ytp-unmute:not([style])"); b && (b.click(), b.remove()); var c = document.querySelector("[style*='/open-app.svg'] button"); c && c.click() }); w.observe(document.body, { subtree: true, childList: true }); $1`)
+m.youtube.com##+js(rpnt, script, /(var ytcsi=)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.ytp-unmute, .ytm-bottom-sheet-overlay-container:has([style*='/open-app.svg']), #global-loader:has(~ .ytm-bottom-sheet-overlay-container [style*='/open-app.svg']) { display: none !important; }</style>"); var w = new MutationObserver(() => { var a = document.querySelector("ytm-pages-dwell-detection"); a?.remove(); var b = document.querySelector(".ytp-unmute:not([style])"); b?.click(); b?.remove(); var c = document.querySelector("[style*='/open-app.svg'] button"); c?.click() }); w.observe(document.body, { subtree: true, childList: true }); $1`)
 
 ! Show chat on live streams
 m.youtube.com##+js(rpnt, script, /(var ytcfg=)/, `var z = new MutationObserver(() => { var a = document.querySelector(".slim-video-action-bar-actions > button-view-model:first-of-type"); if (document.querySelector(".time-display-with-live-dot") && !document.getElementById("openChat") && a) { var b = a.cloneNode(true); b.id = "openChat"; b.querySelector("div:has(> c3-icon) + div").textContent = "Open chat"; b.querySelector("div:has(> c3-icon) path").setAttribute("d", "M21 21H3V3h9v1H4v16h16v-8h1zM15 3v1h4.32l-8.03 8.03.71.71 8-8V9h1V3z"); b.onclick = () => window.open("https://www.youtube.com/live_chat?v=" + new URL(location.href).searchParams.get("v")); a.before(b)} }); z.observe(document.body, { subtree: true, childList: true }); $1`)
