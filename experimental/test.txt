@@ -1,10 +1,7 @@
 ! Title: Test
-! Version: 2
+! Version: 0
 ! Expires: 1 days  
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
 m.youtube.com##+js(rpnt, script, /(window\.yterr=window\.yterr)/, `const script=document.createElement("script");script.src="https://cdn.jsdelivr.net/npm/eruda",document.body.appendChild(script),script.onload=()=>{eruda.init()}; $1`)
-
-remotedesktop.google.com##div[jsname="rTn8xd"], section[jsname="XOLnd"]
-remotedesktop.google.com##div[jsname="QYx1vf"]:style(width: calc(100vw - 60px) !important;)
