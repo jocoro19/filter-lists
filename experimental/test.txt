@@ -1,7 +1,10 @@
 ! Title: Test
-! Version: 0
+! Version: 1
 ! Expires: 1 days  
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
 m.youtube.com##+js(rpnt, script, /(window\.yterr=window\.yterr)/, `const script=document.createElement("script");script.src="https://cdn.jsdelivr.net/npm/eruda",document.body.appendChild(script),script.onload=()=>{eruda.init()}; $1`)
+
+! SponsorBlock
+m.youtube.com##+js(rpnt, script, /(var setMessage=)/, `(()=>{let e,t,o,n,s=[],r=!0,i=0;new MutationObserver((()=>{"/watch"===location.pathname&&document.querySelector("video").duration&&function(){if(!i){n=new AbortController,i=1,e=document.querySelector("video"),o=location.search,console.log("Getting sponsor data...");const a=new URL(location.href).searchParams.get("v");fetch("https://sponsor.ajay.app/api/skipSegments?videoID="+a,{cache:"no-cache",method:"GET",signal:n.signal}).then((e=>e.ok&&e.json())).then((o=>{if(o){const n=o.filter((e=>e.segment[1]-e.segment[0]>=10));n.length>0&&(n.forEach((e=>{s.push({start:e.segment[0],end:e.segment[1],skipCount:0})})),console.log("Sponsor segments:",...s),function(){const o=e.duration,n=document.createElement("div");n.id="segmentContainer",n.style.cssText="width: 100%; height: var(--yt-progress-bar-height); position: absolute; z-index: 2;",s.forEach(((e,t)=>{const s=document.createElement("div");s.style.cssText="min-width: 1px; height: inherit; opacity: 0.7; background-color: #00d400; position: absolute;",s.style.left=e.start/o*100+"%",s.style.right=100*(1-e.end/o)+"%",e.marker=s,n.appendChild(s)})),t=n}(),e.addEventListener("timeupdate",(()=>{r&&s.forEach((t=>{!t.skipped&&e.currentTime>=t.start&&e.currentTime<t.end&&(e.currentTime=t.end,t.marker.remove(),t.skipped=!0)}))})))}else console.log("No sponsor data found")}))}}(),t&&!document.getElementById("segmentContainer")&&function(){const e=t.cloneNode(!0),o=document.querySelector(".YtProgressBarProgressBarLine");o?.appendChild(e)}(),i&&location.search!==o&&(o=location.search,console.log("change"),t=void 0,e=void 0,s=[],n.abort(),i=0)})).observe(document.documentElement,{childList:!0,subtree:!0})})(); $1`)
