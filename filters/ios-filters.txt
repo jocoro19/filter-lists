@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-04-26.1
+! Version: 2024-04-26.2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -115,8 +115,18 @@ m.youtube.com##.channel-tagline-icon:style(width: 18px !important; height: 18px 
 m.youtube.com##ytm-channel-header-links-view-model
 m.youtube.com##.c4-tabbed-header-page-header-buttons:style(padding: 8px 0 !important;)
 m.youtube.com##.c4-tabbed-header-page-header-button:style(max-width: 50% !important;)
-
-! Mobile YouTube new channel page layout improvements
+m.youtube.com##.yt-tab-group-shape-wiz__slider
+m.youtube.com##.yt-tab-shape-wiz__tab-bar
+m.youtube.com##.about-channel-container:style(display: flex !important; flex-direction: column !important;)
+m.youtube.com##.about-channel-section:has(yt-channel-external-link-view-model):style(order: -1 !important;)
+m.youtube.com##.about-channel-section:has(> span > span):style(order: 1 !important; margin-top: 0 !important;)
+m.youtube.com##.about-channel-action-button-container:style(min-height: unset !important; order: 2 !important;)
+m.youtube.com##yt-channel-external-link-view-model > img
+m.youtube.com##.about-channel-action-button:style(margin-bottom: 12px !important;)
+m.youtube.com##.horizontal-card-list-card-thumbnail-xlarge:style(width: 200px !important;)
+m.youtube.com##ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge)
+m.youtube.com##ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) + *:style(border-top: none !important;)
+! New layout
 m.youtube.com##yt-page-header-view-model:style(padding: 0 12px !important;)
 m.youtube.com##.page-header-view-model-wiz__page-header-banner-container:style(padding-top: 17.5% !important; margin: 0 -12px !important;)
 m.youtube.com##yt-page-header-view-model yt-image-banner-view-model:style(border-radius: 0 !important)
@@ -129,18 +139,6 @@ m.youtube.com##yt-description-preview-view-model span
 m.youtube.com##yt-description-preview-view-model button::after:style(content: "About this channel"; font-size: 1.4rem !important;)
 m.youtube.com##yt-page-header-view-model yt-attribution-view-model
 m.youtube.com##yt-page-header-view-model yt-flexible-actions-view-model:style(max-width: 50% !important;)
-
-! Mobile YouTube channel about popup improvements
-m.youtube.com##.yt-tab-group-shape-wiz__slider
-m.youtube.com##.yt-tab-shape-wiz__tab-bar
-m.youtube.com##.about-channel-container:style(display: flex !important; flex-direction: column !important;)
-m.youtube.com##.about-channel-section:has(yt-channel-external-link-view-model):style(order: -1 !important;)
-m.youtube.com##.about-channel-section:has(> span > span):style(order: 1 !important; margin-top: 0 !important;)
-m.youtube.com##.about-channel-action-button-container:style(min-height: unset !important; order: 2 !important;)
-m.youtube.com##yt-channel-external-link-view-model > img
-m.youtube.com##.horizontal-card-list-card-thumbnail-xlarge:style(width: 200px !important;)
-m.youtube.com##ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge)
-m.youtube.com##ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) + *:style(border-top: none !important;)
 
 ! Mobile YouTube video description layout improvements
 m.youtube.com##.slim-video-metadata-header .secondary-text:style(mask-image: none !important; -webkit-mask-image: none !important;)
