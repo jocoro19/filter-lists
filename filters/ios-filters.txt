@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-04-24.1
+! Version: 2024-04-26.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -115,6 +115,22 @@ m.youtube.com##.channel-tagline-icon:style(width: 18px !important; height: 18px 
 m.youtube.com##ytm-channel-header-links-view-model
 m.youtube.com##.c4-tabbed-header-page-header-buttons:style(padding: 8px 0 !important;)
 m.youtube.com##.c4-tabbed-header-page-header-button:style(max-width: 50% !important;)
+
+! Mobile YouTube new channel page layout improvements
+m.youtube.com##yt-page-header-view-model:style(padding: 0 12px !important;)
+m.youtube.com##.page-header-view-model-wiz__page-header-banner-container:style(padding-top: 17.5% !important; margin: 0 -12px !important;)
+m.youtube.com##yt-page-header-view-model yt-image-banner-view-model:style(border-radius: 0 !important)
+m.youtube.com##.page-header-view-model-wiz__page-header-headline:style(margin-top: 8px !important;)
+m.youtube.com##.yt-spec-avatar-shape--avatar-size-extra-large:style(margin: 0 !important;)
+m.youtube.com##.yt-content-metadata-view-model-wiz__metadata-row:style(margin: 0 !important;)
+m.youtube.com##.page-header-view-model-wiz__page-header-headline-info:style(position: relative !important;)
+m.youtube.com##yt-description-preview-view-model:style(position: absolute !important; right: 0 !important; top: 12px !important; margin: 0 !important; padding: 10px !important;)
+m.youtube.com##yt-description-preview-view-model span
+m.youtube.com##yt-description-preview-view-model button::after:style(content: "About this channel"; font-size: 1.4rem !important;)
+m.youtube.com##yt-page-header-view-model yt-attribution-view-model
+m.youtube.com##yt-page-header-view-model yt-flexible-actions-view-model:style(max-width: 50% !important;)
+
+! Mobile YouTube channel about popup improvements
 m.youtube.com##.yt-tab-group-shape-wiz__slider
 m.youtube.com##.yt-tab-shape-wiz__tab-bar
 m.youtube.com##.about-channel-container:style(display: flex !important; flex-direction: column !important;)
@@ -308,6 +324,7 @@ www.pixwox.com##+js(ra, target, .pic > a)
 ! Special CSS injection filters (disabled on Ublock)
 !#if !ext_ublock
 m.youtube.com##+js(rpnt, script, /(var ytInitialPlayerResponse = null;)/, `document.head.insertAdjacentHTML("afterbegin", "<style>ytm-item-section-renderer:has(ad-slot-renderer), ytm-rich-section-renderer, ytm-pivot-bar-item-renderer:has(.pivot-shorts), .yt-tab-shape-wiz[tab-title='Shorts'], ytm-reel-shelf-renderer, .rich-grid-sticky-header, ytm-related-chip-cloud-renderer, ytm-statement-banner-renderer, .media-item-endorsement-container, ytm-comments-simplebox-renderer, ytm-comments-entry-point-teaser-renderer, .channel-tagline-text, ytm-channel-header-links-view-model, .yt-tab-group-shape-wiz__slider, .yt-tab-shape-wiz__tab-bar, ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) { display: none !important; } ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) + * { border-top: none !important; } .c4-tabbed-header-page-header-banner { padding-top: 17.5% !important; margin: 0 -12px !important; border-radius: 0 !important; } .c4-tabbed-header-page-header-section { position: relative !important; } ytm-profile-icon { max-height: 112px !important; max-width: 112px !important; } ytm-channel-tagline-renderer[is-page-header] { position: absolute !important; right: 0 !important; top: 9px !important; } .channel-tagline-wrapper::before { content: 'About this channel'; } .channel-tagline-icon { width: 18px !important; height: 18px !important; } .c4-tabbed-header-page-header-buttons { padding: 8px 0 !important; } .c4-tabbed-header-page-header-button { max-width: 50% !important; }</style>"); $1`)
+m.youtube.com##+js(rpnt, script, /(var ytInitialPlayerResponse = null;)/, `document.head.insertAdjacentHTML("afterbegin", "<style>yt-page-header-view-model { padding: 0 12px !important; } .page-header-view-model-wiz__page-header-banner-container { padding-top: 17.5% !important; margin: 0 -12px !important; } yt-page-header-view-model yt-image-banner-view-model { border-radius: 0 !important } .page-header-view-model-wiz__page-header-headline { margin-top: 8px !important; } .yt-spec-avatar-shape--avatar-size-extra-large, .yt-content-metadata-view-model-wiz__metadata-row { margin: 0 !important; } .page-header-view-model-wiz__page-header-headline-info { position: relative !important; } yt-description-preview-view-model { position: absolute !important; right: 0 !important; top: 12px !important; margin: 0 !important; padding: 10px !important; } yt-description-preview-view-model span, yt-page-header-view-model yt-attribution-view-model { display: none !important; } yt-description-preview-view-model button::after { content: 'About this channel'; font-size: 1.4rem !important; } yt-page-header-view-model yt-flexible-actions-view-model { max-width: 50% !important; }</style>"); $1`)
 m.wikipedia.org##+js(rpnt, script, /(^\(RLQ\=window\.RLQ\|\|)/, `document.head.insertAdjacentHTML("afterbegin", "<style>#page-actions-watch, #page-actions-edit, #page-actions-viewsource, .mw-editsection, .ambox, #mw-data-after-content, #siteNotice, #frb-inline, #frb-nag {display: none !important;}</style>"); $1`)
 reddit.com##+js(rpnt, script, /(var BETA_HOST.*)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.promoted, #header-img, .listingsignupbar, .commentsignupbar, .side > .spacer:not(:has(#search, .linkinfo, .titlebox)), .side .md, .active.read-next { display: none !important; }</style>"); $1`)
 reddit.com##+js(rpnt, script, /(window.CLIENT_EXPERIMENTS)/, `document.head.insertAdjacentHTML("afterbegin", "<style>reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-overlay-display { display: none !important; } html.theme-beta main { width: 100vw !important; height: 100vh !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; } html.theme-beta main img { max-width: 100% !important; max-height: 100% !important; margin: 0 !important; }</style>"); $1`)
