@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.21
+@version     1.21.1
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -208,7 +208,7 @@ The ultimate logical consequence of blocking = theft is the criminalization of t
 	}
 
 	/* Make thumbnails in search smaller if needed */
-	ytd-video-renderer[use-bigger-thumbs] ytd-thumbnail {
+	ytd-video-renderer[use-bigger-thumbs] ytd-thumbnail, ytd-playlist-renderer[use-bigger-thumbs] ytd-playlist-thumbnail {
 		max-width: 360px !important;
 		min-width: 240px !important;
 	}
