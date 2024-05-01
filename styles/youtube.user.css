@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.21.2
+@version     1.22
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -61,9 +61,11 @@ The ultimate logical consequence of blocking = theft is the criminalization of t
 	#channel-header-container {
 		max-width: unset !important;
 		margin: auto !important;
+		position: relative !important;
 		& > #avatar {
 			height: 80px !important;
 			width: 80px !important;
+			margin-right: 16px !important;
 		}
 		& > #inner-header-container {
 			flex-direction: row !important;
@@ -73,30 +75,20 @@ The ultimate logical consequence of blocking = theft is the criminalization of t
 		& #meta {
 			width: unset !important;
 		}
-		& .meta-item:not(:has(~ .meta-item:not([hidden])))::after {
-			content: "‧";
-			margin: 0 4px;
-		}
 	}
 	#channel-tagline {
-		display: inline-block !important;
-		& > ytd-channel-tagline-renderer {
+		position: absolute !important;
+		top: 0 !important;
+		left: 0 !important;
+		& ytd-channel-tagline-renderer {
 			padding: 0 !important;
 		}
-		& #wrapper::before {
-			content: "About this channel";
-			color: var(--yt-spec-text-secondary);
-			font-size: 1.4rem;
-			line-height: 2rem;
+		& #endpoint {
+			width: 80px !important;
+			height: 80px !important;
 		}
-		& #content {
+		& #wrapper {
 			display: none !important;
-		}
-		& #more-icon {
-			height: 20px !important;
-			width: 20px !important;
-			margin: -2px 0 0 2px !important;
-			color: var(--yt-spec-text-secondary) !important;
 		}
 	}
 	#channel-header-links {
@@ -124,6 +116,52 @@ The ultimate logical consequence of blocking = theft is the criminalization of t
 		border-radius: 1px !important;
 		height: 2px !important;
 	}
+	
+	/* New channel page layout */
+	#page-header-banner {
+		padding: 0 !important;
+	}
+	#page-header-banner-sizer {
+		padding-top: 16.25% !important;
+	}
+	.yt-image-banner-view-model-wiz {
+		border-radius: 0 !important;
+		& img {
+			object-position: 0 0 !important;
+		}
+	}
+	yt-attribution-view-model {
+		display: none !important;
+	}
+	.yt-spec-avatar-shape__button--button-giant, .yt-spec-avatar-shape--avatar-size-giant {
+		width: 80px !important;
+		height: 80px !important;
+	}
+	yt-description-preview-view-model {
+		position: absolute !important;
+		top: 0 !important;
+		left: 0 !important;
+		width: 80px !important;
+		height: 80px !important;
+		margin: 0 !important;
+		& truncated-text {
+			display: none !important;
+		}
+	}
+	yt-flexible-actions-view-model {
+		position: absolute !important;
+		top: 0 !important;
+		right: 0 !important;
+		margin: 0 !important;
+		height: 100% !important;
+		align-items: center !important;
+		flex-direction: row-reverse !important;
+		& > div {
+			padding-right: 0 !important;
+			padding-left: 8px !important;
+		}
+	}
+	
 	/* "About channel" popup */
 	tp-yt-paper-dialog:has(ytd-about-channel-renderer) {
 		margin: 48px !important;
@@ -151,6 +189,7 @@ The ultimate logical consequence of blocking = theft is the criminalization of t
 	yt-channel-external-link-view-model > img {
 		display: none !important;
 	}
+	
 	/* "For You" section on channel home tab */
 	[page-subtype="channels"] [should-use-mixed-list-height] {
 		--ytd-grid-video-width: unset !important;
