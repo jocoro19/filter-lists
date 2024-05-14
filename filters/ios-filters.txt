@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-05-14.1
+! Version: 2024-05-14.2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -223,9 +223,10 @@ reddit.com##._2fiIRtMpITeCAzXc4cANKp:style(margin-left: 10px !important;)
 reddit.com,~embed.reddit.com##html.theme-beta:not(:has([pagetype="cdn_media_page"])) > :is(head, body)
 ||redditstatic.com/shreddit$script,domain=~embed.reddit.com
 @@||redditstatic.com/shreddit/*/shell$script
-reddit.com,~embed.reddit.com,redd.it##reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-app::before, shreddit-overlay-display
+reddit.com,~embed.reddit.com,redd.it##reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-overlay-display
 reddit.com,~embed.reddit.com,redd.it##html.theme-beta main:style(width: 100vw !important; height: 100vh !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important;)
 reddit.com,~embed.reddit.com,redd.it##html.theme-beta faceplate-tracker img:style(max-width: 100% !important; max-height: 100% !important; margin: 0 !important;)
+reddit.com,~embed.reddit.com,redd.it##shreddit-app::before:style(content: unset !important;)
 
 ! Fandom
 ||services.fandom.com/icbm/api/loader$script
@@ -325,7 +326,7 @@ m.youtube.com##+js(rpnt, script, /(var ytInitialPlayerResponse = null;)/, `docum
 m.youtube.com##+js(rpnt, script, /(var ytInitialPlayerResponse = null;)/, `document.head.insertAdjacentHTML("afterbegin", "<style>yt-page-header-view-model { padding: 0 12px !important; } .page-header-view-model-wiz__page-header-banner-container { padding-top: 17.5% !important; margin: 0 -12px !important; } yt-page-header-view-model yt-image-banner-view-model { border-radius: 0 !important } .page-header-view-model-wiz__page-header-headline { margin-top: 8px !important; } .yt-spec-avatar-shape--avatar-size-extra-large, .yt-content-metadata-view-model-wiz__metadata-row { margin: 0 !important; } .page-header-view-model-wiz__page-header-headline-info { position: relative !important; } yt-description-preview-view-model { position: absolute !important; right: 0 !important; top: 12px !important; margin: 0 !important; padding: 10px !important; } yt-description-preview-view-model span, yt-page-header-view-model yt-attribution-view-model { display: none !important; } yt-description-preview-view-model button::after { content: 'About this channel'; font-size: 1.4rem !important; } yt-page-header-view-model yt-flexible-actions-view-model { max-width: 50% !important; }</style>"); $1`)
 m.wikipedia.org##+js(rpnt, script, /(^\(RLQ\=window\.RLQ\|\|)/, `document.head.insertAdjacentHTML("afterbegin", "<style>#page-actions-watch, #page-actions-edit, #page-actions-viewsource, .mw-editsection, .ambox, #mw-data-after-content, #siteNotice, #frb-inline, #frb-nag {display: none !important;}</style>"); $1`)
 reddit.com##+js(rpnt, script, /(var BETA_HOST.*)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.promoted, #header-img, .listingsignupbar, .commentsignupbar, .side > .spacer:not(:has(#search, .linkinfo, .titlebox)), .side .md, .active.read-next { display: none !important; }</style>"); $1`)
-reddit.com##+js(rpnt, script, /(window.CLIENT_EXPERIMENTS)/, `document.head.insertAdjacentHTML("afterbegin", "<style>reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-app::before, shreddit-overlay-display { display: none !important; } html.theme-beta main { width: 100vw !important; height: 100vh !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; } html.theme-beta main img { max-width: 100% !important; max-height: 100% !important; margin: 0 !important; }</style>"); $1`)
+reddit.com##+js(rpnt, script, /(window.CLIENT_EXPERIMENTS)/, `document.head.insertAdjacentHTML("afterbegin", "<style>reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-overlay-display { display: none !important; } html.theme-beta main { width: 100vw !important; height: 100vh !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; } html.theme-beta main img { max-width: 100% !important; max-height: 100% !important; margin: 0 !important; } shreddit-app::before { content: unset !important; }</style>"); $1`)
 
 www.picuki.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.sticky-bottom-ads-wrapper, div[class*='promote'], .admin-notice, .stats-profile-button, .show_stories_button {display: none !important;}</style>"); $1`)
 www.pixwox.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>[class^='ah-box'], .share, .similar, .swbtn_igtv, .swbtn_stories { display: none !important; } .swbtn { width: 50% !important; }</style>"); $1`)
