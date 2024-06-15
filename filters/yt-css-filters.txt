@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.23.2
+! Version: 1.23.3
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -72,6 +72,7 @@ www.youtube.com##ytd-rich-grid-renderer #video-title:style(font-size: 1.4rem !im
 www.youtube.com##ytd-rich-grid-renderer #metadata *:style(font-size: 1.2rem !important; line-height: 1.8rem !important;)
 
 ! Improve layout of video description
+www.youtube.com##tp-yt-paper-tooltip.ytd-watch-info-text:style(left: 0 !important; top: 30px !important;)
 www.youtube.com###description:style(pointer-events: none !important;)
 www.youtube.com###description :is(#expand, #collapse, #info-container, #items, a):style(pointer-events: auto !important;)
 www.youtube.com###description:hover:style(background-color: var(--yt-spec-badge-chip-background) !important;)
