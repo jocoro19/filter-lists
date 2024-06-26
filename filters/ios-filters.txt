@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-06-20.2
+! Version: 2024-06-25.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -303,9 +303,11 @@ remotedesktop.google.com##div[jsname="rTn8xd"], section[jsname="XOLnd"]
 remotedesktop.google.com##div[jsname="QYx1vf"]:style(width: calc(100vw - 60px) !important;)
 @@||commons.wikimedia.org^$generichide
 wikimedia.org,wiktionary.org,minecraft.wiki,wiki.gg###siteNotice
-minecraft.wiki##.page-actions-menu
 minecraft.wiki##.mw-editsection
+minecraft.wiki##.page-actions-edit
+minecraft.wiki##.page-actions-watch
 ||minecraft.wiki/load.php?format=original&image=edit
+||minecraft.wiki/load.php?format=original&image=star
 ###posts .hidden-posts-notice
 ||gelbooru.com/index.php*s=view$removeparam=tags
 @@||gelbooru.com/extras/howtosearch$image
