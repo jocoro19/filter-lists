@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-07-06.1
+! Version: 2024-07-12.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -325,7 +325,7 @@ medibang.com##.mdbnPictureViewer #viewerImage:style(pointer-events: auto !import
 imgur.com##div[class^="SeeImgurOIA-"], .Navigation-buttons, .Info-Wrapper, .GalleryPage-bg, .Gallery-EngagementBar, .BottomRecirc
 imgur.com##.Gallery-Byline:style(margin: 0 !important;)
 imgur.com##+js(aeld, /touchend/)
-www.picuki.com##.sticky-bottom-ads-wrapper, div[class*="promote"], .admin-notice, .stats-profile-button, .show_stories_button
+www.picuki.com##.sticky-bottom-ads-wrapper, div[class*="promote"], .admin-notice, .stats-profile-button, .show_stories_button, .stories-viewer-header-button
 www.piokok.com##[class^="ah-box"], .share, .similar, .swbtn_igtv, .swbtn_stories
 www.piokok.com##.swbtn:style(width: 50% !important;)
 www.piokok.com##+js(ra, target, .pic > a)
@@ -338,7 +338,7 @@ m.wikipedia.org##+js(rpnt, script, /(^\(RLQ\=window\.RLQ\|\|)/, `document.head.i
 reddit.com##+js(rpnt, script, /(var BETA_HOST.*)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.promoted, #header-img, .listingsignupbar, .commentsignupbar, .side > .spacer:not(:has(#search, .linkinfo, .titlebox)), .side .md, .active.read-next { display: none !important; }</style>"); $1`)
 reddit.com##+js(rpnt, script, /(window.CLIENT_EXPERIMENTS)/, `document.head.insertAdjacentHTML("afterbegin", "<style>reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-overlay-display { display: none !important; } html.theme-beta main { width: 100vw !important; height: 100vh !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; } html.theme-beta main img { max-width: 100% !important; max-height: 100% !important; margin: 0 !important; } shreddit-app::before { content: unset !important; }</style>"); $1`)
 
-www.picuki.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.sticky-bottom-ads-wrapper, div[class*='promote'], .admin-notice, .stats-profile-button, .show_stories_button {display: none !important;}</style>"); $1`)
+www.picuki.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.sticky-bottom-ads-wrapper, div[class*='promote'], .admin-notice, .stats-profile-button, .show_stories_button, .stories-viewer-header-button {display: none !important;}</style>"); $1`)
 www.piokok.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>[class^='ah-box'], .share, .similar, .swbtn_igtv, .swbtn_stories { display: none !important; } .swbtn { width: 50% !important; }</style>"); $1`)
 imgur.com##+js(rpnt, script, /(dataLayer=\[])/, `document.head.insertAdjacentHTML("afterbegin", "<style>div[class^='SeeImgurOIA-'], .Navigation-buttons, .Info-Wrapper, .GalleryPage-bg, .Gallery-EngagementBar, .BottomRecirc { display: none !important; } .Gallery-Byline { margin: 0 !important;)</style>"); $1`)
 dexerto.com##+js(rpnt, script, /!\(function\(o\,_name\)[\s\S]*/, `document.head.insertAdjacentHTML("afterbegin", "<style>.top-0.justify-center, label.rounded-full, #bottom-adhesion { display: none !important; }</style>");`)
