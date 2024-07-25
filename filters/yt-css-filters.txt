@@ -1,13 +1,14 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.23.3
+! Version: 1.23.4
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
 ! Improve home and subscriptions page layout and hide empty space when ads are blocked
 www.youtube.com##ytd-rich-grid-row, #contents.ytd-rich-grid-row:style(display: contents !important;)
-www.youtube.com##ytd-browse:not([page-subtype="channels"]) #contents.ytd-rich-grid-renderer:style(display: grid !important; grid-template-columns: repeat(auto-fit, minmax(max(300px, 100% / 6), 1fr)); grid-auto-flow: row dense; width: calc(100% - 72px) !important;	max-width: 3000px !important;	margin: auto !important;)
+www.youtube.com##ytd-browse:not([page-subtype="channels"]) #header.ytd-rich-grid-renderer .chip-bar:style(width: calc(100% - 88px) !important; max-width: 3000px !important; margin: auto !important;)
+www.youtube.com##ytd-browse:not([page-subtype="channels"]) #contents.ytd-rich-grid-renderer:style(display: grid !important; grid-template-columns: repeat(auto-fill, minmax(max(300px, 100% / 6), 1fr)); grid-auto-flow: row dense; width: calc(100% - 72px) !important;	max-width: 3000px !important;	margin: auto !important;)
 www.youtube.com##ytd-browse:not([page-subtype="channels"]) ytd-rich-grid-row ytd-rich-item-renderer:style(width: auto !important; margin: 0 8px 32px !important;)
 www.youtube.com##ytd-browse:not([page-subtype="channels"]) :is(ytd-rich-section-renderer, ytd-continuation-item-renderer):style(grid-column: 1 / -1;)
 www.youtube.com##ytd-browse:not([page-subtype="channels"]) #content.ytd-rich-section-renderer:style(margin: 0 8px !important; max-width: unset !important;)
