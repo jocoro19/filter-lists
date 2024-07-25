@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.23.2
+@version     1.23.3
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -21,9 +21,14 @@ The ultimate logical consequence of blocking = theft is the criminalization of t
 		display: contents !important;
 	}
 	ytd-browse:not([page-subtype="channels"]) {
+		& #header.ytd-rich-grid-renderer .chip-bar {
+			width: calc(100% - 88px) !important;
+			max-width: 3000px !important;
+			margin: auto !important;
+		}
 		& #contents.ytd-rich-grid-renderer {
 			display: grid !important;
-			grid-template-columns: repeat(auto-fit, minmax(max(300px, 100% / 6), 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(max(300px, 100% / 6), 1fr));
 			grid-auto-flow: row dense;
 			width: calc(100% - 72px) !important;
 			max-width: 3000px !important;
