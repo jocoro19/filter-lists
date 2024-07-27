@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.23.4
+! Version: 1.23.5
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -69,8 +69,8 @@ www.youtube.com##[page-subtype="channels"] [override-arrow-position-for-mixed-sh
 
 ! Make font smaller for video titles and video information
 www.youtube.com##ytd-rich-item-renderer:style(margin-bottom: 32px !important)
-www.youtube.com##ytd-rich-grid-renderer #video-title:style(font-size: 1.4rem !important; line-height: 2rem !important;)
-www.youtube.com##ytd-rich-grid-renderer #metadata *:style(font-size: 1.2rem !important; line-height: 1.8rem !important;)
+www.youtube.com##ytd-rich-grid-renderer :is(#video-title, .yt-lockup-metadata-view-model-wiz__heading-reset > a):style(font-size: 1.4rem !important; line-height: 2rem !important;)
+www.youtube.com##ytd-rich-grid-renderer :is(#metadata, .yt-lockup-metadata-view-model-wiz__metadata) *:style(font-size: 1.2rem !important; line-height: 1.8rem !important;)
 
 ! Improve layout of video description
 www.youtube.com##tp-yt-paper-tooltip.ytd-watch-info-text:style(left: 0 !important; top: 30px !important;)
