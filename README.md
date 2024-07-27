@@ -2,9 +2,7 @@
 
 This repository contains ad blocking filter lists, custom userstyles, and userscripts for an improved experience on the web.
 
-This repository has been dedicated to the public domain through CC0. Feel free to use, modify, and share the contents of this repository. You aren't legally required to give me credit, but it would be nice of you to do so.
-
-I won't be accepting any contributions at this time.
+This repository has been dedicated to the public domain through CC0. Feel free to use, modify, and share the contents of this repository. Giving me credit would be nice, but you aren't legally required to do so.
 
 ## Contents
 * [Filter Lists](#filter-lists)
