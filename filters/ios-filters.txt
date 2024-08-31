@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-08-31.1
+! Version: 2024-08-31.2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -333,6 +333,7 @@ picuki.com##.sticky-bottom-ads-wrapper, div[class*="promote"], .admin-notice, .s
 piokok.com##[class^="ah-box"], .share, .similar, .swbtn_igtv, .swbtn_stories
 piokok.com##.swbtn:style(width: 50% !important;)
 piokok.com##+js(ra, target, .cover_link)
+piokok.con##+js(ra, target, .pic > a)
 
 ! Special CSS injection filters (disabled on Ublock)
 !#if !ext_ublock
