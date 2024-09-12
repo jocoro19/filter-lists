@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters (JS)
-! Version: 2024-09-06.1
+! Version: 2024-09-12.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -21,7 +21,7 @@ m.youtube.com##+js(rpnt, script, /(var setMessage=)/, `(()=>{const t=document.qu
 
 ! Other
 danbooru.donmai.us##+js(rpnt, script, /(\$\(function\(\))/, `if (/^\/posts\/\d*$/.test(location.pathname)) { var x = new URL(location.href); x.searchParams.delete("q"); history.replaceState(null, "", x.href) }; $1`)
-gelbooru.com##+js(rpnt, script, /(function responsiveViewToggle\(\))/, `document.head.insertAdjacentHTML("afterbegin", "<style>div:has(> [id^='ts_ad_']), .mobileActions .showEditBox { display: none !important; }</style>"); var x = document.querySelectorAll(".thumbnail-container"); location.search.includes("s=list") && x.length == 2 && (x[0].innerHTML += x[1].innerHTML, x[1].remove()); document.querySelectorAll(".thumbnail-preview a").forEach(a => { var b = new URL(a.href); b.searchParams.delete("tags"); a.href = b.href }); $1`)
+gelbooru.com##+js(rpnt, script, /(function responsiveViewToggle\(\))/, `document.querySelectorAll(".mobileActions a[target='_blank']").forEach(a => a.removeAttribute("target")); document.head.insertAdjacentHTML("afterbegin", "<style>div:has(> [id^='ts_ad_']), .mobileActions .showEditBox { display: none !important; }</style>"); var x = document.querySelectorAll(".thumbnail-container"); location.search.includes("s=list") && x.length == 2 && (x[0].innerHTML += x[1].innerHTML, x[1].remove()); document.querySelectorAll(".thumbnail-preview a").forEach(a => { var b = new URL(a.href); b.searchParams.delete("tags"); a.href = b.href }); $1`)
 medibang.com##+js(rpnt, script, /(var ROOT_URL =)/, `var x = new MutationObserver(() => document.querySelectorAll(".illust-item_box a").forEach(a => a.href = a.href.replace(".com/picture/viewer/", ".com/picture/"))); location.pathname === "/contentsSearch/" && x.observe(document.body, { subtree: true, childList: true }); /^\/picture\//.test(location.pathname) && document.querySelectorAll(".pictureDetails__image > a").forEach(b => { delete b.dataset.zoomUrl; b.href = b.querySelector("img").src.replace("/1280_960/", "/") }); $1`)
 toyhou.se##+js(rpnt, script, /(var modalCount)/, `var warning = document.querySelector(".content-warning"); warning && (warning.style.display = "none") && warning.querySelector("button.btn-success").click(); $1`)
 
