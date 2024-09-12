@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.23.6
+! Version: 1.24.0
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -17,27 +17,7 @@ www.youtube.com##ytd-rich-grid-media:style(max-width: unset !important;)
 www.youtube.com##[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer:style(padding-top: 0 !important;)
 
 ! Make the channel page layout more compact
-www.youtube.com##[use-page-header-style][has-channel-art] #wrapper > #contentContainer:style(padding-top: calc(16.25% + 148px) !important;)
-www.youtube.com##[use-page-header-style]:not([has-channel-art]) #wrapper > #contentContainer:style(padding-top: 148px !important;)
-www.youtube.com##.page-header-banner-sizer:style(padding-top: 16.25% !important;)
-www.youtube.com##.page-header-banner:style(margin: 0 !important; border-radius: 0 !important;)
-www.youtube.com##.page-header-banner-image:style(background-position: 0 0 !important;)
-www.youtube.com###channel-header-container:style(max-width: unset !important; margin: auto !important; position: relative !important;)
-www.youtube.com###channel-header-container > #avatar:style(height: 80px !important; width: 80px !important; margin-right: 16px !important;)
-www.youtube.com###channel-header-container > #inner-header-container:style(flex-direction: row !important; align-items: center !important; margin-top: 0 !important;)
-www.youtube.com###channel-header-container #meta:style(width: unset !important;)
-www.youtube.com###channel-tagline:style(display: inline-block !important;)
-www.youtube.com###channel-tagline:style(position: absolute !important; top: 0 !important;	left: 0 !important;)
-www.youtube.com###channel-tagline ytd-channel-tagline-renderer:style(padding: 0 !important;)
-www.youtube.com###channel-tagline #endpoint:style(width: 80px !important; height: 80px !important;)
-www.youtube.com###channel-tagline #wrapper
-www.youtube.com###channel-header-links
-www.youtube.com##[page-subtype="channels"] #subscribe-button:style(margin-left: 8px !important;)
-www.youtube.com##[page-subtype="channels"] #sponsor-button:style(order: -1 !important;)
-www.youtube.com##[page-subtype="channels"] ytd-feed-filter-chip-bar-renderer:style(margin-bottom: -8px !important;)
-www.youtube.com##.yt-tab-shape-wiz:style(padding: 0 6px !important;)
-www.youtube.com##.yt-tab-group-shape-wiz__slider
-www.youtube.com##.yt-tab-shape-wiz__tab-bar--tab-bar-selected:style(background-color: var(--yt-spec-text-primary) !important; border-radius: 1px !important; height: 2px !important;)
+
 
 ! New channel page layout
 www.youtube.com###page-header-banner:style(padding: 0 !important;)
@@ -45,13 +25,15 @@ www.youtube.com###page-header-banner-sizer:style(padding-top: 16.25% !important;
 www.youtube.com##.yt-image-banner-view-model-wiz:style(border-radius: 0 !important;)
 www.youtube.com##.yt-image-banner-view-model-wiz img:style(object-position: 0 0 !important;)
 www.youtube.com##.yt-spec-avatar-shape__button--button-giant, .yt-spec-avatar-shape--avatar-size-giant:style(width: 80px !important; height: 80px !important;)
-www.youtube.com##.yt-spec-avatar-shape--live-ring:style(border: unset !important;)
-www.youtube.com##.yt-spec-avatar-shape--live-ring .yt-spec-avatar-shape__live-badge
-www.youtube.com##yt-description-preview-view-model:style(position: absolute !important; top: 0 !important; left: 0 !important; width: 80px !important; height: 80px !important; margin: 0 !important;)
+www.youtube.com##yt-dynamic-text-view-model .yt-core-attributed-string--inline-flex-mod:style(height: unset !important;)
+www.youtube.com##yt-description-preview-view-model:style(position: absolute !important; top: 4px !important; left: 96px !important; width: 100% !important; height: 50px !important; max-width: unset !important; margin: 0 !important;)
 www.youtube.com##yt-description-preview-view-model truncated-text
 www.youtube.com##yt-attribution-view-model
-www.youtube.com##yt-flexible-actions-view-model:style(position: absolute !important; top: 0 !important;	right: 0 !important; margin: 0 !important; height: 100% !important;	align-items: center !important;	flex-direction: row-reverse !important;)
+www.youtube.com##yt-flexible-actions-view-model:style(position: absolute !important; top: 0 !important;	right: 0 !important; margin: 0 !important; padding-left: 12px !important; height: 100% !important;	align-items: center !important;	flex-direction: row-reverse !important;)
 www.youtube.com##yt-flexible-actions-view-model > div:style(padding-right: 0 !important; padding-left: 8px !important;)
+www.youtube.com##.yt-tab-shape-wiz:style(padding: 0 6px !important;)
+www.youtube.com##.yt-tab-group-shape-wiz__slider
+www.youtube.com##.yt-tab-shape-wiz__tab-bar--tab-bar-selected:style(background-color: var(--yt-spec-text-primary) !important; border-radius: 1px !important; height: 2px !important;)
 
 ! "About channel" popup
 www.youtube.com##tp-yt-paper-dialog:has(ytd-about-channel-renderer):style(margin: 48px !important;)
