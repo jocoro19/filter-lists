@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.23.5
+@version     1.24.0
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -55,82 +55,6 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 	[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer {
 		padding-top: 0 !important;
 	}
-
-	/* Make the channel page layout more compact */
-	[use-page-header-style][has-channel-art] #wrapper > #contentContainer {
-		padding-top: calc(16.25% + 148px) !important;
-	}
-	[use-page-header-style]:not([has-channel-art]) #wrapper > #contentContainer {
-		padding-top: 148px !important;
-	}
-	.page-header-banner-sizer {
-		padding-top: 16.25% !important;
-	}
-	.page-header-banner  {
-		margin: 0 !important;
-		border-radius: 0 !important;
-	}
-	.page-header-banner-image {
-		background-position: 0 0 !important;
-	}
-	#channel-header-container {
-		max-width: unset !important;
-		margin: auto !important;
-		position: relative !important;
-		& > #avatar {
-			height: 80px !important;
-			width: 80px !important;
-			margin-right: 16px !important;
-		}
-		& > #inner-header-container {
-			flex-direction: row !important;
-			align-items: center !important;
-			margin-top: 0 !important;
-		}
-		& #meta {
-			width: unset !important;
-		}
-	}
-	#channel-tagline {
-		position: absolute !important;
-		top: 0 !important;
-		left: 0 !important;
-		& ytd-channel-tagline-renderer {
-			padding: 0 !important;
-		}
-		& #endpoint {
-			width: 80px !important;
-			height: 80px !important;
-		}
-		& #wrapper {
-			display: none !important;
-		}
-	}
-	#channel-header-links {
-		display: none !important;
-	}
-	[page-subtype="channels"] {
-		& #subscribe-button {
-			margin-left: 8px !important;
-		}
-		& #sponsor-button {
-			order: -1 !important;
-		}
-		& ytd-feed-filter-chip-bar-renderer {
-			margin-bottom: -8px !important;
-		}
-	}
-	.yt-tab-shape-wiz {
-		padding: 0 6px !important;
-	}
-	.yt-tab-group-shape-wiz__slider {
-		display: none !important;
-	}
-	.yt-tab-shape-wiz__tab-bar--tab-bar-selected {
-		background-color: var(--yt-spec-text-primary) !important;
-		border-radius: 1px !important;
-		height: 2px !important;
-	}
 	
 	/* New channel page layout */
 	#page-header-banner {
@@ -149,21 +73,16 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 		width: 80px !important;
 		height: 80px !important;
 	}
-	.yt-spec-avatar-shape--live-ring {
-		border: unset !important;
-		& .yt-spec-avatar-shape__live-badge {
-			display: none !important;
-		}
-	}
 	yt-dynamic-text-view-model .yt-core-attributed-string--inline-flex-mod {
 		height: unset !important;
 	}
 	yt-description-preview-view-model {
 		position: absolute !important;
-		top: 0 !important;
-		left: 0 !important;
-		width: 80px !important;
-		height: 80px !important;
+		top: 4px !important;
+		left: 96px !important;
+		width: 100% !important;
+		height: 50px !important;
+		max-width: unset !important;
 		margin: 0 !important;
 		& truncated-text {
 			display: none !important;
@@ -177,6 +96,7 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 		top: 0 !important;
 		right: 0 !important;
 		margin: 0 !important;
+		padding-left: 12px !important;
 		height: 100% !important;
 		align-items: center !important;
 		flex-direction: row-reverse !important;
@@ -184,6 +104,17 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 			padding-right: 0 !important;
 			padding-left: 8px !important;
 		}
+	}
+	.yt-tab-shape-wiz {
+		padding: 0 6px !important;
+	}
+	.yt-tab-group-shape-wiz__slider {
+		display: none !important;
+	}
+	.yt-tab-shape-wiz__tab-bar--tab-bar-selected {
+		background-color: var(--yt-spec-text-primary) !important;
+		border-radius: 1px !important;
+		height: 2px !important;
 	}
 	
 	/* "About channel" popup */
