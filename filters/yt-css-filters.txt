@@ -17,9 +17,6 @@ www.youtube.com##ytd-rich-grid-media:style(max-width: unset !important;)
 www.youtube.com##[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer:style(padding-top: 0 !important;)
 
 ! Make the channel page layout more compact
-
-
-! New channel page layout
 www.youtube.com###page-header-banner:style(padding: 0 !important;)
 www.youtube.com###page-header-banner-sizer:style(padding-top: 16.25% !important;)
 www.youtube.com##.yt-image-banner-view-model-wiz:style(border-radius: 0 !important;)
