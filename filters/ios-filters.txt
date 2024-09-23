@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-09-12.2
+! Version: 2024-09-23.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -90,6 +90,7 @@ m.youtube.com##ytm-rich-item-renderer:has(ytm-feed-nudge-renderer)
 m.youtube.com##ytm-rich-item-renderer:has(ytm-radio-renderer)
 m.youtube.com###related-chips-sentinel
 m.youtube.com##.related-chips-slot-wrapper:style(transform: none !important; -webkit-transform: none !important;)
+m.youtube.com###player-control-overlay:style(user-select: none !important; -webkit-user-select: none !important;)
 m.youtube.com##.player-controls-middle-core-buttons button:style(background-color: unset !important;)
 m.youtube.com##.player-controls-middle-core-buttons button:not(.player-control-play-pause-icon, .endscreen-replay-button)
 m.youtube.com##.player-controls-middle-core-buttons button:is(.player-control-play-pause-icon, .endscreen-replay-button) > c3-icon:style(width: 56px !important; height: 56px !important; padding: 0 !important;)
@@ -310,9 +311,11 @@ minecraft.wiki##.page-actions-watch
 ###posts .hidden-posts-notice
 ||gelbooru.com/index.php*s=view$removeparam=tags
 @@||gelbooru.com/extras/howtosearch$image
+gelbooru.com##div[style^="text-align: center; padding: 10px;"]
 gelbooru.com##div:has(> [id^="ts_ad_"])
 gelbooru.com##.mobileActions .showEditBox
 gelbooru.com##+js(ra, target, .mobileActions a[target="_blank"])
+gelbooru.com##+js(aeld, click, popMagic)
 realbooru.com##iframe[src*="exosrv.com"]
 rule34.xxx##+js(aopr, newcontent)
 ###misskey_app .xF6dY
