@@ -253,6 +253,7 @@ fandom.com##.gallery-icon-container
 ||addtoany.com^
 ||improving.duckduckgo.com^
 ||duckduckgo.com^$removeparam=t
+duckduckgo.com##.L6fj2A3X2mfJl5kE8caF > div:empty
 duckduckgo.com##.related-searches
 duckduckgo.com##.footer--mobile
 duckduckgo.com##.footer
@@ -341,6 +342,7 @@ m.youtube.com##+js(rpnt, script, /(var ytInitialPlayerResponse = null;)/, `if(wi
 m.wikipedia.org##+js(rpnt, script, /(^\(RLQ\=window\.RLQ\|\|)/, `document.head.insertAdjacentHTML("afterbegin", "<style>#page-actions-watch, #page-actions-edit, #page-actions-viewsource, .mw-editsection, #mw-fr-revisiontag, .ambox, #mw-data-after-content, #siteNotice, #frb-inline, #frb-nag {display: none !important;}</style>"); $1`)
 reddit.com##+js(rpnt, script, /(var BETA_HOST.*)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.promoted, #header-img, .listingsignupbar, .commentsignupbar, .side > .spacer:not(:has(#search, .linkinfo, .titlebox)), .side .md, .active.read-next { display: none !important; }</style>"); $1`)
 reddit.com##+js(rpnt, script, /(window\.CLIENT_EXPERIMENTS)/, `const url1 = new URL(location.href); url2 = new URL(url1.searchParams.get("url")); document.title = url2.pathname.slice(1); document.head.insertAdjacentHTML("afterbegin", "<style>reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-overlay-display { display: none !important; } html.theme-beta main { width: 100vw !important; height: 100vh !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; } html.theme-beta main img { max-width: 100% !important; max-height: 100% !important; margin: 0 !important; } shreddit-app::before { content: unset !important; }</style>"); $1`)
+duckduckgo.com##+js(rpnt, script, /(!function\(e\,t\,n\))/, `document.head.insertAdjacentHTML("afterbegin", "<style>.L6fj2A3X2mfJl5kE8caF > div:empty { display: none !important; }</style>"); $1`)
 
 picuki.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.sticky-bottom-ads-wrapper, div[class*='promote'], .admin-notice, .stats-profile-button, .show_stories_button, .stories-viewer-header-button {display: none !important;}</style>"); $1`)
 piokok.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>[class^='ah-box'], .share, .similar, .swbtn_igtv, .swbtn_stories { display: none !important; } .swbtn { width: 50% !important; }</style>"); $1`)
