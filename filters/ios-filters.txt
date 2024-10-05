@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-10.02.1
+! Version: 2024-10.05.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -265,13 +265,10 @@ www.theverge.com##div:has(> div > .duet--article--share-buttons)
 arstechnica.com##.ad.ad.ad.ad_crown
 arstechnica.com##.instream-wrap
 arstechnica.com##.superscroll-separator
-www.dexerto.com##[data-cy="Ad"]
-www.dexerto.com##[data-cy="HomepageAdWrapper"]
+www.dexerto.com##[data-cy="Ad"], [data-cy="HomepageAdWrapper"], [data-cy="SignupWidget"],  [data-cy="QuickBack"]
 www.dexerto.com##div[id^="article"] > div.items-center:has(> div.flex > div.sticky > div[data-ad-unit-id])
 www.dexerto.com##[data-cy="Container"]:has(> div.col-span-full > div.flex > div.flex > div.top-0 > div[data-ad-unit-id])
 www.dexerto.com##label.rounded-full
-www.dexerto.com##[data-cy="SignupWidget"]
-www.dexerto.com##[data-cy="QuickBack"]
 www.dexerto.com##.bg-neutral-grey.justify-center.flex[data-cy="LinkButton"]:style(display: flex !important;)
 www.dexerto.com##[data-nosnippet="true"]:style(min-height: unset !important;)
 globalnews.ca###home-promoBanners-mobile
@@ -312,10 +309,9 @@ minecraft.wiki##.page-actions-watch
 ###posts .hidden-posts-notice
 @@||gelbooru.com/extras/howtosearch$image
 gelbooru.com##div[style^="text-align: center; padding: 10px;"]
-gelbooru.com##div:has(> [id^="ts_ad_"])
+gelbooru.com##div[style*="height:"]:has(> [id^="ts_ad_"])
 gelbooru.com##.mobileActions .showEditBox
 gelbooru.com##+js(ra, target, .mobileActions a[target="_blank"])
-gelbooru.com##+js(aopr, open)
 realbooru.com##iframe[src*="exosrv.com"]
 rule34.xxx##+js(aopr, newcontent)
 ###misskey_app .xF6dY
