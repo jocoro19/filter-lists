@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.24.0
+@version     1.24.1
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -210,9 +210,15 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 		max-width: 360px !important;
 		min-width: 240px !important;
 	}
+
+	/* Video chapters */
+	ytd-engagement-panel-section-list-renderer.watch-flexy {
+		margin-bottom: 12px !important;
+	}
 	
 	/* Live stream chat */
 	ytd-live-chat-frame {
+		min-height: var(--ytd-watch-flexy-panel-max-height);
 		margin-bottom: 12px !important;
 		& #show-hide-button ytd-button-renderer {
 			margin: 0 !important;
@@ -225,11 +231,6 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 		border-top: none !important;
 	}
 	
-	/* Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable) */
-	#segmented-dislike-button .cbox, :is(#segmented-dislike-button, dislike-button-view-model) .yt-spec-button-shape-next__button-text-content {
-		max-width: 80px !important;
-	}
-	
 	/* SponsorBlock UI */
 	.sponsorBlockCategoryPill {
 		margin-right: 6px !important;
@@ -239,5 +240,10 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 		& > iframe {
 			width: 100% !important;
 		}
+	}
+
+	/* Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable) */
+	#segmented-dislike-button .cbox, :is(#segmented-dislike-button, dislike-button-view-model) .yt-spec-button-shape-next__button-text-content {
+		max-width: 80px !important;
 	}
 }
