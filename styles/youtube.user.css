@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.24.3
+@version     1.24.4
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -46,6 +46,9 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 			max-width: unset !important;
 		}
 		& #ghost-cards {
+			display: none !important;
+		}
+        & .yt-spec-avatar-shape--live-ring .yt-spec-avatar-shape__live-badge {
 			display: none !important;
 		}
 	}
