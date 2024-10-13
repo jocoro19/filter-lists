@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filters
-! Version: 2024-04-12.1
+! Version: 2024-10-13.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -91,7 +91,3 @@ www.youtube.com###ghost-cards
 
 ! Bypass redirect for links to external websites
 www.youtube.com##+js(href-sanitizer, a[href^="https://www.youtube.com/redirect"][href*="q=http"], ?q)
-
-! Make Return Youtube Dislike bar width change with the like and dislike buttons
-www.youtube.com##.ryd-tooltip-new-design:style(width: calc(100% - 100.2px) !important;)
-www.youtube.com##.ryd-tooltip-new-design #ryd-bar-container:style(width: 100% !important;)
