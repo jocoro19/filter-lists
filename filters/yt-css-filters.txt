@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.24.4
+! Version: 1.25
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -70,11 +70,13 @@ www.youtube.com##ytd-video-renderer[use-bigger-thumbs] ytd-thumbnail, ytd-playli
 www.youtube.com##ytd-engagement-panel-section-list-renderer.watch-flexy:style(margin-bottom: 12px !important;)
 
 ! Live stream chat
-www.youtube.com##ytd-live-chat-frame:style(!important; margin-bottom: 12px !important;)
-www.youtube.com##ytd-live-chat-frame:not([collapsed]):style(min-height: var(--ytd-watch-flexy-panel-max-height) !important;)
-www.youtube.com##ytd-live-chat-frame #show-hide-button:style(margin: 0 !important;)
 www.youtube.com##yt-live-chat-renderer iron-pages:has(> #input-panel):style(border-bottom: none !important;)
 www.youtube.com##yt-live-chat-renderer iron-pages:has(> #input-panel:empty):style(border-top: none !important;)
+www.youtube.com##ytd-live-chat-frame:style(!important; margin-bottom: 12px !important;)
+www.youtube.com##ytd-live-chat-frame:not([collapsed]):style(min-height: var(--ytd-watch-flexy-panel-max-height) !important;)
+www.youtube.com##ytd-live-chat-frame #show-hide-button ytd-button-renderer:style(margin: 0 !important;)
+www.youtube.com##ytd-live-chat-frame:has(#show-hide-button):style(display: flex !important;)
+www.youtube.com###columns:has(ytd-live-chat-frame #show-hide-button) #bottom-row > #teaser-carousel:style(display: flex !important;)
 
 ! SponsorBlock UI
 www.youtube.com##.sponsorBlockCategoryPill:style(margin-right: 6px !important;)
