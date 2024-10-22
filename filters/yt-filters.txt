@@ -1,11 +1,12 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filters
-! Version: 2024-10-13.1
+! Version: 2024-10-22.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
 ! Hide buttons to sort videos by topic
+www.youtube.com##ytd-masthead #background:style(height: 56px !important;)
 www.youtube.com##[page-subtype="home"] #header
 www.youtube.com##yt-related-chip-cloud-renderer
 www.youtube.com##yt-related-chip-cloud-renderer + ytd-item-section-renderer:style(margin-top: -8px !important;)
