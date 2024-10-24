@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.26
+@version     1.26.1
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -59,7 +59,7 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 		padding-top: 0 !important;
 	}
 	
-	/* New channel page layout */
+	/* Make the channel page layout more compact */
 	#page-header-banner {
 		padding: 0 !important;
 	}
@@ -119,6 +119,9 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 		border-radius: 1px !important;
 		height: 2px !important;
 	}
+	#content.ytd-app:has(ytd-browse[page-subtype="channels"]:not([hidden])) #background.ytd-masthead {
+        background-color: var(--yt-spec-base-background) !important;
+    }
 	
 	/* "About channel" popup */
 	tp-yt-paper-dialog:has(ytd-about-channel-renderer) {
