@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.25
+@version     1.26
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -195,6 +195,9 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 	}
 	ytd-video-description-infocards-section-renderer {
 		padding: 0 !important;
+        & #infocards-section:not(:empty) {
+            padding-top: 16px !important;
+        }
 		& > :not(#infocards-section) {
 			display: none !important;
 		}
@@ -202,23 +205,33 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 	ytd-structured-description-content-renderer ytd-reel-shelf-renderer {
 		display: none !important;
 	}
+    yt-video-attributes-section-view-model {
+        display: none !important;
+    }
 	ytd-video-description-transcript-section-renderer {
-		padding: 0 !important;
-		margin-top: 10px !important;
+        padding-bottom: 0 !important;
 		order: 1 !important;
 	}
+    
+	/* Video chapters */
+	ytd-engagement-panel-section-list-renderer.watch-flexy {
+		margin-bottom: 12px !important;
+	}
+	ytd-engagement-panel-section-list-renderer:is([target-id*="chapters"],[target-id*="transcript"]) {
+        & #header #subtitle:empty {
+            padding-top: 0 !important;
+        }
+        & #subheader .YtChipBarViewModelChipWrapper:nth-of-type(2) {
+            order: -1 !important;
+        }
+    }
 
-	/* Make thumbnails in search smaller if needed */
+	/* Make thumbnails in search smaller */
 	ytd-video-renderer[use-bigger-thumbs] ytd-thumbnail, ytd-playlist-renderer[use-bigger-thumbs] ytd-playlist-thumbnail, ytd-channel-renderer[use-bigger-thumbs] #avatar-section {
 		max-width: 360px !important;
 		min-width: 240px !important;
 	}
 
-	/* Video chapters */
-	ytd-engagement-panel-section-list-renderer.watch-flexy {
-		margin-bottom: 12px !important;
-	}
-	
 	/* Live stream chat */
     yt-live-chat-renderer iron-pages:has(> #input-panel) {
 		border-bottom: none !important;

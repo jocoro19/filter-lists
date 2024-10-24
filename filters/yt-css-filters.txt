@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.25
+! Version: 1.26
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -59,15 +59,19 @@ www.youtube.com###description :is(#expand, #collapse, #info-container, #items, a
 www.youtube.com###description:hover:style(background-color: var(--yt-spec-badge-chip-background) !important;)
 www.youtube.com###description #structured-description > #items:style(display: flex !important; flex-direction: column !important;)
 www.youtube.com##ytd-video-description-infocards-section-renderer:style(padding: 0 !important;)
+www.youtube.com##ytd-video-description-infocards-section-renderer #infocards-section:not(:empty):style(padding-top: 16px !important;)
 www.youtube.com##ytd-video-description-infocards-section-renderer > :not(#infocards-section)
 www.youtube.com##ytd-structured-description-content-renderer ytd-reel-shelf-renderer
-www.youtube.com##ytd-video-description-transcript-section-renderer:style(padding: 0 !important; margin-top: 10px !important; order: 1 !important;)
-
-! Make thumbnails in search smaller if needed
-www.youtube.com##ytd-video-renderer[use-bigger-thumbs] ytd-thumbnail, ytd-playlist-renderer[use-bigger-thumbs] ytd-playlist-thumbnail, ytd-channel-renderer[use-bigger-thumbs] #avatar-section:style(max-width: 360px !important; min-width: 240px !important;)
+www.youtube.com##yt-video-attributes-section-view-model
+www.youtube.com##ytd-video-description-transcript-section-renderer:style(padding-bottom: 0 !important; order: 1 !important;)
 
 ! Video chapters
 www.youtube.com##ytd-engagement-panel-section-list-renderer.watch-flexy:style(margin-bottom: 12px !important;)
+www.youtube.com##ytd-engagement-panel-section-list-renderer:is([target-id*="chapters"],[target-id*="transcript"]) #header #subtitle:empty:style(padding-top: 0 !important;)
+www.youtube.com##ytd-engagement-panel-section-list-renderer:is([target-id*="chapters"],[target-id*="transcript"]) #subheader .YtChipBarViewModelChipWrapper:nth-of-type(2):style(order: -1 !important;)
+
+! Make thumbnails in search smaller
+www.youtube.com##ytd-video-renderer[use-bigger-thumbs] ytd-thumbnail, ytd-playlist-renderer[use-bigger-thumbs] ytd-playlist-thumbnail, ytd-channel-renderer[use-bigger-thumbs] #avatar-section:style(max-width: 360px !important; min-width: 240px !important;)
 
 ! Live stream chat
 www.youtube.com##yt-live-chat-renderer iron-pages:has(> #input-panel):style(border-bottom: none !important;)
