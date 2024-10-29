@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-10-23.1
+! Version: 2024-10-28.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -311,6 +311,8 @@ gelbooru.com##+js(ra, target, .mobileActions a[target="_blank"])
 realbooru.com##iframe[src*="exosrv.com"]
 rule34.xxx##+js(aopr, newcontent)
 ###misskey_app .xF6dY
+*$3p,script,domain=tumblr.com
+*$3p,frame,domain=tumblr.com
 tumblr.com##.TopeC
 tumblr.com##[data-cell-id^="timelineObject"]
 tumblr.com##.smX3m.hgN9e.VC_rY.IvzMP
