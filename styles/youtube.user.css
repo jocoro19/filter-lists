@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.26.2
+@version     1.26.3
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -216,10 +216,26 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 		order: 1 !important;
 	}
     
-	/* Video chapters */
-	ytd-engagement-panel-section-list-renderer.watch-flexy {
-		margin-bottom: 12px !important;
+    /* Make thumbnails in search smaller */
+	ytd-video-renderer[use-bigger-thumbs] ytd-thumbnail, ytd-playlist-renderer[use-bigger-thumbs] ytd-playlist-thumbnail, ytd-channel-renderer[use-bigger-thumbs] #avatar-section {
+		max-width: 360px !important;
+		min-width: 240px !important;
 	}
+    
+    /* Video recommendations sidebar */
+    #secondary-inner.ytd-watch-flexy {
+        --ytd-margin-6x: 12px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        & > #chat-container {
+            order: 1 !important;
+        }
+        & > #related {
+            order: 2 !important;
+        }
+    }
+    
+	/* Video chapters */
 	ytd-engagement-panel-section-list-renderer:is([target-id*="chapters"],[target-id*="transcript"]) {
         & #header #subtitle:empty {
             padding-top: 0 !important;
@@ -229,12 +245,6 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
         }
     }
 
-	/* Make thumbnails in search smaller */
-	ytd-video-renderer[use-bigger-thumbs] ytd-thumbnail, ytd-playlist-renderer[use-bigger-thumbs] ytd-playlist-thumbnail, ytd-channel-renderer[use-bigger-thumbs] #avatar-section {
-		max-width: 360px !important;
-		min-width: 240px !important;
-	}
-
 	/* Live stream chat */
     yt-live-chat-renderer iron-pages:has(> #input-panel) {
 		border-bottom: none !important;
@@ -243,9 +253,6 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 		}
 	}
 	ytd-live-chat-frame {
-        &:not([theater-watch-while]) {
-            margin-bottom: 12px !important;
-        }
         &[theater-watch-while] {
             border-bottom: 0 !important;
             border-radius: 0 !important;

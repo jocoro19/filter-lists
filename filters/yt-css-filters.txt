@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.26.2
+! Version: 1.26.3
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -66,18 +66,21 @@ www.youtube.com##ytd-structured-description-content-renderer ytd-reel-shelf-rend
 www.youtube.com##yt-video-attributes-section-view-model
 www.youtube.com##ytd-video-description-transcript-section-renderer:style(padding-bottom: 0 !important; order: 1 !important;)
 
-! Video chapters
-www.youtube.com##ytd-engagement-panel-section-list-renderer.watch-flexy:style(margin-bottom: 12px !important;)
-www.youtube.com##ytd-engagement-panel-section-list-renderer:is([target-id*="chapters"],[target-id*="transcript"]) #header #subtitle:empty:style(padding-top: 0 !important;)
-www.youtube.com##ytd-engagement-panel-section-list-renderer:is([target-id*="chapters"],[target-id*="transcript"]) #subheader .YtChipBarViewModelChipWrapper:nth-of-type(2):style(order: -1 !important;)
-
 ! Make thumbnails in search smaller
 www.youtube.com##ytd-video-renderer[use-bigger-thumbs] ytd-thumbnail, ytd-playlist-renderer[use-bigger-thumbs] ytd-playlist-thumbnail, ytd-channel-renderer[use-bigger-thumbs] #avatar-section:style(max-width: 360px !important; min-width: 240px !important;)
+
+! Video recommendations sidebar
+www.youtube.com###secondary-inner.ytd-watch-flexy:style(--ytd-margin-6x: 12px !important; display: flex !important; flex-direction: column !important;)
+www.youtube.com###secondary-inner.ytd-watch-flexy > #chat-container:style(order: 1 !important;)
+www.youtube.com###secondary-inner.ytd-watch-flexy > #related:style(order: 2 !important;)
+
+! Video chapters
+www.youtube.com##ytd-engagement-panel-section-list-renderer:is([target-id*="chapters"],[target-id*="transcript"]) #header #subtitle:empty:style(padding-top: 0 !important;)
+www.youtube.com##ytd-engagement-panel-section-list-renderer:is([target-id*="chapters"],[target-id*="transcript"]) #subheader .YtChipBarViewModelChipWrapper:nth-of-type(2):style(order: -1 !important;)
 
 ! Live stream chat
 www.youtube.com##yt-live-chat-renderer iron-pages:has(> #input-panel):style(border-bottom: none !important;)
 www.youtube.com##yt-live-chat-renderer iron-pages:has(> #input-panel:empty):style(border-top: none !important;)
-www.youtube.com##ytd-live-chat-frame:not([theater-watch-while]):style(margin-bottom: 12px !important;)
 www.youtube.com##ytd-live-chat-frame[theater-watch-while]:style(border-bottom: 0 !important; border-radius: 0 !important;)
 www.youtube.com##ytd-live-chat-frame:not([collapsed]):style(min-height: var(--ytd-watch-flexy-panel-max-height) !important;)
 www.youtube.com##ytd-live-chat-frame[collapsed]:has(#show-hide-button):style(display: flex !important;)
