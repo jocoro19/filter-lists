@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2024-11-15.1
+! Version: 2024-11-16.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -303,14 +303,22 @@ minecraft.wiki##.page-actions-watch
 ||minecraft.wiki/load.php?format=original&image=edit
 ||minecraft.wiki/load.php?format=original&image=star
 ###posts .hidden-posts-notice
+*$3p,script,domain=gelbooru.com
+@@||cdn.fluidplayer.com^$domain=gelbooru.com
+@@||ajax.googleapis.com^$domain=gelbooru.com|realbooru.com
 @@||gelbooru.com/extras/howtosearch$image
 gelbooru.com##div[style^="text-align: center; padding: 10px;"]
 gelbooru.com##center:has(div[style$="height: 250px; "])
 gelbooru.com##div[style*="height:"]:has(> [id^="ts_ad_"])
 gelbooru.com##.mobileActions .showEditBox
-gelbooru.com##+js(aopr, ExoLoader)
 gelbooru.com##+js(ra, target, .mobileActions a[target="_blank"])
+gelbooru.com##+js(aopr, ExoLoader)
+*$3p,script,domain=realbooru.com
 realbooru.com##div[style^="margin: 20px"]:has(iframe[src*="exosrv.com"])
+realbooru.com##center > iframe
+realbooru.com##+js(aopr, ExoLoader)
+*$3p,script,domain=rule34.xxx
+@@||ajax.cloudflare.com^$from=rule34.xxx
 rule34.xxx##+js(aopr, newcontent)
 ###misskey_app .xF6dY
 *$3p,script,domain=tumblr.com
