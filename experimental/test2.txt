@@ -1,0 +1,340 @@
+[AdBlock Plus 2.0]
+! Title: Test
+! Version: 0
+! Expires: 1 days
+! License: CC0-1.0
+! Homepage: https://github.com/jocoro19/filter-lists
+
+! Blocked websites
+||tiktok.com^
+||douyin.com^
+||facebook.com^
+||instagram.com^
+||threads.net^$third-party
+||messenger.com^
+||whatsapp.com^
+||meta.com^
+*$domain=tiktok.com|douyin.com|facebook.com|instagram.com|messenger.com|whatsapp.com|meta.com
+
+! Cosmetic filtering fallback
+tiktok.com,douyin.com,facebook.com,instagram.com,messenger.com,whatsapp.com,meta.com##body
+
+! Embed blocking
+##.tiktok-embed
+##.instagram-media
+
+! Disable generic filtering on local pages
+@@||10.0.0.95^$generichide
+
+! Wikipedia
+||m.wikipedia.org/w/load.php?modules=skins.minerva.icons.wikimedia&image=edit
+||m.wikipedia.org/w/load.php?modules=skins.minerva.icons.wikimedia&image=star
+wikipedia.org###page-actions-watch
+wikipedia.org###page-actions-edit
+wikipedia.org###page-actions-viewsource
+wikipedia.org##.mw-editsection
+wikipedia.org##.ambox
+wikipedia.org###mw-data-after-content
+wikipedia.org###siteNotice
+wikipedia.org###frb-inline
+wikipedia.org###frb-nag
+wikipedia.org##[x-apple-data-detectors="true"]:style(pointer-events: none !important; color: inherit !important;)
+www.wikipedia.org##+js(set-cookie, hideWikipediaPortalBanner, 1)
+
+! Twitter/"X" blocking
+twitter.com,x.com##+js(ra, href|src|d|rel|name|content|media)
+twitter.com,x.com##+js(rmnt, script, /[\s\S]/)
+*$domain=twitter.com|x.com
+||twitter.com^$third-party
+||x.com^$third-party
+*$removeparam=s,domain=twitter.com|x.com
+*$removeparam=t,domain=twitter.com|x.com
+
+! Block "Sign in with Google" popups
+||accounts.google.com/gsi/iframe/select$subdocument
+
+! Mobile YouTube
+m.youtube.com##ytm-pivot-bar-renderer:style(height: 48px !important;)
+m.youtube.com#@#.YtWebScrimHostModernOverlay
+m.youtube.com##ytm-related-chip-cloud-renderer
+m.youtube.com##.rich-grid-sticky-header
+m.youtube.com##ytm-rich-section-renderer
+m.youtube.com##ytm-cinematic-container-renderer
+m.youtube.com##cinematic-setting-component
+m.youtube.com##.mobile-topbar-header-background:style(z-index: 2 !important;)
+m.youtube.com##.mobile-topbar-header-sign-in-button
+m.youtube.com##.searchbox-voice-search-wrapper
+m.youtube.com##.YtSearchboxComponentVoiceSearchWrapper
+m.youtube.com##.smartimation__background, .smartimation__overlay:style(z-index: 4 !important;)
+m.youtube.com##.media-item-endorsement-container
+m.youtube.com##ytm-paid-content-overlay-renderer
+m.youtube.com##ytm-statement-banner-renderer
+m.youtube.com##ytm-compact-radio-renderer
+m.youtube.com##ytm-clarification-renderer
+m.youtube.com##ytm-watch-metadata-app-promo-renderer
+m.youtube.com##.music-metadata-premium-upsell-link
+m.youtube.com##c3-toast:has(a[href="https://yt.be/help/dislike"])
+m.youtube.com##.ytm-autonav-bar
+m.youtube.com##ytm-item-section-renderer:style(border-bottom: none !important;)
+m.youtube.com##ytm-item-section-renderer:has(ad-slot-renderer)
+m.youtube.com##ytm-rich-item-renderer:has(ytm-feed-nudge-renderer)
+m.youtube.com##ytm-rich-item-renderer:has(ytm-radio-renderer)
+m.youtube.com###related-chips-sentinel
+m.youtube.com##.related-chips-slot-wrapper:style(transform: none !important; -webkit-transform: none !important;)
+m.youtube.com###player-control-overlay:style(user-select: none !important; -webkit-user-select: none !important;)
+m.youtube.com##.player-controls-middle-core-buttons button:style(background-color: unset !important;)
+m.youtube.com##.player-controls-middle-core-buttons button:not(.player-control-play-pause-icon, .endscreen-replay-button)
+m.youtube.com##.player-controls-middle-core-buttons button:is(.player-control-play-pause-icon, .endscreen-replay-button) > c3-icon:style(width: 56px !important; height: 56px !important; padding: 0 !important;)
+m.youtube.com##.player-controls-content:has(.endscreen-replay-button) .player-controls-background-container:style(background-color: black !important;)
+m.youtube.com##ytm-comments-simplebox-renderer
+m.youtube.com##ytm-comments-entry-point-teaser-renderer
+m.youtube.com##.comment-icon-container:style(height: 48px !important;)
+m.youtube.com##ytm-compact-autoplay-renderer > ytm-video-with-context-renderer:style(margin-bottom: 12px !important;)
+m.youtube.com##.ytm-bottom-sheet-overlay-container:has([style*="/open-app.svg"])
+m.youtube.com###global-loader:has(~ .ytm-bottom-sheet-overlay-container [style*="/open-app.svg"])
+m.youtube.com##body:has(.ytm-bottom-sheet-overlay-container [style*="/open-app.svg"]):style(position: static !important;)
+m.youtube.com##body[engagement-panel-open]:style(position: static !important;)
+m.youtube.com##ytm-shelf-renderer:has([data-type="BADGE_STYLE_TYPE_MEMBERS_ONLY"])
+m.youtube.com##.single-column-browse-results-tab-bar:has([tab-identifier="FEhashtag"])
+m.youtube.com##.engagement-panel-section-list-subheader .ytChipBarViewModelChipWrapper:nth-of-type(2):style(order: -1 !important;)
+m.youtube.com##ytm-pivot-bar-item-renderer .yt-spec-avatar-shape--avatar-size-extra-small:style(width: 20px !important; height: 20px !important;)
+m.youtube.com##ytm-playlist-video-renderer:has([src="https://i.ytimg.com/img/no_thumbnail.jpg"])
+m.youtube.com##ytm-multi-page-menu-section-renderer:has(a[href^="https://www.youtubekids.com"])
+m.youtube.com##+js(href-sanitizer, a[href^="https://www.youtube.com/redirect"][href*="q=http"], ?q)
+
+! Mobile YouTube channel page layout improvements
+m.youtube.com##yt-page-header-view-model:style(padding: 0 12px !important;)
+m.youtube.com##.page-header-view-model-wiz__page-header-banner-container:style(padding-top: 17.5% !important; margin: 0 -12px !important;)
+m.youtube.com##yt-page-header-view-model yt-image-banner-view-model:style(border-radius: 0 !important)
+m.youtube.com##.page-header-view-model-wiz__page-header-headline:style(margin-top: 8px !important;)
+m.youtube.com##[class*="yt-spec-avatar-shape"][class*="extra-large"]:has(img):style(width: 76px !important; height: 76px !important;)
+m.youtube.com##[class*="yt-spec-avatar-shape"][class*="giant"]:has(img):style(width: 120px !important; height: 120px !important;)
+m.youtube.com##.page-header-view-model-wiz__page-header-title--page-header-title-large:style(margin-bottom: 2px !important;)
+m.youtube.com##.page-header-view-model-wiz__page-header-headline-info:style(position: relative !important;)
+m.youtube.com##yt-description-preview-view-model truncated-text
+m.youtube.com##yt-description-preview-view-model:style(position: absolute !important; max-width: unset !important; margin: 0 !important;)
+m.youtube.com##yt-description-preview-view-model:first-child:style(top: -74px; left: 92px; width: calc(100% - 84px) !important; height: 32px !important;)
+m.youtube.com##yt-content-metadata-view-model + yt-description-preview-view-model:style(width: 100% !important; height: 50px !important;)
+m.youtube.com##yt-page-header-view-model yt-attribution-view-model
+m.youtube.com##yt-page-header-view-model yt-flexible-actions-view-model:style(max-width: 50% !important;)
+m.youtube.com##.yt-tab-group-shape-wiz__slider
+m.youtube.com##.yt-tab-shape-wiz__tab-bar
+m.youtube.com##.horizontal-card-list-card-thumbnail-xlarge:style(width: 160px !important;)
+m.youtube.com##ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge)
+m.youtube.com##ytm-item-section-renderer:has(.horizontal-card-list-card-thumbnail-xlarge) + *:style(border-top: none !important;)
+
+! "About channel" popup
+m.youtube.com##.about-channel-container:style(display: flex !important; flex-direction: column !important;)
+m.youtube.com##.about-channel-section:has(yt-channel-external-link-view-model):style(order: -1 !important;)
+m.youtube.com##.about-channel-section:has(> span > span):style(order: 1 !important; margin-top: 0 !important;)
+m.youtube.com##.about-channel-action-button-container:style(min-height: unset !important; order: 2 !important;)
+m.youtube.com##yt-channel-external-link-view-model > img
+m.youtube.com##.about-channel-action-button:style(margin-bottom: 12px !important;)
+
+! Mobile YouTube video description layout improvements
+m.youtube.com##.slim-video-metadata-header .secondary-text:style(mask-image: none !important; -webkit-mask-image: none !important;)
+m.youtube.com##.slim-video-metadata-information-inline-badge
+m.youtube.com##.slim-video-information-show-more
+m.youtube.com##yt-video-attributes-section-view-model
+m.youtube.com##ytm-video-description-header-renderer :is(.title, .cbox, ytm-sentiment-factoid-renderer)
+m.youtube.com##ytm-video-description-header-renderer ytm-view-count-factoid-renderer:style(display: flex !important; flex: 1 !important;)
+m.youtube.com##ytm-video-description-infocards-section-renderer:style(padding: 0 !important;)
+m.youtube.com##ytm-video-description-infocards-section-renderer > :not(.ytm-video-description-infocards-list)
+m.youtube.com##ytm-structured-description-content-renderer:style(padding-bottom: 0 !important; margin-bottom: -24px !important;)
+! m.youtube.com##.expandable-video-description-container .collapsed-string:style(max-height: unset !important; mask-image: none !important; -webkit-mask-image: none !important;)
+
+! Hide YouTube Shorts
+m.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)
+m.youtube.com##ytm-reel-shelf-renderer
+m.youtube.com##[role="tablist"] > a[href*="/shorts"]
+m.youtube.com##.yt-tab-shape-wiz[tab-title="Shorts"]
+m.youtube.com##ytm-media-item:has([data-style="SHORTS"])
+m.youtube.com##ytm-rich-item-renderer:has(a[href*="/shorts/"])
+m.youtube.com##ytm-video-with-context-renderer:has(.big-shorts-singleton)
+m.youtube.com##.playlist-chip-bar
+
+! YouTube embeds
+youtube.com,youtube-nocookie.com##.ytp-info-panel-preview
+youtube.com,youtube-nocookie.com##.ytp-impression-link
+youtube.com,youtube-nocookie.com##.ytp-copylink-button
+youtube.com,youtube-nocookie.com##.ytp-overflow-button
+youtube.com,youtube-nocookie.com##.ytp-youtube-button
+youtube.com,youtube-nocookie.com##.ytp-watermark
+youtube.com,youtube-nocookie.com##.ytp-paid-content-overlay
+youtube.com,youtube-noocokie.com##.annotation.iv-branding
+youtube.com,youtube-noocokie.com##.annotation.iv-promo
+youtube.com,youtube-noocokie.com##.iv-promo-video
+youtube.com,youtube-noocokie.com##.video-annotations
+youtube.com,youtube-noocokie.com##.ytp-cards-teaser
+
+! Pixiv
+||ads-pixiv.net^$third-party
+pixiv.net###spa-contents:has(.v-tags > .bold.ai-generated) > * > *:not(header, #vue-search-modal)
+pixiv.net##.list-item:has([alt*="AI-"],[alt*="AI,"],[alt*=" AI "],[alt*="ai gen"])
+pixiv.net##.list-item:has(.ai-generated)
+pixiv.net##.ad-frame-container
+pixiv.net##.description-text
+pixiv.net##.description-signup-header
+pixiv.net##.popular-search-trial
+pixiv.net##.premium-link
+pixiv.net##.premium-lead-t-footer
+pixiv.net##.gtm-work-fanbox
+pixiv.net##.user-booth-shop
+pixiv.net##[data-intersection-key="recommend-infinite-illust-grid-list-discovery"]
+pixiv.net##.pixpedia-lead-wire
+pixiv.net##div:has(> .pixpedia-works-navigation)
+pixiv.net##._gdpr-notify-header
+pixiv.net##.ui-alert
+pixiv.net##.swipe-detector:style(user-select: auto !important; -webkit-user-select: auto !important;)
+pixiv.net##+js(href-sanitizer, a[href^="/jump.php?url=http"], ?url)
+pixiv.net##+js(href-sanitizer, a[href^="/jump.php?http"])
+
+! Reddit
+reddit.com##+js(set, r.ui.initMWebBanner, noopFunc)
+reddit.com##.mobile-web-redirect-bar
+reddit.com##.listingsignupbar
+reddit.com##.commentsignupbar
+reddit.com##.reddit-infobar
+reddit.com##.locked-tagline
+reddit.com##.active.read-next
+reddit.com##.happening-now-wrap
+||thumbs.redditmedia.com^$css
+reddit.com###header-img
+reddit.com##.side .md
+reddit.com##.side > .spacer:not(:has(#search, .linkinfo, .titlebox))
+reddit.com##.user, .user + .separator
+reddit.com##li.share, li:has(.embed-comment, .hide-button), .li.login-required
+reddit.com##.commentarea .stickied[data-author="AutoModerator"]
+reddit.com##button.c-btn-primary.c-btn[name="over18"][value="no"]
+reddit.com##._1GdKQyDUWvhTFBDr0FsAkj:style(visibility: hidden !important;)
+reddit.com##.Zo-DKBkkLRYQJrXWLL0uI
+reddit.com##._23h0-EcaBUorIHC-JZyh6J
+reddit.com##._1oQyIsiPHYt6nx7VOmd1sz:style(padding-left: 0 !important;)
+reddit.com##._2fiIRtMpITeCAzXc4cANKp:style(margin-left: 10px !important;)
+reddit.com,~embed.reddit.com##html.theme-beta:not(:has([pagetype="cdn_media_page"])) > :is(head, body)
+||redditstatic.com/shreddit$script,domain=~embed.reddit.com
+@@||redditstatic.com/shreddit/*/shell$script
+reddit.com,~embed.reddit.com,redd.it##reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-overlay-display
+reddit.com,~embed.reddit.com,redd.it##html.theme-beta main:style(width: 100vw !important; height: 100vh !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important;)
+reddit.com,~embed.reddit.com,redd.it##html.theme-beta faceplate-tracker img:style(max-width: 100% !important; max-height: 100% !important; margin: 0 !important;)
+reddit.com,~embed.reddit.com,redd.it##shreddit-app::before:style(content: unset !important;)
+
+! Fandom
+||services.fandom.com/icbm/api/loader$script
+fandom.com##.top-ads-container
+fandom.com##.ad-slot-placeholder
+fandom.com##.notifications-box
+fandom.com##.mobile-community-bar__discussions
+fandom.com##.is-anon
+fandom.com##.beta-stars
+fandom.com##.render-wiki-recommendations
+fandom.com##.trfc-147
+fandom.com##.trfc161
+fandom.com##.article-comments-collapsible-menu
+fandom.com##.recirculation-prefooter
+fandom.com##.wiki-page-header > .has-edit-link > div
+fandom.com##.section-edit-link
+fandom.com##.section-edit-link + .vertical-separator
+fandom.com##.mobile-main-page__trending-articles
+fandom.com##.mobile-main-page__popular-categories
+fandom.com##.mw-search-createlink
+fandom.com##.mw-search-exists
+fandom.com##.unified-search__layout__right-rail
+fandom.com##.top-results
+fandom.com##.gallery-icon-container
+
+! Other
+||addtoany.com^
+||improving.duckduckgo.com^
+||duckduckgo.com^$removeparam=t
+duckduckgo.com##.L6fj2A3X2mfJl5kE8caF > div:empty
+duckduckgo.com##li:has(a[href*="ia=shopping"])
+duckduckgo.com##.related-searches
+duckduckgo.com##.footer--mobile
+duckduckgo.com##.footer
+duckduckgo.com##.js-atb-banner
+duckduckgo.com##+js(trusted-set-cookie, psb, -1)
+www.theverge.com,simpleflying.com##.twitter-tweet:style(color: gray !important)
+www.theverge.com##.duet--media--embed:style(min-height: unset !important;)
+www.theverge.com##div:has(> div > .duet--article--share-buttons)
+arstechnica.com##.ad.ad.ad.ad_crown
+arstechnica.com##.instream-wrap
+arstechnica.com##.superscroll-separator
+www.dexerto.com##[data-cy="Ad"], [data-cy="HomepageAdWrapper"], [data-cy="SignupWidget"],  [data-cy="QuickBack"]
+www.dexerto.com##div[id^="article"] > div.items-center:has(> div.flex > div.sticky > div[data-ad-unit-id])
+www.dexerto.com##[data-cy="Container"]:has(> div.col-span-full > div.flex > div.flex > div.top-0 > div[data-ad-unit-id])
+www.dexerto.com##label.rounded-full
+www.dexerto.com##.bg-neutral-grey.justify-center.flex[data-cy="LinkButton"]:style(display: flex !important;)
+www.dexerto.com##[data-nosnippet="true"]:style(min-height: unset !important;)
+globalnews.ca###home-promoBanners-mobile
+pravda.com.ua##[class^="unit_top"]pravda.com.ua##[class^="top_options_club"]
+pravda.com.ua##.advtext_mob
+liveuamap.com##.mobile-navigation
+liveuamap.com##.footer-news.phones
+nasaspaceflight.com##div[style^="text-align:"]
+w3schools.com##.sidesection
+w3schools.com###footer > div:has(> .bottomad), #footer > div:has(> .bottomad) + hr
+minify-js.com,minify-css.com##.fixed.bottom-0
+simpleflying.com##+js(cookie-remover, articlesRead)
+simpleflying.com##+js(set, window.trackUnauthenticatedArticleViews, noopFunc)
+simpleflying.com##+js(rmnt, script, https://frequentflesh.com/)
+simpleflying.com##.w-rich:style(min-height: unset !important;)
+flightradar24.com##.bottom-22
+flightradar24.com##.bottom-menu:style(margin-bottom: 1.2rem !important)
+flightradar24.com##.gm-style > div[style^='pointer-events: none']
+flightradar24.com###map_canvas img[alt="Google"]
+flightradar24.com###map_canvas .gmnoprint
+flightradar24.com###open-in-app-banner
+flightradar24.com##body:not(.in-app-button-removed) #top_navigation:style(top: 0 !important;)
+flightradar24.com###pb-slot-fr24-airport
+flightradar24.com##div:has(> #pb-slot-fr24-map-mob-atf)
+flightradar24.com##.gm-style > div[style]:style(border: unset !important;)
+flightradar24.com##div:has(> [data-testid="aircraft__follow-flight-button"]) button:nth-of-type(3n+1)
+flightradar24.com##div:has(> [data-testid="aircraft__follow-flight-button"]) button:style(margin: 0 !important;)
+flightaware.com##.flightPagePremiumUpsell
+flightaware.com##.flightPagePromoMessage
+remotedesktop.google.com##div[jsname="rTn8xd"], section[jsname="XOLnd"]
+remotedesktop.google.com##div[jsname="QYx1vf"]:style(width: calc(100vw - 60px) !important;)
+@@||commons.wikimedia.org^$generichide
+wikimedia.org,wiktionary.org,minecraft.wiki,wiki.gg###siteNotice
+minecraft.wiki##.mw-editsection
+minecraft.wiki##.page-actions-edit
+minecraft.wiki##.page-actions-watch
+||minecraft.wiki/load.php?format=original&image=edit
+||minecraft.wiki/load.php?format=original&image=star
+###posts .hidden-posts-notice
+*$3p,script,domain=gelbooru.com
+@@||cdn.fluidplayer.com^$domain=gelbooru.com
+@@||ajax.googleapis.com^$domain=gelbooru.com|realbooru.com
+@@||gelbooru.com/extras/howtosearch$image
+gelbooru.com##div[style^="text-align: center; padding: 10px;"]
+gelbooru.com##center:has(div[style$="height: 250px; "])
+gelbooru.com##div[style*="height:"]:has(> [id^="ts_ad_"])
+gelbooru.com##.mobileActions .showEditBox
+gelbooru.com##+js(ra, target, .mobileActions a[target="_blank"])
+gelbooru.com##+js(aopr, ExoLoader)
+*$3p,script,domain=realbooru.com
+realbooru.com##div[style^="margin: 20px"]:has(iframe[src*="exosrv.com"])
+realbooru.com##center > iframe
+realbooru.com##+js(aopr, ExoLoader)
+*$3p,script,domain=rule34.xxx
+@@||ajax.cloudflare.com^$from=rule34.xxx
+rule34.xxx##+js(aopr, newcontent)
+###misskey_app .xF6dY
+*$3p,script,domain=tumblr.com
+*$3p,frame,domain=tumblr.com
+tumblr.com##.TopeC
+tumblr.com##[data-cell-id^="timelineObject"]
+tumblr.com##.smX3m.hgN9e.VC_rY.IvzMP
+medibang.com##.asArtStreetTopNotice
+medibang.com##div[class*="AdBlock"]
+medibang.com##.mdbnContestList__footerMenu
+medibang.com##.mdbnPictureViewer #viewerImage:style(pointer-events: auto !important;)
+imgur.com##div[class^="SeeImgurOIA-"], .Navigation-buttons, .Info-Wrapper, .GalleryPage-bg, .Gallery-EngagementBar, .BottomRecirc
+imgur.com##.Gallery-Byline:style(margin: 0 !important;)
+imgur.com##+js(aeld, /touchend/)
+picuki.com##header
+piokok.com##[class^="ah-box"], .share, .similar, .swbtn_igtv, .swbtn_stories
+piokok.com##.swbtn:style(width: 50% !important;)
+piokok.com##+js(ra, target, .cover_link)
+piokok.com##+js(ra, target, .pic > a)
