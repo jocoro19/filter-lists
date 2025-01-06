@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2025-01-03.3
+! Version: 2025-01-06.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -177,7 +177,7 @@ pixiv.net##.description-text
 pixiv.net##.description-signup-header
 pixiv.net##.popular-search-trial
 pixiv.net##.premium-link
-pixiv.net##.premium-lead-t-footer
+pixiv.net##footer div[class*="t-footer"]
 pixiv.net##.gtm-work-fanbox
 pixiv.net##.user-booth-shop
 pixiv.net##[data-intersection-key="recommend-infinite-illust-grid-list-discovery"]
