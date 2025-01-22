@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2025-01-08.3
+! Version: 2025-01-22.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -262,6 +262,7 @@ www.dexerto.com##[data-cy="Container"]:has(> div.col-span-full > div.flex > div.
 www.dexerto.com##label.rounded-full
 www.dexerto.com##.bg-neutral-grey.justify-center.flex[data-cy="LinkButton"]:style(display: flex !important;)
 www.dexerto.com##[data-nosnippet="true"]:style(min-height: unset !important;)
+www.ctvnews.ca##.b-ads-custom
 globalnews.ca###home-promoBanners-mobile
 pravda.com.ua##[class^="unit_top"]pravda.com.ua##[class^="top_options_club"]
 pravda.com.ua##.advtext_mob
