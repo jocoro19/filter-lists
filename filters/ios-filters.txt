@@ -1,30 +1,35 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2025-01-08.2
+! Version: 2025-01-08.3
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
 
-! Blocked websites
-||tiktok.com^
-||douyin.com^
-||facebook.com^
-||instagram.com^
-||threads.net^$third-party
-||messenger.com^
-||whatsapp.com^
-||meta.com^
-*$domain=tiktok.com|douyin.com|facebook.com|instagram.com|messenger.com|whatsapp.com|meta.com
+! Disable generic filtering on local pages
+@@||10.0.0.95^$generichide
 
-! Cosmetic filtering fallback
-tiktok.com,douyin.com,facebook.com,instagram.com,messenger.com,whatsapp.com,meta.com##body
+! Blocked websites
+||tiktok.com^$document
+||facebook.com^$document
+||instagram.com^$document
+||bing.com^$document
 
 ! Embed blocking
+||instagram.com^$script,third-party
+||tiktok.com^$script,third-party
+||platform.twitter.com^$script,third-party
+||embed.bsky.app^$script,third-party
 ##.tiktok-embed
 ##.instagram-media
 
-! Disable generic filtering on local pages
-@@||10.0.0.95^$generichide
+! Twitter/X blocking (temporary)
+twitter.com,x.com##+js(ra, href|src|d|rel|name|content|media)
+twitter.com,x.com##+js(rmnt, script, /[\s\S]/)
+*$domain=twitter.com|x.com
+||twitter.com^$third-party
+||x.com^$third-party
+*$removeparam=s,domain=twitter.com|x.com
+*$removeparam=t,domain=twitter.com|x.com
 
 ! Wikipedia
 ||m.wikipedia.org/w/load.php?modules=skins.minerva.icons.wikimedia&image=edit
@@ -40,15 +45,6 @@ wikipedia.org###frb-inline
 wikipedia.org###frb-nag
 wikipedia.org##[x-apple-data-detectors="true"]:style(pointer-events: none !important; color: inherit !important;)
 www.wikipedia.org##+js(set-cookie, hideWikipediaPortalBanner, 1)
-
-! Twitter/"X" blocking
-twitter.com,x.com##+js(ra, href|src|d|rel|name|content|media)
-twitter.com,x.com##+js(rmnt, script, /[\s\S]/)
-*$domain=twitter.com|x.com
-||twitter.com^$third-party
-||x.com^$third-party
-*$removeparam=s,domain=twitter.com|x.com
-*$removeparam=t,domain=twitter.com|x.com
 
 ! Block "Sign in with Google" popups
 ||accounts.google.com/gsi/iframe/select$subdocument
@@ -303,7 +299,7 @@ minecraft.wiki##.page-actions-watch
 ||minecraft.wiki/load.php?format=original&image=edit
 ||minecraft.wiki/load.php?format=original&image=star
 ###posts .hidden-posts-notice
-*$3p,script,domain=gelbooru.com
+*$third-party,script,domain=gelbooru.com
 @@||cdn.fluidplayer.com^$domain=gelbooru.com
 @@||ajax.googleapis.com^$domain=gelbooru.com|realbooru.com
 @@||gelbooru.com/extras/howtosearch$image
@@ -313,16 +309,16 @@ gelbooru.com##div[style*="height:"]:has(> [id^="ts_ad_"])
 gelbooru.com##.mobileActions .showEditBox
 gelbooru.com##+js(ra, target, .mobileActions a[target="_blank"])
 gelbooru.com##+js(aopr, ExoLoader)
-*$3p,script,domain=realbooru.com
+*$third-party,script,domain=realbooru.com
 realbooru.com##div[style^="margin: 20px"]:has(iframe[src*="exosrv.com"])
 realbooru.com##center > iframe
 realbooru.com##+js(aopr, ExoLoader)
-*$3p,script,domain=rule34.xxx
+*$third-party,script,domain=rule34.xxx
 @@||ajax.cloudflare.com^$from=rule34.xxx
 rule34.xxx##+js(aopr, newcontent)
 ###misskey_app .xF6dY
-*$3p,script,domain=tumblr.com
-*$3p,frame,domain=tumblr.com
+*$third-party,script,domain=tumblr.com
+*$third-party,frame,domain=tumblr.com
 tumblr.com##.TopeC
 tumblr.com##[data-cell-id^="timelineObject"]
 tumblr.com##.smX3m.hgN9e.VC_rY.IvzMP
