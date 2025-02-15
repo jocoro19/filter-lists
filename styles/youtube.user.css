@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.26.5
+@version     1.26.6
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -254,7 +254,7 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
     }
 
 	/* Live stream chat */
-    yt-live-chat-renderer iron-pages:has(> #input-panel) {
+    yt-live-chat-renderer #panel-pages:has(> #input-panel) {
 		border-bottom: none !important;
 		&:has(> #input-panel:empty) {
 			border-top: none !important;

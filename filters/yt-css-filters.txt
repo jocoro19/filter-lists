@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.26.5
+! Version: 1.26.6
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -81,8 +81,8 @@ www.youtube.com##ytd-engagement-panel-section-list-renderer:is([target-id*="chap
 www.youtube.com##ytd-engagement-panel-section-list-renderer:is([target-id*="chapters"],[target-id*="transcript"]) #subheader .ytChipBarViewModelChipWrapper:nth-of-type(2):style(order: -1 !important;)
 
 ! Live stream chat
-www.youtube.com##yt-live-chat-renderer iron-pages:has(> #input-panel):style(border-bottom: none !important;)
-www.youtube.com##yt-live-chat-renderer iron-pages:has(> #input-panel:empty):style(border-top: none !important;)
+www.youtube.com##yt-live-chat-renderer #panel-pages:has(> #input-panel):style(border-bottom: none !important;)
+www.youtube.com##yt-live-chat-renderer #panel-pages:has(> #input-panel:empty):style(border-top: none !important;)
 www.youtube.com##ytd-live-chat-frame[theater-watch-while]:style(border-bottom: 0 !important; border-radius: 0 !important;)
 www.youtube.com##ytd-live-chat-frame:not([collapsed]):style(min-height: var(--ytd-watch-flexy-panel-max-height) !important;)
 www.youtube.com##ytd-live-chat-frame[collapsed]:has(#show-hide-button):style(display: flex !important;)
