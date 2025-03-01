@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2025-02-14.3
+! Version: 2025-02-28.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -94,6 +94,7 @@ m.youtube.com##ytm-shelf-renderer:has([data-type="BADGE_STYLE_TYPE_MEMBERS_ONLY"
 m.youtube.com##.single-column-browse-results-tab-bar:has([tab-identifier="FEhashtag"])
 m.youtube.com##.engagement-panel-section-list-subheader .ytChipBarViewModelChipWrapper:nth-of-type(2):style(order: -1 !important;)
 m.youtube.com##ytm-pivot-bar-item-renderer .yt-spec-avatar-shape--avatar-size-extra-small:style(width: 20px !important; height: 20px !important;)
+m.youtube.com##ytm-single-column-watch-next-results ytm-compact-channel-renderer
 m.youtube.com##ytm-playlist-video-renderer:has([src="https://i.ytimg.com/img/no_thumbnail.jpg"])
 m.youtube.com##ytm-multi-page-menu-section-renderer:has(a[href^="https://www.youtubekids.com"])
 m.youtube.com##+js(href-sanitizer, a[href^="https://www.youtube.com/redirect"][href*="q=http"], ?q)
