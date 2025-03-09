@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.27.2
+! Version: 1.27.3
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -26,7 +26,7 @@ www.youtube.com##.yt-spec-avatar-shape__button--button-giant, .yt-spec-avatar-sh
 www.youtube.com##yt-dynamic-text-view-model .yt-core-attributed-string--inline-flex-mod:style(height: unset !important;)
 www.youtube.com##yt-content-metadata-view-model > div:nth-of-type(1) .yt-content-metadata-view-model-wiz__delimiter
 www.youtube.com##yt-content-metadata-view-model > div:nth-of-type(1) .yt-content-metadata-view-model-wiz__delimiter + span
-www.youtube.com##yt-description-preview-view-model:style(position: absolute !important; top: 4px !important; left: 96px !important; width: 100% !important; height: 50px !important; max-width: unset !important; margin: 0 !important;)
+www.youtube.com##yt-description-preview-view-model:style(position: absolute !important; top: 4px !important; left: 96px !important; width: calc(100% - 96px) !important; height: 50px !important; max-width: unset !important; margin: 0 !important;)
 www.youtube.com##yt-description-preview-view-model truncated-text
 www.youtube.com##yt-attribution-view-model
 www.youtube.com##yt-flexible-actions-view-model:style(position: absolute !important; top: 0 !important;	right: 0 !important; margin: 0 !important; padding-left: 12px !important; height: 100% !important;	align-items: center !important;	flex-direction: row-reverse !important;)

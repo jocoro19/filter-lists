@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.27.2
+@version     1.27.3
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -91,7 +91,7 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 		position: absolute !important;
 		top: 4px !important;
 		left: 96px !important;
-		width: 100% !important;
+		width: calc(100% - 96px) !important;
 		height: 50px !important;
 		max-width: unset !important;
 		margin: 0 !important;
