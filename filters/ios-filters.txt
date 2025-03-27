@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2025-03-26.3
+! Version: 2025-03-26.4
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -345,6 +345,7 @@ pixnoy.com##.cover_w, .post .view, .swiper-wrapper, .swiper-slide:style(height: 
 pixnoy.com##.swbtn:style(width: 50% !important;)
 pixnoy.com##.meta :is(.sum, .time):style(display: block !important;)
 pixnoy.com##+js(ra, target, .cover_link)
+pixnoy.com##+js(trusted-set-attr, .cover-link, target, _self)
 
 ! Special CSS injection filters (disabled on Ublock)
 !#if !ext_ublock
@@ -354,7 +355,7 @@ reddit.com##+js(rpnt, script, /(var BETA_HOST.*)/, `document.head.insertAdjacent
 reddit.com##+js(rpnt, script, /(window\.CLIENT_EXPERIMENTS)/, `const url1 = new URL(location.href); url2 = new URL(url1.searchParams.get("url")); document.title = url2.pathname.slice(1); document.head.insertAdjacentHTML("afterbegin", "<style>reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-overlay-display { display: none !important; } html.theme-beta main { width: 100vw !important; height: 100vh !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; } html.theme-beta main img { max-width: 100% !important; max-height: 100% !important; margin: 0 !important; } shreddit-app::before { content: unset !important; }</style>"); $1`)
 duckduckgo.com##+js(rpnt, script, /(!function\(e\,t\,n\))/, `document.head.insertAdjacentHTML("afterbegin", "<style>.L6fj2A3X2mfJl5kE8caF > div:empty, li:has(a[href*='ia=shopping']) { display: none !important; }</style>"); $1`)
 
-pixnoy.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>[class^='ah-box'], .similar, .swbtn_igtv, .swbtn_stories, .header, .wid.cf, .as-bar, .footer {display: none !important;} .cover_w, .post .view, .swiper-wrapper, .swiper-slide {height: 100% !important;} body {padding: 5rem 0 !important;} .swbtn {width: 50% !important;} .meta :is(.sum, .time) {display: block !important;}</style>"); $1`)
+! pixnoy.com##+js(rpnt, script, /(window\.dataLayer =)/, `document.head.insertAdjacentHTML("afterbegin", "<style>[class^='ah-box'], .similar, .swbtn_igtv, .swbtn_stories, .header, .wid.cf, .as-bar, .footer {display: none !important;} .cover_w, .post .view, .swiper-wrapper, .swiper-slide {height: 100% !important;} body {padding: 5rem 0 !important;} .swbtn {width: 50% !important;} .meta :is(.sum, .time) {display: block !important;}</style>"); $1`)
 imgur.com##+js(rpnt, script, /(dataLayer=\[])/, `document.head.insertAdjacentHTML("afterbegin", "<style>div[class^='SeeImgurOIA-'], .Navigation-buttons, .Info-Wrapper, .GalleryPage-bg, .Gallery-EngagementBar, .BottomRecirc { display: none !important; } .Gallery-Byline { margin: 0 !important;}</style>"); $1`)
 fandom.com##+js(rpnt, script, /(^document\.documentElement\.className=)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.top-ads-container, .ad-slot-placeholder, .notifications-box, .mobile-community-bar__discussions, .is-anon, .beta-stars, .render-wiki-recommendations, .trfc-147, .recirculation-prefooter, .wiki-page-header > .has-edit-link > div, .section-edit-link, .section-edit-link + .vertical-separator, .mobile-main-page__trending-articles, .mobile-main-page__popular-categories { display: none !important; }</style>"); $1`)
 !#endif
