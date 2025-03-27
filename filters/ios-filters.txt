@@ -355,7 +355,7 @@ reddit.com##+js(rpnt, script, /(window\.CLIENT_EXPERIMENTS)/, `const url1 = new 
 duckduckgo.com##+js(rpnt, script, /(!function\(e\,t\,n\))/, `document.head.insertAdjacentHTML("afterbegin", "<style>.L6fj2A3X2mfJl5kE8caF > div:empty, li:has(a[href*='ia=shopping']) { display: none !important; }</style>"); $1`)
 
 pixnoy.com##+js(trusted-set-attr, "[class^='ah-box'], .similar, .swbtn_igtv, .swbtn_stories, .header, .wid.cf, .as-bar, .footer", style, display: none !important;)
-pixnoy.com##+js(trusted-set-attr, ".cover_w, .post .view, .swiper-wrapper, .swiper-slide", style, height: 100% !important;)
+pixnoy.com##+js(trusted-set-attr, ".cover_w, .post .view", style, height: 100% !important;)
 pixnoy.com##+js(trusted-set-attr, ".swbtn_posts, .swbtn_tagged", style, width: 50% !important;)
 pixnoy.com##+js(trusted-set-attr, ".meta .sum", style, display: block !important;)
 pixnoy.com##+js(trusted-set-attr, body, style, padding: 5rem 0 !important;)
