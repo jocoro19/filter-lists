@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2025-03-27.2
+! Version: 2025-03-27.3
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -339,7 +339,7 @@ medibang.com##.mdbnPictureViewer #viewerImage:style(pointer-events: auto !import
 imgur.com##div[class^="SeeImgurOIA-"], .Navigation-buttons, .Info-Wrapper, .GalleryPage-bg, .Gallery-EngagementBar, .BottomRecirc
 imgur.com##.Gallery-Byline:style(margin: 0 !important;)
 imgur.com##+js(aeld, /touchend/)
-pixnoy.com##[class^="ah-box"], .similar, .swbtn_igtv, .swbtn_stories, .header, .wid.cf, .as-bar, .footer
+pixnoy.com##[class^="ah-box"], .similar, .swbtn_igtv, .swbtn_stories, .header, .wid.cf, .as-bar, .footer, .__cf_email__
 pixnoy.com##.cover_w, .post .view, .swiper-wrapper, .swiper-slide:style(height: 100% !important;)
 pixnoy.com##.swbtn:style(width: 50% !important;)
 pixnoy.com##.meta .sum:style(display: block !important;)
@@ -354,7 +354,7 @@ reddit.com##+js(rpnt, script, /(var BETA_HOST.*)/, `document.head.insertAdjacent
 reddit.com##+js(rpnt, script, /(window\.CLIENT_EXPERIMENTS)/, `const url1 = new URL(location.href); url2 = new URL(url1.searchParams.get("url")); document.title = url2.pathname.slice(1); document.head.insertAdjacentHTML("afterbegin", "<style>reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-overlay-display { display: none !important; } html.theme-beta main { width: 100vw !important; height: 100vh !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important; } html.theme-beta main img { max-width: 100% !important; max-height: 100% !important; margin: 0 !important; } shreddit-app::before { content: unset !important; }</style>"); $1`)
 duckduckgo.com##+js(rpnt, script, /(!function\(e\,t\,n\))/, `document.head.insertAdjacentHTML("afterbegin", "<style>.L6fj2A3X2mfJl5kE8caF > div:empty, li:has(a[href*='ia=shopping']) { display: none !important; }</style>"); $1`)
 
-pixnoy.com##+js(trusted-set-attr, "[class^='ah-box'], .similar, .swbtn_igtv, .swbtn_stories, .header, .wid.cf, .as-bar, .footer", style, display: none !important;)
+pixnoy.com##+js(trusted-set-attr, "[class^='ah-box'], .similar, .swbtn_igtv, .swbtn_stories, .header, .wid.cf, .as-bar, .footer, .__cf_email__", style, display: none !important;)
 pixnoy.com##+js(trusted-set-attr, ".cover_w, .post .view", style, height: 100% !important;)
 pixnoy.com##+js(trusted-set-attr, ".swbtn_posts, .swbtn_tagged", style, width: 50% !important;)
 pixnoy.com##+js(trusted-set-attr, ".meta .sum", style, display: block !important;)
