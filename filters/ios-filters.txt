@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2025-04-09.5
+! Version: 2025-04-10.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -360,7 +360,7 @@ duckduckgo.com##+js(rpnt, script, /(!function\(e\,t\,n\))/, `document.head.inser
 imgur.com##+js(rpnt, script, /(dataLayer=\[])/, `document.head.insertAdjacentHTML("afterbegin", "<style>div[class^='SeeImgurOIA-'], .Navigation-buttons, .Info-Wrapper, .GalleryPage-bg, .Gallery-EngagementBar, .BottomRecirc { display: none !important; } .Gallery-Byline { margin: 0 !important;}</style>"); $1`)
 fandom.com##+js(rpnt, script, /(^document\.documentElement\.className=)/, `document.head.insertAdjacentHTML("afterbegin", "<style>.top-ads-container, .ad-slot-placeholder, .notifications-box, .mobile-community-bar__discussions, .is-anon, .beta-stars, .render-wiki-recommendations, .trfc-147, .recirculation-prefooter, .wiki-page-header > .has-edit-link > div, .section-edit-link, .section-edit-link + .vertical-separator, .mobile-main-page__trending-articles, .mobile-main-page__popular-categories { display: none !important; }</style>"); $1`)
 pixnoy.com##+js(rpnt, script, /(\(function\(\))/, `document.head.insertAdjacentHTML("afterbegin", "<style>[class^='ah-box'], .similar, .swbtn_igtv, .swbtn_stories, .header, .wid.cf, .as-bar, .footer, .__cf_email__ {display: none !important;} .cover_w, .post .view, .swiper-wrapper, .swiper-slide {height: 100% !important;} body {padding: 5rem 0 !important;} .swbtn {width: 50% !important;} .meta :is(.sum, .time) {display: block !important;}</style>"); $1`)
-pixnoy.com##+js(rmnt, #text, /^(pixnoy|account insight|post_insight|score|index|health rate|users ratio|weeks posts|similar user)$/i)
+pixnoy.com##+js(rmnt, #text, /^(pixnoy|account insight|post insight|score|index|health rate|users ratio|weeks posts|similar user)$/i)
 pixnoy.com##+js(trusted-set-attr, "[class^='ah-box'], .similar, .swbtn_igtv, .swbtn_stories, .header, .wid.cf, .as-bar, .footer, .__cf_email__", style, display: none !important;)
 pixnoy.com##+js(trusted-set-attr, ".swbtn_posts, .swbtn_tagged", style, width: 50% !important;)
 pixnoy.com##+js(trusted-set-attr, ".meta .sum", style, display: block !important;)
