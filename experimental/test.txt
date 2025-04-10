@@ -3,5 +3,3 @@
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
-
-pixnoy.com##+js(rpnt, script, /(window\.dataLayer =)/, `(()=>{function e(){document.querySelectorAll(".item:has(> .item)").forEach((e=>{const t=e.querySelector(".sum");t.insertAdjacentElement("afterend",t.querySelector(".time")),t.insertAdjacentElement("afterend",t.querySelector(".count")),Array.from(e.querySelectorAll(".item")).reverse().forEach((t=>{e.insertAdjacentElement("afterend",t)}))}))}document.title=document.title.replace(/ (Instagram profile, stories )?- Pixnoy$/,""),location.pathname.startsWith("/profile/")&&(location.pathname.endsWith("/tagged/")?document.title=document.title.replace(/ Instagram tagged$/,""):document.querySelector(".be_un a")&&location.assign(document.querySelector(".be_un a").href),addEventListener("DOMContentLoaded",(()=>{e();const t=new MutationObserver(e),n=document.querySelector(".items");n&&t.observe(n,{childList:!0})})))})(); $&`)
