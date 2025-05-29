@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2025-05-28.1
+! Version: 2025-05-28.2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -169,7 +169,8 @@ youtube.com,youtube-noocokie.com##.iv-promo-video
 youtube.com,youtube-noocokie.com##.video-annotations
 youtube.com,youtube-noocokie.com##.ytp-cards-teaser
 youtube.com,youtube-nocookie.com##.ytwPlayerFullscreenActionMenuHost
-youtube.com,youtube-nocookie.com##.player-controls-bottom, .watch-page-progress-bar:style(bottom: 0 !important;)
+youtube.com,youtube-nocookie.com##.fullscreen-controls-always-on .player-controls-bottom:style(bottom: 30px !important;)
+youtube.com,youtube-nocookie.com##.fullscreen-controls-always-on .watch-page-progress-bar:style(bottom: 0 !important;)
 
 ! Pixiv
 ||ads-pixiv.net^$third-party
