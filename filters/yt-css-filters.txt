@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.27.3
+! Version: 1.27.4
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -74,9 +74,7 @@ www.youtube.com##ytd-search > #container:style(width: calc(100% - 88px) !importa
 www.youtube.com##ytd-video-renderer[use-bigger-thumbs] ytd-thumbnail, ytd-playlist-renderer[use-bigger-thumbs] ytd-playlist-thumbnail, ytd-channel-renderer[use-bigger-thumbs] #avatar-section:style(max-width: 360px !important; min-width: 240px !important;)
 
 ! Video recommendations sidebar
-www.youtube.com###secondary-inner.ytd-watch-flexy:style(--ytd-margin-6x: 12px !important; display: flex !important; flex-direction: column !important;)
-www.youtube.com###secondary-inner.ytd-watch-flexy > #chat-container:style(order: 1 !important;)
-www.youtube.com###secondary-inner.ytd-watch-flexy > #related:style(order: 2 !important;)
+www.youtube.com###secondary-inner.ytd-watch-flexy:style(--ytd-margin-6x: 12px !important;)
 
 ! Video chapters
 www.youtube.com##ytd-engagement-panel-section-list-renderer:is([target-id*="chapters"],[target-id*="transcript"]) #header #subtitle:empty:style(padding-top: 0 !important;)
