@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS Basic YouTube Filters
-! Version: 2024-10-22.1
+! Version: 2025-06-24.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -89,6 +89,7 @@ youtube.com,youtube-nocookie.com##.ytp-watermark
 ! Hide placeholders displayed during loading
 www.youtube.com###home-container-skeleton
 www.youtube.com###ghost-cards
+www.youtube.com###ghost-comment-section
 
 ! Bypass redirect for links to external websites
 www.youtube.com##+js(href-sanitizer, a[href^="https://www.youtube.com/redirect"][href*="q=http"], ?q)
