@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.27.4
+@version     1.27.5
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -102,7 +102,7 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 	yt-attribution-view-model {
 		display: none !important;
 	}
-	yt-flexible-actions-view-model {
+	yt-page-header-view-model yt-flexible-actions-view-model {
 		position: absolute !important;
 		top: 0 !important;
 		right: 0 !important;
