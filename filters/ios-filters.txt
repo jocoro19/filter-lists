@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2025-07-30.1
+! Version: 2025-07-30.2
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -363,6 +363,7 @@ pixnoy.com##.swbtn:style(width: 50% !important;)
 pixnoy.com##.meta .sum:style(display: block !important;)
 pixnoy.com##body:style(padding: 5rem 0 !important;)
 pixnoy.com##+js(ra, target, ".cover_link, .pic > a", stay)
+pixnoy.com##+js(set, setInterval, noopFunc)
 
 ! Special CSS injection filters (disabled on Ublock)
 !#if !ext_ublock
