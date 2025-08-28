@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.27.6
+@version     1.27.7
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -176,11 +176,11 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 		margin-bottom: 32px !important;
 	}
 	ytd-rich-grid-renderer {
-		& :is(#video-title, .yt-lockup-metadata-view-model-wiz__heading-reset > a) {
+		& :is(#video-title, .yt-lockup-metadata-view-model-wiz__heading-reset > a, .yt-lockup-metadata-view-model__title) {
 			font-size: 1.4rem !important;
 			line-height: 2rem !important;
 		}
-		& :is(#metadata, .yt-lockup-metadata-view-model-wiz__metadata) * {
+		& :is(#metadata, .yt-lockup-metadata-view-model-wiz__metadata, .yt-lockup-metadata-view-model__metadata) * {
 			font-size: 1.2rem !important;
 			line-height: 1.8rem !important;
 		}
