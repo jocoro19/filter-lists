@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.27.8
+@version     1.27.9
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -66,7 +66,7 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 	#page-header-banner-sizer {
 		padding-top: 16.25% !important;
 	}
-	.yt-image-banner-view-model-wiz {
+	.yt-image-banner-view-model-wiz, yt-image-banner-view-model {
 		border-radius: 0 !important;
 		& img {
 			object-position: 0 0 !important;

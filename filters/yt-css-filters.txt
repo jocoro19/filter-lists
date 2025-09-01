@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.27.8
+! Version: 1.27.9
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -20,8 +20,8 @@ www.youtube.com##[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer
 ! Make the channel page layout more compact
 www.youtube.com###page-header-banner:style(padding: 0 !important;)
 www.youtube.com###page-header-banner-sizer:style(padding-top: 16.25% !important;)
-www.youtube.com##.yt-image-banner-view-model-wiz:style(border-radius: 0 !important;)
-www.youtube.com##.yt-image-banner-view-model-wiz img:style(object-position: 0 0 !important;)
+www.youtube.com##.yt-image-banner-view-model-wiz, yt-image-banner-view-model:style(border-radius: 0 !important;)
+www.youtube.com##.yt-image-banner-view-model-wiz img, yt-image-banner-view-model img:style(object-position: 0 0 !important;)
 www.youtube.com##.yt-spec-avatar-shape__button--button-giant, .yt-spec-avatar-shape--avatar-size-giant:style(width: 80px !important; height: 80px !important;)
 www.youtube.com##yt-dynamic-text-view-model .yt-core-attributed-string--inline-flex-mod:style(height: unset !important;)
 www.youtube.com##yt-content-metadata-view-model > div:nth-of-type(1) .yt-content-metadata-view-model-wiz__delimiter
