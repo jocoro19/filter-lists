@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2025-09-09.1
+! Version: 2025-09-22.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -44,6 +44,7 @@ wikipedia.org###siteNotice
 wikipedia.org###frb-inline
 wikipedia.org###frb-nag
 wikipedia.org##.read-more-container
+wikipedia.org##.cdx-typeahead-search__menu:not(.cdx-menu--has-footer)
 wikipedia.org##[x-apple-data-detectors="true"]:style(pointer-events: none !important; color: inherit !important;)
 www.wikipedia.org##+js(set-cookie, hideWikipediaPortalBanner, 1)
 
