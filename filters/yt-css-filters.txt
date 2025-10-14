@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.27.10
+! Version: 1.27.11
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -13,6 +13,9 @@ www.youtube.com##ytd-browse:not([page-subtype="channels"]) :is(ytd-rich-grid-row
 www.youtube.com##ytd-browse:not([page-subtype="channels"]) :is(ytd-rich-section-renderer, ytd-continuation-item-renderer):style(grid-column: 1 / -1;)
 www.youtube.com##ytd-browse:not([page-subtype="channels"]) #content.ytd-rich-section-renderer:style(margin: 0 8px !important; max-width: unset !important;)
 www.youtube.com##ytd-browse:not([page-subtype="channels"]) .yt-spec-avatar-shape--live-ring .yt-spec-avatar-shape__live-badge
+www.youtube.com##ytd-browse:not([page-subtype="channels"]) .yt-lockup-view-model > yt-touch-feedback-shape
+www.youtube.com##ytd-browse:not([page-subtype="channels"]) .yt-lockup-view-model .yt-lockup-metadata-view-model__title:style(color: var(--yt-attributed-string-link-hover-color) !important;)
+www.youtube.com##ytd-browse:not([page-subtype="channels"]) .yt-lockup-view-model .yt-lockup-metadata-view-model__metadata:style(color: var(--yt-spec-text-secondary) !important;)
 www.youtube.com###ghost-cards
 www.youtube.com##ytd-rich-grid-media:style(max-width: unset !important;)
 www.youtube.com##[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer:style(padding-top: 0 !important;)
