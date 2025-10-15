@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.27.13
+@version     1.27.14
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -81,20 +81,20 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 	#page-header-banner-sizer {
 		padding-top: 16.25% !important;
 	}
-	.yt-image-banner-view-model-wiz, yt-image-banner-view-model {
+	#page-header .yt-image-banner-view-model-wiz, yt-image-banner-view-model {
 		border-radius: 0 !important;
 		& img {
 			object-position: 0 0 !important;
 		}
 	}
-	.yt-spec-avatar-shape__button--button-giant, .yt-spec-avatar-shape--avatar-size-giant {
+	#page-header .yt-spec-avatar-shape__button--button-giant, .yt-spec-avatar-shape--avatar-size-giant {
 		width: 80px !important;
 		height: 80px !important;
 	}
-	yt-dynamic-text-view-model .yt-core-attributed-string--inline-flex-mod {
+	#page-header yt-dynamic-text-view-model .yt-core-attributed-string--inline-flex-mod {
 		height: unset !important;
 	}
-    yt-content-metadata-view-model > div:nth-of-type(1) {
+    #page-header yt-content-metadata-view-model > div:nth-of-type(1) {
         & .yt-content-metadata-view-model__delimiter {
             display: none !important;
         }
