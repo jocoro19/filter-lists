@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.27.15
+! Version: 1.27.16
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -72,6 +72,7 @@ www.youtube.com##ytd-video-description-infocards-section-renderer > :not(#infoca
 www.youtube.com##ytd-structured-description-content-renderer ytd-reel-shelf-renderer
 www.youtube.com##yt-video-attributes-section-view-model
 www.youtube.com##ytd-video-description-transcript-section-renderer:style(padding-bottom: 0 !important; order: 1 !important;)
+www.youtube.com##ytd-watch-metadata #teaser-carousel
 
 ! Make thumbnails in search smaller
 www.youtube.com##ytd-search:style(padding-left: 0 !important; padding-right: 0 !important;)
