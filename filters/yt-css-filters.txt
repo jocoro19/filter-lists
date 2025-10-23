@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.27.16
+! Version: 1.27.17
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -98,9 +98,6 @@ www.youtube.com##ytd-live-chat-frame[collapsed]:has(#show-hide-button):style(dis
 www.youtube.com##ytd-live-chat-frame #show-hide-button ytd-button-renderer:style(margin: 0 !important;)
 www.youtube.com###columns:has(ytd-live-chat-frame #show-hide-button) #bottom-row > #teaser-carousel:style(display: flex !important;)
 www.youtube.com###full-bleed-container ytd-live-chat-frame:style(border-radius: 0 !important;)
-
-! History page
-www.youtube.com##ytd-app:has([page-subtype="history"]) ytd-popup-container yt-list-item-view-model:has(svg path[d^="M19 3h-4V2a1 1 0"]):style(order: -1 !important;)
 
 ! SponsorBlock UI
 www.youtube.com##.sponsorBlockCategoryPill:style(margin-right: 6px !important;)
