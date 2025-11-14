@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.27.17
+@version     1.27.18
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -241,6 +241,12 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
     ytd-watch-metadata #teaser-carousel {
         display: none !important;
     }
+
+	/* Add padding to comments */
+	ytd-comment-view-model #content {
+		padding-right: 32px !important;
+	}
+    
     
     /* Make thumbnails in search smaller */
     ytd-search {
@@ -260,7 +266,7 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
     #secondary-inner.ytd-watch-flexy {
         --ytd-margin-6x: 12px !important;
     }
-    
+
 	/* Video chapters */
 	ytd-engagement-panel-section-list-renderer:is([target-id*="chapters"],[target-id*="transcript"]) {
         & #header #subtitle:empty {
