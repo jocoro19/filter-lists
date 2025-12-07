@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.27.19
+@version     1.27.20
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -30,7 +30,7 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 			display: grid !important;
 			grid-template-columns: repeat(auto-fill, minmax(max(300px, 100% / 6), 1fr));
 			grid-auto-flow: row dense;
-			width: max(100% - 72px, 90%) !important;
+			width: 95% !important;
 			max-width: 3000px !important;
 			margin: auto !important;
 		}
