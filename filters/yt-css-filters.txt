@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.27.20
+! Version: 1.27.21
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -62,9 +62,6 @@ www.youtube.com##ytd-rich-grid-renderer :is(#metadata, .yt-lockup-metadata-view-
 
 ! Improve layout of video description
 www.youtube.com##tp-yt-paper-tooltip.ytd-watch-info-text:style(left: 0 !important; top: 30px !important;)
-www.youtube.com###description:style(pointer-events: none !important;)
-www.youtube.com###description :is(#expand, #collapse, #info-container, #items, a):style(pointer-events: auto !important;)
-www.youtube.com###description:hover:style(background-color: var(--yt-spec-badge-chip-background) !important;)
 www.youtube.com###description #structured-description > #items:style(display: flex !important; flex-direction: column !important;)
 www.youtube.com##ytd-video-description-infocards-section-renderer:style(padding: 0 !important;)
 www.youtube.com##ytd-video-description-infocards-section-renderer #infocards-section:not(:empty):style(padding-top: 16px !important;)
@@ -74,7 +71,7 @@ www.youtube.com##yt-video-attributes-section-view-model
 www.youtube.com##ytd-video-description-transcript-section-renderer:style(padding-bottom: 0 !important; order: 1 !important;)
 www.youtube.com##ytd-watch-metadata #teaser-carousel
 
-! Add padding to comments 
+! Add padding to comments
 www.youtube.com##ytd-comment-view-model #content:style(height: 48px !important;)
 
 ! Make thumbnails in search smaller

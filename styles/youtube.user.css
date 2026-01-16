@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.27.20
+@version     1.27.21
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -73,7 +73,7 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 	[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer {
 		padding-top: 0 !important;
 	}
-	
+
 	/* Make the channel page layout more compact */
 	#page-header-banner {
 		padding: 0 !important;
@@ -145,7 +145,7 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 	#content.ytd-app:has(ytd-browse[page-subtype="channels"]:not([hidden])) #background.ytd-masthead {
         background-color: var(--yt-spec-base-background) !important;
     }
-	
+
 	/* "About channel" popup */
 	tp-yt-paper-dialog:has(ytd-about-channel-renderer) {
 		margin: 48px !important;
@@ -173,7 +173,7 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 	yt-channel-external-link-view-model > img {
 		display: none !important;
 	}
-	
+
 	/* "For You" section on channel home tab */
 	[page-subtype="channels"] [should-use-mixed-list-height] {
 		--ytd-grid-video-width: unset !important;
@@ -185,7 +185,7 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 	[page-subtype="channels"] [override-arrow-position-for-mixed-shelf] :is(#left-arrow, #right-arrow) {
 		height: 118px !important;
 	}
-	
+
 	/* Make font smaller for video titles and video information */
 	ytd-rich-item-renderer {
 		margin-bottom: 32px !important;
@@ -200,24 +200,15 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 			line-height: 1.8rem !important;
 		}
 	}
-	
+
 	/* Improve layout of video description */
 	tp-yt-paper-tooltip.ytd-watch-info-text {
 		left: 0 !important;
 		top: 30px !important;
 	}
-	#description {
-		pointer-events: none !important;
-		& :is(#expand, #collapse, #info-container, #items, a) {
-			pointer-events: auto !important;
-		}
-		&:hover {
-			background-color: var(--yt-spec-badge-chip-background) !important;
-		}
-		& #structured-description > #items {
-			display: flex !important;
-			flex-direction: column !important;
-		}
+	#description #structured-description > #items {
+        display: flex !important;
+        flex-direction: column !important;
 	}
 	ytd-video-description-infocards-section-renderer {
 		padding: 0 !important;
@@ -246,8 +237,8 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 	ytd-comment-view-model #content {
 		padding-right: 32px !important;
 	}
-    
-    
+
+
     /* Make thumbnails in search smaller */
     ytd-search {
         padding-left: 0 !important;
@@ -261,7 +252,7 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 		max-width: 360px !important;
 		min-width: 240px !important;
 	}
-    
+
     /* Video recommendations sidebar */
     #secondary-inner.ytd-watch-flexy {
         --ytd-margin-6x: 12px !important;
@@ -314,7 +305,7 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
     #columns:has(ytd-live-chat-frame #show-hide-button) #bottom-row > #teaser-carousel {
         display: none !important;
     }
-	
+
 	/* SponsorBlock UI */
 	.sponsorBlockCategoryPill {
 		margin-right: 6px !important;
