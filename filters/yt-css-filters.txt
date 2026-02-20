@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.27.21
+! Version: 1.27.22
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -40,6 +40,8 @@ www.youtube.com##.yt-tab-shape-wiz, yt-tab-shape.yt-tab-shape:style(padding: 0 6
 www.youtube.com##.yt-tab-group-shape-wiz__slider, .tabGroupShapeSlider
 www.youtube.com##.yt-tab-shape-wiz__tab-bar--tab-bar-selected:style(background-color: var(--yt-spec-text-primary) !important; border-radius: 1px !important; height: 2px !important;)
 www.youtube.com###content.ytd-app:has(ytd-browse[page-subtype="channels"]:not([hidden])) #background.ytd-masthead:style(background-color: var(--yt-spec-base-background) !important;)
+www.youtube.com##[page-subtype="channels"] ytd-rich-grid-renderer chip-bar-view-model:style(padding-left: 0 !important;)
+www.youtube.com##[page-subtype="channels"] ytd-rich-grid-renderer #contents:style(padding-top: 16px !important;)
 
 ! "About channel" popup
 www.youtube.com##tp-yt-paper-dialog:has(ytd-about-channel-renderer):style(margin: 48px !important;)
