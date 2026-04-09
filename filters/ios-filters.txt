@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2026.04.09.3
+! Version: 2026.04.09.4
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -292,6 +292,7 @@ pravda.com.ua##[class^="unit_top"]pravda.com.ua##[class^="top_options_club"]
 pravda.com.ua##.advtext_mob
 liveuamap.com##.mobile-navigation
 liveuamap.com##.footer-news.phones
+||static.timesofisrael.com/js/reg_wall.js
 nasaspaceflight.com##div[style^="text-align:"]
 w3schools.com##.sidesection
 w3schools.com###footer > div:has(> .bottomad), #footer > div:has(> .bottomad) + hr
