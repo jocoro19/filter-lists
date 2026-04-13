@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.27.24
+@version     1.27.25
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -294,6 +294,9 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
         &[theater-watch-while] {
             border-bottom: 0 !important;
             border-radius: 0 !important;
+			& > iframe {
+				border-radius: 0 !important;
+			}
         }
         &:not([collapsed]) {
             min-height: var(--ytd-watch-flexy-panel-max-height) !important;
