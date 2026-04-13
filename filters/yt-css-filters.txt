@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS YouTube Fixes (filter list)
-! Version: 1.27.27
+! Version: 1.27.28
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -27,7 +27,7 @@ www.youtube.com###page-header-banner:style(padding: 0 !important;)
 www.youtube.com###page-header-banner-sizer:style(padding-top: 16.25% !important;)
 www.youtube.com###page-header .yt-image-banner-view-model-wiz, yt-image-banner-view-model:style(border-radius: 0 !important;)
 www.youtube.com###page-header .yt-image-banner-view-model-wiz img, yt-image-banner-view-model img:style(object-position: 0 0 !important;)
-www.youtube.com###page-header .yt-spec-avatar-shape__button--button-giant, .yt-spec-avatar-shape--avatar-size-giant:style(width: 80px !important; height: 80px !important;)
+www.youtube.com###page-header :is(.yt-spec-avatar-shape__button--button-giant, .yt-spec-avatar-shape--avatar-size-giant, .ytSpecAvatarShapeButtonGiant, .ytSpecAvatarShapeAvatarSizeGiant):style(width: 80px !important; height: 80px !important;)
 www.youtube.com###page-header yt-dynamic-text-view-model .yt-core-attributed-string--inline-flex-mod:style(height: unset !important;)
 www.youtube.com###page-header yt-content-metadata-view-model > div:nth-of-type(1) :is(.yt-content-metadata-view-model__delimiter, .ytContentMetadataViewModelDelimiter)
 www.youtube.com###page-header yt-content-metadata-view-model > div:nth-of-type(1) :is(.yt-content-metadata-view-model__delimiter, .ytContentMetadataViewModelDelimiter) + span
