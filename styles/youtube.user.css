@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.27.28
+@version     1.27.29
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -16,41 +16,41 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
 */
 
 @-moz-document domain("www.youtube.com") {
-	/* Improve home and subscriptions page layout and hide empty space when ads are blocked */
-	ytd-rich-grid-row, #contents.ytd-rich-grid-row {
-		display: contents !important;
-	}
-	ytd-browse:not([page-subtype="channels"]) {
-		& #header.ytd-rich-grid-renderer .chip-bar {
-			width: calc(100% - 88px) !important;
-			max-width: 3000px !important;
-			margin: auto !important;
-		}
-		& #contents.ytd-rich-grid-renderer {
-			display: grid !important;
-			grid-template-columns: repeat(auto-fill, minmax(max(300px, 100% / 6), 1fr));
-			grid-auto-flow: row dense;
-			width: 95% !important;
-			max-width: 3000px !important;
-			margin: auto !important;
-		}
-		& :is(ytd-rich-grid-row ytd-rich-item-renderer, #contents.ytd-rich-grid-renderer > ytd-rich-item-renderer) {
-			width: auto !important;
-			margin: 0 8px 32px !important;
-		}
-		& :is(ytd-rich-section-renderer, ytd-continuation-item-renderer) {
-			grid-column: 1 / -1;
-		}
-		& #content.ytd-rich-section-renderer {
-			margin: 0 8px !important;
-			max-width: unset !important;
-		}
-		& #ghost-cards {
-			display: none !important;
-		}
+    /* Improve home and subscriptions page layout and hide empty space when ads are blocked */
+    ytd-rich-grid-row, #contents.ytd-rich-grid-row {
+        display: contents !important;
+    }
+    ytd-browse:not([page-subtype="channels"]) {
+        & #header.ytd-rich-grid-renderer .chip-bar {
+            width: calc(100% - 88px) !important;
+            max-width: 3000px !important;
+            margin: auto !important;
+        }
+        & #contents.ytd-rich-grid-renderer {
+            display: grid !important;
+            grid-template-columns: repeat(auto-fill, minmax(max(300px, 100% / 6), 1fr));
+            grid-auto-flow: row dense;
+            width: 95% !important;
+            max-width: 3000px !important;
+            margin: auto !important;
+        }
+        & :is(ytd-rich-grid-row ytd-rich-item-renderer, #contents.ytd-rich-grid-renderer > ytd-rich-item-renderer) {
+            width: auto !important;
+            margin: 0 8px 32px !important;
+        }
+        & :is(ytd-rich-section-renderer, ytd-continuation-item-renderer) {
+            grid-column: 1 / -1;
+        }
+        & #content.ytd-rich-section-renderer {
+            margin: 0 8px !important;
+            max-width: unset !important;
+        }
+        & #ghost-cards {
+            display: none !important;
+        }
         & .yt-spec-avatar-shape--live-ring .yt-spec-avatar-shape__live-badge {
-			display: none !important;
-		}
+            display: none !important;
+        }
         & .yt-lockup-view-model > yt-touch-feedback-shape {
             margin: -6px !important;
             & * {
@@ -66,82 +66,79 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
         & .yt-lockup-metadata-view-model__menu-button {
             right: 0 !important;
         }
-	}
-	ytd-rich-grid-media {
-		max-width: unset !important;
-	}
-	[page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer {
-		padding-top: 0 !important;
-	}
+    }
+    ytd-rich-grid-media {
+        max-width: unset !important;
+    }
+    [page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer {
+        padding-top: 0 !important;
+    }
 
-	/* Make the channel page layout more compact */
-	#page-header-banner {
-		padding: 0 !important;
-	}
-	#page-header-banner-sizer {
-		padding-top: 16.25% !important;
-	}
-	#page-header .yt-image-banner-view-model-wiz, yt-image-banner-view-model {
-		border-radius: 0 !important;
-		& img {
-			object-position: 0 0 !important;
-		}
-	}
-	#page-header :is(.yt-spec-avatar-shape__button--button-giant, .yt-spec-avatar-shape--avatar-size-giant, .ytSpecAvatarShapeButtonGiant, .ytSpecAvatarShapeAvatarSizeGiant) {
-		width: 80px !important;
-		height: 80px !important;
-	}
-	#page-header yt-dynamic-text-view-model .yt-core-attributed-string--inline-flex-mod {
-		height: unset !important;
-	}
+    /* Make the channel page layout more compact */
+    #page-header-banner {
+        padding: 0 !important;
+    }
+    #page-header-banner-sizer {
+        padding-top: 16.25% !important;
+    }
+    #page-header .yt-image-banner-view-model-wiz, yt-image-banner-view-model {
+        border-radius: 0 !important;
+        & img {
+            object-position: 0 0 !important;
+        }
+    }
+    #page-header :is(.yt-spec-avatar-shape__button--button-giant, .yt-spec-avatar-shape--avatar-size-giant, .ytSpecAvatarShapeButtonGiant, .ytSpecAvatarShapeAvatarSizeGiant) {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    #page-header yt-dynamic-text-view-model .yt-core-attributed-string--inline-flex-mod {
+        height: unset !important;
+    }
     #page-header yt-content-metadata-view-model > div:nth-of-type(1) :is(.yt-content-metadata-view-model__delimiter, .ytContentMetadataViewModelDelimiter) {
         display: none !important;
         & + span {
             display: none !important;
         }
     }
-	yt-description-preview-view-model {
-		position: absolute !important;
-		top: 4px !important;
-		left: 96px !important;
-		width: calc(100% - 96px) !important;
-		height: 50px !important;
-		max-width: unset !important;
-		margin: 0 !important;
-		& truncated-text {
-			display: none !important;
-		}
-	}
-	yt-attribution-view-model {
-		display: none !important;
-	}
-	yt-page-header-view-model yt-flexible-actions-view-model {
-		position: absolute !important;
-		top: 0 !important;
-		right: 0 !important;
-		margin: 0 !important;
-		padding-left: 12px !important;
-		height: 100% !important;
-		align-items: center !important;
-		flex-direction: row-reverse !important;
-		& > div {
-			padding-right: 0 !important;
-			padding-left: 8px !important;
-		}
-	}
-	.yt-tab-shape-wiz, yt-tab-shape.yt-tab-shape {
-		padding: 0 6px !important;
-	}
-	.yt-tab-group-shape-wiz__slider, .tabGroupShapeSlider {
-		display: none !important;
-	}
-	.yt-tab-shape-wiz__tab-bar--tab-bar-selected {
-		background-color: var(--yt-spec-text-primary) !important;
-		border-radius: 1px !important;
-		height: 2px !important;
-	}
-	#content.ytd-app:has(ytd-browse[page-subtype="channels"]:not([hidden])) #background.ytd-masthead {
-        background-color: var(--yt-spec-base-background) !important;
+    yt-description-preview-view-model {
+        position: absolute !important;
+        top: 4px !important;
+        left: 96px !important;
+        width: calc(100% - 96px) !important;
+        height: 50px !important;
+        max-width: unset !important;
+        margin: 0 !important;
+        & truncated-text {
+            display: none !important;
+        }
+    }
+    yt-attribution-view-model {
+        display: none !important;
+    }
+    yt-page-header-view-model yt-flexible-actions-view-model {
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+        margin: 0 !important;
+        padding-left: 12px !important;
+        height: 100% !important;
+        align-items: center !important;
+        flex-direction: row-reverse !important;
+        & > div {
+            padding-right: 0 !important;
+            padding-left: 8px !important;
+        }
+    }
+    .yt-tab-shape-wiz, yt-tab-shape.yt-tab-shape {
+        padding: 0 6px !important;
+    }
+    .yt-tab-group-shape-wiz__slider, .tabGroupShapeSlider {
+        display: none !important;
+    }
+    .yt-tab-shape-wiz__tab-bar--tab-bar-selected {
+        background-color: var(--yt-spec-text-primary) !important;
+        border-radius: 1px !important;
+        height: 2px !important;
     }
     [page-subtype="channels"] ytd-rich-grid-renderer {
         & chip-bar-view-model {
@@ -151,98 +148,112 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
             padding-top: 16px !important;
         }
     }
+    [page-subtype="channels"] #primary ytd-rich-grid-renderer #contents {
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(max(240px, 100% / 5), 1fr));
+        gap: 16px;
+        padding-right: 12px;
+        width: calc(100% - 12px) !important;
+        & > ytd-rich-item-renderer {
+            width: 100% !important;
+            margin: 0 !important;
+        }
+        & > ytd-continuation-item-renderer {
+            grid-column: 1 / -1;
+        }
+    }
 
-	/* "About channel" popup */
-	tp-yt-paper-dialog:has(ytd-about-channel-renderer) {
-		margin: 48px !important;
-	}
-	ytd-engagement-panel-section-list-renderer:has(ytd-about-channel-renderer) {
-		margin: 0 !important;
-	}
-	ytd-about-channel-renderer {
-		& #about-container {
-			max-height: unset !important;
-			display: flex !important;
-			flex-direction: column !important;
-		}
-		& #links-section {
-			order: -1 !important;
-		}
-		& #description-container {
-			order: 1 !important;
-			padding: 12px 0 0 !important;
-		}
-		& #button-container {
-			order: 2 !important;
-		}
-	}
-	yt-channel-external-link-view-model > img {
-		display: none !important;
-	}
+    /* "About channel" popup */
+    tp-yt-paper-dialog:has(ytd-about-channel-renderer) {
+        margin: 48px !important;
+    }
+    ytd-engagement-panel-section-list-renderer:has(ytd-about-channel-renderer) {
+        margin: 0 !important;
+    }
+    ytd-about-channel-renderer {
+        & #about-container {
+            max-height: unset !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+        & #links-section {
+            order: -1 !important;
+        }
+        & #description-container {
+            order: 1 !important;
+            padding: 12px 0 0 !important;
+        }
+        & #button-container {
+            order: 2 !important;
+        }
+    }
+    yt-channel-external-link-view-model > img {
+        display: none !important;
+    }
 
-	/* "For You" section on channel home tab */
-	[page-subtype="channels"] [should-use-mixed-list-height] {
-		--ytd-grid-video-width: unset !important;
-		--ytd-grid-video-thumbnail-height: unset !important;
-		& #thumbnail {
-			border-radius: 8px !important;
-		}
-	}
-	[page-subtype="channels"] [override-arrow-position-for-mixed-shelf] :is(#left-arrow, #right-arrow) {
-		height: 118px !important;
-	}
+    /* "For You" section on channel home tab */
+    [page-subtype="channels"] [should-use-mixed-list-height] {
+        --ytd-grid-video-width: unset !important;
+        --ytd-grid-video-thumbnail-height: unset !important;
+        & #thumbnail {
+            border-radius: 8px !important;
+        }
+    }
+    [page-subtype="channels"] [override-arrow-position-for-mixed-shelf] :is(#left-arrow, #right-arrow) {
+        height: 118px !important;
+    }
 
-	/* Make font smaller for video titles and video information */
-	ytd-rich-item-renderer {
-		margin-bottom: 32px !important;
-	}
-	ytd-rich-grid-renderer {
-		& :is(#video-title, .yt-lockup-metadata-view-model-wiz__heading-reset > a, .yt-lockup-metadata-view-model__title, .ytLockupMetadataViewModelTitle) {
-			font-size: 1.4rem !important;
-			line-height: 2rem !important;
-		}
-		& :is(#metadata, .yt-lockup-metadata-view-model-wiz__metadata, .yt-lockup-metadata-view-model__metadata, .ytLockupMetadataViewModelMetadata) * {
-			font-size: 1.2rem !important;
-			line-height: 1.8rem !important;
-		}
-	}
+    /* Make font smaller for video titles and video information */
+    ytd-rich-item-renderer {
+        margin-bottom: 32px !important;
+    }
+    ytd-rich-grid-renderer {
+        & :is(#video-title, .yt-lockup-metadata-view-model-wiz__heading-reset > a, .yt-lockup-metadata-view-model__title, .ytLockupMetadataViewModelTitle) {
+            font-size: 1.4rem !important;
+            line-height: 2rem !important;
+        }
+        & :is(#metadata, .yt-lockup-metadata-view-model-wiz__metadata, .yt-lockup-metadata-view-model__metadata, .ytLockupMetadataViewModelMetadata) * {
+            font-size: 1.2rem !important;
+            line-height: 1.8rem !important;
+        }
+    }
 
-	/* Improve layout of video description */
-	tp-yt-paper-tooltip.ytd-watch-info-text {
-		left: 0 !important;
-		top: 30px !important;
-	}
-	#description #structured-description > #items {
+    /* Improve layout of video description */
+    tp-yt-paper-tooltip.ytd-watch-info-text {
+        left: 0 !important;
+        top: 30px !important;
+    }
+    #description #structured-description > #items {
         display: flex !important;
         flex-direction: column !important;
-	}
-	ytd-video-description-infocards-section-renderer {
-		padding: 0 !important;
+    }
+    ytd-video-description-infocards-section-renderer {
+        padding: 0 !important;
         & #infocards-section:not(:empty) {
             padding-top: 16px !important;
         }
-		& > :not(#infocards-section) {
-			display: none !important;
-		}
-	}
-	ytd-structured-description-content-renderer ytd-reel-shelf-renderer {
-		display: none !important;
-	}
+        & > :not(#infocards-section) {
+            display: none !important;
+        }
+    }
+    ytd-structured-description-content-renderer ytd-reel-shelf-renderer {
+        display: none !important;
+    }
     yt-video-attributes-section-view-model {
         display: none !important;
     }
-	ytd-video-description-transcript-section-renderer {
+    ytd-video-description-transcript-section-renderer {
         padding-bottom: 0 !important;
-		order: 1 !important;
-	}
+        order: 1 !important;
+    }
     ytd-watch-metadata #teaser-carousel {
         display: none !important;
     }
 
-	/* Add padding to comments */
-	ytd-comment-view-model #content {
-		padding-right: 32px !important;
-	}
+    /* Add padding to comments */
+    ytd-comment-view-model #content {
+        padding-right: 32px !important;
+    }
 
 
     /* Make thumbnails in search smaller */
@@ -254,18 +265,18 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
             margin: auto !important;
         }
     }
-	ytd-video-renderer[use-bigger-thumbs] ytd-thumbnail, ytd-playlist-renderer[use-bigger-thumbs] ytd-playlist-thumbnail, ytd-channel-renderer[use-bigger-thumbs] #avatar-section {
-		max-width: 360px !important;
-		min-width: 240px !important;
-	}
+    ytd-video-renderer[use-bigger-thumbs] ytd-thumbnail, ytd-playlist-renderer[use-bigger-thumbs] ytd-playlist-thumbnail, ytd-channel-renderer[use-bigger-thumbs] #avatar-section {
+        max-width: 360px !important;
+        min-width: 240px !important;
+    }
 
     /* Video recommendations sidebar */
     #secondary-inner.ytd-watch-flexy {
         --ytd-margin-6x: 12px !important;
     }
 
-	/* Video chapters */
-	ytd-engagement-panel-section-list-renderer:is([target-id*="chapters"],[target-id*="transcript"]) {
+    /* Video chapters */
+    ytd-engagement-panel-section-list-renderer:is([target-id*="chapters"],[target-id*="transcript"]) {
         & #header #subtitle:empty {
             padding-top: 0 !important;
         }
@@ -283,14 +294,14 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
         display: block !important;
     }
 
-	/* Live stream chat */
+    /* Live stream chat */
     yt-live-chat-renderer #panel-pages:has(> #input-panel) {
-		border-bottom: none !important;
-		&:has(> #input-panel:empty) {
-			border-top: none !important;
-		}
-	}
-	ytd-live-chat-frame {
+        border-bottom: none !important;
+        &:has(> #input-panel:empty) {
+            border-top: none !important;
+        }
+    }
+    ytd-live-chat-frame {
         &[theater-watch-while] {
             border-bottom: 0 !important;
             border-radius: 0 !important;
@@ -298,33 +309,33 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
         &:not([collapsed]) {
             min-height: var(--ytd-watch-flexy-panel-max-height) !important;
         }
-		&[collapsed]:has(#show-hide-button) {
+        &[collapsed]:has(#show-hide-button) {
             display: flex !important;
         }
         & #show-hide-button ytd-button-renderer {
-			margin: 0 !important;
-		}
-	}
-	#full-bleed-container :is(ytd-live-chat-frame, ytd-live-chat-frame > iframe) {
+            margin: 0 !important;
+        }
+    }
+    #full-bleed-container :is(ytd-live-chat-frame, ytd-live-chat-frame > iframe) {
         border-radius: 0 !important;
     }
     #columns:has(ytd-live-chat-frame #show-hide-button) #bottom-row > #teaser-carousel {
         display: none !important;
     }
 
-	/* SponsorBlock UI */
-	.sponsorBlockCategoryPill {
-		margin-right: 6px !important;
-	}
-	#sponsorBlockPopupContainer {
-		margin-bottom: 12px !important;
-		& > iframe {
-			width: 100% !important;
-		}
-	}
+    /* SponsorBlock UI */
+    .sponsorBlockCategoryPill {
+        margin-right: 6px !important;
+    }
+    #sponsorBlockPopupContainer {
+        margin-bottom: 12px !important;
+        & > iframe {
+            width: 100% !important;
+        }
+    }
 
-	/* Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable) */
-	#segmented-dislike-button .cbox, :is(#segmented-dislike-button, dislike-button-view-model) .yt-spec-button-shape-next__button-text-content {
-		max-width: 80px !important;
-	}
+    /* Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable) */
+    #segmented-dislike-button .cbox, :is(#segmented-dislike-button, dislike-button-view-model) .yt-spec-button-shape-next__button-text-content {
+        max-width: 80px !important;
+    }
 }
