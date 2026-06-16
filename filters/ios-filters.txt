@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2026.04.14.2
+! Version: 2026.06.16.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -371,13 +371,13 @@ medibang.com##.mdbnPictureViewer #viewerImage:style(pointer-events: auto !import
 imgur.com##div[class^="SeeImgurOIA-"], .Navigation-buttons, .Info-Wrapper, .GalleryPage-bg, .Gallery-EngagementBar, .BottomRecirc
 imgur.com##.Gallery-Byline:style(margin: 0 !important;)
 imgur.com##+js(aeld, /touchend/)
-pixnoy.com##[class^="ah-box"], .similar, .swbtn_igtv, .swbtn_stories, .dp-link, .header, .wid.cf, .as-bar, .footer, .__cf_email__, .slimlay, .maxdor
-pixnoy.com##.post .pic:style(height: 100% !important;)
-pixnoy.com##.swbtn:style(width: 50% !important;)
-pixnoy.com##.meta .sum:style(display: block !important;)
-pixnoy.com##body:style(padding: 5rem 0 !important;)
-pixnoy.com##+js(ra, target, ".cover_link, .pic > a", stay)
-pixnoy.com##+js(set, setInterval, noopFunc)
+picnob.com##[class^="ah-box"], .similar, .swbtn_reels, .swbtn_igtv, .swbtn_stories, .dp-link, .header, .wid.cf, .as-bar, .footer, .__cf_email__, .slimlay, .maxdor, .desney
+picnob.com##.post .pic:style(height: 100% !important;)
+picnob.com##.swbtn:style(width: 50% !important;)
+picnob.com##.meta .sum:style(display: block !important;)
+picnob.com##body:style(padding: 5rem 0 !important;)
+picnob.com##+js(ra, target, ".cover_link, .pic > a", stay)
+picnob.com##+js(set, setInterval, noopFunc)
 
 ! Special CSS injection filters (disabled on Ublock)
 !#if !ext_ublock
@@ -389,6 +389,6 @@ duckduckgo.com##+js(rpnt, script, /(!function\(e\,t\,n\))/, `if(window.trustedTy
 
 imgur.com##+js(rpnt, script, /(dataLayer=\[])/, `if(window.trustedTypes&&trustedTypes.createPolicy&&!trustedTypes.defaultPolicy){const e=e=>e;trustedTypes.createPolicy("default",{createHTML:e,createScriptURL:e,createScript:e})}; document.head.insertAdjacentHTML("afterbegin", "<style>div[class^='SeeImgurOIA-'], .Navigation-buttons, .Info-Wrapper, .GalleryPage-bg, .Gallery-EngagementBar, .BottomRecirc { display: none !important; } .Gallery-Byline { margin: 0 !important;}</style>"); $1`)
 fandom.com##+js(rpnt, script, /(^document\.documentElement\.className=)/, `if(window.trustedTypes&&trustedTypes.createPolicy&&!trustedTypes.defaultPolicy){const e=e=>e;trustedTypes.createPolicy("default",{createHTML:e,createScriptURL:e,createScript:e})}; document.head.insertAdjacentHTML("afterbegin", "<style>.top-ads-container, .ad-slot-placeholder, .notifications-box, .mobile-community-bar__discussions, .is-anon, .beta-stars, .render-wiki-recommendations, .trfc-147, .recirculation-prefooter, .wiki-page-header > .has-edit-link > div, .section-edit-link, .section-edit-link + .vertical-separator, .mobile-main-page__trending-articles, .mobile-main-page__popular-categories { display: none !important; }</style>"); $1`)
-pixnoy.com##+js(rpnt, script, /(window\.dataLayer =)/, `if(window.trustedTypes&&trustedTypes.createPolicy&&!trustedTypes.defaultPolicy){const e=e=>e;trustedTypes.createPolicy("default",{createHTML:e,createScriptURL:e,createScript:e})}; document.head.insertAdjacentHTML("afterbegin", "<style>[class^='ah-box'], .similar, .swbtn_igtv, .swbtn_stories, .dp-link, .header, .wid.cf, .as-bar, .footer, .__cf_email__, .slimlay, .maxdor {display: none !important;} .cover_w, .post .view, .swiper-wrapper, .swiper-slide {height: 100% !important;} body {padding: 5rem 0 !important;} .swbtn {width: 50% !important;} .meta :is(.sum, .time) {display: block !important;}</style>"); $1`)
-pixnoy.com##+js(rmnt, #text, /^(pixnoy|account insight|post insight|score|index|health rate|users ratio|weeks posts|similar user)$/i)
+picnob.com##+js(rpnt, script, /(window\.dataLayer =)/, `if(window.trustedTypes&&trustedTypes.createPolicy&&!trustedTypes.defaultPolicy){const e=e=>e;trustedTypes.createPolicy("default",{createHTML:e,createScriptURL:e,createScript:e})}; document.head.insertAdjacentHTML("afterbegin", "<style>[class^='ah-box'], .similar, .swbtn_reels, .swbtn_igtv, .swbtn_stories, .dp-link, .header, .wid.cf, .as-bar, .footer, .__cf_email__, .slimlay, .maxdor, .desney {display: none !important;} .cover_w, .post .view, .swiper-wrapper, .swiper-slide {height: 100% !important;} body {padding: 5rem 0 !important;} .swbtn {width: 50% !important;} .meta :is(.sum, .time) {display: block !important;}</style>"); $1`)
+picnob.com##+js(rmnt, #text, /^(picnob|account insight|post insight|score|index|health rate|users ratio|weeks posts|similar user)$/i)
 !#endif
