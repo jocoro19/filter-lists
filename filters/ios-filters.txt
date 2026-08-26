@@ -1,6 +1,6 @@
 [AdBlock Plus 2.0]
 ! Title: JHS iOS Filters
-! Version: 2026.08.19.1
+! Version: 2026.08.25.1
 ! Expires: 1 days
 ! License: CC0-1.0
 ! Homepage: https://github.com/jocoro19/filter-lists
@@ -204,36 +204,6 @@ pixiv.net##.__top_side_menu_body section:has([href^="/premium"])
 pixiv.net##.flex:has(> [data-ga4-label="order_filter_chip"])
 pixiv.net##.charcoal-modal-body section:has(h2 span:nth-of-type(2))
 
-! Reddit
-reddit.com##+js(set, r.ui.initMWebBanner, noopFunc)
-reddit.com##.mobile-web-redirect-bar
-reddit.com##.listingsignupbar
-reddit.com##.commentsignupbar
-reddit.com##.reddit-infobar
-reddit.com##.locked-tagline
-reddit.com##.active.read-next
-reddit.com##.happening-now-wrap
-||thumbs.redditmedia.com^$css
-reddit.com###header-img
-reddit.com##.side .md
-reddit.com##.side > .spacer:not(:has(#search, .linkinfo, .titlebox))
-reddit.com##.user, .user + .separator
-reddit.com##li.share, li:has(.embed-comment, .hide-button), .li.login-required
-reddit.com##.commentarea .stickied[data-author="AutoModerator"]
-reddit.com##button.c-btn-primary.c-btn[name="over18"][value="no"]
-reddit.com##._1GdKQyDUWvhTFBDr0FsAkj:style(visibility: hidden !important;)
-reddit.com##.Zo-DKBkkLRYQJrXWLL0uI
-reddit.com##._23h0-EcaBUorIHC-JZyh6J
-reddit.com##._1oQyIsiPHYt6nx7VOmd1sz:style(padding-left: 0 !important;)
-reddit.com##._2fiIRtMpITeCAzXc4cANKp:style(margin-left: 10px !important;)
-reddit.com,~embed.reddit.com##html.theme-beta:not(:has([pagetype="cdn_media_page"])) > :is(head, body)
-||redditstatic.com/shreddit$script,domain=~embed.reddit.com
-@@||redditstatic.com/shreddit/*/shell$script
-reddit.com,~embed.reddit.com,redd.it##reddit-header-small, reddit-header-large, post-bottom-bar, shreddit-app > div, shreddit-overlay-display
-reddit.com,~embed.reddit.com,redd.it##html.theme-beta main:style(width: 100vw !important; height: 100vh !important; position: absolute !important; inset: 0 !important; margin: 0 !important; display: flex !important; align-items: center !important; justify-content: center !important;)
-reddit.com,~embed.reddit.com,redd.it##html.theme-beta faceplate-tracker img:style(max-width: 100% !important; max-height: 100% !important; margin: 0 !important;)
-reddit.com,~embed.reddit.com,redd.it##shreddit-app::before:style(content: unset !important;)
-
 ! Fandom
 ||services.fandom.com/icbm/api/loader$script
 fandom.com##.top-ads-container
@@ -259,9 +229,7 @@ fandom.com##.top-results
 fandom.com##.gallery-icon-container
 
 ! Other
-xcancel.com##.inner-nav > a
-xcancel.com##.right > :not(:has(.icon-search, .icon-cog))
-||xcancel.com/logo.png
+||xcancel.com^
 ||demand.supply^
 ||addtoany.com^
 ||improving.duckduckgo.com^
