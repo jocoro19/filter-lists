@@ -2,7 +2,7 @@
 @name        JHS YouTube Fixes
 @namespace   https://github.com/jocoro19
 @author      JoCoRo19
-@version     1.27.32
+@version     1.27.33
 @description Various fixes for YouTube
 @license     CC0-1.0
 @homepageURL https://github.com/jocoro19/filter-lists
@@ -344,10 +344,5 @@ The ultimate logical consequence of "blocking = theft" is the criminalization of
         & > iframe {
             width: 100% !important;
         }
-    }
-
-    /* Set maximum width for dislike button (if Return YouTube Dislike is temporarily unavailable) */
-    #segmented-dislike-button .cbox, :is(#segmented-dislike-button, dislike-button-view-model) .yt-spec-button-shape-next__button-text-content {
-        max-width: 80px !important;
     }
 }
